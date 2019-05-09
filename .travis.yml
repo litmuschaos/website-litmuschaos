@@ -10,7 +10,6 @@ sudo: required
 services:
 - docker
 before_script:
-- cd openebs-app
 - npm install
 script:
 - ng build --prod
