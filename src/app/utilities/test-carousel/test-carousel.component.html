@@ -1,0 +1,11 @@
+<div>
+  <owl-carousel [options]="slideOptions" [carouselClasses]="['owl-theme', 'sliding', 'owl-nav']">
+    <div class="item" *ngFor="let workload of workloadsObject;let i = index">
+      <a routerLink={{workload.url}}>
+        <div class="workloads">
+          <img src={{workload.imageUrl}} class="workload-images" />
+        </div>
+      </a>
+    </div>
+  </owl-carousel>
+</div>

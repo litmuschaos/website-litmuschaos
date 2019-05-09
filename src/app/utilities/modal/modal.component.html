@@ -1,0 +1,50 @@
+<!-- Modal -->
+<div class="modal fade" id="vancouver-model" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div *ngIf="setFormChange_vancouver; else second" class="modal-body">
+        <div class="demo-form pd-t-b-all">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 mobile-newsletter mb-4" style="text-align:left; margin:auto">
+                <p class="p2">
+                  <strong style="font-size:1.5rem;color:#ee5a2b">OSSNA - 2018</strong>
+                </p>
+                <p class="p2">Fill out the details to get all the news and actions from the event.</p>
+              </div>
+              <div class="col-md-10" style="margin:auto">
+                <form class="form-view theme2 margin-0-auto" novalidate [formGroup]="leadForm" (ngSubmit)="formSubmit()">
+
+                  <div class="d-flex flex-column flex-md-row justify-content-md-between">
+                    <!-- Text input-->
+                    <div class="form-group required-control newsletter-input-1">
+                      <input maxlength="250" id="agilefield-1" name="first_name" id="agilefield-1" formControlName="name" type="text" placeholder="Name"
+                        class="form-control" [ngClass]="{
+                        'valid_input':name.valid && (name.touched || name.dirty),
+                        'invalid_input':name.invalid && (name.touched || name.dirty || isFormEmpty)
+                        }" style="border-radius: 0;">
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group required-control newsletter-input-2">
+                      <input maxlength="250" id="agilefield-3" name="email" type="email" id="agilefield-2" formControlName="email" placeholder="Email"
+                        class="form-control" [ngClass]="{
+                        'valid_input':email.valid && (email.touched || email.dirty),
+                        'invalid_input':email.invalid && (email.touched || email.dirty || isFormEmpty)
+                        }" style="border-radius: 0;">
+                    </div>
+                  </div>
+                  <div class="agile-group float-right">
+                    <button type="submit" class="ebs-btn mr-0" id="slacksubmit" [disabled]="!leadForm.valid">Sign up</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-template #second>
+        <app-modal-success></app-modal-success>
+      </ng-template>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,241 @@
+/* .carousel .two-button {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-height {
+  height: auto;
+
+}
+
+.company-logos .logo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.company-logos .logo img {
+  height: 60px;
+  width: auto;
+  padding: 1rem;
+}
+
+.whitepaper {
+  color: #fff
+}
+
+.whitepaper:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #E86029
+} */
+
+.newsletter-input::placeholder {
+    color: #fefefe;
+  }
+  
+  a {
+    color: #fff;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .downloadpaper {
+    padding-top: 8px;
+  }
+  
+  
+  .footer {
+    background-color: #262b3e;
+  }
+  
+  .f-horizontalline {
+    width: 100%;
+    border-bottom: 1px solid white;
+    margin: 0 30px;
+  }
+  
+  .footer ul {
+    line-height: calc(3);
+  }
+  
+  .footer .community {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .footer .community li {
+    width: 50%;
+    padding-left: 14%;
+  }
+  
+  .f-logo-section {
+    text-align: left;
+    padding: 2rem 15px;
+  }
+  
+  .f-logo {
+    padding: 0.5rem 0;
+    height: 2.5rem;
+    width: auto;
+  }
+  
+  .f-copyright {
+    text-align: center;
+    color: white;
+  }
+  
+  /* .top-footer>ul>li>p {
+    padding-bottom: 16px;
+    font-size: 14px;
+  } */
+  
+  .top-footer ul>li {
+    padding-bottom: 16px;
+    font-size: 14px;
+  }
+  
+  .bottom-footer ul>li {
+    font-size: 12px;
+    padding: 0px 0px 0px 0px;
+  }
+  
+  #social-icons>ul>li {
+    font-size: 12px;
+    padding: 0px 6px;
+  }
+  
+  .copyright {
+    font-size: 12px;
+  }
+  
+  .newsletter-input {
+    width: 320px;
+    font-size: 14px;
+    height: 48px;
+    color: #fefefe;
+    background-color: inherit;
+    border: 1px solid #fefefe;
+  }
+  
+  @media screen and (max-width:768px) {
+    .bottom-footer>ul>li>ul>li {
+      font-size: 12px;
+      padding: 4px 0px;
+    }
+  
+    .bottom-footer>ul>li {
+      padding-bottom: 16px;
+    }
+  
+    .newsletter-input {
+      width: 360px;
+      font-size: 14px;
+      height: 48px;
+      color: #fefefe;
+      background-color: inherit;
+      border: 1px solid #fefefe;
+    }
+  
+    .subscribe-btn {
+      margin-top: 16px;
+    }
+  
+    .mayadata-logo {
+      height: 24px;
+    }
+  
+    .copyright {
+      font-size: 12px;
+    }
+  }
+  
+  @media screen and (max-width:540px) {
+    .newsletter-input {
+      width: 330px;
+      font-size: 14px;
+      height: 48px;
+      color: #fefefe;
+      background-color: inherit;
+      border: 1px solid #fefefe;
+    }
+  
+    .subscribe-btn {
+      margin-top: 0px;
+    }
+  
+  
+  }
+  
+  @media screen and (max-width:480px) {
+    .bottom-footer>ul>li {
+      padding-bottom: 16px;
+    }
+  }
+  
+  @media screen and (max-width:400px) {
+    .newsletter-input {
+      width: 280px;
+      font-size: 14px;
+      height: 48px;
+      color: #fefefe;
+      background-color: inherit;
+      border: 1px solid #fefefe;
+    }
+  }
+  
+  @media screen and (min-width:768px) {
+  
+    .bottom-footer>ul>li>ul>li {
+      font-size: 8px;
+      padding: 0px 10px;
+    }
+  
+    .newsletter-input {
+      width: 320px;
+      font-size: 14px;
+      height: 48px;
+      color: #fefefe;
+      background-color: inherit;
+      border: 1px solid #fefefe;
+    }
+  
+    .mayadata-logo {
+      height: 20px;
+    }
+  
+    .copyright {
+      font-size: 8px;
+    }
+  }
+  
+  @media screen and (min-width:992px) {
+  
+    .bottom-footer>ul>li>ul>li {
+      font-size: 12px;
+      padding: 0px 10px;
+    }
+  
+    .mayadata-logo {
+      height: 24px;
+    }
+  
+    .copyright {
+      font-size: 12px;
+    }
+  }
+  
+  @media screen and (min-width:1200px) {
+    .bottom-footer>ul>li>ul>li {
+      font-size: 12px;
+      padding: 0px 0px 0px 40px;
+    }
+  
+    .bottom-footer>ul>li>ul>li:nth-child(1) {
+      padding: 0px 0px 0px 0px;
+    }
+  }
+  
