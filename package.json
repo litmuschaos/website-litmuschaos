@@ -1,6 +1,7 @@
 {
   "name": "litmuschaos",
   "version": "0.0.0",
+  "author": "Intakhab Ali",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
