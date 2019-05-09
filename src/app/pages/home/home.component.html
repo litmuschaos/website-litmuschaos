@@ -15,7 +15,7 @@
 <div class="container">
   <h1 class="section-heading pd-b-2">What is Litmus?</h1>
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3 py-3 py-md-0">
         <img class="what-is-litmus-icons mr-b-1" src="assets/images/whatislitmus/frameworkforchaos.svg" alt="FrameWork for Chaos">
       <div class="card border-0">
         <div class="card-body p-0">
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-3 py-3 py-md-0  ">
         <img class="what-is-litmus-icons mr-b-1" src="assets/images/whatislitmus/cicdpipeline.svg" alt="CI/CD pipeline">
       <div class="card border-0">
         <div class="card-body p-0">
@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <div class="col-sm-3">
+    <div class="col-sm-3 py-3 py-md-0">
         <img class="what-is-litmus-icons mr-b-1" src="assets/images/whatislitmus/testworkload.svg" alt="Test Workload">
       <div class="card border-0">
         <div class="card-body p-0">
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-3 py-3 py-md-0">
         <img class="what-is-litmus-icons mr-b-1" src="assets/images/whatislitmus/ansible.svg" alt="Ansible">
         <div class="card border-0">
           <div class="card-body p-0">
@@ -59,9 +59,12 @@
         <h1 class="section-heading pd-b-2">Why Litmus?</h1>
       </div>
     </div>
-    <div class="row">      
+    <div class="row">
+      <div class="col-sm-6 mobile">
+          <img class="card-img-top why-litmus-img " src="assets/images/whylitmus/whylitmus.svg" alt="Why Litmus?">
+      </div>      
       <div class="col-sm-6">
-        <h4 class="font-weight-bold pb-4">DevOps team need an easy to use framework mainly the following reasons:</h4>  
+        <h4 class="section-subheading font-weight-bold pb-4">DevOps team need an easy to use framework mainly the following reasons:</h4>  
         <div class="card shadow-sm border-0 why-litmus-card">
           <div class="card-body">
               <img class="why-litmus-icons" src="assets/images/whylitmus/chaosvariouslayer.svg" alt="chaos at various layer">
@@ -69,12 +72,12 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6">
-          <img class="card-img-top why-litmus-img" src="assets/images/whylitmus/whylitmus.svg" alt="Why Litmus?">
+      <div class="col-sm-6 desktop">
+          <img class="card-img-top why-litmus-img " src="assets/images/whylitmus/whylitmus.svg" alt="Why Litmus?">
       </div>
-    </div>
-    <div class="row pd-t-b-all">
-      <div class="col-sm-6">
+    <!-- </div>
+    <div class="row pd-t-b-all "> -->
+      <div class="col-sm-6 py-4 py-md-2">
         <div class="card shadow-sm border-0 why-litmus-card">
           <div class="card-body">
               <img class="why-litmus-icons" src="assets/images/whylitmus/cicdvalidating.svg" alt="Chaos in Production">
@@ -82,7 +85,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 py-0 py-md-2">
         <div class="card shadow-sm border-0 why-litmus-card">
           <div class="card-body">
               <img class="what-is-litmus-icons" src="assets/images/whylitmus/chaosinproduction.svg" alt="Ansible">
@@ -100,9 +103,9 @@
 
 <section class="pd-t-b-all"> 
 <div class="container">
-  <div class="row">
+  <div class="row flex-column-reverse flex-md-row">
     <div class="col-sm-4">
-      <img class="who-use-litmus float-right"src="assets/images/whouselitmus/whouselitmus.svg" alt="Who Use Litmus">
+      <img class="who-use-litmus"src="assets/images/whouselitmus/whouselitmus.svg" alt="Who Use Litmus">
     </div>
     <div class="col-sm-8">
       <div class="pl-4">
@@ -129,25 +132,25 @@
 </section>
 
 
-<section class="pd-t-b-all resources-section">
+<section class="pd-t-b-all resources-section" >
 <div class="container">
-  <h1 class="section-heading pd-b-2 text-center">Litmus Resources</h1>
+  <h1 class="section-heading pd-b-2 text-center" id="resources">Litmus Resources</h1>
   <div class="row pb-t-2 pb-b-2">
     <div class="col-sm-6">    
       <div class="card flex-row p-4">
           <img class="litmus-resources-icon" src="assets/images/litmusresources/doc.svg" alt="Documentation">
         <div class="card-body p-0 pl-3">          
           <p class="card-text resources-p-height">Go to the litmus documentation to read more about litmus properties and it architecture.</p>
-          <a href="#" class="btn btn-primary resources-btn">View Documentation</a>
+          <a href="https://litmusdocs.openebs.io/" class="btn btn-primary resources-btn">View Documentation</a>
         </div>
       </div>
     </div>
-    <div class="col-sm-6">  
-      <div class="card flex-row p-4">
+    <div class="col-sm-6 pb-t-2 pb-t-md-0">  
+      <div class="card flex-row p-4 ">
           <img class="litmus-resources-icon" src="assets/images/litmusresources/blog.svg" alt="Blog">
         <div class="card-body p-0 pl-3">          
           <p class="card-text resources-p-height">Using Chaos Engineering to harden the applications that use NuoDB and OpenEBS</p>
-          <a href="#" class="btn btn-primary resources-btn">Read the Blog</a>
+          <a href="https://blog.openebs.io/using-chaos-engineering-to-harden-the-applications-that-use-nuodb-and-openebs-fe855436b51a" class="btn btn-primary resources-btn">Read the Blog</a>
         </div>
       </div>
     </div>
@@ -162,12 +165,12 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-6">   
+    <div class="col-sm-6 pb-t-2 pb-t-md-0">   
       <div class="card flex-row p-4">
           <img class="litmus-resources-icon" src="assets/images/litmusresources/blog.svg" alt="Blog">
         <div class="card-body p-0 pl-3">
           <p class="card-text resources-p-height">Litmus: Release a chaos monkey on your kubernetes stateful workloads!</p>
-          <a href="#" class="btn btn-primary resources-btn">Read The Blog</a>
+          <a href="https://blog.openebs.io/litmus-release-a-chaos-monkey-on-your-kubernetes-stateful-workloads-6345e01b637d" class="btn btn-primary resources-btn">Read The Blog</a>
         </div>
       </div>
     </div>
@@ -178,16 +181,16 @@
             <img class="litmus-resources-icon" src="assets/images/litmusresources/github.svg" alt="GitHub">
           <div class="card-body p-0 pl-3">       
             <p class="card-text resources-p-height">Browse Litmus on GitHub now!</p>
-            <a href="#" class="btn btn-primary resources-btn">GitHub</a>
+            <a href="https://github.com/litmuschaos" class="btn btn-primary resources-btn">GitHub</a>
           </div>
         </div>
       </div>
-      <div class="col-sm-6">   
+      <div class="col-sm-6 pb-t-2 pb-t-md-0">   
         <div class="card flex-row p-4">
         <img class="litmus-resources-icon" src="assets/images/litmusresources/blog.svg" alt="Blog">
           <div class="card-body p-0 pl-3">  
             <p class="card-text resources-p-height">How do i run litmus test to compare storage performance on kubernetes</p>
-            <a href="#" class="btn btn-primary resources-btn">Read the Blog</a>
+            <a href="https://blog.openebs.io/how-do-i-run-a-litmus-test-to-compare-storage-performance-on-kubernetes-b309f9b94dd6" class="btn btn-primary resources-btn">Read the Blog</a>
           </div>
         </div>
       </div>
