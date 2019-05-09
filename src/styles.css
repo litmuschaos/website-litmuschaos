@@ -269,7 +269,7 @@
   /*padding define start*/
   
   .pd-t-b-all {
-    padding: 2rem 0;
+    padding: 3rem 0;
   }
   
   .pd-t-b-all-03 {
@@ -323,7 +323,9 @@
   .pd-t-3 {
     padding-top: 3rem;
   }
-  
+  .pb-t-md-0{
+    padding-top:0; 
+  }
   .m-t-b-2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -467,9 +469,11 @@
     }
   
     .pd-t-b-all {
-      padding: 3rem 0;
+      padding: 2rem 0;
     }
-  
+    .pb-t-2 {
+      padding-top: 2rem;
+    }
     .cl-reverse-mb {
       flex-direction: column-reverse;
     }
