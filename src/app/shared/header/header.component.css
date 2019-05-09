@@ -1,0 +1,36 @@
+.nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .desktop-view {
+    display: block;
+  }
+  
+  .mobile-view {
+    display: none;
+  }
+  
+  @media screen and (max-width:990.9998px) {
+    .mobile-nav {
+      background: #B5B5C0;
+      margin-top: 8px;
+      margin-left: -16px;
+      margin-right: -16px;
+      height: 100vh;
+    }
+  
+    .desktop-view {
+      display: none;
+    }
+  
+    .mobile-view {
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width:358.99998px) {
+    .display_320 {
+      display: none;
+    }
+  }
+  

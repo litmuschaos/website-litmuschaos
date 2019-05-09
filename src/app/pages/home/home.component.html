@@ -1,0 +1,196 @@
+<section class="hero-section ">
+  <div class="container ">
+  <div class="row hero-bg align-items-center">
+    <div class="col-md-6">
+      <img class="hero-section-litmus-logo" src="assets/images/litmuslogo/lightlogo.svg" alt="Litmus">
+      <h1 class="hero-heading">Chaos Engineering for</h1>
+      <h1 class="hero-heading">Kubernetes</h1>
+      <button class="btn btn-lg hero-btn"> See in Action </button>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="pd-t-b-all">
+<div class="container">
+  <h1 class="section-heading pd-b-2">What is Litmus?</h1>
+  <div class="row">
+    <div class="col-sm-3">
+        <img class="what-is-litmus-icons mr-b-1" src="assets/images/whatislitmus/frameworkforchaos.svg" alt="FrameWork for Chaos">
+      <div class="card border-0">
+        <div class="card-body p-0">
+          <p class="card-text">Provide framework for chaos engineering - including running test suites. capturing logs, generating reports and helping perform chaos tests.</p>    
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+        <img class="what-is-litmus-icons mr-b-1" src="assets/images/whatislitmus/cicdpipeline.svg" alt="CI/CD pipeline">
+      <div class="card border-0">
+        <div class="card-body p-0">
+          <p class="card-text">Can be used in CI/CD pipelines for testing stateful workload</p>       
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+        <img class="what-is-litmus-icons mr-b-1" src="assets/images/whatislitmus/testworkload.svg" alt="Test Workload">
+      <div class="card border-0">
+        <div class="card-body p-0">
+          <p class="card-text">Test workload are delivered as pre-configured container, ready to use</p>       
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+        <img class="what-is-litmus-icons mr-b-1" src="assets/images/whatislitmus/ansible.svg" alt="Ansible">
+        <div class="card border-0">
+          <div class="card-body p-0">
+            <p class="card-text">Tests are written either in plain English (using godog) or in Ansible playbooks and interact with the Kubernetes cluster via kubectl</p>         
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</section>
+
+<section class="pd-t-b-all">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="section-heading pd-b-2">Why Litmus?</h1>
+      </div>
+    </div>
+    <div class="row">      
+      <div class="col-sm-6">
+        <h4 class="font-weight-bold pb-4">DevOps team need an easy to use framework mainly the following reasons:</h4>  
+        <div class="card shadow-sm border-0 why-litmus-card">
+          <div class="card-body">
+              <img class="why-litmus-icons" src="assets/images/whylitmus/chaosvariouslayer.svg" alt="chaos at various layer">
+            <p class="card-text ">Building various jobs in CI pipelines that are part of the core infrastructure, so that they can just concentrate on their own business logic. Chaos experiments are performed at various layers such as applications and storage</p>         
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+          <img class="card-img-top why-litmus-img" src="assets/images/whylitmus/whylitmus.svg" alt="Why Litmus?">
+      </div>
+    </div>
+    <div class="row pd-t-b-all">
+      <div class="col-sm-6">
+        <div class="card shadow-sm border-0 why-litmus-card">
+          <div class="card-body">
+              <img class="why-litmus-icons" src="assets/images/whylitmus/cicdvalidating.svg" alt="Chaos in Production">
+            <p class="card-text">Build pipelines fro CI/E2E pipelines for validating and certifying new Kubernetes version before moving to production</p>         
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card shadow-sm border-0 why-litmus-card">
+          <div class="card-body">
+              <img class="what-is-litmus-icons" src="assets/images/whylitmus/chaosinproduction.svg" alt="Ansible">
+            <p class="card-text">Introduce chaos experiments in production to validate the resiliency of the systems. through these experiments the failures are detected in planned manner rather than finding the accidentally.</p>         
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="pd-t-b-all"> 
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <img class="who-use-litmus float-right"src="assets/images/whouselitmus/whouselitmus.svg" alt="Who Use Litmus">
+    </div>
+    <div class="col-sm-8">
+      <div class="pl-4">
+      <h1 class="section-heading pd-b-2">Who use Litmus?</h1>
+      <p>Kubernetes developers writing stateful application use Litmus books to easily perform chaos expirements. DevOps administrators use Litmus to build CI/E2E pipelines where most of the pipeline jobs are already available as Litmus book and can tune the remaining jobs quickly.</p>
+    </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="pd-t-b-all">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="pd-b-2">How to use Litmus?</h1>
+      <p class="pb-3">Litmus books are defined as kubernetes jobs. All Litmus experiments are conducted using the standard kubectl command.</p>
+      <div class="kubeclt-command">
+        <code>kubectl apply -f hack/rbac.yaml</code>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section class="pd-t-b-all resources-section">
+<div class="container">
+  <h1 class="section-heading pd-b-2 text-center">Litmus Resources</h1>
+  <div class="row pb-t-2 pb-b-2">
+    <div class="col-sm-6">    
+      <div class="card flex-row p-4">
+          <img class="litmus-resources-icon" src="assets/images/litmusresources/doc.svg" alt="Documentation">
+        <div class="card-body p-0 pl-3">          
+          <p class="card-text resources-p-height">Go to the litmus documentation to read more about litmus properties and it architecture.</p>
+          <a href="#" class="btn btn-primary resources-btn">View Documentation</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">  
+      <div class="card flex-row p-4">
+          <img class="litmus-resources-icon" src="assets/images/litmusresources/blog.svg" alt="Blog">
+        <div class="card-body p-0 pl-3">          
+          <p class="card-text resources-p-height">Using Chaos Engineering to harden the applications that use NuoDB and OpenEBS</p>
+          <a href="#" class="btn btn-primary resources-btn">Read the Blog</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="row pb-t-2 pb-b-2">
+    <div class="col-sm-6">     
+      <div class="card flex-row p-4">
+          <img class="litmus-resources-icon" src="assets/images/litmusresources/slides.svg" alt="Slides">
+        <div class="card-body p-0 pl-3"> 
+          <p class="card-text resources-p-height">Checkout the SLIDES of our session on "e2e using Litmus" from Kubecon'18 EU</p>
+          <a href="#" class="btn btn-primary resources-btn">Go to Slides</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">   
+      <div class="card flex-row p-4">
+          <img class="litmus-resources-icon" src="assets/images/litmusresources/blog.svg" alt="Blog">
+        <div class="card-body p-0 pl-3">
+          <p class="card-text resources-p-height">Litmus: Release a chaos monkey on your kubernetes stateful workloads!</p>
+          <a href="#" class="btn btn-primary resources-btn">Read The Blog</a>
+        </div>
+      </div>
+    </div>
+  </div>     
+  <div class="row pb-t-2 pb-b-2">
+      <div class="col-sm-6">         
+        <div class="card flex-row p-4 pl-3">
+            <img class="litmus-resources-icon" src="assets/images/litmusresources/github.svg" alt="GitHub">
+          <div class="card-body p-0 pl-3">       
+            <p class="card-text resources-p-height">Browse Litmus on GitHub now!</p>
+            <a href="#" class="btn btn-primary resources-btn">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">   
+        <div class="card flex-row p-4">
+        <img class="litmus-resources-icon" src="assets/images/litmusresources/blog.svg" alt="Blog">
+          <div class="card-body p-0 pl-3">  
+            <p class="card-text resources-p-height">How do i run litmus test to compare storage performance on kubernetes</p>
+            <a href="#" class="btn btn-primary resources-btn">Read the Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>  
+</div>
+</section>

@@ -1,0 +1,47 @@
+ .carousel-indicators {
+   display: none;
+ }
+
+ .upcoming-events {
+   height: 150px;
+   display: flex;
+   margin: auto;
+ }
+
+ #events .carousel-indicators {
+   display: none;
+ }
+
+ .carousel-control-prev,
+ .carousel-control-next {
+   display: none;
+ }
+
+
+
+ @media screen and (max-width:767.98888px) {
+   .upcoming-events {
+     height: auto;
+     width: 50%;
+     display: flex;
+     margin: auto;
+   }
+ }
+
+ @media screen and (max-width:576px) {
+   .upcoming-events {
+     width: 50%;
+   }
+ }
+
+ @media screen and (max-width:480px) {
+   .upcoming-events {
+     width: 64%;
+   }
+ }
+
+ @media screen and (max-width:400px) {
+   .upcoming-events {
+     width: 72%;
+   }
+ }
