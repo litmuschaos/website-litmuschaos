@@ -46,6 +46,7 @@
 .who-use-litmus{
     height: 190px;
     width: auto;
+    float: right;
 }
 .kubeclt-command{
     padding: 1rem ;
@@ -66,4 +67,39 @@
 }
 .resources-p-height{
     height: 55px;
+}
+
+@media screen and (max-width: 768px){
+    .hero-bg{
+        background-image: none;
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .section-heading{
+        font-size:  32px;
+    }
+    .hero-heading{
+        font-size:  28px;
+    }   
+    .why-litmus-img{
+        margin: 0;
+    }
+    .section-subheading{
+        font-size:20px;
+        padding-top: 2rem;
+    }
+    .why-litmus-card{
+        height: auto;
+    }
+    .who-use-litmus{
+        float: none;
+        margin-top: 2rem;
+    }
+    .resources-p-height{
+        height: auto;
+    }
+    .resources-btn{
+     margin-top: 1rem;
+    }
 }

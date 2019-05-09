@@ -29,6 +29,7 @@ import { WebinarService } from './services/webinar/webinar.service';
 import { JoincommunityService } from './services/joincommunity/joincommunity.service';
 import { EventsService } from './services/events/events.service';
 import { HomeComponent } from './pages/home/home.component';
+import { HackthonHomeComponent } from './pages/hackthons/hackthon-home/hackthon-home.component';
 
 const appRoutes: Routes = []
 @NgModule({
@@ -41,7 +42,8 @@ const appRoutes: Routes = []
     ModalSuccessComponent,
     UpcomingEventCarouselComponent,
     TestCarouselComponent,
-    HomeComponent
+    HomeComponent,
+    HackthonHomeComponent
   ],
   imports: [
     BrowserModule,
