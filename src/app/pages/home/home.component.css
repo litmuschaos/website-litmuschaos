@@ -4,7 +4,7 @@
     padding: 2rem 0;
 }
 .hero-bg{
-    background-image: url("/assets/images/herosection.svg");
+    background-image: url("/assets/images/hero-bg-litmus.png");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
