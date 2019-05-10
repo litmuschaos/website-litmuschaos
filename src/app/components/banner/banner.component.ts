@@ -10,7 +10,7 @@ export class BannerComponent implements OnInit {
   public hide = false;
 
   notification = {
-    notification_content: 'Get commercial support for OpenEBS',
+    notification_content: 'Get commercial support for Litmus',
     notification_url: 'https://mayadata.io/mdap'
   };
   constructor() { }
