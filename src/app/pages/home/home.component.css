@@ -52,6 +52,9 @@
     padding: 1rem ;
     background: black;
 }
+.text-decoration-hover:hover{
+    text-decoration: none;
+}
 .litmus-resources-icon{
     height: 55px;
     width: 55px;
