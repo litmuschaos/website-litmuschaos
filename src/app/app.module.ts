@@ -9,6 +9,7 @@ import {
   FormControl,
   ReactiveFormsModule
 } from '@angular/forms';
+import { ClipboardModule } from 'ngx-clipboard';
 import { NgxSmartModalModule, NgxSmartModalService } from 'ngx-smart-modal';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { OwlModule } from 'ngx-owl-carousel';
@@ -53,6 +54,7 @@ const appRoutes: Routes = []
     ReactiveFormsModule,
     NgbModule.forRoot(),
     NgxSmartModalModule.forRoot(),
+    ClipboardModule,
     OwlModule
   ],
   providers: [

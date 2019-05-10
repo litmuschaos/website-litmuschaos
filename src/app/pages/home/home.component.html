@@ -123,8 +123,9 @@
     <div class="col-md-12">
       <h1 class="pd-b-2">How to use Litmus?</h1>
       <p class="pb-3">Litmus books are defined as kubernetes jobs. All Litmus experiments are conducted using the standard kubectl command.</p>
-      <div class="kubeclt-command">
+      <div class="kubeclt-command d-flex align-items-center justify-content-between">
         <code>kubectl apply -f hack/rbac.yaml</code>
+        <button class="btn btn-link text-white text-decoration-hover" style="text-decoration-style:node" ngxClipboard [cbContent]="'kubectl apply -f hack/rbac.yaml'" (click)="CopyButton()">{{copyText}}</button>
       </div>
     </div>
   </div>
