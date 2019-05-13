@@ -5,7 +5,12 @@
     height: 35px;
     width: 35px;
   }
-  
+  body{
+    color: #23232A;
+  }
+  p{
+    color: #23232A
+  }
   /* OpenSans and Lato */
   @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,600,700');
   
