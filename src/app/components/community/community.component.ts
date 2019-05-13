@@ -23,9 +23,13 @@ export class CommunityComponent implements OnInit {
 
   join_our_community = [
     {
-      title: 'Join Litmus Community on Slack',
+      title: 'Join our Litmus Channel on OpenEBS community on Slack',
       icon: 'assets/images/icons/join-our-community-icon1.svg',
-      lists: ['It is a very responsive community. You will get a response within 3 to 6 hours.', `<a style="color:#000"
+      lists: [
+      `The simple and easy way to do this is by signing up for the OpenEBS Community on Slack and joiniing the Litmus Channel.`,
+      `You can join by simply filling up the form`,
+      'It is a very responsive community. You will get a response within 3 to 6 hours.', 
+      `<a style="color:#000"
        href="https://github.com/litmuschaos/litmus/issues" target="_blank" rel="noopener">Litmus on GitHub</a>
        is also a great way to get help.`]
     },
