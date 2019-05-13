@@ -19,6 +19,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { BannerComponent } from './components/banner/banner.component';
 
+import { JoincommunityGuard } from './guards/joincommunity.guard';
 
 import { ModalComponent } from './utilities/modal/modal.component';
 import { ModalSuccessComponent } from './utilities/modal-success/modal-success.component';
@@ -31,8 +32,19 @@ import { JoincommunityService } from './services/joincommunity/joincommunity.ser
 import { EventsService } from './services/events/events.service';
 import { HomeComponent } from './pages/home/home.component';
 import { HackthonHomeComponent } from './pages/hackthons/hackthon-home/hackthon-home.component';
+import { CommunityComponent } from './components/community/community.component';
+import { ThankyouJoincommunityComponent } from './components/thankyou-joincommunity/thankyou-joincommunity.component';
 
-const appRoutes: Routes = []
+const appRoutes: Routes = [
+  { path: "", component: HomeComponent },
+  { path: "join-our-community", component: CommunityComponent },
+  {
+    path: 'thankyou-join-our-community',
+    component: ThankyouJoincommunityComponent,
+    canActivate: [JoincommunityGuard]
+  },
+
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +56,9 @@ const appRoutes: Routes = []
     UpcomingEventCarouselComponent,
     TestCarouselComponent,
     HomeComponent,
-    HackthonHomeComponent
+    HackthonHomeComponent,
+    CommunityComponent,
+    ThankyouJoincommunityComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +78,8 @@ const appRoutes: Routes = []
     EventsService,
     HttpClient,
     Title,
-    NgxSmartModalService
+    NgxSmartModalService,
+    JoincommunityGuard
   ],
   bootstrap: [AppComponent]
 })

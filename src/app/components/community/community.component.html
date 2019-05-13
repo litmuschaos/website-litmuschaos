@@ -1,0 +1,62 @@
+<div #community style="background-color:#e8e8e8;background-repeat: no-repeat; background-size: cover;"
+  class="pt-0 pt-md-5 community" [style.background-image]="'url('+ bgImageUrl  + ')'">
+  <div class="container">
+    <div class="row pt-5 pb-0 py-md-5">
+      <div class="col-md-7 py-0">
+        <div class="mb-3 mb-lg-4 p-4" style="background-color:#fefefe;padding: 24px; border-radius: 5px;"
+          *ngFor="let section of join_our_community">
+          <div class="row">
+            <div class="col-md-2">
+              <img src={{section.icon}} style="width:45px">
+            </div>
+            <div class="col-md-9">
+              <h4 style="font-size:18px; font-weight:600">{{ section.title}}</h4>
+              <div class="px-3 pt-3">
+                <ul style="color: #262b3e;border-left: 1.5px solid #0063ff;padding-left: 18px;" class="mb-0">
+                  <li class="pb-2" *ngFor="let listItem of section.lists" [innerHTML]="listItem"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 py-0">
+        <div class="mb-4 px-3 px-md-0">
+          <div class="row" style="background-color:#fefefe;padding: 24px;border-radius: 5px;">
+            <div class="col-md-12">
+              <h4 style="font-weight:bold; font-size: 18px">Please fill out the form to join our
+                Slack Community</h4>
+                <h4 style="font-weight:bold; font-size: 18px">(#Litmus channel)</h4>
+              <div class="py-5">
+                <form novalidate [formGroup]="contactForm" (ngSubmit)="formSubmit()">
+                  <div class="form-group py-2">
+                    <input type="text" class="form-control" [ngClass]="{
+                        'valid_input':name.valid && (name.touched || name.dirty),
+                        'invalid_input':name.invalid && (name.touched || name.dirty || isFormEmpty)
+                        }" id="name" formControlName="name" required placeholder="NAME">
+                  </div>
+                  <div class="form-group py-2">
+                    <input type="email" class="form-control" [ngClass]="{
+                            'valid_input':email.valid && (email.touched || email.dirty),
+                            'invalid_input':email.invalid && (email.touched || email.dirty || isFormEmpty)
+                            }" id="email" formControlName="email" required aria-describedby="emailHelp"
+                      placeholder="EMAIL">
+                  </div>
+                  <div class="form-group py-2">
+                    <input type="text" class="form-control" [ngClass]="{
+                            'valid_input':company.valid && (company.touched || company.dirty),
+                            'invalid_input':company.invalid && (company.touched || company.dirty || isFormEmpty) 
+                            }" id="company" formControlName="company" required placeholder="COMPANY">
+                  </div>
+                  <button type="submit"
+                    class="btn btn-blue d-flex justify-content-center align-items-center mx-auto mt-5">Register
+                    Me Now!</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
