@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { Observable } from 'rxjs/Observable';
-
-import { contactDetails, ContactDetailsForWebinar, ContactDetailsForJoinOurCommunity, NewsletterSubscriber } from './agile.model';
+import { contactDetails, ContactDetailsForWebinar, ContactDetailsForJoinOurCommunity, NewsletterSubscriber,contactDetailsLitmus  } from './agile.model';
 
 @Injectable()
 
@@ -16,6 +14,8 @@ export class AgileService {
   host: string;
   private contactDetailsForWebinar: ContactDetailsForWebinar[] = [];
   private contactDetailsForJoinOurCommunity: ContactDetailsForJoinOurCommunity[] = [];
+  private contactDetailsForJoinLitmusOurCommunity: contactDetailsLitmus[]= [];
+  
   constructor(private http: HttpClient) {
 
     this.host = window.location.host;
@@ -89,6 +89,18 @@ export class AgileService {
     this.http.post<{ message: string }>(this.apiurl + 'joinourcommunity/formsubmit', ContactDetails)
       .subscribe(response => {
         this.contactDetailsForJoinOurCommunity.push(ContactDetails);
+      });
+  }
+  sendDatasToOpenEBSBackendForJoinLitmusOurCommunity(data) {
+    const ContactDetails: contactDetailsLitmus = {
+      name: data.name,
+      email: data.email,
+      company: data.company,
+    };
+    console.log(data + "service")
+    this.http.post<{ message: string }>(this.apiurl + 'joinlitmuscommunity/litmus/formsubmit', ContactDetails)
+      .subscribe(response => {
+        this.contactDetailsForJoinLitmusOurCommunity.push(ContactDetails);
       });
   }
 

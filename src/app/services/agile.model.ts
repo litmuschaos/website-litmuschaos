@@ -6,6 +6,12 @@ export interface contactDetails {
     tag: string;
 }
 
+export interface contactDetailsLitmus {
+    name: string;
+    email: string;
+    company: string;
+}
+
 export interface ContactDetailsForWebinar {
     name: string;
     email: string;
@@ -28,4 +34,3 @@ export interface NewsletterSubscriber {
     email: string;
     tag: string;
 }
-

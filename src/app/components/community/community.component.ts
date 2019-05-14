@@ -15,11 +15,7 @@ export class CommunityComponent implements OnInit {
   name: FormControl;
   email: FormControl;
   company: FormControl;
-  subscribeNewsletterCheck: FormControl;
-  demoCheck: FormControl;
-  usecasesAndPricingForCommercialSupportCheck: FormControl;
   isFormEmpty = false;
-  mdTag = 'Community_Email';
 
   join_our_community = [
     {
@@ -53,9 +49,6 @@ export class CommunityComponent implements OnInit {
     this.name = new FormControl('', Validators.required);
     this.company = new FormControl('', Validators.required);
     this.email = new FormControl('', [Validators.required, Validators.pattern('[^ @]*@[^ @]*')]);
-    this.subscribeNewsletterCheck = new FormControl(true);
-    this.demoCheck = new FormControl('');
-    this.usecasesAndPricingForCommercialSupportCheck = new FormControl('');
   }
 
   createForm() {
@@ -63,30 +56,20 @@ export class CommunityComponent implements OnInit {
       name: this.name,
       email: this.email,
       company: this.company,
-      subscribeNewsletterCheck: this.subscribeNewsletterCheck,
-      demoCheck: this.demoCheck,
-      usecasesAndPricingForCommercialSupportCheck: this.usecasesAndPricingForCommercialSupportCheck
     });
   }
 
   formSubmit() {
     if ((this.name.errors == null) && (this.email.errors == null) && (this.company.errors == null)) {
-      console.log(this.contactForm.value.subscribeNewsletterCheck);
       const data = {
         name: this.contactForm.value.name,
         email: this.contactForm.value.email,
-        company: this.contactForm.value.company,
-        subscribeNewsletterCheck: null,
-        demoCheck: null,
-        usecasesAndPricingForCommercialSupportCheck: null,
-        addTag: this.mdTag
+        company: this.contactForm.value.company
       };
-      this.agileService.sendDatasToOpenEBSBackendForJoinOurCommunity(data);
+      this.agileService.sendDatasToOpenEBSBackendForJoinLitmusOurCommunity(data);
       this.joincommunityService.isFormSubmitted = true;
-      this.joincommunityService.isDemoChecked = this.contactForm.value.demoCheck;
-      this.joincommunityService.isSubscribeNewsletterChecked = this.contactForm.value.subscribeNewsletterCheck;
       this.router.navigate(['thankyou-join-our-community']);
-      console.log('Success');
+      console.log(JSON.stringify(data)+ ' Success');
     }
     if (this.name.errors || this.email.errors || this.company.errors) {
       this.isFormEmpty = true;
