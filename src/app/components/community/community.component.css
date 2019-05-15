@@ -1,0 +1,30 @@
+.form-check-label {
+    font-size: 12px;
+  }
+  
+  .community {
+    padding-bottom: 10px
+  }
+  
+  .ng-hide {
+    display: none;
+  }
+  
+  a {
+    color: #003AAC;
+  }
+  
+  .signin-card {
+    padding: 53px 24px;
+  }
+  
+  @media screen and (max-width:767px) {
+    .community {
+      padding-bottom: 0px
+    }
+  
+    .signin-card {
+      padding: 24px;
+    }
+  }
+  
