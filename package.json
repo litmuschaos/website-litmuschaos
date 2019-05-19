@@ -35,8 +35,8 @@
     "ngx-smart-modal": "^5.0.0",
     "popper": "^1.0.1",
     "popper.js": "^1.14.7",
-    "rxjs": "^6.0.0",
-    "rxjs-compat": "^6.5.1",
+    "rxjs": "6.0.0",
+    "rxjs-compat": "6.5.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
