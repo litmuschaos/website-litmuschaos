@@ -1,15 +1,20 @@
 /* hero section */
 .hero-section{
     background: #0063ff;
-    padding: 2rem 0;
 }
 .hero-bg{
-    background-image: url("/assets/images/hero-bg-litmus.png");
+    background-image: url("/assets/images/litmus-bg.png");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
-    height: 480px;
 } 
+.hero-sec{
+    height: 480px;
+    background-color: rgb(0,99,255,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .hero-section-litmus-logo{
     width: 192px;
     height: auto;
