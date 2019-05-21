@@ -55,8 +55,10 @@
     float: right;
 }
 .kubeclt-command{
-    padding: 1rem ;
+    padding: 0.2rem ;
     background: black;
+    margin-top:0.1rem;
+    margin-bottom: 0.4rem;
 }
 .text-decoration-hover:hover{
     text-decoration: none;

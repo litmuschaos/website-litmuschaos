@@ -127,14 +127,27 @@
       <p>Litmus books are defined as kubernetes jobs. Litmus experiments leverage the enormous power of kubectl commands.</p>
       <p class="pb-3">Use the below commands to set up the pre-requisites for Litmus:</p>
       <div class="kubeclt-command d-flex align-items-center justify-content-between">
-        <code>helm install litmuschaos/litmusInfra --namespace=litmus</code>
-        <button class="btn btn-link text-white text-decoration-hover" style="text-decoration-style:node" ngxClipboard [cbContent]="'kubectl apply -f hack/rbac.yaml'" (click)="CopyButton()">{{copyText}}</button>
+       <div>
+        <code>helm repo add litmuschaos https://litmuschaos.github.io/chaos-charts</code><br/>
       </div>
+        <button class="btn btn-link text-white text-decoration-hover p-0" style="text-decoration-style:node" ngxClipboard [cbContent]="'helm repo add litmuschaos https://litmuschaos.github.io/chaos-charts'" (click)="CopyButton1()">{{copyText1}}</button>
+      </div>
+      <div class="kubeclt-command d-flex align-items-center justify-content-between">
+        <div>
+           <code>helm repo update</code>
+         </div>
+           <button class="btn btn-link text-white text-decoration-hover p-0" style="text-decoration-style:node" ngxClipboard [cbContent]="'helm repo update'" (click)="CopyButton2()">{{copyText2}}</button>
+      </div>
+      <div class="kubeclt-command d-flex align-items-center justify-content-between">
+        <div>
+          <code>helm install litmuschaos/litmusInfra --namespace=litmus</code>
+        </div>
+          <button class="btn btn-link text-white text-decoration-hover p-0" style="text-decoration-style:node" ngxClipboard [cbContent]="'helm install litmuschaos/litmusInfra --namespace=litmus'" (click)="CopyButton3()">{{copyText3}}</button>
+      </div> 
     </div>
   </div>
 </div>
 </section>
-
 
 <section class="pd-t-b-all resources-section" >
 <div class="container">
