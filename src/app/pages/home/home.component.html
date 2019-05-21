@@ -124,9 +124,10 @@
   <div class="row">
     <div class="col-md-12">
       <h1 class="pd-b-2">How to use Litmus?</h1>
-      <p class="pb-3">Litmus books are defined as kubernetes jobs. All Litmus experiments are conducted using the standard kubectl command.</p>
+      <p>Litmus books are defined as kubernetes jobs. Litmus experiments leverage the enormous power of kubectl commands.</p>
+      <p class="pb-3">Use the below commands to set up the pre-requisites for Litmus:</p>
       <div class="kubeclt-command d-flex align-items-center justify-content-between">
-        <code>kubectl apply -f hack/rbac.yaml</code>
+        <code>helm install litmuschaos/litmusInfra --namespace=litmus</code>
         <button class="btn btn-link text-white text-decoration-hover" style="text-decoration-style:node" ngxClipboard [cbContent]="'kubectl apply -f hack/rbac.yaml'" (click)="CopyButton()">{{copyText}}</button>
       </div>
     </div>
