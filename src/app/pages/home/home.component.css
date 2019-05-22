@@ -54,11 +54,19 @@
     width: auto;
     float: right;
 }
+code{
+    color: #1BE0E6;
+    margin-left: 1rem;
+}
 .kubeclt-command{
-    padding: 0.2rem ;
+    padding: 0.6rem ;
     background: black;
     margin-top:0.1rem;
     margin-bottom: 0.4rem;
+}
+.kubeclt-command-middle{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 .text-decoration-hover:hover{
     text-decoration: none;
@@ -112,5 +120,11 @@
     }
     .resources-btn{
      margin-top: 1rem;
+    }
+    .btn-copy{
+        display: none;
+    }
+    code{
+        margin-left: 0rem;
     }
 }
