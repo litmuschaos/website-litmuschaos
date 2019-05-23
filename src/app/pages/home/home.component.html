@@ -126,23 +126,13 @@
       <h1 class="pd-b-2">How to use Litmus?</h1>
       <p>Litmus books are defined as kubernetes jobs. Litmus experiments leverage the enormous power of kubectl commands.</p>
       <p class="pb-3 font-weight-bold">Use the below commands to set up the pre-requisites for Litmus:</p>
-      <div class="kubeclt-command d-flex align-items-center justify-content-between">
+      <div class="kubeclt-command d-flex align-items-start justify-content-between">
        <div>
-        <code>helm repo add litmuschaos https://litmuschaos.github.io/chaos-charts</code> 
+        <code>helm repo add litmuschaos https://litmuschaos.github.io/chaos-charts</code><br/> 
+        <code>helm repo update</code><br/>
+        <code>helm install litmuschaos/litmusInfra --namespace=litmus</code>
       </div>
-        <button class="btn-copy btn btn-link text-white text-decoration-hover p-0" style="text-decoration-style:node" ngxClipboard [cbContent]="'helm repo add litmuschaos https://litmuschaos.github.io/chaos-charts'" (click)="CopyButton1()"><img src="assets/images/icons/copyIcon.svg" alt="copy"> {{copyText1}}</button>
-      </div>
-      <div class="kubeclt-command d-flex align-items-center justify-content-between kubeclt-command-middle">
-        <div>
-           <code>helm repo update</code>
-         </div>
-           <button class="btn-copy btn btn-link text-white text-decoration-hover p-0" style="text-decoration-style:node" ngxClipboard [cbContent]="'helm repo update'" (click)="CopyButton2()"><img src="assets/images/icons/copyIcon.svg" alt="copy"> {{copyText2}}</button>
-      </div>
-      <div class="kubeclt-command d-flex align-items-center justify-content-between">
-        <div>
-          <code>helm install litmuschaos/litmusInfra --namespace=litmus</code>
-        </div>
-          <button class="btn-copy btn btn-link text-white text-decoration-hover p-0" style="text-decoration-style:node" ngxClipboard [cbContent]="'helm install litmuschaos/litmusInfra --namespace=litmus'" (click)="CopyButton3()"><img src="assets/images/icons/copyIcon.svg" alt="copy"> {{copyText3}}</button>
+        <button class="btn-copy btn btn-link text-white text-decoration-hover p-0" style="text-decoration-style:node" ngxClipboard [cbContent]=helmCommand (click)="CopyButton1()"><img src="assets/images/icons/copyIcon.svg" alt="copy"> {{copyText1}}</button>
       </div> 
     </div>
   </div>
