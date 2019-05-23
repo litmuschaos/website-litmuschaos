@@ -9,6 +9,10 @@ export class HomeComponent implements OnInit {
   public copyText1:string = "Copy";
   public copyText2:string = "Copy";
   public copyText3:string = "Copy";
+  public helmCommand:string = ` helm repo add litmuschaos https://litmuschaos.github.io/chaos-charts \
+  helm repo update \
+  helm install litmuschaos/litmusInfra --namespace=litmus \
+  `
   constructor() { }
 
   ngOnInit() {
