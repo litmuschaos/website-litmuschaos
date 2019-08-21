@@ -1,10 +1,12 @@
 <div class="section-block pb-3" style="background-color:#23232A; color:#fefefe">
   <div class="container">
     <div class="row">
+      <!--
       <div class="col-md-12 pb-3">
         <div class="row">
+          
           <div class="col-md-12 col-lg-9">
-            <p class="pb-3 text-uppercase font-weight-bold">Interested in our newsletter?</p>
+            <p class="pb-3 text-uppercase font-weight-bold" >Interested in our newsletter?</p>
             <form class="form-inline py-3 py-md-0" novalidate [formGroup]="leadForm" (ngSubmit)="formSubmit()">
               <div class="form-group mr-sm-3">
                 <input type="email" class="form-control form-control-lg newsletter-input" aria-describedby="emailHelp"
@@ -19,7 +21,7 @@
                 data-target="#openebsnewsletterthanks" [disabled]="!leadForm.valid">Subscribe</button>
             </form>
 
-            <!-- <form class="form-view theme2 b-d" novalidate [formGroup]="leadForm" (ngSubmit)="formSubmit()">
+             <form class="form-view theme2 b-d" novalidate [formGroup]="leadForm" (ngSubmit)="formSubmit()">
               <div class="d-flex flex-column justify-content-md-between">
                 <div class="form-group required-control newsletter-input-1">
                   <input maxlength="250" id="agilefield-1" name="first_name" id="agilefield-1" formControlName="name"
@@ -43,25 +45,18 @@
                 <button type="submit" class="btn btn-blue-lg text-uppercase" id="slacksubmit" data-toggle="modal"
                   data-target="#openebsnewsletterthanks" [disabled]="!leadForm.valid">Submit</button>
               </div>
-            </form> -->
+            </form>
           </div>
+          
           <div class="col-md-12 col-lg-3 d-flex justify-content-md-start align-items-md-center justify-content-lg-end align-items-lg-end
             pt-4 pt-md-5 pt-lg-0">
-            <li id="social-icons" style="list-style-type:none">
-              <ul class="d-flex justify-content-center justify-content-md-between" *ngIf="social_icons">
-                <li *ngFor="let social_icon of social_icons" class="pr-md-3 pl-md-0 pr-lg-0 pl-lg-3">
-                  <a href={{social_icon.url}} target="_blank">
-                    <img src={{social_icon.src}} alt={{social_icon.alt}} height="24px;">
-                  </a>
-                </li>
-              </ul>
-            </li>
           </div>
           <div class="col-12 py-2 py-md-4">
             <hr class="w-100" style="border-top: 1.5px solid #fefefe;">
           </div>
         </div>
-      </div>
+      </div> 
+      -->
       <div class="col-md-12 top-footer">
         <div class="row">
           <div class="col-md-12 col-lg-2 pb-md-5 pb-lg-0">
@@ -98,7 +93,7 @@
               <li><a href="https://docs.openebs.io/" target="_blank" class="text-uppercase font-weight-bold">Blog</a>
               </li>
               <li><a routerLink="/join-our-community" class="text-uppercase font-weight-bold">Community</a></li>
-              <li><a href="https://github.com/openebs/" class="text-uppercase font-weight-bold" target="_blank"
+              <li><a href="https://github.com/litmuschaos/" class="text-uppercase font-weight-bold" target="_blank"
                   rel="noopener noreferrer">GitHub</a></li>
             </ul> -->
           </div>
@@ -134,6 +129,15 @@
               </li>
             </ul>
           </li>
+          <li id="social-icons" style="list-style-type:none">
+              <ul class="d-flex justify-content-center justify-content-md-between" *ngIf="social_icons">
+                <li *ngFor="let social_icon of social_icons" class="pr-md-3 pl-md-0 pr-lg-0 pl-lg-3">
+                  <a href={{social_icon.url}} target="_blank">
+                    <img src={{social_icon.src}} alt={{social_icon.alt}} height="24px;">
+                  </a>
+                </li>
+              </ul>
+            </li>
         </ul>
       </div>
     </div>
