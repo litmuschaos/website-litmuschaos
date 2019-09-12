@@ -30,17 +30,26 @@ export class FooterComponent implements OnInit {
     {
       src: 'assets/images/footer/tw.svg',
       alt: 'twitter',
-      url: 'https://twitter.com/LitmusChaos'
+      url: 'https://twitter.com/LitmusChaos',
+      name: 'Twitter'
     },
     {
       src: 'assets/images/footer/ln.svg',
-      alt: 'linkedin',
-      url: 'https://www.linkedin.com/company/openebs/'
+      alt: 'Blog',
+      url: 'https://blog.openebs.io/tagged/litmus',
+      name:"Blog"
     },
     {
       src: 'assets/images/footer/gh.svg',
-      alt: 'github',
-      url: 'https://github.com/litmuschaos'
+      alt: 'Docs',
+      url: 'https://docs.litmuschaos.io/',
+      name: 'Docs'
+    },
+    {
+      src: 'assets/images/footer/gh.svg',
+      alt: 'MayadataHelpCenter',
+      url: 'https://help.mayadata.io',
+      name: 'MayaDataHelpCenter'
     }
   ];
 
