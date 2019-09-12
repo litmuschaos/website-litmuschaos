@@ -41,11 +41,6 @@ export class FooterComponent implements OnInit {
       src: 'assets/images/footer/gh.svg',
       alt: 'github',
       url: 'https://github.com/litmuschaos'
-    },
-    {
-      src: 'assets/images/footer/yt.svg',
-      alt: 'youtube',
-      url: 'https://www.youtube.com/channel/UC3ywadaAUQ1FI4YsHZ8wa0g'
     }
   ];
 
