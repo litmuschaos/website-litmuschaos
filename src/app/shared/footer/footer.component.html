@@ -133,7 +133,7 @@
               <ul class="d-flex justify-content-center justify-content-md-between" *ngIf="social_icons">
                 <li *ngFor="let social_icon of social_icons" class="pr-md-3 pl-md-0 pr-lg-0 pl-lg-3">
                   <a href={{social_icon.url}} target="_blank">
-                    <img src={{social_icon.src}} alt={{social_icon.alt}} height="24px;">
+                    {{social_icon.name}}
                   </a>
                 </li>
               </ul>
