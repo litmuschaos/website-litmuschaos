@@ -9,7 +9,12 @@
   .mobile-view {
     display: none;
   }
-  
+  .set-span-height> span{
+    line-height: 16px !important;
+  }
+  .navbar-brand{
+    padding-bottom: 0.6rem;
+  }
   @media screen and (max-width:990.9998px) {
     .mobile-nav {
       background: #B5B5C0;
