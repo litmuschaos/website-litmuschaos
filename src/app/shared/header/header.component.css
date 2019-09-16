@@ -9,12 +9,28 @@
   .mobile-view {
     display: none;
   }
-  .set-span-height> span{
-    line-height: 16px !important;
+  .github-star{
+    background-color: #B5B5C0;
+    border-radius: 2rem;
+    font-size: 16px;
+    margin-bottom: 0.3rem;
   }
-  .navbar-brand{
-    padding-bottom: 0.6rem;
+  .github-star .github-block{
+    padding: 0.2rem 0.5rem;
+   
   }
+  .github-star .bd-right-github{
+    border-right: 1px solid #ddd
+  }
+  .github-thumup{
+    font-size: 20px;
+    margin-bottom: 0.1rem;
+    margin-left: 1rem;
+  }
+  .github-thumup:hover{
+    font-size: 25px;
+  }
+
   @media screen and (max-width:990.9998px) {
     .mobile-nav {
       background: #B5B5C0;
