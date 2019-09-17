@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   constructor(private http: HttpClient) {
     this.host = window.location.host;
     if ((this.host.toString().indexOf("localhost") + 1) && this.host.toString().indexOf(":")) {
-      this.githubApiurl = "http://localhost:3000/";
+      this.githubApiurl = "http://localhost:3000/github";
 
     } else {
       this.githubApiurl = "/github";
