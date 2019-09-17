@@ -11,6 +11,13 @@
   p{
     color: #23232A
   }
+  .black-color{
+    color:#000;
+  }
+  .black-color:hover{
+    color:#000;
+    text-decoration: none;
+  }
   /* OpenSans and Lato */
   @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,600,700');
   
