@@ -540,7 +540,7 @@
 @media screen and (max-width:575px) {
 
   .hacktoberfest-hero {
-    background-image: url(/assets/images/hacktoberfest2018/hackmoile.png);
+    background-image: url(/assets/images/hacktoberfest2019/hackmoile.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 110vh;
@@ -821,7 +821,7 @@
 
 
   .hacktoberfest-hero {
-    background-image: url(/assets/images/hacktoberfest2018/hacktoberfestmains.png);
+    background-image: url(/assets/images/hacktoberfest2019/hacktoberfestmains.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 110vh;
@@ -1129,7 +1129,7 @@
 @media screen and (min-width:1900px) {
 
   .hacktoberfest-hero {
-    background-image: url(/assets/images/hacktoberfest2018/hacktoberfestmains.png);
+    background-image: url(/assets/images/hacktoberfest2019/hacktoberfestmains.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 85vh;
