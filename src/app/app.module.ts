@@ -34,10 +34,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { HackthonHomeComponent } from './pages/hackthons/hackthon-home/hackthon-home.component';
 import { CommunityComponent } from './components/community/community.component';
 import { ThankyouJoincommunityComponent } from './components/thankyou-joincommunity/thankyou-joincommunity.component';
+import { Hacktoberfest2019Component } from './pages/hackthons/hacktoberfest2019/hacktoberfest2019.component';
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
   { path: "join-our-community", component: CommunityComponent },
+  { path: "hacktoberfest", component: Hacktoberfest2019Component },
   {
     path: 'thankyou-join-our-community',
     component: ThankyouJoincommunityComponent,
@@ -58,7 +60,8 @@ const appRoutes: Routes = [
     HomeComponent,
     HackthonHomeComponent,
     CommunityComponent,
-    ThankyouJoincommunityComponent
+    ThankyouJoincommunityComponent,
+    Hacktoberfest2019Component
   ],
   imports: [
     BrowserModule,
