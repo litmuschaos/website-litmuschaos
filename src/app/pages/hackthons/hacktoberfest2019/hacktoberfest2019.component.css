@@ -69,4 +69,8 @@ a:hover {
     max-width: 100%;
   }
 
+  .section2,
+  .section4 {
+    background: none;
+  }
 }
