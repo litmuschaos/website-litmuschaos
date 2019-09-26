@@ -49,6 +49,19 @@ a:hover {
   max-width: 350px;
 }
 
+
+
+.colored-border-bottom {
+  text-align: center;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(0.25turn, rgba(255, 249, 34), rgba(255, 0, 128), rgba(56, 2, 155, 0));
+  border-image-slice: 1;
+  width: fit-content;
+}
+
 @media screen and (max-width:768px) {
 
   .laptop,
