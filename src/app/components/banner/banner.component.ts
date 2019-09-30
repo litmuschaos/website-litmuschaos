@@ -10,8 +10,8 @@ export class BannerComponent implements OnInit {
   public hide = false;
 
   notification = {
-    notification_content: 'Get commercial support for Litmus',
-    notification_url: 'https://mayadata.io/mdap'
+    notification_content: 'MayaData is celebrating Hacktoberfest 2019 with OpenEBS and Litmus',
+    notification_url: 'https://mayadata.io/hacktoberfest'
   };
   constructor() { }
 

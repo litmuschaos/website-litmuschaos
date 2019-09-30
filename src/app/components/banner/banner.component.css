@@ -1,130 +1,132 @@
 .banner-info {
-    transition: background-color 0.5s ease-out;
-    background-color: #1BE0E6;
-    /* background: #262b3e; */
-    /* fallback for old browsers */
-  }
-  
-  /* .banner-info:hover {
+  transition: background-color 0.5s ease-out;
+  background-color: #1BE0E6;
+  /* background: #262b3e; */
+  /* fallback for old browsers */
+}
+
+/* .banner-info:hover {
     background-color: #CE5F00;
   } */
-  
-  .banner-info .content {
-    color: #23232A;;
-    text-align: center;
-  }
-  
-  .close-btn {
-    position: relative;
-    margin-top: -125px;
-    margin-right: 16px;
-    color: #ffffff;
-  }
-  
-  .close-btn-mob {
-    position: relative;
-    margin-top: -80px;
-    margin-right: 0px;
-    color: #ffffff;
-  }
-  
-  .pointer-cursor {
-    cursor: pointer;
-  }
-  
-  .banner {
-    min-height: 30px;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .hidebanner {
+
+.banner-info .content {
+  color: #23232A;
+  ;
+  text-align: center;
+}
+
+.close-btn {
+  position: relative;
+  margin-top: -125px;
+  margin-right: 16px;
+  color: #ffffff;
+}
+
+.close-btn-mob {
+  position: relative;
+  margin-top: -80px;
+  margin-right: 0px;
+  color: #ffffff;
+}
+
+.pointer-cursor {
+  cursor: pointer;
+}
+
+.banner {
+  min-height: 30px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.hidebanner {
+  display: none;
+}
+
+.banner a:hover {
+  text-decoration: none;
+}
+
+.banner .content {
+  font-size: 16px;
+  padding: 15px 0;
+}
+
+.bg-strip {
+  background-color: #f7f7f7;
+  color: #848484;
+}
+
+.bg-strip ul {
+  margin-bottom: 0px;
+  min-height: 40px;
+}
+
+.desktop1 {
+  box-sizing: border-box;
+}
+
+.badge-secondary {
+  background-color: #33F6FB;
+  color: #23232A;
+}
+
+.notification {
+  color: #23232A;
+}
+
+.notification:hover {
+  text-decoration: none;
+}
+
+.learn-more-link {
+  transition: margin-right 0.5s ease;
+  margin-right: 0px;
+}
+
+.learn-more-link:hover {
+  margin-right: 5px;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.banner-font-size {
+  font-size: 14px;
+}
+
+.banner-height {
+  height: 30px;
+}
+
+@media screen and (max-width:767px) {
+  .desktop1 {
     display: none;
   }
-  
-  .banner a:hover {
-    text-decoration: none;
-  }
-  
-  .banner .content {
-    font-size: 16px;
-    padding: 15px 0;
-  }
-  
-  .bg-strip {
-    background-color: #f7f7f7;
-    color: #848484;
-  }
-  
-  .bg-strip ul {
-    margin-bottom: 0px;
-    min-height: 40px;
-  }
-  
-  .desktop1 {
-    box-sizing: border-box;
-  }
-  
-  .badge-secondary {
-    background-color: #33F6FB;
-    color: #23232A;
-  }
-  .notification{
-    color: #23232A;
-  }
-  .notification:hover {
-    text-decoration: none;
-  }
-  
-  .learn-more-link {
-    transition: margin-right 0.5s ease;
-    margin-right: 0px;
-  }
-  
-  .learn-more-link:hover {
-    margin-right: 5px;
-  }
-  
-  a {
-    color: #fff;
-  }
-  
-  a:hover {
-    text-decoration: none;
-    color: #fff;
-  }
-  
+
   .banner-font-size {
     font-size: 14px;
   }
-  
+}
+
+@media screen and (max-width:400px) {
+  .desktop1 {
+    display: none;
+  }
+
+  .banner-font-size {
+    font-size: 13px;
+  }
+
   .banner-height {
-    height: 40px;
+    height: 50px;
   }
-  
-  @media screen and (max-width:767px) {
-    .desktop1 {
-      display: none;
-    }
-  
-    .banner-font-size {
-      font-size: 14px;
-    }
-  }
-  
-  @media screen and (max-width:400px) {
-    .desktop1 {
-      display: none;
-    }
-  
-    .banner-font-size {
-      font-size: 13px;
-    }
-  
-    .banner-height {
-      height: 50px;
-    }
-  
-  }
-  
+
+}
