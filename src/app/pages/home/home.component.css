@@ -150,7 +150,7 @@ pre.code label {
 pre.code code {
   font-family: "Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
   display: block;
-  margin: 0 0 0 60px;
+  margin: 0 0 0 0px;
   padding: 15px 16px 14px;
   border-left: 1px solid #555;
   overflow-x: auto;
@@ -159,7 +159,7 @@ pre.code code {
   color: #ddd;
 }
 
-pre::after {
+/* pre::after {
   content: "Double Click to Select";
   padding: 0;
   width: auto;
@@ -173,7 +173,7 @@ pre::after {
   overflow: hidden;
   -webkit-backface-visibility: hidden;
   transition: all 0.3s ease;
-}
+} */
 
 pre:hover::after {
   opacity: 0;
@@ -200,6 +200,13 @@ pre.code-jquery code {
   color: #4dd0e1;
 }
 
+.join-our-community {
+  background-image: url(/assets/images/dots.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0px
+}
+
 
 @media screen and (max-width: 768px) {
   .hero-bg {
@@ -207,6 +214,11 @@ pre.code-jquery code {
     height: auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .join-our-community {
+    background: none;
+    padding: 0px 0px
   }
 
   .section-heading {
@@ -249,5 +261,9 @@ pre.code-jquery code {
 
   code {
     margin-left: 0rem;
+  }
+
+  .feature-img {
+    max-width: 75%;
   }
 }
