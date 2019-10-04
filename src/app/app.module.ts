@@ -81,6 +81,7 @@ const appRoutes: Routes = [
     NgxSmartModalService,
     JoincommunityGuard
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
