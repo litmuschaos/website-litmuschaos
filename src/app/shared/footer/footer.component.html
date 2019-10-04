@@ -60,17 +60,20 @@
       <div class="col-md-12 top-footer">
         <div class="row">
           <div class="col-md-12 col-lg-2 pb-md-5 pb-lg-0">
-            <p class="pb- 4 p-md-0"><img src="assets/images/litmuslogo/litmusicon.svg" style="height:40px"
-                alt="litmus"></p>
+            <p class="pb- 4 p-md-0"><img src="assets/images/litmuslogo/litmusicon.svg" style="height:40px" alt="litmus">
+            </p>
           </div>
           <div class="col-md-3 col-lg-2 pt-4 pt-md-0">
             <ul>
               <li><a href="#resources" class="text-uppercase font-weight-bold">Resources</a></li>
-              <li><a href="https://docs.litmuschaos.io/" target="_blank" class="text-uppercase font-weight-bold">Docs</a>
+              <li><a href="https://docs.litmuschaos.io/" target="_blank"
+                  class="text-uppercase font-weight-bold">Docs</a>
               </li>
-              <li><a href="https://blog.openebs.io/tagged/litmus" target="_blank" class="text-uppercase font-weight-bold">Blog</a>
+              <li><a href="https://blog.mayadata.io/tag/litmus" target="_blank"
+                  class="text-uppercase font-weight-bold">Blog</a>
               </li>
-              <li><a href="/join-our-community" class="text-uppercase font-weight-bold">Community</a></li>
+              <li><a href="https://kubernetes.slack.com/messages/CNXNB0ZTN"
+                  class="text-uppercase font-weight-bold">Community</a></li>
               <li><a href="https://github.com/litmuschaos" class="text-uppercase font-weight-bold" target="_blank"
                   rel="noopener noreferrer">GitHub</a></li>
             </ul>
@@ -130,14 +133,14 @@
             </ul>
           </li>
           <li id="social-icons" style="list-style-type:none">
-              <ul class="d-flex justify-content-center justify-content-md-between" *ngIf="social_icons">
-                <li *ngFor="let social_icon of social_icons" class="pr-md-3 pl-md-0 pr-lg-0 pl-lg-3">
-                  <a href={{social_icon.url}} target="_blank">
-                    {{social_icon.name}}
-                  </a>
-                </li>
-              </ul>
-            </li>
+            <ul class="d-flex justify-content-center justify-content-md-between" *ngIf="social_icons">
+              <li *ngFor="let social_icon of social_icons" class="pr-md-3 pl-md-0 pr-lg-0 pl-lg-3">
+                <a href={{social_icon.url}} target="_blank">
+                  {{social_icon.name}}
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
