@@ -26,7 +26,7 @@ export class FooterComponent implements OnInit {
   copyright_text = `Copyright &copy; ${(new Date()).getFullYear()} MayaData Inc.`;
 
   social_icons = [
-    
+
     {
       src: 'assets/images/footer/tw.svg',
       alt: 'twitter',
@@ -36,8 +36,8 @@ export class FooterComponent implements OnInit {
     {
       src: 'assets/images/footer/ln.svg',
       alt: 'Blog',
-      url: 'https://blog.openebs.io/tagged/litmus',
-      name:"Blog"
+      url: 'https://blog.mayadata.io/tag/litmus',
+      name: "Blog"
     },
     {
       src: 'assets/images/footer/gh.svg',

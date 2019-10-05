@@ -266,4 +266,8 @@ pre.code-jquery code {
   .feature-img {
     max-width: 75%;
   }
+
+  .display-none-on-mob {
+    display: none;
+  }
 }
