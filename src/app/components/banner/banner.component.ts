@@ -10,8 +10,8 @@ export class BannerComponent implements OnInit {
   public hide = false;
 
   notification = {
-    notification_content: 'MayaData is celebrating Hacktoberfest 2019 with OpenEBS and Litmus',
-    notification_url: 'https://mayadata.io/hacktoberfest'
+    notification_content: 'REGISTER for FREE Kubernetes and OpenEBS Technical Workshop at Kubecon',
+    notification_url: 'https://go.mayadata.io/openebs-meet-kubecon-sandiego'
   };
   constructor() { }
 
