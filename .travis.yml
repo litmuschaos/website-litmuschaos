@@ -14,9 +14,9 @@ before_script:
 script:
 - ng build --prod
 after_success:
-- if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then export REPO=mayadata/www-litmuschaos-io;
+- if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then export REPO=litmuschaos/www-litmuschaos-io;
    docker login -u "$DOCKER_USER" -p "$DOCKER_PASS" && docker build -t $REPO:$COMMIT . && docker push $REPO; 
   fi
-- if [ "$TRAVIS_BRANCH" = "staging" -a "$TRAVIS_PULL_REQUEST" != "false" ]; then export REPO=mayadata/www-staging-litmuschaos-io;
+- if [ "$TRAVIS_BRANCH" = "staging" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then export REPO=litmuschaos/www-staging-litmuschaos-io;
    docker login -u "$DOCKER_USER" -p "$DOCKER_PASS" && docker build -t $REPO:$TRAVIS_BRANCH-$COMMIT . && docker push $REPO; 
   fi
