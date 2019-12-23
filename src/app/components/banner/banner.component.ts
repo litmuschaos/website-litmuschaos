@@ -9,10 +9,7 @@ export class BannerComponent implements OnInit {
 
   public hide = false;
 
-  notification = {
-    notification_content: 'REGISTER for FREE Kubernetes and OpenEBS Technical Workshop at Kubecon',
-    notification_url: 'https://go.mayadata.io/openebs-meet-kubecon-sandiego'
-  };
+  notification: null;
   constructor() { }
 
   ngOnInit() {
