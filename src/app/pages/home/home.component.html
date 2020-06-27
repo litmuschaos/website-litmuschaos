@@ -147,7 +147,7 @@
       <div id="community-buttons" class="col-12">
         <span *ngFor="let comm of communities" class="p-3">
           <a href={{comm.url}} target="_blank">
-            <button class="btn border border-primary text-center"><img src={{comm.src}} alt={{comm.alt}} id="icon"> {{comm.name}}</button>
+            <button id="comm-btn" class="btn border border-primary text-center"><img src={{comm.src}} alt={{comm.alt}} id="icon"> {{comm.name}}</button>
           </a>
         </span>
       </div>
