@@ -236,6 +236,10 @@ pre.code-jquery code {
   flex-wrap: wrap;
 }
 
+#comm-btn {
+  width: 10rem;
+}
+
 @media screen and (max-width: 768px) {
   .heading {
     padding-left: 1.3rem;
