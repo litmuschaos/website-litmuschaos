@@ -10,7 +10,10 @@
   #footer-content {
     display: flex;
     flex-direction: column;
-    margin: 3rem;
+    margin: 0;
+  }
+  .copyright {
+    width: 8rem;
   }
 }
 
@@ -19,6 +22,11 @@
 }
 #logo {
   width: 10em;
+  margin-bottom: 1rem;
+}
+
+.copyright {
+  width: 20rem;
   margin-bottom: 1rem;
 }
 

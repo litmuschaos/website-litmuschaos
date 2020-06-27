@@ -1,16 +1,33 @@
 <section class="hero-section hero-bg">
-  <div class="container ">
-    <div class="row  align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
       <div class="col-md-6 hero-sec">
         <div style="max-width:700px">
           <img class="hero-section-litmus-logo" src="assets/images/litmuslogo/litmus-white.svg" alt="Litmus">
           <h2 class="hero-heading">Cloud-Native Chaos Engineering <br class="display-none-on-mob" />for<br
               class="display-none-on-mob" /> Kubernetes Developers
             and SREs</h2>
-          <a href="https://docs.litmuschaos.io" target="_blank"> <button class="btn btn-lg hero-btn"
-              style="color:#0063ff;"> Get Started > </button></a>
+          <a href="https://docs.litmuschaos.io" target="_blank"> <button class="btn btn-lg hero-btn font-weight-bold d-flex align-items-center"
+              style="color:#0063ff;"> Get Started <img id="icon" src="assets/images/icons/play.svg" alt="go"></button></a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="pd-t-b-all">
+  <div class="container">
+    <h1 class="section-heading pb-5 text-center">What is Litmus?</h1>
+    <h4 class="text-center mb-4">"Create, manage, monitor Chaos on Kubernetes"</h4>
+    <h5 class="text-center">LitmusChaos is an open source cloud native Chaos Engineering framework for Kubernetes. It provides custom APIs (via CRDs) to orchestrate Chaos on your clusters while providing readily usable, off-the-shelf Chaos experiments via the ChaosHub. Litmus is highly extensible and integrates with other tools to enable the creation of custom experiments. Kubernetes developers & SREs use Litmus to manage Chaos in a declarative manner and find weaknesses in their infrastructure.</h5>
+  </div>
+</section>
+
+<section class="pd-t-b-all">
+  <div class="container">
+    <h1 class="section-heading pb-5 text-center">Why Litmus?</h1>
+    <div class="d-flex justify-content-center">
+      <img class="whylitmus" src="assets/images/whylitmus/whylitmus.png" alt="why litmus">
     </div>
   </div>
 </section>
@@ -25,9 +42,9 @@
         <div class="card border-0 pt-3">
           <div class="card-body p-0">
             <h4 class="mb-3">Chaos For Kubernetes</h4>
-            <p class="card-text">Litmus provides a complete toolset to practice chaos engineering on Kubernetes in a
+            <!-- <p class="card-text">Litmus provides a complete toolset to practice chaos engineering on Kubernetes in a
               cloud-native way. Litmus offers chaos engineering as a natural extension of development and operations.
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
@@ -36,8 +53,8 @@
         <div class="card border-0 pt-3">
           <div class="card-body p-0">
             <h4 class="mb-3">Declarative Chaos</h4>
-            <p class="card-text">Bring GitOps into chaos engineering. Define chaos, run chaos and observe chaos using
-              Kubernetes Custom Resources.</p>
+            <!-- <p class="card-text">Bring GitOps into chaos engineering. Define chaos, run chaos and observe chaos using
+              Kubernetes Custom Resources.</p> -->
           </div>
         </div>
       </div>
@@ -47,8 +64,8 @@
         <div class="card border-0 pt-3">
           <div class="card-body p-0">
             <h4 class="mb-3">ChaosHub</h4>
-            <p class="card-text">ChaosHub brings all the reusable chaos experiments together. Application developers
-              and SRE share their chaos experiences for others to reuse.</p>
+            <!-- <p class="card-text">ChaosHub brings all the reusable chaos experiments together. Application developers
+              and SRE share their chaos experiences for others to reuse.</p> -->
           </div>
         </div>
       </div>
@@ -57,9 +74,9 @@
         <div class="card border-0">
           <div class="card-body p-0 pt-3">
             <h4 class="mb-3">Pluggable Chaos</h4>
-            <p class="card-text">Litmus toolset has a native chaos library for chaos injection. In addition, you can use
+            <!-- <p class="card-text">Litmus toolset has a native chaos library for chaos injection. In addition, you can use
               other chaos tools such as Pumba and PowerfulSeal to be part of Litmus framework and take advantage of
-              their chaos features.</p>
+              their chaos features.</p> -->
           </div>
         </div>
       </div>
@@ -82,21 +99,26 @@
       <div class="col-12">
         <h2 class="section-heading pb-4 h1 text-center">Get started with Litmus</h2>
         <div>
+          <p class="pl-4">Install Litmus</p>
           <div id='wrapper'>
             <pre
               class='code code-yaml'><code>kubectl apply -f https://litmuschaos.github.io/pages/litmus-operator-latest.yaml</code></pre>
           </div>
         </div>
-        <div class="text-center pt-4 pb-5">
-          <p>Once you install Litmus, download a chaos experiment from ChaosHub and inject chaos. See <a
+        <div class="pt-4 pb-5">
+          <p class="pl-4">Once you install Litmus, download a chaos experiment from ChaosHub and inject chaos. See <a
               href="https://docs.litmuschaos.io/" target="_blank">example</a>.</p>
+          <div id='wrapper'>
+            <pre
+              class='code code-yaml'><code>kubectl apply -f https://hub.litmuschaos.io/api/chaos/1.5.0?file=charts/generic/experiments.yaml</code></pre>
+          </div>
         </div>
-        <div class="row d-flex">
+        <!-- <div class="row d-flex">
           <div class="col-12 m-auto" style="max-width: 700px;">
             <a href="https://asciinema.org/a/G9TcXpgikLuGTBY7btIUNSuWN" target="_blank"><img
                 src="https://asciinema.org/a/G9TcXpgikLuGTBY7btIUNSuWN.svg" class="img-fluid" /></a>
           </div>
-        </div>
+        </div> -->
         <!-- <div>
           <asciinema-player src="assets/cast/litmus-demo.cast" cols="132" rows="17"></asciinema-player>
         </div> -->
@@ -107,8 +129,8 @@
 
 <section class="pt-5">
   <div class="container d-flex flex-column align-items-center">
-    <img src="assets/images/cncf/cncf-color.svg" alt="CNCF logo" id="logo">
-    <p>We are a <a href="https://www.cncf.io/" target="_">Cloud Native Computing Foundation</a> sandbox project.</p>
+    <img src="assets/images/cncf/cncf-color.svg" alt="CNCF logo" id="cncf-logo">
+    <p class="text-center">We are a <a href="https://www.cncf.io/" target="_">Cloud Native Computing Foundation</a> sandbox project.</p>
   </div>
 </section>
 
@@ -122,7 +144,7 @@
       <div id="community-buttons" class="col-12">
         <span *ngFor="let comm of communities" class="p-3">
           <a href={{comm.url}} target="_blank">
-            <button class="btn btn-primary text-center">{{comm.name}}</button>
+            <button class="btn border border-primary text-center"><img src={{comm.src}} alt={{comm.alt}} id="icon"> {{comm.name}}</button>
           </a>
         </span>
       </div>
