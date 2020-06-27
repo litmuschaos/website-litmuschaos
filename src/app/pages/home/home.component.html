@@ -1,11 +1,10 @@
 <section class="hero-section hero-bg">
-  <div class="container">
+  <div>
     <div class="row align-items-center">
       <div class="col-md-6 hero-sec">
-        <div style="max-width:700px">
+        <div class="heading" style="max-width:700px">
           <img class="hero-section-litmus-logo" src="assets/images/litmuslogo/litmus-white.svg" alt="Litmus">
-          <h2 class="hero-heading">Cloud-Native Chaos Engineering <br class="display-none-on-mob" />for<br
-              class="display-none-on-mob" /> Kubernetes Developers
+          <h2 class="hero-heading">Cloud-Native Chaos Engineering <br>for<br> Kubernetes Developers
             and SREs</h2>
           <a href="https://docs.litmuschaos.io" target="_blank"> <button class="btn btn-lg hero-btn font-weight-bold d-flex align-items-center"
               style="color:#0063ff;"> Get Started <img id="icon" src="assets/images/icons/play.svg" alt="go"></button></a>
@@ -17,17 +16,22 @@
 
 <section class="pd-t-b-all">
   <div class="container">
-    <h1 class="section-heading pb-5 text-center">What is Litmus?</h1>
-    <h4 class="text-center mb-4">"Create, manage, monitor Chaos on Kubernetes"</h4>
-    <h5 class="text-center">LitmusChaos is an open source cloud native Chaos Engineering framework for Kubernetes. It provides custom APIs (via CRDs) to orchestrate Chaos on your clusters while providing readily usable, off-the-shelf Chaos experiments via the ChaosHub. Litmus is highly extensible and integrates with other tools to enable the creation of custom experiments. Kubernetes developers & SREs use Litmus to manage Chaos in a declarative manner and find weaknesses in their infrastructure.</h5>
+    <h1 class="section-heading pb-5 text-center">Create, Manage and Monitor Chaos on Kubernetes</h1>
+    <!-- <h4 class="text-center mb-4 text-primary">Create, manage and monitor Chaos on Kubernetes</h4> -->
+    <p id="info-text" class="text-center">LitmusChaos is an open source cloud-native Chaos Engineering framework. It provides custom APIs (via CRDs) to orchestrate chaos on Kubernetes while providing readily usable, off-the-shelf chaos experiments via ChaosHub. Litmus is highly extensible and integrates with other tools to enable the creation of custom experiments. Kubernetes developers & SREs use Litmus to manage chaos in a declarative manner and find weaknesses in their applications and infrastructure.</p>
+    <!-- <div class="d-flex justify-content-center mt-5">
+      <img class="whylitmus" src="assets/images/whatislitmus/whatislitmus.png" alt="About Litmus">
+    </div> -->
   </div>
 </section>
 
 <section class="pd-t-b-all">
   <div class="container">
-    <h1 class="section-heading pb-5 text-center">Why Litmus?</h1>
+    <h1 class="section-heading pb-5 text-center">Principles of Cloud-Native Chaos</h1>
     <div class="d-flex justify-content-center">
-      <img class="whylitmus" src="assets/images/whylitmus/whylitmus.png" alt="why litmus">
+      <a class="d-flex justify-content-center" target="_" href="https://www.cncf.io/blog/2019/11/06/cloud-native-chaos-engineering-enhancing-kubernetes-application-resiliency/">
+        <img class="whylitmus" src="assets/images/whylitmus/whylitmus.png" alt="why litmus">
+      </a>
     </div>
   </div>
 </section>
@@ -41,7 +45,7 @@
           alt="Choas For Kubernetes">
         <div class="card border-0 pt-3">
           <div class="card-body p-0">
-            <h4 class="mb-3">Chaos For Kubernetes</h4>
+            <h4 class="mb-3">Chaos Operator</h4>
             <!-- <p class="card-text">Litmus provides a complete toolset to practice chaos engineering on Kubernetes in a
               cloud-native way. Litmus offers chaos engineering as a natural extension of development and operations.
             </p> -->
@@ -52,7 +56,7 @@
         <img class="img-fluid feature-img" src="assets/images/features/declarative-chaos.png" alt="Declarative Chaos">
         <div class="card border-0 pt-3">
           <div class="card-body p-0">
-            <h4 class="mb-3">Declarative Chaos</h4>
+            <h4 class="mb-3">Chaos Scheduler</h4>
             <!-- <p class="card-text">Bring GitOps into chaos engineering. Define chaos, run chaos and observe chaos using
               Kubernetes Custom Resources.</p> -->
           </div>
@@ -84,7 +88,7 @@
   </div>
 </section>
 
-<section class="py-5">
+<section class="pt-5">
   <a href="https://hub.litmuschaos.io" target="_blank">
     <picture>
       <source media="(max-width: 767.99998px)" srcset="assets/images/chaos-hub-mob.png">
@@ -93,7 +97,7 @@
   </a>
 </section>
 
-<section>
+<section class="getting-started">
   <div class="container">
     <div class="row py-5">
       <div class="col-12">
@@ -138,8 +142,7 @@
   <div class="container">
     <div class="row join-our-community">
       <div class="col-12 pb-5">
-        <h2 class="section-heading pb-4 h1 text-center">Join Litmus Community</h2>
-        <h4 class="text-center">Litmus community is on Kubernetes Slack.</h4>
+        <h2 class="section-heading pb-4 h1 text-center">Join the Litmus Community</h2>
       </div>
       <div id="community-buttons" class="col-12">
         <span *ngFor="let comm of communities" class="p-3">
