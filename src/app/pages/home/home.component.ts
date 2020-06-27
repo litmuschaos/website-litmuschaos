@@ -15,6 +15,34 @@ export class HomeComponent implements OnInit {
   `
   constructor() { }
 
+  communities = [
+    {
+      src: 'assets/images/footer/sl.svg',
+      alt: 'slack',
+      url: 'https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN',
+      name: 'Join #litmus Channel'
+    },
+    {
+      src: 'assets/images/footer/gh.svg',
+      alt: 'github',
+      url: 'https://github.com/litmuschaos',
+      name: 'Github'
+    },
+    {
+      src: 'assets/images/footer/tw.svg',
+      alt: 'twitter',
+      url: 'https://twitter.com/LitmusChaos',
+      name: 'Twitter'
+    },
+    {
+      src: 'assets/images/footer/md.svg',
+      alt: 'Blog',
+      url: 'https://dev.to/t/litmuschaos/latest',
+      name: 'Blog'
+    },
+  ];
+
+
   ngOnInit() {
     $('i[rel="pre"]').replaceWith(function () {
       return $('<pre><code>' + $(this).html() + '</code></pre>');

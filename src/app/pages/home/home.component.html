@@ -105,19 +105,26 @@
   </div>
 </section>
 
-<section class="py-5">
+<section class="pt-5">
+  <div class="container d-flex flex-column align-items-center">
+    <img src="assets/images/cncf/cncf-color.svg" alt="CNCF logo" id="logo">
+    <p>We are a <a href="https://www.cncf.io/" target="_">Cloud Native Computing Foundation</a> sandbox project.</p>
+  </div>
+</section>
+
+<section class="pt-5">
   <div class="container">
     <div class="row join-our-community">
       <div class="col-12 pb-5">
         <h2 class="section-heading pb-4 h1 text-center">Join Litmus Community</h2>
         <h4 class="text-center">Litmus community is on Kubernetes Slack.</h4>
       </div>
-      <div class="col-12">
-        <div class="d-flex justify-content-center align-items-center flex-column">
-          <a href="https://kubernetes.slack.com/messages/CNXNB0ZTN" target="_blank">
-            <button class="btn btn-primary text-center">Join #litmus Channel</button>
+      <div id="community-buttons" class="col-12">
+        <span *ngFor="let comm of communities" class="p-3">
+          <a href={{comm.url}} target="_blank">
+            <button class="btn btn-primary text-center">{{comm.name}}</button>
           </a>
-        </div>
+        </span>
       </div>
     </div>
   </div>
