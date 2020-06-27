@@ -52,9 +52,9 @@ export class FooterComponent implements OnInit {
     },
     {
       src: 'assets/images/footer/md.svg',
-      alt: 'Youtube',
+      alt: 'YouTube',
       url: 'https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw ',
-      name: 'Youtube'
+      name: 'YouTube'
     },
   ];
 

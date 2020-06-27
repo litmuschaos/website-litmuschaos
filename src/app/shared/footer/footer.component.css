@@ -4,6 +4,12 @@
 #footer-content {
   margin: 0 10rem;
   color: white;
+  font-weight: 400;
+}
+
+#info-text {
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 @media only screen and (max-width: 630px) {
@@ -31,13 +37,13 @@
 }
 
 #row-header {
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
 a {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   color: white;
 }
 

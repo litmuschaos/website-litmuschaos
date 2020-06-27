@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
       src: 'assets/images/community/youtube-3.svg',
       alt: 'Youtube',
       url: 'https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw ',
-      name: 'Youtube'
+      name: 'YouTube'
     },
   ];
 

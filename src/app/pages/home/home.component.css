@@ -18,6 +18,11 @@
   margin: 0 0.5rem;
 }
 
+#info-text {
+  line-height: 1.8;
+  font-size: 1.12rem;
+}
+
 .hero-sec {
   height: 480px;
   /* background-color: rgb(0, 99, 255, 0.6); */
@@ -48,7 +53,7 @@
 }
 
 .whylitmus {
-  width: 60%;
+  width: 70%;
 }
 
 .what-is-litmus-icons {
@@ -61,6 +66,9 @@
   width: 45px;
 }
 
+.getting-started {
+  background-color: whitesmoke;
+}
 .why-litmus-img {
   height: 248px;
   width: auto;
@@ -229,6 +237,9 @@ pre.code-jquery code {
 }
 
 @media screen and (max-width: 768px) {
+  .heading {
+    padding-left: 1.3rem;
+  }
   .whylitmus {
     width: 100%;
   }
