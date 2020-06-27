@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { EventsService } from '../../services/events/events.service';
-import { Router, NavigationEnd } from '@angular/router';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NavigationEnd, Router } from '@angular/router';
 import { AgileService } from '../../services/agile.service';
+import { EventsService } from '../../services/events/events.service';
 
 @Component({
   selector: 'app-footer',
@@ -25,8 +25,19 @@ export class FooterComponent implements OnInit {
 
   copyright_text = `Copyright &copy; ${(new Date()).getFullYear()} MayaData Inc.`;
 
-  social_icons = [
-
+  communities = [
+    {
+      src: 'assets/images/footer/sl.svg',
+      alt: 'slack',
+      url: 'https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN',
+      name: 'Slack'
+    },
+    {
+      src: 'assets/images/footer/gh.svg',
+      alt: 'github',
+      url: 'https://github.com/litmuschaos',
+      name: 'Github'
+    },
     {
       src: 'assets/images/footer/tw.svg',
       alt: 'twitter',
@@ -34,23 +45,26 @@ export class FooterComponent implements OnInit {
       name: 'Twitter'
     },
     {
-      src: 'assets/images/footer/ln.svg',
+      src: 'assets/images/footer/md.svg',
       alt: 'Blog',
-      url: 'https://blog.mayadata.io/tag/litmus',
-      name: "Blog"
+      url: 'https://dev.to/t/litmuschaos/latest',
+      name: 'Blog'
+    },
+  ];
+
+  resources = [
+    {
+      name: 'Docs',
+      url: 'https://docs.litmuschaos.io/'
     },
     {
-      src: 'assets/images/footer/gh.svg',
-      alt: 'Docs',
-      url: 'https://docs.litmuschaos.io/',
-      name: 'Docs'
+      name: 'FAQ',
+      url: 'https://docs.litmuschaos.io/docs/faq-general/'
     },
     {
-      src: 'assets/images/footer/gh.svg',
-      alt: 'MayadataHelpCenter',
-      url: 'https://help.mayadata.io',
-      name: 'MayaDataHelpCenter'
-    }
+      name: 'Issues',
+      url: 'https://github.com/litmuschaos/litmus/issues'
+    },
   ];
 
   ngOnInit() {

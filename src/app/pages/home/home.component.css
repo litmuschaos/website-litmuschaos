@@ -4,7 +4,7 @@
 }
 
 .hero-bg {
-  background-image: url("/assets/images/litmus-bg.png");
+  background-image: url("/assets/images/litmus-bg2.png");
   background-position: center;
   /* Center the image */
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
 
 .hero-sec {
   height: 480px;
-  background-color: rgb(0, 99, 255, 0.6);
+  /* background-color: rgb(0, 99, 255, 0.6); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,9 +204,19 @@ pre.code-jquery code {
   background-image: url(/assets/images/dots.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 120px 0px
+  padding-bottom: 10rem;
 }
 
+#logo {
+  width: 25em;
+  margin-bottom: 1rem;
+}
+
+#community-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 @media screen and (max-width: 768px) {
   .hero-bg {
