@@ -36,7 +36,7 @@ export class FooterComponent implements OnInit {
       src: 'assets/images/footer/gh.svg',
       alt: 'github',
       url: 'https://github.com/litmuschaos',
-      name: 'Github'
+      name: 'GitHub'
     },
     {
       src: 'assets/images/footer/tw.svg',
@@ -49,6 +49,12 @@ export class FooterComponent implements OnInit {
       alt: 'Blog',
       url: 'https://dev.to/t/litmuschaos/latest',
       name: 'Blog'
+    },
+    {
+      src: 'assets/images/footer/md.svg',
+      alt: 'Youtube',
+      url: 'https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw ',
+      name: 'Youtube'
     },
   ];
 

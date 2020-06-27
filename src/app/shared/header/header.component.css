@@ -6,6 +6,14 @@
     display: block;
   }
   
+  #logo {
+    margin-left: 5rem;
+  }
+
+  #navbarSupportedContent {
+    font-weight: bold;
+  }
+
   .mobile-view {
     display: none;
   }
@@ -46,6 +54,9 @@
   
     .mobile-view {
       display: block;
+    }
+    #logo {
+      margin-left: 0;
     }
   }
   
