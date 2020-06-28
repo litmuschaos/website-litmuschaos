@@ -15,6 +15,40 @@ export class HomeComponent implements OnInit {
   `
   constructor() { }
 
+  communities = [
+    {
+      src: 'assets/images/community/slack-new-logo.svg',
+      alt: 'slack',
+      url: 'https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN',
+      name: 'Slack'
+    },
+    {
+      src: 'assets/images/community/github-1.svg',
+      alt: 'github',
+      url: 'https://github.com/litmuschaos',
+      name: 'GitHub'
+    },
+    {
+      src: 'assets/images/community/twitter-3.svg',
+      alt: 'twitter',
+      url: 'https://twitter.com/LitmusChaos',
+      name: 'Twitter'
+    },
+    {
+      src: 'assets/images/community/devto.svg',
+      alt: 'DEV',
+      url: 'https://dev.to/t/litmuschaos/latest',
+      name: 'DEV'
+    },
+    {
+      src: 'assets/images/community/youtube-3.svg',
+      alt: 'Youtube',
+      url: 'https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw ',
+      name: 'YouTube'
+    },
+  ];
+
+
   ngOnInit() {
     $('i[rel="pre"]').replaceWith(function () {
       return $('<pre><code>' + $(this).html() + '</code></pre>');
