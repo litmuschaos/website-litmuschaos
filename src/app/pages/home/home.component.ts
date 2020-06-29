@@ -48,6 +48,29 @@ export class HomeComponent implements OnInit {
     },
   ];
 
+  adopters = [
+    {
+      name: 'Zebrium',
+      src: 'assets/images/adopters/zebrium.webp',
+      width: '200',
+    },
+    {
+      name: 'OpenEBS',
+      src: 'assets/images/adopters/openebs-alternative.png',
+      width: '150',
+    },
+    {
+      name: 'Wipro',
+      src: 'assets/images/adopters/wipro.png',
+      width: '100',
+    },
+    {
+      name: 'Intuit',
+      src: 'assets/images/adopters/intuit.webp',
+      width: '150',
+    },
+  ]
+
 
   ngOnInit() {
     $('i[rel="pre"]').replaceWith(function () {
