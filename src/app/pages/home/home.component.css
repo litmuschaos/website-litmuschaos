@@ -67,7 +67,7 @@
 }
 
 .getting-started {
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
 }
 .why-litmus-img {
   height: 248px;
@@ -244,11 +244,19 @@ pre.code-jquery code {
   flex-wrap: wrap;
 }
 
+#adopter-section {
+  background-color: #edf0fa;
+  /* background-color: whitesmoke; */
+}
+
 #comm-btn {
   width: 10rem;
 }
 
 @media screen and (max-width: 768px) {
+  #adopters {
+    flex-direction: column;
+  }
   .heading {
     padding-left: 1.3rem;
   }

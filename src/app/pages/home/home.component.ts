@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'OpenEBS',
       src: 'assets/images/adopters/openebs-alternative.png',
-      width: '150',
+      width: '200',
     },
     {
       name: 'Wipro',
@@ -67,7 +67,7 @@ export class HomeComponent implements OnInit {
     {
       name: 'Intuit',
       src: 'assets/images/adopters/intuit.webp',
-      width: '150',
+      width: '120',
     },
   ]
 

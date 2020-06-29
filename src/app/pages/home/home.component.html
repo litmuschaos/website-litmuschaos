@@ -131,14 +131,14 @@
   </div>
 </section>
 
-<section class="py-5">
+<section id="adopter-section" class="py-5">
   <div class="container d-flex flex-column align-items-center">
     <h4 class="text-center">Originally created by</h4>
     <img src="assets/images/mayadata-primary.png" alt="MayaData logo" id="cncf-logo">
     <h4 class="text-center">Loved and adopted by</h4>
     <div id="adopters" class="col-12">
       <span *ngFor="let adopter of adopters" class="px-4 py-3">
-        <img src={{adopter.src}} alt={{adopter.name}} id="adopter-icon" width={adopter.width}>
+        <img src={{adopter.src}} alt={{adopter.name}} id="adopter-icon" width={{adopter.width}}>
       </span>
     </div>
   </div>
