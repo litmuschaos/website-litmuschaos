@@ -35,7 +35,7 @@ export class FooterComponent implements OnInit {
     {
       src: 'assets/images/footer/gh.svg',
       alt: 'github',
-      url: 'https://github.com/litmuschaos',
+      url: 'https://github.com/litmuschaos/litmus',
       name: 'GitHub'
     },
     {
