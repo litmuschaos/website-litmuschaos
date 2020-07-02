@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     {
       src: 'assets/images/community/github-1.svg',
       alt: 'github',
-      url: 'https://github.com/litmuschaos',
+      url: 'https://github.com/litmuschaos/litmus',
       name: 'GitHub'
     },
     {
