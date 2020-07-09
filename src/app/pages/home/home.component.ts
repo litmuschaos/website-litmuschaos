@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
     {
       src: 'assets/images/community/slack-new-logo.svg',
       alt: 'slack',
-      url: 'https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN',
+      url: 'https://slack.litmuschaos.io',
       name: 'Slack'
     },
     {
