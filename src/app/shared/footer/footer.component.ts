@@ -29,7 +29,7 @@ export class FooterComponent implements OnInit {
     {
       src: 'assets/images/footer/sl.svg',
       alt: 'slack',
-      url: 'https://app.slack.com/client/T09NY5SBT/CNXNB0ZTN',
+      url: 'https://slack.litmuschaos.io',
       name: 'Slack'
     },
     {
