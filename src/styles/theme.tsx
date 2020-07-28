@@ -1,6 +1,7 @@
 export default {
   screens: {
     // max-widths in pixels
+    xs: 450,
     sm: 640,
     md: 768,
     lg: 1024,
