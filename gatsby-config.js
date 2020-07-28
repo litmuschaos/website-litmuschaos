@@ -1,8 +1,8 @@
-const siteTitle = "gatsby-starter-typescript-deluxe";
+const siteTitle = "LitmusChaos";
 const siteDescription =
-  "A Gatsby starter with TypeScript, Storybook, Styled Components, Framer Motion, Jest, and more.";
-const siteAuthor = "@gojutin";
-const siteUrl = "https://gatsby-starter-typescript-deluxe.netlify.com";
+  "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.";
+const siteAuthor = "@litmuschaos";
+const siteUrl = "https://litmuschaos.io";
 const siteImage = `${siteUrl}/icons/icon_512x512.png`;
 const siteKeywords = ["gatsby", "typescript", "starter", "javascript", "react"];
 
@@ -13,15 +13,15 @@ module.exports = {
     author: siteAuthor,
     url: siteUrl,
     keywords: siteKeywords,
-    image: siteImage,
+    image: siteImage
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/images`,
-        name: "images",
-      },
+        name: "images"
+      }
     },
     {
       resolve: "gatsby-plugin-react-axe",
@@ -31,8 +31,8 @@ module.exports = {
         // See: https://github.com/dequelabs/axe-core/blob/master/doc/API.md#api-name-axeconfigure
         axeOptions: {
           // Your axe-core options.
-        },
-      },
+        }
+      }
     },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
@@ -54,16 +54,16 @@ module.exports = {
           {
             src: "icons/icon_512x512.png",
             sizes: "512x512",
-            types: "image/png",
+            types: "image/png"
           },
           {
             src: "icons/icon_192x192.png",
             sizes: "192x192",
-            types: "image/png",
-          },
-        ],
-      },
+            types: "image/png"
+          }
+        ]
+      }
     },
-    `gatsby-plugin-offline`,
-  ],
+    `gatsby-plugin-offline`
+  ]
 };

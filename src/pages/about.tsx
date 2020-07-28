@@ -1,7 +1,7 @@
+import { RouteComponentProps } from "@reach/router";
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
-import { RouteComponentProps } from "@reach/router";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
 
@@ -14,7 +14,7 @@ import { SEO } from "../components/seo";
   1. A basic styled component using the theme.
 */
 const StyledComponent1 = styled.p`
-  color: ${props => props.theme.colors.orange};
+  color: ${props => props.theme.colors.greenLight};
   font-size: 1.2rem;
 `;
 
@@ -24,7 +24,7 @@ const StyledComponent1 = styled.p`
 */
 const StyledComponent2 = styled.p`
   color: ${({ theme }) =>
-    theme.screens.sm ? theme.colors.blue : theme.colors.orange};
+    theme.screens.sm ? theme.colors.purpleLight : theme.colors.greenLight};
   font-size: 1.2rem;
 `;
 
@@ -34,7 +34,7 @@ const StyledComponent2 = styled.p`
 */
 
 const OrangeBlock = styled(motion.div)`
-  background: ${props => props.theme.colors.orange};
+  background: ${props => props.theme.colors.greenLight};
   height: 100px;
   width: 100px;
   border-radius: 10px;
@@ -50,9 +50,9 @@ const BlueBlock = styled(motion.div).attrs(() => ({
   initial: { opacity: 0, scale: 0 },
   animate: { opacity: 1, scale: 1 },
   transition: { duration: 2 },
-  whileHover: { scale: 0.8 },
+  whileHover: { scale: 0.8 }
 }))`
-  background: ${props => props.theme.colors.blue};
+  background: ${props => props.theme.colors.purpleLight};
   height: 100px;
   width: 100px;
   border-radius: 10px;
