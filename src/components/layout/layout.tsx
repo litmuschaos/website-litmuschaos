@@ -3,13 +3,12 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { GlobalStyles, theme } from "../../styles";
 // Components
-import { CSSDebugger } from "../css-debugger";
 import { Footer } from "../footer";
+import Header from "./Header";
 
 const Container = styled.div`
   margin: 0 auto;
-  max-width: 1080px;
-  padding: 2rem;
+  max-width: 100%;
 `;
 
 const Layout: React.FC = ({ children }) => {
@@ -30,7 +29,7 @@ const Layout: React.FC = ({ children }) => {
     <ThemeProvider theme={theme()}>
       <Container>
         <GlobalStyles />
-        <CSSDebugger />
+        <Header />
         <main>{children}</main>
         <Footer />
       </Container>
