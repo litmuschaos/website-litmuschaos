@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
+import { Link } from "../link/index";
+import { OutlinedButton } from "../button/index";
 import { GithubIcon } from "../github-icon/index";
 
 const LogoDiv = styled.div`
@@ -11,12 +12,25 @@ const LogoDiv = styled.div`
 `;
 
 const GitHubStars = styled.div`
-  background: grey;
-  padding: 0.5rem 2rem;
-  margin: 0 2rem;
+  height: 2rem;
+  font-size: 0.5rem;
+  background: #f1f2f6;
+  padding: 0.5rem 0.5rem;
+  margin: 0.5rem 1rem;
+  box-shadow: -0.2rem 0.3rem 0.7rem 0.1rem rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: row nowrap;
   justify-content: space-around;
+  .stars {
+    width: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .divider {
+    margin: 0 0.5rem;
+  }
 `;
 
 const NavBar = styled.nav`
@@ -34,6 +48,10 @@ const NavBar = styled.nav`
       left: 0;
     }
   }
+`;
+
+const GettingStarted = styled.div`
+  color: white;
 `;
 
 const Ul = styled.ul`
@@ -59,19 +77,6 @@ const Ul = styled.ul`
   }
 `;
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-
-  &:focus,
-  &:hover,
-  &:visited,
-  &:link,
-  &:active {
-    text-decoration: none;
-    color: black;
-  }
-`;
-
 const Nav = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -93,30 +98,34 @@ const Nav = () => {
         <Img fixed={imageData} className="logo" alt="LitmusChaos Icon" />
         <h2>Litmus</h2>
         <GitHubStars>
-          <GithubIcon />
+          <div className="stars">
+            <GithubIcon />
+            <h3>Stars</h3>
+          </div>
+          <hr className="divider" />
           <h2>1080</h2>
         </GitHubStars>
       </LogoDiv>
       <Ul>
-        <StyledLink to="/">
+        <Link to="/">
           <li>Why Litmus?</li>
-        </StyledLink>
+        </Link>
 
-        <StyledLink to="#" className="listItems">
+        <Link to="#" className="listItems">
           <li>Chaoshub</li>
-        </StyledLink>
+        </Link>
 
-        <StyledLink to="#">
+        <Link to="#">
           <li>Blogs</li>
-        </StyledLink>
+        </Link>
 
-        <StyledLink to="#">
+        <Link to="#">
           <li>Community</li>
-        </StyledLink>
+        </Link>
 
-        <StyledLink to="#">
-          <li>Get Started</li>
-        </StyledLink>
+        <GettingStarted>
+          <OutlinedButton>Get Started</OutlinedButton>
+        </GettingStarted>
       </Ul>
     </NavBar>
   );

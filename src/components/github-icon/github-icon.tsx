@@ -11,7 +11,7 @@ const GithubIcon: React.FC = () => {
     query {
       icon: file(relativePath: { eq: "github-icon.png" }) {
         childImageSharp {
-          fixed(height: 30, width: 30) {
+          fixed(height: 20, width: 20) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
