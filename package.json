@@ -1,14 +1,14 @@
 {
-  "name": "gatsby-starter-typescript-deluxe",
-  "description": "A Gatsby starter with TypeScript, Storybook, Styled Components, Jest, and more.",
+  "name": "litmus",
+  "description": "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.",
   "version": "0.0.3",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gojutin/gatsby-starter-typescript-deluxe"
+    "url": "https://github.com/litmuschaos/website-litmuschaos"
   },
   "bugs": {
-    "url": "https://github.com/gojutin/gatsby-starter-typescript-deluxe/issues"
+    "url": "https://github.com/litmuschaos/website-litmuschaos/issues"
   },
   "scripts": {
     "develop": "gatsby develop",
