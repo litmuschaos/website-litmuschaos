@@ -1,9 +1,11 @@
-export { GlobalStyles } from "./global-styles";
+import "modern-css-reset/dist/reset.min.css";
 import { useContext } from "react";
-import { ThemeContext, DefaultTheme } from "styled-components";
+import { DefaultTheme, ThemeContext } from "styled-components";
 import media from "use-media";
 import themeObject from "./theme";
-import "modern-css-reset/dist/reset.min.css";
+
+export { GlobalStyles } from "./global-styles";
+export { theme, useTheme };
 
 type DefaultThemeObject = Omit<typeof themeObject, "screens"> & {
   screens: {
@@ -17,15 +19,13 @@ const theme = (): DefaultTheme => {
     const value = media({ maxWidth: screens[key] });
     return {
       ...accum,
-      [key]: value,
+      [key]: value
     };
   }, {});
   return {
     ...themeValues,
-    screens: breakpointSizes,
+    screens: breakpointSizes
   };
 };
 
 const useTheme = () => useContext(ThemeContext);
-
-export { theme, useTheme };

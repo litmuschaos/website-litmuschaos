@@ -15,7 +15,8 @@ export default {
     greenDark: "#109B67",
     purpleLight: "#858CDD",
     purpleDark: "#858cdd",
-    textPrimary: "#5B44BA"
+    textPrimary: "#042A2B",
+    textSecondary: "#5B44BA"
   },
   opacity: {
     0: 0,

@@ -1,11 +1,19 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const PanelContainer = styled.div`
-  display: flex;
-  flex-direction: ${({ theme }) => (theme.screens.xs ? "column" : "row")};
-  justify-content: center;
   width: 100%;
+  display: flex;
+  ${({ theme }) =>
+    theme.screens.sm
+      ? css`
+          flex-direction: column;
+          align-items: start;
+        `
+      : css`
+          flex-direction: row;
+          justify-content: center;
+        `};
 `;
 
 const ResponsiveRow: React.FC = ({ children }) => {
