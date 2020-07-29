@@ -16,7 +16,8 @@ export default {
     purpleLight: "#858CDD",
     purpleDark: "#858cdd",
     textPrimary: "#042A2B",
-    textSecondary: "#5B44BA"
+    textSecondary: "#5B44BA",
+    pureWhite: "#FFFFFF"
   },
   opacity: {
     0: 0,
@@ -24,6 +25,10 @@ export default {
     50: 0.5,
     75: 0.75,
     100: 1
+  },
+  gradient: {
+    purpleGradient:
+      "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;"
   },
   py: (value: number | string) =>
     `padding-top: ${value}; padding-bottom: ${value};`

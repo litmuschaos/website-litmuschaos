@@ -6,7 +6,6 @@ const Link = styled(GatsbyLink)`
   color: white;
   text-decoration: none;
   :hover {
-    font-weight: bold;
     color: black;
   }
 `;

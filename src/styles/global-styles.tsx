@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
     color: ${props => props.theme.colors.textPrimary};
   }
   html {
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
   }
   a {
     text-decoration: none;
