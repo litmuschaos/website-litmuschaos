@@ -1,25 +1,25 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
 import styled from "styled-components";
 import { Link } from "../link/index";
 import { OutlinedButton } from "../button/index";
 import { GithubIcon } from "../github-icon/index";
+import Burger from "./Burger";
+const LitmusLogo = require("../../images/LitmusLogo.png");
 
 const LogoDiv = styled.div`
   display: flex;
-  color: black;
 `;
 
 const GitHubStars = styled.div`
   height: 2rem;
   font-size: 0.5rem;
-  background: #f1f2f6;
+  background: ${props => props.theme.colors.spaceGrey};
   padding: 0.5rem 0.5rem;
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 1.5rem;
   box-shadow: -0.2rem 0.3rem 0.7rem 0.1rem rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
   display: flex;
+  color: black;
   flex-direction: row nowrap;
   justify-content: space-around;
   .stars {
@@ -30,6 +30,22 @@ const GitHubStars = styled.div`
   }
   .divider {
     margin: 0 0.5rem;
+  }
+  .starValue {
+    width: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media (max-width: 768px) {
+    margin: 0;
+    box-shadow: 0;
+    background: transparent;
+    right: 0;
+
+    .starValue {
+      display: none;
+    }
   }
 `;
 
@@ -43,15 +59,16 @@ const NavBar = styled.nav`
     padding: 0;
   }
   @media (max-width: 768px) {
+    height: 2rem;
     .logo {
-      position: absolute;
-      left: 0;
+      height: 1.8rem;
+      width: 5rem;
     }
   }
 `;
 
 const GettingStarted = styled.div`
-  color: white;
+  color: ${props => props.theme.colors.backgroundLight};
 `;
 
 const Ul = styled.ul`
@@ -62,48 +79,24 @@ const Ul = styled.ul`
     padding: 0 1rem;
   }
   @media (max-width: 768px) {
-    flex-flow: column nowrap;
-    background-color: #0d2538;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 200px;
-    padding-top: 3.5rem;
-    transition: transform 0.3s ease-in-out;
-    li {
-      color: #fff;
-    }
+    display: none;
   }
 `;
 
 const Nav = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      icon: file(relativePath: { eq: "LitmusLogo.png" }) {
-        childImageSharp {
-          fixed(height: 50, width: 50) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-    }
-  `);
-
-  const imageData = data.icon.childImageSharp.fixed;
-
   return (
     <NavBar>
       <LogoDiv>
-        <Img fixed={imageData} className="logo" alt="LitmusChaos Icon" />
-        <h2>Litmus</h2>
+        <img src={LitmusLogo} className="logo" alt="LitmusChaos Icon" />
         <GitHubStars>
           <div className="stars">
             <GithubIcon />
             <h3>Stars</h3>
           </div>
-          <hr className="divider" />
-          <h2>1080</h2>
+          <div className="starValue">
+            <hr className="divider" />
+            <h2>1080</h2>
+          </div>
         </GitHubStars>
       </LogoDiv>
       <Ul>
@@ -127,6 +120,7 @@ const Nav = () => {
           <OutlinedButton>Get Started</OutlinedButton>
         </GettingStarted>
       </Ul>
+      <Burger />
     </NavBar>
   );
 };

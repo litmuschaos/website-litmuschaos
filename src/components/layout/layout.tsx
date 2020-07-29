@@ -9,6 +9,10 @@ import Header from "./Header";
 const Container = styled.div`
   margin: 0 auto;
   max-width: 100%;
+  @media (max-width: 768px) {
+    width: 100%;
+    background: green;
+  }
 `;
 
 const Layout: React.FC = ({ children }) => {

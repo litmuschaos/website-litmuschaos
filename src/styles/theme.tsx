@@ -10,6 +10,7 @@ export default {
   colors: {
     backgroundLight: "#F9FAFC",
     backgroundDark: "#F4F5F7",
+    spaceGrey: "#F1F2F6",
     greenLight: "#25C187",
     greenDark: "#109B67",
     purpleLight: "#858CDD",
