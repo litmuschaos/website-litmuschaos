@@ -51,53 +51,26 @@ const Ul = styled.ul`
   }
 `;
 
+const ResponsiveNav = styled.div`
+  display: flex;
+  flex-direction; row;
+`
+
 const Nav: React.FC = () => {
-  const { sm, md } = useTheme().screens;
+  const { sm } = useTheme().screens;
 
   return (
     <NavBar>
       {sm ? (
         <>
           <Logo />
-          <GitHubStars>
-            <div className="stars">
-              <GithubIcon />
-
-              <h3>Stars</h3>
-            </div>
-          </GitHubStars>
-          <Burger />
-        </>
-      ) : md ? (
-        <>
-          <LogoDiv>
-            <Logo />
+          <ResponsiveNav>
             <GitHubStars>
-              <GithubIcon />
-              <h3>Stars</h3>
+                <GithubIcon />
+                <h3>Stars</h3>
             </GitHubStars>
-          </LogoDiv>
-          <Ul>
-            <Link to="/">
-              <li>Why Litmus?</li>
-            </Link>
-
-            <Link to="#" className="listItems">
-              <li>Chaoshub</li>
-            </Link>
-
-            <Link to="#">
-              <li>Blogs</li>
-            </Link>
-
-            <Link to="#">
-              <li>Community</li>
-            </Link>
-
-            <GettingStarted>
-              <OutlinedButton>Get Started</OutlinedButton>
-            </GettingStarted>
-          </Ul>
+            <Burger />
+          </ResponsiveNav>
         </>
       ) : (
         <>

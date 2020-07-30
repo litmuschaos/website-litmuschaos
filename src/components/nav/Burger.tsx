@@ -2,24 +2,27 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledBurger = styled.div`
-  display: none;
+  margin: 0 0.7rem;
+  margin-top: 0.9rem;
+  height: 1.5rem;
   width: 2rem;
-  height: 2rem;
-  background: black;
-  @media (max-width: 768px) {
-    display: block;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .line {
+    width: 70%;
+    margin-lefT: 30%;
   }
 `;
 
 const Burger: React.FC = () => {
   return (
-    <>
-      <StyledBurger>
-        <div>Hello</div>
-        <div />
-        <div />
-      </StyledBurger>
-    </>
+    <StyledBurger>
+        <button />
+        <button className="line" />
+        <button className="line" />
+    </StyledBurger>
   );
 };
 
