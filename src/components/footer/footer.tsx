@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useTheme } from "../../styles";
+import { BoundedContainer } from "../layout";
 import { LinkGroup } from "./linkgroup";
 
 const Logo: React.FC = () => (
@@ -13,10 +14,6 @@ const Row = styled.div`
   > * {
     margin: 0 1rem;
   }
-`;
-
-const BoundedContainer = styled.div`
-  width: 20%;
 `;
 
 const Copyright: React.FC = () => (
@@ -43,7 +40,7 @@ const Footer: React.FC = () => {
         </>
       ) : (
         <Row>
-          <BoundedContainer>
+          <BoundedContainer width="20%">
             <Logo />
             <Copyright />
           </BoundedContainer>

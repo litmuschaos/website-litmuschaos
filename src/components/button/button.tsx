@@ -1,29 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-// Default Button Styles
-const Button = styled.button`
-  height: 3rem;
-  min-width: 10rem;
-  border: none;
-  background: ${props => props.theme.gradient.purpleGradient}
-  color: ${props => props.theme.colors.backgroundDark};
-  border-radius: 0.2rem;
-  font-size: 0.9rem;
-  cursor: pointer;
-  :disabled {
-    background: lightgray;
-  }
-`;
+interface IButton {
+  gradientColor: "purple" | "green";
+  screen: "small" | "large";
+}
 
-const ButtonMobile = styled.button`
+// Default Button Styles
+const Button = styled.button<IButton>`
   height: 3rem;
   min-width: 10rem;
-  width: 70%;
+  width: ${props => (props.screen === "small" ? "70%" : "15rem")};
   border: none;
-  background: ${props => props.theme.gradient.purpleGradient}
-  color: ${props => props.theme.colors.backgroundDark};
-  border-radius: 0.2rem;
+  background: ${props =>
+    props.gradientColor === "purple"
+      ? props.theme.gradient.purple
+      : props.theme.gradient.green};
+  color: ${props => props.theme.colors.pureWhite};
+  border-radius: 0.25rem;
   font-size: 0.9rem;
   cursor: pointer;
   :disabled {
@@ -38,16 +32,13 @@ const WhiteOnGreenButtonStyles = styled.button`
   border: none;
   border-radius: 0.2rem;
   background: ${props => props.theme.colors.pureWhite};
-  color: ${props => props.theme.colors.greenLight};
-  font-size: 0.9rem;
+  color: ${props => props.theme.colors.greenDark};
+  font-size: 0.7rem;
+  font-weight: bold;
   cursor: pointer;
   :disabled {
     background: lightgray;
   }
-`;
-const WhiteOnGreenButtonTextStyles = styled.p`
-  font-size: 0.7rem;
-  font-weight: 700;
 `;
 
 // Outline Button Styles
@@ -66,11 +57,7 @@ const OutlinedButton = styled.button`
 `;
 
 const WhiteOnGreenButton: React.FC = ({ children }) => {
-  return (
-    <WhiteOnGreenButtonStyles>
-      <WhiteOnGreenButtonTextStyles>{children}</WhiteOnGreenButtonTextStyles>
-    </WhiteOnGreenButtonStyles>
-  );
+  return <WhiteOnGreenButtonStyles>{children}</WhiteOnGreenButtonStyles>;
 };
 
-export { Button, ButtonMobile, OutlinedButton, WhiteOnGreenButton };
+export { Button, OutlinedButton, WhiteOnGreenButton };

@@ -1,5 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
+// import { useTheme } from "../styles";
+import { Button, WhiteOnGreenButton } from "../../components/button";
+import { BoundedContainer } from "../layout";
+
+// Styles
 
 const Main = styled.div`
   width: 100%;
@@ -8,21 +13,64 @@ const Main = styled.div`
   justify-content: space-between;
 `;
 
-const Container = styled.div`
-  width: 50%;
-  padding: 2% 8%;
+const BackgroundHeader = styled.div`
+  position: absolute;
+  top: 0;
+  left: 35%;
+  z-index: -1;
+  width: 65%;
 `;
 
-interface IHead {
-  leftProp: JSX.Element | React.ReactElement | React.FunctionComponent | null;
-  rightProp: JSX.Element | React.ReactElement | React.FunctionComponent | null;
-}
+// Components
 
-const Head: React.FC<IHead> = ({ leftProp, rightProp }) => {
+const OutlinedPurpleBox: React.FC = () => (
+  <img src="/svg/outlined_purple_box.svg" alt="litmus logo" />
+);
+
+const LeftHeaderContainer: React.FC = () => {
+  const { sm, md } = useTheme().screens;
+
+  const flexibleButton = (
+    <Button screen={sm ? "small" : "large"} gradientColor="purple">
+      Get Started
+    </Button>
+  );
+
+  return (
+    <div style={{ margin: md ? "5rem 0" : "5rem" }}>
+      <WhiteOnGreenButton>OPEN-SOURCE PLATFORM</WhiteOnGreenButton>
+      <h1>
+        Chaos Engineering
+        <br />
+        for your Kubernetes
+      </h1>
+      <p>
+        Kubernetes developers and SREs use Litmus to create, manage and monitor
+        chaos workflows. Resilience of your Kubernetes starts with finding a
+        weakness and start fixing it.
+      </p>
+      <div style={{ marginTop: "1rem" }}>{flexibleButton}</div>
+    </div>
+  );
+};
+
+const RightHeaderContainer: React.FC = () => {
+  return (
+    <>
+      <BackgroundHeader>
+        <OutlinedPurpleBox />
+      </BackgroundHeader>
+    </>
+  );
+};
+
+const Head: React.FC = () => {
   return (
     <Main>
-      <Container>{leftProp}</Container>
-      <Container>{rightProp}</Container>
+      <BoundedContainer width="45%">
+        <LeftHeaderContainer />
+      </BoundedContainer>
+      <RightHeaderContainer />
     </Main>
   );
 };

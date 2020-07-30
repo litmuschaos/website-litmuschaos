@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { GlobalStyles, theme } from "../../styles";
-
+import { CSSDebugger } from "../css-debugger";
 // Components
 import { Footer } from "../footer";
 import Header from "./Header";
@@ -19,6 +19,7 @@ const Layout: React.FC = ({ children }) => {
     <ThemeProvider theme={theme()}>
       <Container>
         <GlobalStyles />
+        <CSSDebugger />
         <Header />
         <main>{children}</main>
         <Footer />

@@ -27,7 +27,9 @@ export default {
     100: 1
   },
   gradient: {
-    purpleGradient:
+    purple:
+      "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;",
+    green:
       "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;"
   },
   py: (value: number | string) =>
