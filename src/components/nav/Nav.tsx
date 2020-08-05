@@ -23,14 +23,18 @@ const LogoDiv = styled.div`
 `;
 
 const GitHubStars = styled.div`
-  height: 2rem;
+  height: fit-content;
   font-size: 0.5rem;
   background: ${props => props.theme.colors.spaceGrey};
   padding: 0.5rem 0.5rem;
   margin-left: 1rem;
   margin-top: 0.6rem;
-  box-shadow: -0.2rem 0.3rem 0.7rem 0.1rem rgba(0, 0, 0, 0.4);
-  border-radius: 0.5rem;
+  width: 66px;
+height: 30px;
+border: 1px solid #FFFFFF;
+box-sizing: border-box;
+filter: drop-shadow(0px 1px 14px rgba(0, 0, 0, 0.12));
+border-radius: 4px;
   display: flex;
   color: black;
   flex-direction: row nowrap;

@@ -2,6 +2,7 @@ import React from "react";
 import styled, { useTheme } from "styled-components";
 // import { useTheme } from "../styles";
 import { Button, WhiteOnGreenButton } from "../../components/button";
+import { Heading, Paragraph } from "../../components/texts";
 import { BoundedContainer } from "../layout";
 
 // Styles
@@ -32,23 +33,23 @@ const LeftHeaderContainer: React.FC = () => {
 
   const flexibleButton = (
     <Button screen={sm ? "small" : "large"} gradientColor="purple">
-      Get Started
+        Get Started
     </Button>
   );
 
   return (
     <div style={{ margin: md ? "5rem 0" : "5rem" }}>
       <WhiteOnGreenButton>OPEN-SOURCE PLATFORM</WhiteOnGreenButton>
-      <h1>
+      <Heading>
         Chaos Engineering
         <br />
         for your Kubernetes
-      </h1>
-      <p>
+      </Heading>
+      <Paragraph>
         Kubernetes developers and SREs use Litmus to create, manage and monitor
         chaos workflows. Resilience of your Kubernetes starts with finding a
         weakness and start fixing it.
-      </p>
+      </Paragraph>
       <div style={{ marginTop: "1rem" }}>{flexibleButton}</div>
     </div>
   );
