@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { ResponsiveRow } from '../layout'
 import { Heading, SubHeading, Paragraph } from '../texts/index'
+import { Section } from "../../components/section-layout";
 // import { useTheme } from '../../styles'
 
 const Subtext = styled.div`
@@ -11,6 +12,29 @@ const Subtext = styled.div`
   padding: 10px;
 `;
 
+const Columnflex = styled.div`
+    width:50%;
+    display:flex;
+    flex-flow:wrap column;
+    justify-content:center;
+    align-items:start;
+`
+
+const Rowflex = styled.div`
+    width:100%;
+    display:flex;
+    flex-flow:wrap row;
+    justify-content:center;
+    align-items:center;
+`
+
+const Width100 = styled.div`
+    width:100%;
+    display:flex;
+    flex-flow:wrap column;
+    justify-content:center;
+    align-items:center;
+`
 
 // co React.FC = ({ children }) => {
 //     const { sm } = useTheme().screens
@@ -27,36 +51,37 @@ const Subtext = styled.div`
 
 const GetStartedWithLitmus: React.FC = () => {
     return (
-        <>
-            <ResponsiveRow>
-            <>
+        <Section>
+            <Width100>
                 <Heading>Get started with Litmus</Heading>
-                <Subtext>
-                    <Paragraph>
-                        Kubernetes developers and SREs use Litmus to create, manage and monitor
-                        chaos workflows. Resilience of your Kubernetes starts with finding a
-                        weakness and start fixing it.
-                    </Paragraph>
-                </Subtext>
-            </>
-            <img
-                    src="./svg/chaosbird_experimenting.svg"
-                    alt="Chaos Bird Experimenting"
-            />
+            </Width100>
+            <ResponsiveRow>
+                <img
+                        src="./svg/MacWindow.svg"
+                        alt="Code for Installing Litmus"
+                />
+                <Rowflex>
+                    <img
+                            src="./svg/VerticalNumber.svg"
+                            alt="Code for Installing Litmus"
+                    />
+                    <Columnflex>
+                        <Subtext>
+                            <SubHeading>Install Litmus</SubHeading>
+                            <Paragraph>Install Litmus with a helm chart. Default options will get you a minimal version of Litmus to run or schedule individual chaos experiments.</Paragraph>
+                        </Subtext>
+                        <Subtext>
+                            <SubHeading>Get experiments</SubHeading>
+                            <Paragraph>Browse and install the required experiments from ChaosHub. When you install them, they become custom resources which you can tune.</Paragraph>
+                        </Subtext>
+                        <Subtext>
+                            <SubHeading>Run chaos</SubHeading>
+                            <Paragraph>Create a chaos engine and attach the experiments you have installed. Run the chaos engine manifest through kubectl to run your chaos experiment.</Paragraph>
+                        </Subtext>
+                    </Columnflex>
+                </Rowflex>
             </ResponsiveRow>
-            <Subtext>
-                <SubHeading>Install Litmus</SubHeading>
-                <Paragraph>Install Litmus with a helm chart. Default options will get you a minimal version of Litmus to run or schedule individual chaos experiments.</Paragraph>
-            </Subtext>
-            <Subtext>
-                <SubHeading>Get experiments</SubHeading>
-                <Paragraph>Browse and install the required experiments from ChaosHub. When you install them, they become custom resources which you can tune.</Paragraph>
-            </Subtext>
-            <Subtext>
-                <SubHeading>Run chaos</SubHeading>
-                <Paragraph>Create a chaos engine and attach the experiments you have installed. Run the chaos engine manifest through kubectl to run your chaos experiment.</Paragraph>
-            </Subtext>
-        </>
+        </Section>
     );
 };
 

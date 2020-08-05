@@ -3,11 +3,12 @@ import React from "react";
 import styled from "styled-components";
 import { ResponsiveRow } from '../layout'
 import { Heading, SubHeading, Paragraph } from '../texts/index'
+import { Section } from "../../components/section-layout";
 // import { useTheme } from '../../styles'
 
 const Subtext = styled.div`
   min-width: 8rem;
-  width: 50%;
+  width: 100%;
   padding: 10px;
 `;
 
@@ -20,6 +21,22 @@ const CircleDot = styled.div`
     box-shadow: 0px 9px 11px rgba(91, 68, 186, 0.15);
 `
 
+const Width100 = styled.div`
+    min-width:100%;
+    width:100%;
+    display:flex;
+    flex-flow:wrap row;
+    justify-content:center;
+    align-items:center;
+`
+
+const Columnflex = styled.div`
+    width:50%;
+    display:flex;
+    flex-flow:wrap column;
+    justify-content:center;
+    align-items:start;
+`
 // co React.FC = ({ children }) => {
 //     const { sm } = useTheme().screens
 //     if (sm) {
@@ -35,22 +52,20 @@ const CircleDot = styled.div`
 
 const StartInMinutes: React.FC = () => {
     return (
-        <>
+        <Section>       
             <ResponsiveRow>
-            <>
-                <Heading>Start in minutes not in days</Heading>
-                <Subtext>
+                <Columnflex>
+                    <Heading>Start in minutes not in days</Heading>
                     <Paragraph>
                         Kubernetes developers and SREs use Litmus to create, manage and monitor
                         chaos workflows. Resilience of your Kubernetes starts with finding a
                         weakness and start fixing it.
-                    </Paragraph>
-                </Subtext>
-            </>
-            <img
-                    src="./svg/chaosbird_experimenting.svg"
-                    alt="Chaos Bird Experimenting"
-            />
+                    </Paragraph>                        
+                </Columnflex>
+                <img
+                    src="./svg/DummyVideo.svg"
+                    alt="Dummy Video Replace it"
+                />
             </ResponsiveRow>
             <ResponsiveRow>
                 <Subtext>
@@ -78,7 +93,7 @@ const StartInMinutes: React.FC = () => {
                     <SubHeading>Find weaknesses if any</SubHeading>
                 </Subtext>
             </ResponsiveRow>
-        </>
+        </Section>
     );
 };
 
