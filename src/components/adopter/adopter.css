@@ -1,0 +1,20 @@
+
+
+
+.AdopterHeading
+{
+    font-size: 24px;
+}
+.AdopterLogos
+{
+   
+    display: flex;
+    justify-content: space-between;
+}
+
+/*.ZerebriumLogo, .IntuitLogo, .OpenEBSLogo
+{
+    
+    margin-left: 20px;
+}
+*/
