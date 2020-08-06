@@ -7,7 +7,7 @@ import Burger from "./Burger";
 import { useTheme } from "../../styles";
 
 const Logo: React.FC = () => (
-  <img src="/svg/litmus-logo.svg" width="128" alt="litmus logo" />
+  <img src="/svg/Litmus.svg" width="128" alt="litmus logo" />
 );
 
 const NavBar = styled.nav`
@@ -23,14 +23,18 @@ const LogoDiv = styled.div`
 `;
 
 const GitHubStars = styled.div`
-  height: 2rem;
-  font-size: 0.5rem;
+  height: fit-content;  
   background: ${props => props.theme.colors.spaceGrey};
-  padding: 0.5rem 0.5rem;
+  padding: 0.3rem 0.5rem;
+  padding-top: 0.5rem;
   margin-left: 1rem;
   margin-top: 0.6rem;
-  box-shadow: -0.2rem 0.3rem 0.7rem 0.1rem rgba(0, 0, 0, 0.4);
-  border-radius: 0.5rem;
+  width: 72px;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 1px 14px rgba(0, 0, 0, 0.12));
+  transform:scale(0.8);
+  border-radius: 4px;
   display: flex;
   color: black;
   flex-direction: row nowrap;

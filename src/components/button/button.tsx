@@ -8,17 +8,22 @@ interface IButton {
 
 // Default Button Styles
 const Button = styled.button<IButton>`
-  height: 3rem;
-  min-width: 10rem;
-  width: ${props => (props.screen === "small" ? "70%" : "15rem")};
+  height: 4.5rem;
+  min-width: 8rem;
+  width: ${props => (props.screen === "small" ? "50%" : "15rem")};
   border: none;
+  outline:none;
   background: ${props =>
     props.gradientColor === "purple"
       ? props.theme.gradient.purple
       : props.theme.gradient.green};
   color: ${props => props.theme.colors.pureWhite};
-  border-radius: 0.25rem;
-  font-size: 0.9rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-flow:row wrap;
+  border-radius: 0.5rem;
+  font-size: ${props => props.theme.fontsize.subheading};
   cursor: pointer;
   :disabled {
     background: lightgray;
@@ -30,12 +35,18 @@ const WhiteOnGreenButtonStyles = styled.button`
   height: 2rem;
   min-width: 13rem;
   border: none;
+  outline:none;
   border-radius: 0.2rem;
   background: ${props => props.theme.colors.pureWhite};
   color: ${props => props.theme.colors.greenDark};
-  font-size: 0.7rem;
+  font-size: ${props => props.theme.fontsize.paragraph};
   font-weight: bold;
   cursor: pointer;
+  width: 208px;
+  height: 33px;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
   :disabled {
     background: lightgray;
   }
@@ -46,10 +57,11 @@ const OutlinedButton = styled.button`
   min-width: 2rem;
   padding: 0.5rem 2rem;
   background: transparent;
+  outline:none;
   color: ${props => props.theme.colors.backgroundDark};
   border: 0.05rem solid white;
   border-radius: 0.5rem;
-  font-size: 1rem;
+  font-size: ${props => props.theme.fontsize.paragraph};
   cursor: pointer;
   :disabled {
     background: lightgray;

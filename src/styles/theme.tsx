@@ -33,6 +33,11 @@ export default {
       "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;"
   },
   py: (value: number | string) =>
-    `padding-top: ${value}; padding-bottom: ${value};`
+    `padding-top: ${value}px; padding-bottom: ${value}px;`,
   // Add anything else you'd like.
+  fontsize: {
+    heading: "3rem",
+    paragraph: "1.2rem",
+    subheading: "1.5rem",
+  }
 };
