@@ -1,24 +1,24 @@
 .LeftColumn
 {
     
-    max-width: 791px;
+    max-width: 49.4375rem;
 }
 .kubernetestext
 {
-    max-width: 600px;
+    max-width: 37.5rem;
     margin-top: 1rem;
     color : #6F6F6F;
-    margin-top: 39px;
+    margin-top: 2.4375rem;
 }
 
 .kubernetesHeading
 {
-    margin-top: 101px;
-    font-size: 48px;
+    margin-top: 6.3125rem;
+    
 }
 .GetStartedButton
 {
-    margin-top: 39px;
-    margin-bottom: 140px;
+    margin-top: 2.4437rem;
+    margin-bottom: 8.75rem;
 }
 
