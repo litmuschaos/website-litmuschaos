@@ -96,7 +96,7 @@ const CreatedByColumn: React.FC = () => {
     </div>
   } else {
     return (
-      <div style={{ margin:'0 0 3rem 0' }}>
+      <div style={{ marginBottom:'3rem' }}>
         <h5 className="AdopterHeading">Created By</h5>
             <Mayadata />
       </div>
@@ -109,7 +109,7 @@ const CreatedByColumn: React.FC = () => {
 const AdopterColumn: React.FC = () => {
   const { sm } = useTheme().screens
   if (sm) {
-    return <div style={{ margin: '0 8rem 0 1rem' , width :"80vw" } }>
+    return <div style={{ margin: '0 auto 0 1rem' , width :"80vw" } }>
       <h5 className="AdopterHeading">Adopted By</h5>
             <div className="AdopterLogos">
                
@@ -162,15 +162,9 @@ const Adopter: React.FC = () => {
     return (
     <>
       <ResponsiveRow>
-          
-           <CreatedByColumn />
-          
-         
-            <AdopterColumn />
-            
-          
-          
-              <JoinAsAdopter />
+          <CreatedByColumn />
+          <AdopterColumn />
+          <JoinAsAdopter />
              
         
       </ResponsiveRow>
