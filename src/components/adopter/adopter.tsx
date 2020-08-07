@@ -165,8 +165,6 @@ const Adopter: React.FC = () => {
           <CreatedByColumn />
           <AdopterColumn />
           <JoinAsAdopter />
-             
-        
       </ResponsiveRow>
     </>
     );  
