@@ -18,13 +18,13 @@ const ChaoshubImage: React.FC = () => {
   else if(md)
   {
     return(
-      <img  style={{width : "20rem", height : "22.5rem", marginTop :"5rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
+      <img  style={{width : "20rem", height : "22.5rem", marginTop :"5rem" }}src="/svg/ChaoshubHeroImage.svg" alt="Mayadata Logo" />
       )
   }
   else if(lg)
   {
     return(
-      <img  style={{width : "30rem", height : "22.5rem", marginTop :"5rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
+      <img  style={{width : "30rem", height : "22.5rem", marginTop :"5rem" }}src="/svg/ChaoshubHeroImage.svg" alt="Mayadata Logo" />
       )
   }
   else{
