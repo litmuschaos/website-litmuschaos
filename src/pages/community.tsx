@@ -96,7 +96,7 @@ const CommunityIntroduction: React.FC = () => {
               <h1 style={{fontSize : lg ?"1.75rem":"3.5rem",maxWidth : lg ? "100%" : "36.5rem"}}>
               By the community,for the community!
               </h1>
-              <p style={{maxWidth : lg ? "100%" : "35rem", margin: '2rem 0 0 0', color : "#6F6F6F"}}>
+              <p style={{maxWidth : lg ? "100%" : "35rem", margin: '2rem 0 2rem 0', color : "#6F6F6F"}}>
               Created by our users, contributors, and adopters, the Litmus community truly believes in adding to the value of open source 
               culture where serving the community is of utmost priority to us, and imparting the value of cloud-native chaos is all that matters. 
               <br />
