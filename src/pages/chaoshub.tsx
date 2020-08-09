@@ -95,7 +95,7 @@ const ChaoshubIntroduction: React.FC = () => {
           <h1 style={{fontSize : lg ?"1.75rem":"3.5rem",maxWidth : lg ? "100%" : "36.5rem"}}>
             Your Experiments for Kubernetes are ready!
           </h1>
-          <p style={{maxWidth : lg ? "100%" : "35rem", margin: '2rem 0 0 0', color : "#6F6F6F"}}>
+          <p style={{maxWidth : lg ? "100%" : "35rem", margin: '2rem 0 2rem 0', color : "#6F6F6F"}}>
             Litmus is highly extensible and integrates with other tools to enable the creation of custom experiments. Kubernetes developers & SREs use Litmus to manage chaos in a declarative manner and find weaknesses in their applications and infrastructure.
           </p>
           {flexibleButton}
