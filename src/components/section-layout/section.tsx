@@ -9,13 +9,14 @@ const Container = styled.div`
 `
 
 const SectionStylesLarge = styled.div`
-  max-width:  70vw;
+  max-width: 120rem;
+  padding:40px;
   width: 70vw;
-  min-height: 70vh;
+  min-height: 100vh;
   height:100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 const SectionStyles = styled.div`
@@ -26,12 +27,12 @@ const SectionStyles = styled.div`
   height:100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 const Section: React.FC = ({ children }) => {
-    const { sm, md } = useTheme().screens;
-    if (sm || md){
+    const { xl } = useTheme().screens;
+    if (xl){
         return (
         <Container>
             <SectionStyles>{children}</SectionStyles>

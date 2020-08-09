@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 
 const HeadingStyles = styled.div`
     font-size: ${props => props.theme.fontsize.heading};
@@ -23,15 +23,18 @@ const ParagraphStyles = styled.div`
 `;
 
 const Heading: React.FC = ({ children }) => {
-    return <HeadingStyles>{children}</HeadingStyles>;
+    const { sm } = useTheme().screens;
+    return <HeadingStyles style={{ fontSize:sm?"2rem":"" }}>{children}</HeadingStyles>;
 };
 
 const SubHeading: React.FC = ({ children }) => {
-    return <SubHeadingStyles>{children}</SubHeadingStyles>;
+    const { sm } = useTheme().screens;
+    return <SubHeadingStyles style={{ fontSize:sm?"1.2rem":"" }}>{children}</SubHeadingStyles>;
 };
 
 const Paragraph: React.FC = ({ children }) => {
-    return <ParagraphStyles>{children}</ParagraphStyles>;
+    const { sm } = useTheme().screens;
+    return <ParagraphStyles style={{ fontSize:sm?"1rem":"" }}>{children}</ParagraphStyles>;
 };
 
 export { Heading, SubHeading, Paragraph };

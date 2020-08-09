@@ -18,10 +18,6 @@ const BackgroundHeader = styled.div`
 
 // Components
 
-const OutlinedPurpleBox: React.FC = () => (
-  <img src="/svg/MainRectangle.svg" alt="Litmus Prototype" />
-);
-
 const LeftHeaderContainer: React.FC = () => {
   const { sm, md } = useTheme().screens;
   const flexibleButton = (
@@ -31,31 +27,32 @@ const LeftHeaderContainer: React.FC = () => {
   );
 
   return (
-    // <div style={{  }}>
-    <div style={{ margin: md ? "5rem 0" : "5rem" }}>
-        <WhiteOnGreenButton>OPEN-SOURCE PLATFORM</WhiteOnGreenButton>
-        <Heading>
-          Chaos Engineering
-          <br />
-          for your Kubernetes
-        </Heading>
-        <Paragraph>
-          Kubernetes developers and SREs use Litmus to create, manage and monitor
-          chaos workflows. Resilience of your Kubernetes starts with finding a
-          weakness and start fixing it.
-        </Paragraph>
-        <div style={{ marginTop: "1rem" }}>{flexibleButton}</div>
-      {/* // </div> */}
-    </div>
+      <div style={{ margin: md ? "5rem 0" : "0rem 5rem 0rem 0rem" }}>
+          <WhiteOnGreenButton>OPEN-SOURCE PLATFORM</WhiteOnGreenButton>
+          <Heading>
+            Chaos Engineering
+            <br />
+            for your Kubernetes
+          </Heading>
+          <Paragraph>
+            Kubernetes developers and SREs use Litmus to create, manage and monitor
+            chaos workflows. Resilience of your Kubernetes starts with finding a
+            weakness and start fixing it.
+          </Paragraph>
+          <div style={{ marginTop: "1rem" }}>{flexibleButton}</div>
+      </div>
   );
 };
 
 const RightHeaderContainer: React.FC = () => {
+  const { sm, md } = useTheme().screens;
   return (
     <>
+    <BoundedContainer width="50%">
       <BackgroundHeader>
-        <OutlinedPurpleBox />
+        {sm||md ? ( <object data="/svg/MainRectangleMobile.svg" type="image/svg+xml" /> ) : ( <object data="/svg/MainRectangle.svg" type="image/svg+xml" style={{maxWidth:"100%"}}/> )}
       </BackgroundHeader>
+    </BoundedContainer>
     </>
   );
 };

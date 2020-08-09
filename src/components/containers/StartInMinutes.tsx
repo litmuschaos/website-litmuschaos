@@ -2,34 +2,9 @@
 import React from "react";
 import styled from "styled-components";
 import { ResponsiveRow } from '../layout'
-import { Heading, SubHeading, Paragraph } from '../texts/index'
+import { Heading, Paragraph } from '../texts/index'
 import { Section } from "../../components/section-layout";
-// import { useTheme } from '../../styles'
-
-const Subtext = styled.div`
-  min-width: 8rem;
-  width: 100%;
-  align-self:start;
-  padding: 10px;
-`;
-
-const CircleDot = styled.div`
-    width: 2.7rem;
-    height: 2.7rem;
-    background: #109B67;
-    border: 8px solid #FFFFFF;
-    border-radius:50%;
-    box-shadow: 0px 9px 11px rgba(91, 68, 186, 0.15);
-`
-
-const Width100 = styled.div`
-    min-width:100%;
-    width:100%;
-    display:flex;
-    flex-flow:wrap row;
-    justify-content:center;
-    align-items:center;
-`
+import { useTheme } from '../../styles'
 
 const Columnflex = styled.div`
     width:50%;
@@ -38,25 +13,46 @@ const Columnflex = styled.div`
     justify-content:center;
     align-items:start;
 `
+const Rowflex = styled.div`
+    width:50%;
+    min-width:20rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+`
+const LineVertical = styled.div`
+    width:100%;
+    display:flex;
+    justify-content:center;
+`
+const LineHorizontal = styled.div`
+    width:100%;
+`
 
-// co React.FC = ({ children }) => {
-//     const { sm } = useTheme().screens
-//     if (sm) {
-//       return <div style={{ margin: '0 1rem' }}>{children}</div>
-//     } else {
-//       return (
-//         <div style={{ margin: '28rem 0 3rem 0', textAlign: 'center' }}>
-//           {children}
-//         </div>
-//       )
-//     }
-//   };
+const Line: React.FC = () => {
+    const { lg } = useTheme().screens
+    if (lg) {
+      return (
+          <LineVertical>
+              <object data="/svg/VerticalLine.svg" type="image/svg+xml" style={{maxWidth:"120rem", minWidth:"20rem"}}></object>
+          </LineVertical>
+      ) 
+    } else {
+      return (
+        <LineHorizontal>
+             <div style={{position: "relative", display:"flex", flexFlow:"row wrap", justifyContent:"center", alignItems:"flex-start" }}>
+                <object data="/svg/HorizontalLine.svg" type="image/svg+xml" style={{maxWidth:"120rem",position: "absolute", width: "125vw", top: "-9.3rem"}}></object>
+            </div>
+        </LineHorizontal>
+    )}
+};
 
 const StartInMinutes: React.FC = () => {
+    const { md,lg } = useTheme().screens
     return (
         <Section>       
-            <ResponsiveRow>
-                <Columnflex>
+            <Rowflex style={{ flexFlow:lg?"row wrap":"row"}}>
+                <Columnflex style={{minWidth:md?"20rem":"30rem"}}>
                     <Heading>Start in minutes not in days</Heading>
                     <Paragraph>
                         Kubernetes developers and SREs use Litmus to create, manage and monitor
@@ -66,34 +62,12 @@ const StartInMinutes: React.FC = () => {
                 </Columnflex>
                 <img
                     src="./svg/DummyVideo.svg"
-                    alt="Dummy Video Replace it"
+                    alt="Dummy Video Replace it with video tag"
+                    style={{width:"50%", minWidth:md?"20rem":"30rem"}}
                 />
-            </ResponsiveRow>
-            <ResponsiveRow>
-                <Subtext>
-                    <CircleDot />
-                    <SubHeading>Install Litmus through<br/>helm chart</SubHeading>
-                </Subtext>
-                <Subtext>
-                    <CircleDot />
-                    <SubHeading>Choose a workflow<br/>template</SubHeading>
-                </Subtext>
-                <Subtext>
-                    <CircleDot />
-                    <SubHeading>Tune chaos experiments</SubHeading>
-                </Subtext>
-                <Subtext>
-                    <CircleDot />
-                    <SubHeading>Schedule the workflow</SubHeading>
-                </Subtext>
-                <Subtext>
-                    <CircleDot />
-                    <SubHeading>Observe chaos analytics</SubHeading>
-                </Subtext>
-                <Subtext>
-                    <CircleDot />
-                    <SubHeading>Find weaknesses if any</SubHeading>
-                </Subtext>
+            </Rowflex>
+            <ResponsiveRow> 
+                        <Line />       
             </ResponsiveRow>
         </Section>
     );

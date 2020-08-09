@@ -2,8 +2,6 @@ import React from 'react'
 import { Head, CloudNativeWay, StartInMinutes, GetStartedWithLitmus, SeeWhatOur } from '../components/containers/index'
 import { Layout } from '../components/layout'
 import { SEO } from '../components/seo'
-// import { useTheme } from '../styles'
-
 
 const App = () => {
   return (

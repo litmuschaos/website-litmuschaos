@@ -1,70 +1,41 @@
-// import { Layout, ResponsiveRow } from '../components/layout'
 import React from "react";
 import styled from "styled-components";
 import { ResponsiveRow } from '../layout'
-import { Heading, SubHeading, Paragraph } from '../texts/index'
+import { Heading } from '../texts/index'
 import { Section } from "../../components/section-layout";
-// import { useTheme } from '../../styles'
-
-const Subtext = styled.div`
-  min-width: 8rem;
-  width: 50%;
-  padding: 10px;
-  font-weight:normal;
-  colour:grey;
-`;
+import { useTheme } from '../../styles'
 
 const Columnflex = styled.div`
-    width:50%;
     display:flex;
     flex-flow:wrap column;
     justify-content:center;
     align-items:start;
+    padding:3rem;
 `
 const Rowflex = styled.div`
     width:100%;
     display:flex;
-    flex-flow:wrap row;
-    justify-content:start;
-    align-items:start;
+    justify-content:center;
+    align-items:center;
+
 `
 
-// co React.FC = ({ children }) => {
-//     const { sm } = useTheme().screens
-//     if (sm) {
-//       return <div style={{ margin: '0 1rem' }}>{children}</div>
-//     } else {
-//       return (
-//         <div style={{ margin: '28rem 0 3rem 0', textAlign: 'center' }}>
-//           {children}
-//         </div>
-//       )
-//     }
-//   };
-
 const SeeWhatOur: React.FC = () => {
+    const { xs, sm, md, lg } = useTheme().screens;
     return (
         <Section>
-            <ResponsiveRow>
+            <Rowflex style={{flexFlow: lg?"row wrap":"row"}}>
                 <img
                     src="./svg/ChaosBirdSaying.svg"
                     alt="Chaos Bird Saying"
+                    style={{maxWidth:"41rem", width:lg?"80%":"50%", minWidth:"25rem", padding:"3rem"}}
                 />
-                <Columnflex>
-                    <Heading>See what our users are saying about us</Heading>
-                    <Subtext>
-                        <SubHeading>
-                            Litmus is one of the most promising open source chaos engineering frameworks that takes into account proper chaos engineering principles while providing autonomy and  extensibility to the users.
-                        </SubHeading>
-                    </Subtext>
-                    <Rowflex>
-                        <img
-                            src="./svg/Andreas.svg"
-                            alt="Andreas Krivas Saying"
-                        />
-                    </Rowflex>
-                </Columnflex>
-            </ResponsiveRow>
+                {sm||md?(
+                    <object data="/svg/SeeWhatOurMobile.svg" type="image/svg+xml" style={{width:xs?"100%":sm?"80%":md?"60%":""}}></object>
+                ):(
+                    <object data="/svg/SeeWhatOurDesktop.svg" type="image/svg+xml" style={{width:"100%", minWidth:"40rem", maxWidth:"34rem"}}></object>
+                )}
+            </Rowflex>
         </Section>
     );
 };
