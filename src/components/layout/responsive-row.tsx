@@ -9,10 +9,13 @@ const PanelContainer = styled.div`
       ? css`
           flex-direction: column;
           align-items: start;
+          
+          
         `
       : css`
           flex-direction: row;
           justify-content: center;
+          
         `};
 `;
 

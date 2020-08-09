@@ -4,6 +4,10 @@ import { GlobalStyles, theme } from "../../styles";
 import { CSSDebugger } from "../css-debugger";
 // Components
 import { Footer } from "../footer";
+import { Banner } from "../banner";
+import { Adopter } from "../adopter";
+
+
 import Header from "./Header";
 
 const Container = styled.div`
@@ -22,6 +26,9 @@ const Layout: React.FC = ({ children }) => {
         <CSSDebugger />
         <Header />
         <main>{children}</main>
+        <Adopter />
+        <Banner />
+        
         <Footer />
       </Container>
     </ThemeProvider>
