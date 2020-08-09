@@ -10,7 +10,7 @@ interface IButton {
 const Button = styled.button<IButton>`
   height: 3rem;
   min-width: 10rem;
-  width: ${props => (props.screen === "small" ? "70%" : "15rem")};
+  width: ${props => (props.screen === "small" ? "70%" : "20.0625rem")};
   border: none;
   background: ${props =>
     props.gradientColor === "purple"
@@ -20,6 +20,7 @@ const Button = styled.button<IButton>`
   border-radius: 0.25rem;
   font-size: 0.9rem;
   cursor: pointer;
+  box-shadow: #5B44BA25;
   :disabled {
     background: lightgray;
   }
