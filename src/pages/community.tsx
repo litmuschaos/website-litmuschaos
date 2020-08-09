@@ -54,13 +54,13 @@ const Video: React.FC = () => {
   if(lg )
   {
     return(
-      <iframe style={{margin: "2rem auto"}} width="300" height="168.75" src="https://www.youtube.com/embed/W5hmNbaYPfM"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      <iframe style={{margin: "2rem auto 2rem auto"}} width="300" height="168.75" src="https://www.youtube.com/embed/W5hmNbaYPfM"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
     )
   }
   else
   {
     return(
-     <iframe style={{margin: "2rem auto"}} width="560" height="315" src="https://www.youtube.com/embed/W5hmNbaYPfM"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+     <iframe style={{margin: "2rem auto 2rem auto"}} width="560" height="315" src="https://www.youtube.com/embed/W5hmNbaYPfM"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
     )
   }
 }
