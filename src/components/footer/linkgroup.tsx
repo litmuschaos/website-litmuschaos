@@ -9,19 +9,29 @@ const Title = styled.div`
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 1.5rem;
+  max-width:164px;
+  
 `;
 
 const ListBox = styled.ul`
   margin: 0;
   padding: 0;
+  
 `;
 
 const List = styled.li`
   text-decoration: none;
   display: flex;
   margin-top: 1rem;
+  margin-right:5rem;
   img {
     margin-right: 1rem;
+  }
+
+  @media screen and (max-width: 600px) 
+  {
+    float:left;
+    margin-right:2rem;
   }
 `;
 
@@ -29,7 +39,7 @@ const Row = styled.div`
   display: flex;
   justify-content: space-around;
   > * {
-    margin: 0 1rem;
+    margin: 0 1rem 2rem 0;
   }
 `;
 
