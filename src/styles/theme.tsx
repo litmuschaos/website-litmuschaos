@@ -17,7 +17,8 @@ export default {
     purpleDark: "#858cdd",
     textPrimary: "#042A2B",
     textSecondary: "#5B44BA",
-    pureWhite: "#FFFFFF"
+    pureWhite: "#FFFFFF",
+    MayadataColor : "#001959"
   },
   opacity: {
     0: 0,
@@ -30,7 +31,7 @@ export default {
     purple:
       "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;",
     green:
-      "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;"
+      "linear-gradient(135.47deg, #109C68 1.77%, rgba(133, 140, 221, 0) 64.41%), #25C087;"
   },
   py: (value: number | string) =>
     `padding-top: ${value}; padding-bottom: ${value};`
