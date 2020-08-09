@@ -1,6 +1,6 @@
 import React from "react";
 
-import  "../styles/chaoshub.css"
+
 import { useTheme } from '../styles'
 import { Button } from "../components/button";
 import { Layout, ResponsiveRow } from '../components/layout'
