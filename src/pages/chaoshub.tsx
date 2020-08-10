@@ -115,7 +115,7 @@ const AboutRessilence: React.FC = () => {
       <hr style={{ width: "100%", margin: "1rem auto"}} />
       <ResponsiveRow>
         <h1 style={{fontSize : lg ?"3rem":"3.5rem",color : "#109B67", width : lg? "12rem": "15rem"}}>&#60; 90%</h1>
-        <p style={{maxWidth: lg? "auto":"27.5625rem", margin:lg?"0":"1rem 0 0 1rem", fontSize: '1rem', color : "#6F6F6F"}}>of the resilience of your service depends on fixing or tuning the weaknesses in the configuration or code of the rest of micro services including Kubernetes.</p>
+        <p style={{maxWidth: lg? "auto":"25rem", margin:"auto", fontSize: '1rem', color : "#6F6F6F"}}>of the resilience of your service depends on fixing or tuning the weaknesses in the configuration or code of the rest of micro services including Kubernetes.</p>
       </ResponsiveRow>
       <hr style={{ width: "100%", margin: "1rem auto"}} />
       <p>You will need chaos experiments to cover most of the micro services and 
@@ -127,7 +127,6 @@ const AboutRessilence: React.FC = () => {
     </div>
   )
 }
-
 const UsefulLinks: React.FC = () => {
   
   const { lg } = useTheme().screens;
