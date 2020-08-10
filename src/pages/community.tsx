@@ -149,23 +149,46 @@ const JoiningCommunity: React.FC = () => {
   }
 
   const JoiningSlack: React.FC = () => {
-    const { lg } = useTheme().screens;
-    
-    const flexibleButton = (
-    <Button screen={lg ? "small" : "large"} style={{marginBottom: "3rem"}} className="GetStartedButton" gradientColor="purple">
-          Join the Channel
-    </Button>
-    )
-    return(
-      <div style={{textAlign : "center", width:lg? "17rem":"32.6875rem", height : lg?"19.5rem":"27.5625rem", backgroundColor : "#FFFFFF", borderRadius : "0.5rem", boxShadow : "box-shadow: 0 0.875rem 3.375rem #000000 10%;", margin: lg ? '1rem auto 5rem auto':'7.125rem 0.5rem 1rem 1rem'}}>
-          <Slack />
-          <p style={{fontSize:lg ? "1.5rem":"2.25rem", fontWeight :"500", margin : '2.125rem 0 0 0'}}>Join #Litmus<br /> on Kubernetes Slack</p>
-          
-          {flexibleButton}
-      </div>
+  const { sm, lg } = useTheme().screens;
 
-    )
-  }
+  const flexibleButton = (
+    <Button
+      screen={lg ? "small" : "large"}
+      style={{ marginBottom: "3rem" }}
+      className="GetStartedButton"
+      gradientColor="purple"
+    >
+      Join the Channel
+    </Button>
+  );
+  return (
+    <div
+      style={{
+        textAlign: "center",
+        width: lg ? "17rem" : "32.6875rem",
+        height: lg ? "19.5rem" : "27.5625rem",
+        backgroundColor: "#FFFFFF",
+        borderRadius: "0.5rem",
+        boxShadow: "box-shadow: 0 0.875rem 3.375rem #000000 10%;",
+        margin: sm ? "1rem auto 5rem auto" : "7.125rem 0.5rem 7.125rem 1rem"
+      }}
+    >
+      <Slack />
+      <p
+        style={{
+          fontSize: lg ? "1.5rem" : "2.25rem",
+          fontWeight: "500",
+          margin: "2.125rem 0 0 0"
+        }}
+      >
+        Join #Litmus
+        <br /> on Kubernetes Slack
+      </p>
+
+      {flexibleButton}
+    </div>
+  );
+};
 
   const Ready:React.FC = () => {
     const { lg } = useTheme().screens;
