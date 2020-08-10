@@ -5,7 +5,8 @@ export default {
     sm: 640,
     md: 768,
     lg: 1024,
-    xl: 1280
+    xl: 1280,
+    xxl: 1450
   },
   colors: {
     backgroundLight: "#F9FAFC",
@@ -34,6 +35,11 @@ export default {
       "linear-gradient(135.47deg, #109C68 1.77%, rgba(133, 140, 221, 0) 64.41%), #25C087;"
   },
   py: (value: number | string) =>
-    `padding-top: ${value}; padding-bottom: ${value};`
+    `padding-top: ${value}; padding-bottom: ${value};`,
   // Add anything else you'd like.
+  fontsize: {
+    heading: "3rem",
+    paragraph: "1.2rem",
+    subheading: "1.5rem",
+  }
 };

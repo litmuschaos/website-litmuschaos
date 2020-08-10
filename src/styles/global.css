@@ -1,16 +1,54 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+/* Removed the font since I added the font in Nav.tsx for compatibility of svgs. The font when present in the DOM can be accesibile by the SVGs. So It was redundant here.*/
 
 html {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Ubuntu", sans-serif !important;
 }
 
-body {
+body,html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+
 }
 
 a {
   text-decoration: none;
   color: #000;
+}
+
+/* SVGs font work differenly than normal HTML elements. So this rule is required. */
+svg, text{
+  font-family: Ubuntu !important;
+  font-weight:300;
+}
+
+/* ScrollBar css */
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;  /* used # because theme props is'nt working in global.css file */
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #858CDD;   /* used # because theme props is'nt working in global.css file */
+  border-radius:50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5B44BA;  /* used # because theme props is'nt working in global.css file */
+  cursor:pointer;
+}
+
+/* Text Selection Colours */
+
+::-moz-selection { 
+  color: white;
+  background: #858CDD;
+}
+
+::selection {
+  color: white;
+  background: #858CDD;
 }
