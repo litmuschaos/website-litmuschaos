@@ -201,7 +201,7 @@ const JoinAsAdopter: React.FC = () => {
     
     const { sm,lg} = useTheme().screens
     const flexibleButton = (
-      <Button screen={sm ? "small" : "large"} style={{ marginTop :"-4rem"}} gradientColor="green">
+      <Button screen={sm ? "small" : "large"} style={{ marginTop :"-4rem" , fontSize : "0.875rem"}} gradientColor="green">
         List Yourself As an Adopter
       </Button>
     );
