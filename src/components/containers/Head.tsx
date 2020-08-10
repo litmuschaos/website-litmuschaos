@@ -2,16 +2,11 @@ import React from "react";
 import styled, { useTheme } from "styled-components";
 // import { useTheme } from "../styles";
 import { Button, WhiteOnGreenButton } from "../../components/button";
+import { Heading, Paragraph } from "../../components/texts";
+import { Section } from "../../components/section-layout";
 import { BoundedContainer } from "../layout";
 
 // Styles
-
-const Main = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
 
 const BackgroundHeader = styled.div`
   position: absolute;
@@ -23,55 +18,53 @@ const BackgroundHeader = styled.div`
 
 // Components
 
-const OutlinedPurpleBox: React.FC = () => (
-  <img src="/svg/outlined_purple_box.svg" alt="litmus logo" />
-);
-
 const LeftHeaderContainer: React.FC = () => {
   const { sm, md } = useTheme().screens;
-
   const flexibleButton = (
     <Button screen={sm ? "small" : "large"} gradientColor="purple">
-      Get Started
+        Get Started
     </Button>
   );
 
   return (
-    <div style={{ margin: md ? "5rem 0" : "5rem" }}>
-      <WhiteOnGreenButton>OPEN-SOURCE PLATFORM</WhiteOnGreenButton>
-      <h1>
-        Chaos Engineering
-        <br />
-        for your Kubernetes
-      </h1>
-      <p>
-        Kubernetes developers and SREs use Litmus to create, manage and monitor
-        chaos workflows. Resilience of your Kubernetes starts with finding a
-        weakness and start fixing it.
-      </p>
-      <div style={{ marginTop: "1rem" }}>{flexibleButton}</div>
-    </div>
+      <div style={{ margin: md ? "5rem 0" : "0rem 5rem 0rem 0rem" }}>
+          <WhiteOnGreenButton>OPEN-SOURCE PLATFORM</WhiteOnGreenButton>
+          <Heading>
+            Chaos Engineering
+            <br />
+            for your Kubernetes
+          </Heading>
+          <Paragraph>
+            Kubernetes developers and SREs use Litmus to create, manage and monitor
+            chaos workflows. Resilience of your Kubernetes starts with finding a
+            weakness and start fixing it.
+          </Paragraph>
+          <div style={{ marginTop: "1rem" }}>{flexibleButton}</div>
+      </div>
   );
 };
 
 const RightHeaderContainer: React.FC = () => {
+  const { sm, md } = useTheme().screens;
   return (
     <>
+    <BoundedContainer width="50%">
       <BackgroundHeader>
-        <OutlinedPurpleBox />
+        {sm||md ? ( <object data="/svg/MainRectangleMobile.svg" type="image/svg+xml" /> ) : ( <object data="/svg/MainRectangle.svg" type="image/svg+xml" style={{maxWidth:"100%"}}/> )}
       </BackgroundHeader>
+    </BoundedContainer>
     </>
   );
 };
 
 const Head: React.FC = () => {
   return (
-    <Main>
+    <Section>
       <BoundedContainer width="45%">
         <LeftHeaderContainer />
       </BoundedContainer>
       <RightHeaderContainer />
-    </Main>
+    </Section>
   );
 };
 
