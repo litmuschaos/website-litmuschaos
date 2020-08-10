@@ -246,7 +246,7 @@ const JoiningCommunity: React.FC = () => {
     const { sm,lg } = useTheme().screens;
 
     return(
-      <div style={{maxWidth: lg?'auto':'37.625rem', margin:sm ? "1rem":'5rem 1rem 5rem 1rem'}}>
+      <div style={{maxWidth: lg?'auto':'37.625rem', margin:sm ? "1rem":'2rem 1rem 5rem 1rem'}}>
         <h6 style={{fontSize : lg ?"1.75rem":"3.5rem", margin :'auto auto 2rem auto'}}>Community resources</h6>
         
         <p style={{color : "#6F6F6F",  maxWidth: lg?'auto':'35.1875rem'}}>
