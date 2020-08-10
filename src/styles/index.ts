@@ -4,7 +4,6 @@ import { DefaultTheme, ThemeContext } from "styled-components";
 import media from "use-media";
 import themeObject from "./theme";
 
-export { GlobalStyles } from "./global-styles";
 export { theme, useTheme };
 
 type DefaultThemeObject = Omit<typeof themeObject, "screens"> & {

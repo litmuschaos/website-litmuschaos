@@ -1,8 +1,9 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
 // import { useTheme } from "../styles";
-import { Button, WhiteOnGreenButton } from "../../components/button";
-import { BoundedContainer } from "../layout";
+import { Button, WhiteOnGreenButton } from "../../button";
+import { BoundedContainer } from "../../layout";
+import { Heading } from "../../texts";
 
 // Styles
 
@@ -39,11 +40,11 @@ const LeftHeaderContainer: React.FC = () => {
   return (
     <div style={{ margin: md ? "5rem 0" : "5rem" }}>
       <WhiteOnGreenButton>OPEN-SOURCE PLATFORM</WhiteOnGreenButton>
-      <h1>
+      <Heading>
         Chaos Engineering
         <br />
         for your Kubernetes
-      </h1>
+      </Heading>
       <p>
         Kubernetes developers and SREs use Litmus to create, manage and monitor
         chaos workflows. Resilience of your Kubernetes starts with finding a
@@ -67,7 +68,7 @@ const RightHeaderContainer: React.FC = () => {
 const Head: React.FC = () => {
   return (
     <Main>
-      <BoundedContainer width="45%">
+      <BoundedContainer width="45%" margin="0">
         <LeftHeaderContainer />
       </BoundedContainer>
       <RightHeaderContainer />

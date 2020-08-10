@@ -11,9 +11,9 @@ beforeEach(() => {
     return {
       icon: {
         childImageSharp: {
-          fixed: "gatsby-logo.png",
-        },
-      },
+          fixed: "gatsby-logo.png"
+        }
+      }
     };
   });
 });

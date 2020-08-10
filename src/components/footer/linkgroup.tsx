@@ -7,7 +7,7 @@ import { community, resources, sitemap, top_adopters } from "./data";
 const Title = styled.div`
   color: ${props => props.theme.colors.textSecondary};
   font-weight: 600;
-  font-size: 1rem;
+  font-size: ${props => props.theme.fontSize.paragraph};
   margin-bottom: 1.5rem;
 `;
 

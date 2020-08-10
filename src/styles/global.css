@@ -13,3 +13,42 @@ a {
   text-decoration: none;
   color: #000;
 }
+
+/* SVGs font work differenly than normal HTML elements. So this rule is required. */
+svg,
+text {
+  font-family: Ubuntu !important;
+  font-weight: 300;
+}
+
+/* ScrollBar css */
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #858cdd;
+  border-radius: 3rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5b44ba;
+  cursor: pointer;
+}
+
+/* Text Selection Colours */
+
+::-moz-selection {
+  color: white;
+  background: #858cdd;
+}
+
+::selection {
+  color: white;
+  background: #858cdd;
+}

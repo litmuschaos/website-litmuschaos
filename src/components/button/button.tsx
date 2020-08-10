@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 interface IButton {
@@ -18,7 +17,7 @@ const Button = styled.button<IButton>`
       : props.theme.gradient.green};
   color: ${props => props.theme.colors.pureWhite};
   border-radius: 0.25rem;
-  font-size: 0.9rem;
+  font-size: ${props => props.theme.fontSize.button};
   cursor: pointer;
   :disabled {
     background: lightgray;
@@ -26,14 +25,14 @@ const Button = styled.button<IButton>`
 `;
 
 // White On Green Button Styles
-const WhiteOnGreenButtonStyles = styled.button`
+const WhiteOnGreenButton = styled.button`
   height: 2rem;
   min-width: 13rem;
   border: none;
   border-radius: 0.2rem;
   background: ${props => props.theme.colors.pureWhite};
   color: ${props => props.theme.colors.greenDark};
-  font-size: 0.7rem;
+  font-size: ${props => props.theme.fontSize.small};
   font-weight: bold;
   cursor: pointer;
   :disabled {
@@ -49,15 +48,11 @@ const OutlinedButton = styled.button`
   color: ${props => props.theme.colors.backgroundDark};
   border: 0.05rem solid white;
   border-radius: 0.5rem;
-  font-size: 1rem;
+  font-size: ${props => props.theme.fontSize.button};
   cursor: pointer;
   :disabled {
     background: lightgray;
   }
 `;
-
-const WhiteOnGreenButton: React.FC = ({ children }) => {
-  return <WhiteOnGreenButtonStyles>{children}</WhiteOnGreenButtonStyles>;
-};
 
 export { Button, OutlinedButton, WhiteOnGreenButton };

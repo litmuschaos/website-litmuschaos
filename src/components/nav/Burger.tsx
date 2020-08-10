@@ -12,16 +12,16 @@ const StyledBurger = styled.div`
 
   .line {
     width: 70%;
-    margin-lefT: 30%;
+    margin-left: 30%;
   }
 `;
 
 const Burger: React.FC = () => {
   return (
     <StyledBurger>
-        <button />
-        <button className="line" />
-        <button className="line" />
+      <button />
+      <button className="line" />
+      <button className="line" />
     </StyledBurger>
   );
 };

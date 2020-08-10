@@ -1,1 +1,1 @@
-export { CSSDebugger } from "./css-debugger";
+export * from "./css-debugger";

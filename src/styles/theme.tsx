@@ -6,34 +6,43 @@ export default {
     md: 768,
     lg: 1024,
     xl: 1280,
+    xxl: 1600,
+    xxxl: 1920
+  },
+  fontSize: {
+    heading: "3.5rem",
+    subHeading: "1.5rem",
+    paragraph: "1rem",
+    button: "1.125rem",
+    small: "0.875rem"
   },
   colors: {
-    backgroundLight: '#F9FAFC',
-    backgroundDark: '#F4F5F7',
-    spaceGrey: '#F1F2F6',
-    darkGrey: '#6F6F6F',
-    greenLight: '#25C187',
-    greenDark: '#109B67',
-    purpleLight: '#858CDD',
-    purpleDark: '#858cdd',
-    textPrimary: '#042A2B',
-    textSecondary: '#5B44BA',
-    pureWhite: '#FFFFFF',
+    backgroundLight: "#F9FAFC",
+    backgroundDark: "#F4F5F7",
+    spaceGrey: "#F1F2F6",
+    darkGrey: "#6F6F6F",
+    greenLight: "#25C187",
+    greenDark: "#109B67",
+    purpleLight: "#858CDD",
+    purpleDark: "#858cdd",
+    textPrimary: "#042A2B",
+    textSecondary: "#5B44BA",
+    pureWhite: "#FFFFFF"
   },
   opacity: {
     0: 0,
     25: 0.25,
     50: 0.5,
     75: 0.75,
-    100: 1,
+    100: 1
   },
   gradient: {
     purple:
-      'linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;',
+      "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;",
     green:
-      'linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;',
+      "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;"
   },
   py: (value: number | string) =>
-    `padding-top: ${value}; padding-bottom: ${value};`,
+    `padding-top: ${value}; padding-bottom: ${value};`
   // Add anything else you'd like.
-}
+};

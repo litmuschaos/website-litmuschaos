@@ -11,9 +11,9 @@ beforeEach(() => {
         siteMetadata: {
           title: "Test",
           description: "Test",
-          author: "@test",
-        },
-      },
+          author: "@test"
+        }
+      }
     };
   });
 });

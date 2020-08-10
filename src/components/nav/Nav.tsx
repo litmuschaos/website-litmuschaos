@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "../link/index";
+import { useTheme } from "../../styles";
 import { OutlinedButton } from "../button/index";
 import { GithubIcon } from "../github-icon/index";
+import { Link } from "../link/index";
 import Burger from "./Burger";
-import { useTheme } from "../../styles";
 
 const Logo: React.FC = () => (
   <img src="/svg/litmus-logo.svg" width="128" alt="litmus logo" />
@@ -24,7 +24,7 @@ const LogoDiv = styled.div`
 
 const GitHubStars = styled.div`
   height: 2rem;
-  font-size: 0.5rem;
+  font-size: ${props => props.theme.fontSize.small};
   background: ${props => props.theme.colors.spaceGrey};
   padding: 0.5rem 0.5rem;
   margin-left: 1rem;
@@ -47,14 +47,14 @@ const Ul = styled.ul`
   flex-flow: row nowrap;
   li {
     padding: 1rem 1rem;
-    font-size: 0.9rem;
+    font-size: ${props => props.theme.fontSize.button};
   }
 `;
 
 const ResponsiveNav = styled.div`
   display: flex;
   flex-direction; row;
-`
+`;
 
 const Nav: React.FC = () => {
   const { sm } = useTheme().screens;
@@ -66,8 +66,8 @@ const Nav: React.FC = () => {
           <Logo />
           <ResponsiveNav>
             <GitHubStars>
-                <GithubIcon />
-                <h3>Stars</h3>
+              <GithubIcon />
+              <h3>Stars</h3>
             </GitHubStars>
             <Burger />
           </ResponsiveNav>
@@ -94,7 +94,7 @@ const Nav: React.FC = () => {
               <li>Blogs</li>
             </Link>
 
-            <Link to="#">
+            <Link to="/community">
               <li>Community</li>
             </Link>
 

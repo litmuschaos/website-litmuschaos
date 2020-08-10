@@ -1,5 +1,1 @@
-export {
-  Button,
-  OutlinedButton,
-  WhiteOnGreenButton
-} from "./button";
+export * from "./button";
