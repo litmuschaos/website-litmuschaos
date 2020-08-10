@@ -13,14 +13,14 @@ interface IPanelContainer {
 }
 
 const PanelContainer = styled.div<IPanelContainer>`
-  margin: ${props => props.margin};
-  width: ${props => (props.theme.screens.sm ? "100%" : props.width)};
+  margin: ${(props) => (props.theme.screens.sm ? "1rem 0" : props.margin)};
+  width: ${(props) => (props.theme.screens.sm ? "100%" : props.width)};
 `;
 
 const BoundedContainer: React.FC<IBoundedContainer> = ({
   width,
   children,
-  margin
+  margin,
 }) => {
   return (
     <PanelContainer width={width} margin={margin}>
