@@ -6,7 +6,7 @@ export default {
     md: 768,
     lg: 1024,
     xl: 1280,
-    xxl: 1450
+    xxl: 1450,
   },
   colors: {
     backgroundLight: "#F9FAFC",
@@ -18,20 +18,20 @@ export default {
     purpleDark: "#858cdd",
     textPrimary: "#042A2B",
     textSecondary: "#5B44BA",
-    pureWhite: "#FFFFFF"
+    pureWhite: "#FFFFFF",
   },
   opacity: {
     0: 0,
     25: 0.25,
     50: 0.5,
     75: 0.75,
-    100: 1
+    100: 1,
   },
   gradient: {
     purple:
       "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;",
     green:
-      "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;"
+      "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;",
   },
   py: (value: number | string) =>
     `padding-top: ${value}; padding-bottom: ${value};`,
@@ -40,5 +40,5 @@ export default {
     heading: "3rem",
     paragraph: "1.2rem",
     subheading: "1.5rem",
-  }
+  },
 };
