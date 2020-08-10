@@ -18,18 +18,18 @@ const CommunityImage: React.FC = () => {
   else if(md)
   {
     return(
-      <img  style={{width : "20rem", height : "22.5rem", marginTop :"2rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
+      <img  style={{width : "20rem", height : "22.5rem", marginTop :"-2rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
       )
   }
   else if(lg)
   {
     return(
-      <img  style={{width : "30rem", height : "22.5rem", marginTop :"2rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
+      <img  style={{width : "30rem", height : "22.5rem", marginTop :"-2rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
       )
   }
   else{
       return(
-    <img  style={{width : "40rem", height : "30rem", marginTop :"2rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
+    <img  style={{width : "40rem", height : "30rem", marginTop :"-2rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
     )
   }
 
