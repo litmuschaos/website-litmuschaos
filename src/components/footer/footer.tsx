@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { useTheme } from "../../styles";
-import { BoundedContainer } from "../layout";
-import { LinkGroup } from "./linkgroup";
+import React from 'react'
+import styled from 'styled-components'
+import { useTheme } from '../../styles'
+import { BoundedContainer } from '../layout'
+import { LinkGroup } from './linkgroup'
 
 const Logo: React.FC = () => (
   <img src="/svg/litmus-logo.svg" width="128" alt="litmus logo" />
-);
+)
 
 const Row = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ const Row = styled.div`
   > * {
     margin: 0 1rem;
   }
-`;
+`
 
 const Copyright: React.FC = () => (
   <>
@@ -25,10 +25,10 @@ const Copyright: React.FC = () => (
       page.
     </p>
   </>
-);
+)
 
 const Footer: React.FC = () => {
-  const { md } = useTheme().screens;
+  const { md } = useTheme().screens
 
   return (
     <>
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
         </>
       ) : (
         <Row>
-          <BoundedContainer width="20%">
+          <BoundedContainer width="20%" margin="1rem">
             <Logo />
             <Copyright />
           </BoundedContainer>
@@ -50,11 +50,11 @@ const Footer: React.FC = () => {
         </Row>
       )}
       <div>
-        <hr style={{ width: "80%", margin: "1rem auto" }} />
-        <p style={{ textAlign: "center" }}>Originally created by Mayadata</p>
+        <hr style={{ width: '80%', margin: '1rem auto' }} />
+        <p style={{ textAlign: 'center' }}>Originally created by Mayadata</p>
       </div>
     </>
-  );
-};
+  )
+}
 
-export { Footer };
+export { Footer }

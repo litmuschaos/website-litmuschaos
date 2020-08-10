@@ -1,22 +1,32 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 interface IBoundedContainer {
-  width: string;
-  children: React.ReactNode;
+  width: string
+  children: React.ReactNode
+  margin: string
 }
 
 interface IPanelContainer {
-  width: string;
+  width: string
+  margin: string
 }
 
 const PanelContainer = styled.div<IPanelContainer>`
-  margin: 1rem;
-  width: ${props => (props.theme.screens.sm ? "100%" : props.width)};
-`;
+  margin: ${(props) => props.margin}
+  width: ${(props) => (props.theme.screens.sm ? '100%' : props.width)};
+`
 
-const BoundedContainer: React.FC<IBoundedContainer> = ({ width, children }) => {
-  return <PanelContainer width={width}>{children}</PanelContainer>;
-};
+const BoundedContainer: React.FC<IBoundedContainer> = ({
+  width,
+  children,
+  margin,
+}) => {
+  return (
+    <PanelContainer width={width} margin={margin}>
+      {children}
+    </PanelContainer>
+  )
+}
 
-export { BoundedContainer };
+export { BoundedContainer }
