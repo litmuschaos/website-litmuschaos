@@ -5,15 +5,15 @@ import { useTheme } from "../../styles";
 import { Paragraph } from "../texts";
 
 const SlackBox = styled.div`
-  background: ${props => props.theme.colors.pureWhite};
+  background: ${(props) => props.theme.colors.pureWhite};
   width: 100%;
   height: 100%;
-  padding: 1rem 10%;
+  padding: 15% 10%;
   text-align: center;
 `;
 
 const Text = styled.p`
-  font-size: ${props => (props.theme.screens.sm ? "1.3rem" : "1.5rem")};
+  font-size: ${(props) => (props.theme.screens.sm ? "1.3rem" : "1.5rem")};
   font-weight: 600;
 `;
 

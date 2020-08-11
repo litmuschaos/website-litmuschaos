@@ -10,7 +10,7 @@ export default {
     xxxl: 1920,
   },
   fontSize: {
-    heading: { lg: "3.5rem", md: "1.75rem" },
+    heading: { lg: "2.2rem", md: "1.75rem" },
     subHeading: "1.5rem",
     paragraph: { lg: "1rem", md: "0.875rem" },
     button: "1.125rem",

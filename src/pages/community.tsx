@@ -4,6 +4,7 @@ import { Button } from "../components/button";
 import { BoundedContainer, Layout, ResponsiveRow } from "../components/layout";
 import { SEO } from "../components/seo";
 import { Slack } from "../components/slack";
+import { VideoFrame } from "../components/videoBox";
 import { Heading, Paragraph } from "../components/texts";
 import { theme, useTheme } from "../styles";
 
@@ -12,7 +13,7 @@ const HeaderText = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1rem 3rem;
-  width: ${props => (!props.theme.screens.sm ? "35%" : "")};
+  width: ${(props) => (!props.theme.screens.sm ? "35%" : "")};
 `;
 
 const CommunityImage = styled.img`
@@ -21,8 +22,8 @@ const CommunityImage = styled.img`
 `;
 
 const CommunityText = styled.div`
-  width: ${props => (props.theme.screens.sm ? "80%" : "40%")};
-  margin: ${props => (props.theme.screens.sm ? "0 auto" : "")};
+  width: ${(props) => (props.theme.screens.sm ? "80%" : "40%")};
+  margin: ${(props) => (props.theme.screens.sm ? "0 auto" : "")};
   display: flex;
   flex-direction: column;
 `;
@@ -52,21 +53,21 @@ const CommunityTextList = styled.div`
 
 const BlueTestTube = styled.img`
   position: absolute;
-  width: ${props => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${props => (props.theme.screens.sm ? "90%" : "")};
-  left: ${props => (props.theme.screens.sm ? "50%" : "10%")};
+  width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
+  margin-top: ${(props) => (props.theme.screens.sm ? "90%" : "")};
+  left: ${(props) => (props.theme.screens.sm ? "50%" : "10%")};
 `;
 
 const GreenTestTube = styled.img`
   position: absolute;
-  width: ${props => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${props => (props.theme.screens.sm ? "105%" : "6%")};
-  left: ${props => (props.theme.screens.sm ? "65%" : "45%")};
+  width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
+  margin-top: ${(props) => (props.theme.screens.sm ? "105%" : "6%")};
+  left: ${(props) => (props.theme.screens.sm ? "65%" : "45%")};
 `;
 
 const SlackBox = styled.div`
-  margin: ${props => (props.theme.screens.sm ? "0 auto" : "0 2rem")};
-  width: ${props => (props.theme.screens.sm ? "80%" : "25%")};
+  margin: ${(props) => (props.theme.screens.sm ? "0 auto" : "0 2rem")};
+  width: ${(props) => (props.theme.screens.sm ? "80%" : "25%")};
   box-shadow: -0.2rem 0.3rem 0.7rem 0.1rem rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
 `;
@@ -117,7 +118,10 @@ const Header: React.FC = () => {
 const JoinOurCommunity: React.FC = () => {
   return (
     <div
-      style={{ background: theme().colors.backgroundDark, padding: "5rem 0" }}
+      style={{
+        background: theme().colors.backgroundDark,
+        padding: "5rem 0",
+      }}
     >
       <ResponsiveRow>
         <CommunityText>
@@ -194,6 +198,36 @@ const JoinOurCommunity: React.FC = () => {
   );
 };
 
+const LitmusCommunityVideo: React.FC = () => {
+  const { sm } = useTheme().screens.sm;
+
+  const paragraphText =
+    "Creating chaos on YouTube. Subscribe to our channel for early updates on meeting recordings, tutorials, events and more";
+  return (
+    <div style={{ margin: "2rem 0", textAlign: "center" }}>
+      <Heading style={{ textAlign: "center", margin: "0 auto" }}>
+        See what’s happening in
+        <br />
+        the Litmus community
+      </Heading>
+
+      <CommunityText style={{ margin: "2rem auto", textAlign: "center" }}>
+        <Paragraph>{paragraphText}</Paragraph>
+      </CommunityText>
+
+      <VideoFrame />
+
+      <Button
+        style={{ margin: "3rem 0" }}
+        screen={sm ? "small" : "large"}
+        gradientColor="purple"
+      >
+        Visit Our Youtube
+      </Button>
+    </div>
+  );
+};
+
 const Community = () => {
   return (
     <Layout>
@@ -203,6 +237,9 @@ const Community = () => {
       </BoundedContainer>
       <BoundedContainer width="100%" margin="0">
         <JoinOurCommunity />
+      </BoundedContainer>
+      <BoundedContainer width="100%" margin="0">
+        <LitmusCommunityVideo />
       </BoundedContainer>
     </Layout>
   );
