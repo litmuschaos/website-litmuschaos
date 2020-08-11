@@ -4,7 +4,7 @@ import { theme } from "../../styles";
 import { CSSDebugger } from "../css-debugger";
 // Components
 import { Footer } from "../footer";
-import Header from "./Header";
+import { Nav } from "../nav";
 
 const Container = styled.div`
   margin: ${props => (props.theme.screens.md ? "0 1rem" : "0 5rem")};
@@ -17,7 +17,7 @@ const Layout: React.FC = ({ children }) => {
     <ThemeProvider theme={theme()}>
       <Container>
         <CSSDebugger />
-        <Header />
+        <Nav />
         <main>{children}</main>
         <Footer />
       </Container>

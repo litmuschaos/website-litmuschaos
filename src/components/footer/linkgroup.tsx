@@ -39,7 +39,7 @@ interface LinkProps {
 }
 const Links: React.FC<LinkProps> = ({ data, showImage, internalLink }) => {
   return (
-    <div>
+    <div style={{ margin: "1rem" }}>
       <Title>{data.title}</Title>
       <ListBox>
         {data.links.map(link =>
