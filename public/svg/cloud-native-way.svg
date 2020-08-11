@@ -1,5 +1,7 @@
-<svg width="558" height="380" viewBox="0 0 558 380" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="558" height="380" transform="matrix(-1 0 0 1 558 0)" fill="url(#pattern0)"/>
+<svg width="687" height="619" viewBox="0 0 687 619" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M20.5939 315.818C39.3704 399.357 65.5955 482.19 107.724 540.032C128.783 568.946 153.803 591.596 183.836 604.977C213.863 618.356 248.937 622.485 290.137 614.299C372.676 597.9 471.805 565.024 550.284 515.363C628.777 465.695 686.5 399.314 686.5 315.927C686.5 232.532 626.841 158.796 545.276 103.746C463.727 48.7073 360.402 12.4354 273.333 3.93239C121.469 -10.8983 48.6304 23.5695 18.5299 83.2769C3.46075 113.168 -0.940491 149.455 0.89032 189.215C2.72107 228.972 10.7805 272.156 20.5939 315.818Z" stroke="#858CDD" stroke-opacity="0.1"/>
+<path d="M64.355 315.055C96.774 459.479 154.962 601.722 297.522 573.361C440.083 544.999 640 459.641 640 315.055C640 170.469 433.433 59.6812 282.975 44.9687C20.7141 19.3234 30.4668 164.086 64.355 315.055Z" fill="#858CDD" fill-opacity="0.05"/>
+<rect width="558" height="380" transform="matrix(-1 0 0 1 584 89)" fill="url(#pattern0)"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0" transform="translate(0 -0.234211) scale(0.00025 0.000367105)"/>

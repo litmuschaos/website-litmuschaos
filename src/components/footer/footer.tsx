@@ -1,22 +1,18 @@
 import React from "react";
-import styled from "styled-components";
 import { useTheme } from "../../styles";
-import { BoundedContainer, ResponsiveRow } from "../layout";
+import { BoundedContainer, ResponsiveRow, Row } from "../layout";
 import { Paragraph } from "../texts";
 import { community, resources, sitemap, top_adopters } from "./data";
 import { Links } from "./linkgroup";
 
 const Logo: React.FC = () => (
-  <img src="/svg/litmus-logo.svg" width="128" alt="litmus logo" />
+  <img
+    src="/svg/litmus-logo.svg"
+    width="128"
+    alt="litmus logo"
+    style={{ marginBottom: "1rem" }}
+  />
 );
-
-const Row = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  > * {
-    margin: 0 1rem;
-  }
-`;
 
 const Copyright: React.FC = () => (
   <>
@@ -39,27 +35,25 @@ const Footer: React.FC = () => {
       {md ? (
         <>
           <Logo />
-          <div>
-            <ResponsiveRow>
-              <Row>
-                <Links data={sitemap} showImage={false} internalLink={true} />
-                <Links data={resources} showImage={true} internalLink={false} />
-              </Row>
-              <Row>
-                <Links
-                  data={top_adopters}
-                  showImage={false}
-                  internalLink={false}
-                />
-                <Links data={community} showImage={true} internalLink={false} />
-              </Row>
-            </ResponsiveRow>
-          </div>
+          <ResponsiveRow>
+            <Row>
+              <Links data={sitemap} showImage={false} internalLink={true} />
+              <Links data={resources} showImage={true} internalLink={false} />
+            </Row>
+            <Row>
+              <Links
+                data={top_adopters}
+                showImage={false}
+                internalLink={false}
+              />
+              <Links data={community} showImage={true} internalLink={false} />
+            </Row>
+          </ResponsiveRow>
           <Copyright />
         </>
       ) : (
         <Row>
-          <BoundedContainer width="20%" margin="1rem">
+          <BoundedContainer width="30%" margin="-1.2rem 1rem 0 0">
             <Logo />
             <Copyright />
           </BoundedContainer>

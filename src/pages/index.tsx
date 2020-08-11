@@ -1,22 +1,10 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { Layout, ResponsiveRow } from "../components/layout";
+import { Layout } from "../components/layout";
 import { Head } from "../components/sections/home";
+import { CloudNativeWay } from "../components/sections/home/CloudNativeWay";
 import { SEO } from "../components/seo";
 import { theme, useTheme } from "../styles";
-
-const CloudNativeWay: React.FC = ({ children }) => {
-  const { sm } = useTheme().screens;
-  if (sm) {
-    return <div style={{ margin: "0 1rem" }}>{children}</div>;
-  } else {
-    return (
-      <div style={{ margin: "28rem 0 3rem 0", textAlign: "center" }}>
-        {children}
-      </div>
-    );
-  }
-};
 
 const OutlinedPurpleBoxImage = styled.img`
   position: absolute;
@@ -47,19 +35,7 @@ const App = () => {
       <Layout>
         <SEO />
         <Head />
-        <CloudNativeWay>
-          <h2>Do it the cloud-native way</h2>
-          <ResponsiveRow>
-            <img
-              src="./svg/chaosbird_experimenting.svg"
-              alt="Chaos Bird Experimenting"
-            />
-            <div>
-              <p>Some</p>
-              <p>File</p>
-            </div>
-          </ResponsiveRow>
-        </CloudNativeWay>
+        <CloudNativeWay />
       </Layout>
     </>
   );
