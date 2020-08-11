@@ -1,6 +1,4 @@
 import React from "react";
-import { Button } from "../../components/button";
-import { useTheme } from "../../styles";
 import styled from "styled-components";
 
 const VideoBox = styled.iframe`

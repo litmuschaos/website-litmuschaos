@@ -4,6 +4,7 @@ import { Button } from "../components/button";
 import { BoundedContainer, Layout, ResponsiveRow } from "../components/layout";
 import { SEO } from "../components/seo";
 import { Slack } from "../components/slack";
+import { Card } from "../components/card";
 import { VideoFrame } from "../components/videoBox";
 import { Heading, Paragraph } from "../components/texts";
 import { theme, useTheme } from "../styles";
@@ -23,7 +24,7 @@ const CommunityImage = styled.img`
 
 const CommunityText = styled.div`
   width: ${(props) => (props.theme.screens.sm ? "80%" : "40%")};
-  margin: ${(props) => (props.theme.screens.sm ? "0 auto" : "")};
+  margin: ${(props) => (props.theme.screens.sm ? "0 auto" : "0 5rem")};
   display: flex;
   flex-direction: column;
 `;
@@ -205,14 +206,14 @@ const LitmusCommunityVideo: React.FC = () => {
     "Creating chaos on YouTube. Subscribe to our channel for early updates on meeting recordings, tutorials, events and more";
   return (
     <div style={{ margin: "2rem 0", textAlign: "center" }}>
-      <Heading style={{ textAlign: "center", margin: "0 auto" }}>
+      <Heading textAlign="center" style={{ margin: "0 auto" }}>
         See what’s happening in
         <br />
         the Litmus community
       </Heading>
 
-      <CommunityText style={{ margin: "2rem auto", textAlign: "center" }}>
-        <Paragraph>{paragraphText}</Paragraph>
+      <CommunityText style={{ margin: "2rem auto" }}>
+        <Paragraph textAlign="center">{paragraphText}</Paragraph>
       </CommunityText>
 
       <VideoFrame />
@@ -224,6 +225,46 @@ const LitmusCommunityVideo: React.FC = () => {
       >
         Visit Our Youtube
       </Button>
+    </div>
+  );
+};
+
+const CommunityEvents: React.FC = () => {
+  return (
+    <div style={{ margin: "4rem 0" }}>
+      <ResponsiveRow>
+        <CommunityText>
+          <Heading>Community Events</Heading>
+          <Paragraph style={{ margin: "1rem 0" }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
+            felis nec arcu eleifend scelerisque. Curabitur facilisis, nibh sit
+            amet tincidunt porttitor, orci lorem accumsan ex, quis scelerisque
+            quam ligula fringilla risus.
+          </Paragraph>
+        </CommunityText>
+        <BoundedContainer width="40%" margin="0 auto">
+          <ResponsiveRow>
+            <ResponsiveRow>
+              <Card
+                width="90%"
+                height="18rem"
+                subheading="CNCF Meetup"
+                body="Lorem Ipsum"
+                image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mariaclusters.com%2Fimg%2Findex%2Fcncf.png&f=1&nofb=1"
+              />
+            </ResponsiveRow>
+            <ResponsiveRow>
+              <Card
+                width="90%"
+                height="18rem"
+                subheading="3rd Wednesday Meetup"
+                body="Some type of meetup"
+                image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblog.mayadata.io%2Fhubfs%2F1.7Release-01-1.jpg%23keepProtocol&f=1&nofb=1"
+              />
+            </ResponsiveRow>
+          </ResponsiveRow>
+        </BoundedContainer>
+      </ResponsiveRow>
     </div>
   );
 };
@@ -240,6 +281,9 @@ const Community = () => {
       </BoundedContainer>
       <BoundedContainer width="100%" margin="0">
         <LitmusCommunityVideo />
+      </BoundedContainer>
+      <BoundedContainer width="100%" margin="0">
+        <CommunityEvents />
       </BoundedContainer>
     </Layout>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "../../components/button";
 import { useTheme } from "../../styles";
-import { Paragraph } from "../texts";
+import { Paragraph, Subheading } from "../texts";
 
 const SlackBox = styled.div`
   background: ${(props) => props.theme.colors.pureWhite};
@@ -10,11 +10,6 @@ const SlackBox = styled.div`
   height: 100%;
   padding: 15% 10%;
   text-align: center;
-`;
-
-const Text = styled.p`
-  font-size: ${(props) => (props.theme.screens.sm ? "1.3rem" : "1.5rem")};
-  font-weight: 600;
 `;
 
 const Slack: React.FC = () => {
@@ -33,10 +28,13 @@ const Slack: React.FC = () => {
           src="./svg/slackWithLabel.svg"
           alt="Slack Logo"
         />
-        <Text style={{ margin: "1rem 0" }}>
+        <Subheading textAlign="center" style={{ margin: "1rem 0" }}>
           Join #Litmus on Kubernetes Slack
-        </Text>
-        <Paragraph style={{ marginBottom: "0.7rem", fontSize: "0.7rem" }}>
+        </Subheading>
+        <Paragraph
+          textAlign="center"
+          style={{ marginBottom: "0.7rem", fontSize: "0.7rem" }}
+        >
           Connect with SREs and Chaos Engineering enthusiasts.
         </Paragraph>
         <div>
