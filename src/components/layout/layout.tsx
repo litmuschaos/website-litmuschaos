@@ -7,11 +7,9 @@ import { Footer } from "../footer";
 import Header from "./Header";
 
 const Container = styled.div`
-  margin: 0 auto;
-  width: 100%;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+  margin: ${props => (props.theme.screens.md ? "0 1rem" : "0 5rem")};
+  position: relative;
+  z-index: ${props => props.theme.zIndex.content};
 `;
 
 const Layout: React.FC = ({ children }) => {

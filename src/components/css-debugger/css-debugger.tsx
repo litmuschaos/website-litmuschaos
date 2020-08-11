@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { ComponentProps, useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 
 const ToggleDebugButton = styled(motion.button).attrs(() => ({
   drag: true,
   dragMomentum: false,
-  whileHover: { scale: 1.05 }
+  whileHover: { scale: 1.05 },
 }))<{ debug?: boolean }>`
   position: fixed;
   top: 20px;
@@ -51,7 +51,7 @@ const CSSDebugger: React.FC<CSSDebuggerProps> = ({
   showToggle = true,
   showGrid = true,
   buttonStyle,
-  color = "rgba(255, 0, 0, .75)"
+  color = "rgba(255, 0, 0, .75)",
 }) => {
   const [isDebug, setIsDebug] = useState(debug);
   const GlobalStyle = createGlobalStyle<{

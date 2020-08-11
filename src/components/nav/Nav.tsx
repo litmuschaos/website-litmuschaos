@@ -16,6 +16,8 @@ const NavBar = styled.nav`
   display: flex;
   background: transparent;
   justify-content: space-around;
+  position: relative;
+  z-index: ${props => props.theme.zIndex.nav};
 `;
 
 const LogoDiv = styled.div`

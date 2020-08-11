@@ -1,13 +1,20 @@
-import styled, { DefaultTheme } from "styled-components";
-
-const calcSize = (theme: DefaultTheme) => {
-  console.log(theme.screens);
-  return "3.5rem";
-};
+import styled from "styled-components";
 
 const Heading = styled.h1`
-  font-size: ${props => calcSize(props.theme)};
   line-height: 130%;
+  font-size: ${props =>
+    props.theme.screens.md
+      ? props.theme.fontSize.heading.md
+      : props.theme.fontSize.heading.lg};
 `;
 
-export { Heading };
+const Paragraph = styled.p`
+  line-height: 170%;
+  color: ${props => props.theme.colors.darkGray};
+  font-size: ${props =>
+    props.theme.screens.md
+      ? props.theme.fontSize.paragraph.md
+      : props.theme.fontSize.paragraph.lg};
+`;
+
+export { Heading, Paragraph };

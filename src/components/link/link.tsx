@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { Link as GatsbyLink } from "gatsby";
+import styled from "styled-components";
 
 const Link = styled(GatsbyLink)`
   display: block;
