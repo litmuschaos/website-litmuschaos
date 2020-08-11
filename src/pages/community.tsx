@@ -1,18 +1,18 @@
 import React from "react";
-import { Layout, ResponsiveRow } from "../components/layout";
-import { SEO } from "../components/seo";
 import styled from "styled-components";
 import { Button } from "../components/button";
+import { BoundedContainer, Layout, ResponsiveRow } from "../components/layout";
+import { SEO } from "../components/seo";
 import { Slack } from "../components/slack";
-import { BoundedContainer } from "../components/layout";
-import { useTheme, theme } from "../styles";
+import { Heading, Paragraph } from "../components/texts";
+import { theme, useTheme } from "../styles";
 
 // Styles
 const HeaderText = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1rem 3rem;
-  width: ${(props) => (!props.theme.screens.sm ? "35%" : "")};
+  width: ${props => (!props.theme.screens.sm ? "35%" : "")};
 `;
 
 const CommunityImage = styled.img`
@@ -21,8 +21,8 @@ const CommunityImage = styled.img`
 `;
 
 const CommunityText = styled.div`
-  width: ${(props) => (props.theme.screens.sm ? "80%" : "40%")};
-  margin: ${(props) => (props.theme.screens.sm ? "0 auto" : "")};
+  width: ${props => (props.theme.screens.sm ? "80%" : "40%")};
+  margin: ${props => (props.theme.screens.sm ? "0 auto" : "")};
   display: flex;
   flex-direction: column;
 `;
@@ -52,25 +52,21 @@ const CommunityTextList = styled.div`
 
 const BlueTestTube = styled.img`
   position: absolute;
-  width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${(props) => (props.theme.screens.sm ? "90%" : "")};
-  left: ${(props) => (props.theme.screens.sm ? "50%" : "10%")};
+  width: ${props => (props.theme.screens.sm ? "15%" : "3%")};
+  margin-top: ${props => (props.theme.screens.sm ? "90%" : "")};
+  left: ${props => (props.theme.screens.sm ? "50%" : "10%")};
 `;
 
 const GreenTestTube = styled.img`
   position: absolute;
-  width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${(props) => (props.theme.screens.sm ? "105%" : "6%")};
-  left: ${(props) => (props.theme.screens.sm ? "65%" : "45%")};
-`;
-
-const H1 = styled.h1`
-  font-size: 1.7rem;
+  width: ${props => (props.theme.screens.sm ? "15%" : "3%")};
+  margin-top: ${props => (props.theme.screens.sm ? "105%" : "6%")};
+  left: ${props => (props.theme.screens.sm ? "65%" : "45%")};
 `;
 
 const SlackBox = styled.div`
-  margin: ${(props) => (props.theme.screens.sm ? "0 auto" : "0 2rem")};
-  width: ${(props) => (props.theme.screens.sm ? "80%" : "25%")};
+  margin: ${props => (props.theme.screens.sm ? "0 auto" : "0 2rem")};
+  width: ${props => (props.theme.screens.sm ? "80%" : "25%")};
   box-shadow: -0.2rem 0.3rem 0.7rem 0.1rem rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
 `;
@@ -88,16 +84,14 @@ const Header: React.FC = () => {
           <CommunityImage src="./svg/CommunityBackground.svg" alt="Community" />
         )}
         <HeaderText style={{ marginTop: "5%" }}>
-          <H1>
+          <Heading>
             By the community,
             <br />
             for the community!
-          </H1>
-          <p
+          </Heading>
+          <Paragraph
             style={{
-              fontSize: "0.9rem",
               margin: "2rem 0",
-              color: theme().colors.darkGrey,
             }}
           >
             Created by our users, contributors, and adopters, the Litmus
@@ -110,7 +104,7 @@ const Header: React.FC = () => {
             community to learn and share all about cloud-native Chaos
             Engineering and help Kubernetes infrastructures be resilient. Let’s
             make this journey wonderful together.
-          </p>
+          </Paragraph>
           <Button screen={sm ? "small" : "large"} gradientColor="purple">
             Get Started
           </Button>
@@ -127,7 +121,7 @@ const JoinOurCommunity: React.FC = () => {
     >
       <ResponsiveRow>
         <CommunityText>
-          <H1>Join our Community meetings</H1>
+          <Heading>Join our Community meetings</Heading>
           <p style={{ margin: "1rem 0", color: theme().colors.textSecondary }}>
             We meet on every 3rd saturday of the month!
           </p>

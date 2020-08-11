@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useTheme } from "../../styles";
 import { BoundedContainer } from "../layout";
+import { Paragraph } from "../texts";
 import { LinkGroup } from "./linkgroup";
 
 const Logo: React.FC = () => (
@@ -18,12 +19,14 @@ const Row = styled.div`
 
 const Copyright: React.FC = () => (
   <>
-    <p>Copyright © 2020 LitmusChaos Authors. All rights reserved.</p>
-    <p>
+    <Paragraph>
+      Copyright © 2020 LitmusChaos Authors. All rights reserved.
+    </Paragraph>
+    <Paragraph>
       The Linux Foundation has registered trademarks and uses trademarks. For a
       list of trademarks of The Linux Foundation, please see our Trademark Usage
       page.
-    </p>
+    </Paragraph>
   </>
 );
 
@@ -51,7 +54,9 @@ const Footer: React.FC = () => {
       )}
       <div>
         <hr style={{ width: "80%", margin: "1rem auto" }} />
-        <p style={{ textAlign: "center" }}>Originally created by Mayadata</p>
+        <Paragraph style={{ textAlign: "center" }}>
+          Originally created by Mayadata
+        </Paragraph>
       </div>
     </>
   );
