@@ -39,8 +39,11 @@ const OutlinedPurpleBox: React.FC = () => {
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme()}>
-      <OutlinedPurpleBox />
+    <>
+      <ThemeProvider theme={theme()}>
+        <OutlinedPurpleBox />
+      </ThemeProvider>
+
       <Layout>
         <SEO />
         <Head />
@@ -58,7 +61,7 @@ const App = () => {
           </ResponsiveRow>
         </CloudNativeWay>
       </Layout>
-    </ThemeProvider>
+    </>
   );
 };
 
