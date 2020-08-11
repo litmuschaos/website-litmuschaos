@@ -18,18 +18,18 @@ const CommunityImage: React.FC = () => {
   else if(md)
   {
     return(
-      <img  style={{width : "20rem", height : "22.5rem", marginTop :"-2rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
+      <img  style={{width : "20rem", height : "22.5rem", marginTop :"5rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
       )
   }
   else if(lg)
   {
     return(
-      <img  style={{width : "30rem", height : "22.5rem", marginTop :"-2rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
+      <img  style={{width : "30rem", height : "22.5rem", marginTop :"5rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
       )
   }
   else{
       return(
-    <img  style={{width : "40rem", height : "30rem", marginTop :"-2rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
+    <img  style={{width : "40rem", height : "30rem", marginTop :"5rem" }}src="/svg/CommunityHeroImage.svg" alt="Mayadata Logo" />
     )
   }
 
@@ -246,7 +246,7 @@ const JoiningCommunity: React.FC = () => {
     const { sm,lg } = useTheme().screens;
 
     return(
-      <div style={{maxWidth: lg?'auto':'37.625rem', margin:sm ? "1rem":'0rem 1rem 5rem 1rem'}}>
+      <div style={{maxWidth: lg?'auto':'37.625rem', margin:sm ? "1rem":'5rem 1rem 5rem 1rem'}}>
         <h6 style={{fontSize : lg ?"1.75rem":"3.5rem", margin :'auto auto 2rem auto'}}>Community resources</h6>
         
         <p style={{color : "#6F6F6F",  maxWidth: lg?'auto':'35.1875rem'}}>
