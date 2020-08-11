@@ -31,7 +31,7 @@ const WhiteOnGreenButton = styled.button`
   border: none;
   border-radius: 0.2rem;
   background: ${props => props.theme.colors.pureWhite};
-  color: ${props => props.theme.colors.greenDark};
+  color: ${props => props.theme.colors.darkGreen(1)};
   font-size: ${props => props.theme.fontSize.small};
   font-weight: bold;
   cursor: pointer;

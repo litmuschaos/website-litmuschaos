@@ -1,23 +1,22 @@
-import React from "react";
 import styled, { css } from "styled-components";
 
-const PanelContainer = styled.div`
+interface IResponsiveRow {
+  breakpoint: string;
+}
+
+const ResponsiveRow = styled.div<IResponsiveRow>`
   width: 100%;
   display: flex;
-  ${({ theme }) =>
-    theme.screens.sm
+  ${props =>
+    props.theme.screens[props.breakpoint]
       ? css`
           flex-direction: column;
-          align-items: start;
+          align-items: center;
         `
       : css`
           flex-direction: row;
           justify-content: center;
         `};
 `;
-
-const ResponsiveRow: React.FC = ({ children }) => {
-  return <PanelContainer>{children}</PanelContainer>;
-};
 
 export { ResponsiveRow };

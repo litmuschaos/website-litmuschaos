@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Link = styled(GatsbyLink)`
   display: block;
-  color: white;
+  color: black;
   text-decoration: none;
   :hover {
     color: black;

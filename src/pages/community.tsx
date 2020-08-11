@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "../components/button";
+import { Card } from "../components/card";
 import { BoundedContainer, Layout, ResponsiveRow } from "../components/layout";
 import { SEO } from "../components/seo";
 import { Slack } from "../components/slack";
-import { Card } from "../components/card";
-import { VideoFrame } from "../components/videoBox";
 import { Heading, Paragraph } from "../components/texts";
+import { VideoFrame } from "../components/videoBox";
 import { theme, useTheme } from "../styles";
 
 // Styles
@@ -14,7 +14,7 @@ const HeaderText = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1rem 3rem;
-  width: ${(props) => (!props.theme.screens.sm ? "35%" : "")};
+  width: ${props => (!props.theme.screens.sm ? "35%" : "")};
 `;
 
 const CommunityImage = styled.img`
@@ -23,8 +23,8 @@ const CommunityImage = styled.img`
 `;
 
 const CommunityText = styled.div`
-  width: ${(props) => (props.theme.screens.sm ? "80%" : "40%")};
-  margin: ${(props) => (props.theme.screens.sm ? "0 auto" : "0 5rem")};
+  width: ${props => (props.theme.screens.sm ? "80%" : "40%")};
+  margin: ${props => (props.theme.screens.sm ? "0 auto" : "0 5rem")};
   display: flex;
   flex-direction: column;
 `;
@@ -54,21 +54,21 @@ const CommunityTextList = styled.div`
 
 const BlueTestTube = styled.img`
   position: absolute;
-  width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${(props) => (props.theme.screens.sm ? "90%" : "")};
-  left: ${(props) => (props.theme.screens.sm ? "50%" : "10%")};
+  width: ${props => (props.theme.screens.sm ? "15%" : "3%")};
+  margin-top: ${props => (props.theme.screens.sm ? "90%" : "")};
+  left: ${props => (props.theme.screens.sm ? "50%" : "10%")};
 `;
 
 const GreenTestTube = styled.img`
   position: absolute;
-  width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${(props) => (props.theme.screens.sm ? "105%" : "6%")};
-  left: ${(props) => (props.theme.screens.sm ? "65%" : "45%")};
+  width: ${props => (props.theme.screens.sm ? "15%" : "3%")};
+  margin-top: ${props => (props.theme.screens.sm ? "105%" : "6%")};
+  left: ${props => (props.theme.screens.sm ? "65%" : "45%")};
 `;
 
 const SlackBox = styled.div`
-  margin: ${(props) => (props.theme.screens.sm ? "0 auto" : "0 2rem")};
-  width: ${(props) => (props.theme.screens.sm ? "80%" : "25%")};
+  margin: ${props => (props.theme.screens.sm ? "0 auto" : "0 2rem")};
+  width: ${props => (props.theme.screens.sm ? "80%" : "25%")};
   box-shadow: -0.2rem 0.3rem 0.7rem 0.1rem rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
 `;
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
 
   return (
     <div style={{ height: "100%" }}>
-      <ResponsiveRow>
+      <ResponsiveRow breakpoint="sm">
         {sm ? (
           <></>
         ) : (
@@ -124,7 +124,7 @@ const JoinOurCommunity: React.FC = () => {
         padding: "5rem 0",
       }}
     >
-      <ResponsiveRow>
+      <ResponsiveRow breakpoint="sm">
         <CommunityText>
           <Heading>Join our Community meetings</Heading>
           <p style={{ margin: "1rem 0", color: theme().colors.textSecondary }}>
@@ -140,7 +140,7 @@ const JoinOurCommunity: React.FC = () => {
               margin: "1rem 0",
             }}
           >
-            <ResponsiveRow>
+            <ResponsiveRow breakpoint="sm">
               <CommunityTextList>
                 <p>Topics we discuss</p>
                 <ul>
@@ -232,7 +232,7 @@ const LitmusCommunityVideo: React.FC = () => {
 const CommunityEvents: React.FC = () => {
   return (
     <div style={{ margin: "4rem 0" }}>
-      <ResponsiveRow>
+      <ResponsiveRow breakpoint="sm">
         <CommunityText>
           <Heading>Community Events</Heading>
           <Paragraph style={{ margin: "1rem 0" }}>
@@ -243,8 +243,8 @@ const CommunityEvents: React.FC = () => {
           </Paragraph>
         </CommunityText>
         <BoundedContainer width="40%" margin="0 auto">
-          <ResponsiveRow>
-            <ResponsiveRow>
+          <ResponsiveRow breakpoint="sm">
+            <ResponsiveRow breakpoint="sm">
               <Card
                 width="90%"
                 height="18rem"
@@ -253,7 +253,7 @@ const CommunityEvents: React.FC = () => {
                 image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mariaclusters.com%2Fimg%2Findex%2Fcncf.png&f=1&nofb=1"
               />
             </ResponsiveRow>
-            <ResponsiveRow>
+            <ResponsiveRow breakpoint="sm">
               <Card
                 width="90%"
                 height="18rem"

@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "../../styles";
-import { BoundedContainer, ResponsiveRow, Row } from "../layout";
+import { BoundedContainer, Column, Row, SectionLight } from "../layout";
 import { Paragraph } from "../texts";
 import { community, resources, sitemap, top_adopters } from "./data";
 import { Links } from "./linkgroup";
@@ -31,11 +31,11 @@ const Footer: React.FC = () => {
   const { md } = useTheme().screens;
 
   return (
-    <>
+    <SectionLight>
       {md ? (
         <>
           <Logo />
-          <ResponsiveRow>
+          <Column>
             <Row>
               <Links data={sitemap} showImage={false} internalLink={true} />
               <Links data={resources} showImage={true} internalLink={false} />
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
               />
               <Links data={community} showImage={true} internalLink={false} />
             </Row>
-          </ResponsiveRow>
+          </Column>
           <Copyright />
         </>
       ) : (
@@ -64,12 +64,12 @@ const Footer: React.FC = () => {
         </Row>
       )}
       <div>
-        <hr style={{ width: "80%", margin: "1rem auto" }} />
+        <hr style={{ margin: "1rem auto" }} />
         <Paragraph style={{ textAlign: "center" }}>
           Originally created by Mayadata
         </Paragraph>
       </div>
-    </>
+    </SectionLight>
   );
 };
 

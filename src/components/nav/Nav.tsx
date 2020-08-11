@@ -12,9 +12,9 @@ const Logo: React.FC = () => (
 
 const NavBar = styled.nav`
   width: 100%;
-  margin-top: 1rem;
+  padding-top: 1rem;
   display: flex;
-  background: transparent;
+  background-color: ${props => props.theme.colors.backgroundDark};
   justify-content: space-around;
   position: relative;
   z-index: ${props => props.theme.zIndex.nav};
@@ -55,7 +55,7 @@ const Ul = styled.ul`
 
 const ResponsiveNav = styled.div`
   display: flex;
-  flex-direction; row;
+  flex-direction: row;
 `;
 
 const Nav: React.FC = () => {

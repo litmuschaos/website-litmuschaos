@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "styled-components";
 // import { useTheme } from "../styles";
 import { Button, WhiteOnGreenButton } from "../../button";
-import { BoundedContainer } from "../../layout";
+import { BoundedContainer, SectionDark } from "../../layout";
 import { Heading, Paragraph } from "../../texts";
 
 // Components
@@ -17,7 +17,7 @@ const LeftHeaderContainer: React.FC = () => {
   );
 
   return (
-    <div style={{ margin: "5rem 0" }}>
+    <div>
       <WhiteOnGreenButton>OPEN-SOURCE PLATFORM</WhiteOnGreenButton>
       <Heading>
         Chaos Engineering
@@ -36,9 +36,11 @@ const LeftHeaderContainer: React.FC = () => {
 
 const Head: React.FC = () => {
   return (
-    <BoundedContainer width="45%" margin="0">
-      <LeftHeaderContainer />
-    </BoundedContainer>
+    <SectionDark>
+      <BoundedContainer width="40%" margin="0">
+        <LeftHeaderContainer />
+      </BoundedContainer>
+    </SectionDark>
   );
 };
 

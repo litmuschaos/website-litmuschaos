@@ -1,3 +1,7 @@
+const opacityCheck = (opacity: number) => {
+  return opacity && opacity >= 0 && opacity <= 1;
+};
+
 export default {
   screens: {
     // max-widths in pixels
@@ -21,13 +25,25 @@ export default {
     backgroundDark: "#F4F5F7",
     spaceGrey: "#F1F2F6",
     darkGray: "#6F6F6F",
-    greenLight: "#25C187",
-    greenDark: "#109B67",
-    purpleLight: "#858CDD",
-    purpleDark: "#858cdd",
     textPrimary: "#042A2B",
     textSecondary: "#5B44BA",
     pureWhite: "#FFFFFF",
+    purple: (opacity: number): string =>
+      opacityCheck(opacity)
+        ? `rgba(133, 140, 221, ${opacity})`
+        : `rgba(133, 140, 221, 1)`,
+    darkGreen: (opacity: number): string =>
+      opacityCheck(opacity)
+        ? `rgba(16, 155, 103, ${opacity})`
+        : `rgba(16, 155, 103, 1)`,
+    lightGreen: (opacity: number): string =>
+      opacityCheck(opacity)
+        ? `rgba(37, 193, 135, ${opacity})`
+        : `rgba(37, 193, 135, 1)`,
+    yellow: (opacity: number): string =>
+      opacityCheck(opacity)
+        ? `rgba(240, 183, 64, ${opacity})`
+        : `rgba(240, 183, 64, 1)`,
   },
   opacity: {
     0: 0,
@@ -43,10 +59,6 @@ export default {
   gradient: {
     purple:
       "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;",
-    green:
-      "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;",
+    green: "linear-gradient(82.87deg, #109C68 25.92%, #25C087 78.64%);",
   },
-  py: (value: number | string) =>
-    `padding-top: ${value}; padding-bottom: ${value};`,
-  // Add anything else you'd like.
 };

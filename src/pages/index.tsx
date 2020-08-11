@@ -1,10 +1,10 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 import { Layout } from "../components/layout";
 import { Head } from "../components/sections/home";
 import { CloudNativeWay } from "../components/sections/home/CloudNativeWay";
 import { SEO } from "../components/seo";
-import { theme, useTheme } from "../styles";
+import { useTheme } from "../styles";
 
 const OutlinedPurpleBoxImage = styled.img`
   position: absolute;
@@ -28,9 +28,9 @@ const OutlinedPurpleBox: React.FC = () => {
 const App = () => {
   return (
     <>
-      <ThemeProvider theme={theme()}>
+      {/* <ThemeProvider theme={theme()}>
         <OutlinedPurpleBox />
-      </ThemeProvider>
+      </ThemeProvider> */}
 
       <Layout>
         <SEO />
