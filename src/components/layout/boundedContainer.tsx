@@ -14,7 +14,7 @@ const PanelContainer = styled.div<IPanelContainer>`
   width: ${props => (props.theme.screens.sm ? "100%" : props.width)};
   display:flex;
   justify-content:center;
-  align-items:center;
+  
   flex-flow:row wrap;
 `;
 
