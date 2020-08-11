@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { useTheme } from "../../styles";
-import { BoundedContainer } from "../layout";
+import { BoundedContainer, ResponsiveRow } from "../layout";
 import { Paragraph } from "../texts";
-import { LinkGroup } from "./linkgroup";
+import { community, resources, sitemap, top_adopters } from "./data";
+import { Links } from "./linkgroup";
 
 const Logo: React.FC = () => (
   <img src="/svg/litmus-logo.svg" width="128" alt="litmus logo" />
@@ -11,7 +12,7 @@ const Logo: React.FC = () => (
 
 const Row = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   > * {
     margin: 0 1rem;
   }
@@ -38,7 +39,22 @@ const Footer: React.FC = () => {
       {md ? (
         <>
           <Logo />
-          <LinkGroup />
+          <div>
+            <ResponsiveRow>
+              <Row>
+                <Links data={sitemap} showImage={false} internalLink={true} />
+                <Links data={resources} showImage={true} internalLink={false} />
+              </Row>
+              <Row>
+                <Links
+                  data={top_adopters}
+                  showImage={false}
+                  internalLink={false}
+                />
+                <Links data={community} showImage={true} internalLink={false} />
+              </Row>
+            </ResponsiveRow>
+          </div>
           <Copyright />
         </>
       ) : (
@@ -47,9 +63,10 @@ const Footer: React.FC = () => {
             <Logo />
             <Copyright />
           </BoundedContainer>
-          <div>
-            <LinkGroup />
-          </div>
+          <Links data={sitemap} showImage={false} internalLink={true} />
+          <Links data={resources} showImage={true} internalLink={false} />
+          <Links data={top_adopters} showImage={false} internalLink={false} />
+          <Links data={community} showImage={true} internalLink={false} />
         </Row>
       )}
       <div>
