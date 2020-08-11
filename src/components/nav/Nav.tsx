@@ -97,7 +97,7 @@ const Nav: React.FC = () => {
                 <li>Why Litmus?</li>
               </Link>
 
-              <Link to="#" className="listItems">
+              <Link to="/chaoshub" className="listItems">
                 <li>Chaoshub</li>
               </Link>
 
@@ -105,7 +105,7 @@ const Nav: React.FC = () => {
                 <li>Blogs</li>
               </Link>
 
-              <Link to="#">
+              <Link to="/community">
                 <li>Community</li>
               </Link>
 
