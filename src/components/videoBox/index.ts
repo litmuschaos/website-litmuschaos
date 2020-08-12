@@ -1,1 +1,1 @@
-export { VideoFrame } from "./VideoFrame";
+export * from "./VideoFrame";
