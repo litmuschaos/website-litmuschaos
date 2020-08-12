@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Layout } from "../components/layout";
-import { Head } from "../components/sections/home";
-import { CloudNativeWay } from "../components/sections/home/CloudNativeWay";
+import { CloudNativeWay, Head } from "../components/sections/home";
 import { SEO } from "../components/seo";
 import { useTheme } from "../styles";
 
