@@ -15,8 +15,9 @@ export default {
   },
   fontSize: {
     heading: { lg: "2.2rem", md: "1.75rem" },
-    subHeading: "1.5rem",
+    subHeading: { lg: "1.5rem", md: "1.125rem" },
     paragraph: { lg: "1rem", md: "0.875rem" },
+    subText: { lg: "1.25rem", md: "1.125rem" },
     button: "1.125rem",
     small: "0.875rem",
   },
@@ -27,7 +28,6 @@ export default {
     darkGray: "#6F6F6F",
     textPrimary: "#042A2B",
     textSecondary: "#5B44BA",
-    pureWhite: "#FFFFFF",
     purple: (opacity: number): string =>
       opacityCheck(opacity)
         ? `rgba(133, 140, 221, ${opacity})`

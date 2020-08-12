@@ -5,7 +5,7 @@ import { useTheme } from "../../styles";
 import { Paragraph, Subheading } from "../texts";
 
 const SlackBox = styled.div`
-  background: ${(props) => props.theme.colors.pureWhite};
+  background: white;
   width: 100%;
   height: 100%;
   padding: 15% 10%;

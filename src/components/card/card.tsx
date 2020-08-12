@@ -11,16 +11,16 @@ interface ICard {
 }
 
 const CardBox = styled.div`
-  background: ${(props) => props.theme.colors.pureWhite};
-  width: ${(props) => (props.theme.screens.sm ? "90%" : "30%")};
+  background: white;
+  width: ${props => (props.theme.screens.sm ? "90%" : "30%")};
   width: 100%;
   height: 100%;
 `;
 
 const InnerCard = styled.div<ICard>`
-  width: ${(props) => (props.theme.screens.sm ? "90%" : props.width)};
-  height: ${(props) => (props.theme.screens.sm ? "18rem" : props.height)};
-  margin: ${(props) => (props.theme.screens.sm ? "0.5rem auto" : "")};
+  width: ${props => (props.theme.screens.sm ? "90%" : props.width)};
+  height: ${props => (props.theme.screens.sm ? "18rem" : props.height)};
+  margin: ${props => (props.theme.screens.sm ? "0.5rem auto" : "")};
   box-shadow: -0.2rem 0.3rem 0.7rem 0.1rem rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
 `;

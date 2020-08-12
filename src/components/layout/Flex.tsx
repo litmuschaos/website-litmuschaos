@@ -11,4 +11,12 @@ const Column = styled.div`
   align-items: start;
 `;
 
-export { Row, Column };
+const ColumnCenter = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+`;
+
+export { Row, Column, ColumnCenter };

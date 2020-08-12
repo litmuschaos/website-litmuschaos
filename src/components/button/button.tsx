@@ -15,7 +15,7 @@ const Button = styled.button<IButton>`
     props.gradientColor === "purple"
       ? props.theme.gradient.purple
       : props.theme.gradient.green};
-  color: ${props => props.theme.colors.pureWhite};
+  color: white;
   border-radius: 0.25rem;
   font-size: ${props => props.theme.fontSize.button};
   cursor: pointer;
@@ -30,7 +30,7 @@ const WhiteOnGreenButton = styled.button`
   min-width: 13rem;
   border: none;
   border-radius: 0.2rem;
-  background: ${props => props.theme.colors.pureWhite};
+  background: white;
   color: ${props => props.theme.colors.darkGreen(1)};
   font-size: ${props => props.theme.fontSize.small};
   font-weight: bold;
