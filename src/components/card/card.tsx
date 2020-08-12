@@ -32,9 +32,8 @@ const Card: React.FC<ICard> = ({ image, width, height, subheading, body }) => {
         {image ? (
           <img
             style={{
-              width: "100%",
               height: "8rem",
-              objectFit: "contain",
+              objectFit: "cover",
               margin: "0 auto",
             }}
             src={image}
@@ -45,7 +44,9 @@ const Card: React.FC<ICard> = ({ image, width, height, subheading, body }) => {
         )}
 
         {subheading ? (
-          <Subheading style={{ margin: "0 1.5rem" }}>{subheading}</Subheading>
+          <Subheading style={{ margin: "0 1.5rem", marginTop: "0.5rem" }}>
+            {subheading}
+          </Subheading>
         ) : (
           <></>
         )}

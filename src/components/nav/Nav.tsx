@@ -14,10 +14,9 @@ const NavBar = styled.nav`
   width: 100%;
   padding-top: 1rem;
   display: flex;
-  background-color: ${props => props.theme.colors.backgroundDark};
   justify-content: space-around;
   position: relative;
-  z-index: ${props => props.theme.zIndex.nav};
+  z-index: ${(props) => props.theme.zIndex.nav};
 `;
 
 const LogoDiv = styled.div`
@@ -26,8 +25,8 @@ const LogoDiv = styled.div`
 
 const GitHubStars = styled.div`
   height: 2rem;
-  font-size: ${props => props.theme.fontSize.small};
-  background: ${props => props.theme.colors.spaceGrey};
+  font-size: ${(props) => props.theme.fontSize.small};
+  background: ${(props) => props.theme.colors.spaceGrey};
   padding: 0.5rem 0.5rem;
   margin-left: 1rem;
   margin-top: 0.6rem;
@@ -49,7 +48,7 @@ const Ul = styled.ul`
   flex-flow: row nowrap;
   li {
     padding: 1rem 1rem;
-    font-size: ${props => props.theme.fontSize.button};
+    font-size: ${(props) => props.theme.fontSize.button};
   }
 `;
 

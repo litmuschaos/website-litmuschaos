@@ -1,0 +1,40 @@
+import React from "react";
+import { Heading, Paragraph } from "../../../components/texts";
+import { VideoFrame } from "../../../components/videoBox";
+import { Button } from "../../../components/button";
+import { useTheme } from "../../../styles";
+import { SectionLight } from "../../../components/layout";
+import { CommunityText } from "./globalStyle";
+
+// Component
+const LitmusCommunityVideo: React.FC = () => {
+  const { sm } = useTheme().screens.sm;
+
+  const paragraphText =
+    "Creating chaos on YouTube. Subscribe to our channel for early updates on meeting recordings, tutorials, events and more";
+  return (
+    <SectionLight style={{ textAlign: "center" }}>
+      <Heading textAlign="center" style={{ margin: "0 auto" }}>
+        See what’s happening in
+        <br />
+        the Litmus community
+      </Heading>
+
+      <CommunityText style={{ margin: "2rem auto" }}>
+        <Paragraph textAlign="center">{paragraphText}</Paragraph>
+      </CommunityText>
+
+      <VideoFrame />
+
+      <Button
+        style={{ margin: "3rem 0" }}
+        screen={sm ? "small" : "large"}
+        gradientColor="purple"
+      >
+        Visit Our Youtube
+      </Button>
+    </SectionLight>
+  );
+};
+
+export { LitmusCommunityVideo };

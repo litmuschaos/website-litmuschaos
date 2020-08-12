@@ -3,21 +3,21 @@ const sitemap = {
   links: [
     {
       name: "Why litmus?",
-      url: "/whylitmus"
+      url: "/whylitmus",
     },
     {
       name: "ChaosHub",
-      url: "/chaoshub"
+      url: "/chaoshub",
     },
     {
       name: "Blog",
-      url: "/blog"
+      url: "/blog",
     },
     {
       name: "Community",
-      url: "/community"
-    }
-  ]
+      url: "/community",
+    },
+  ],
 };
 
 const resources = {
@@ -26,19 +26,19 @@ const resources = {
     {
       name: "Docs",
       image: "/svg/Docs.svg",
-      url: "https://docs.litmuschaos.io/docs/getstarted/"
+      url: "https://docs.litmuschaos.io/docs/getstarted/",
     },
     {
       name: "FAQ",
       image: "/svg/FAQ.svg",
-      url: "https://docs.litmuschaos.io/docs/faq-general/"
+      url: "https://docs.litmuschaos.io/docs/faq-general/",
     },
     {
       name: "Issues",
       image: "/svg/Issues.svg",
-      url: "https://github.com/litmuschaos/litmus/issues"
-    }
-  ]
+      url: "https://github.com/litmuschaos/litmus/issues",
+    },
+  ],
 };
 
 const top_adopters = {
@@ -46,24 +46,28 @@ const top_adopters = {
   links: [
     {
       name: "Intuit",
-      url: "https://github.com/litmuschaos/litmus/blob/master/ADOPTERS.md"
+      image: "/svg/Intuit.svg",
+      url: "https://github.com/litmuschaos/litmus/blob/master/ADOPTERS.md",
     },
     {
       name: "Wipro",
+      image: "/svg/Wipro.svg",
       url:
-        "https://github.com/litmuschaos/litmus/blob/master/adopters/AppAnywhere.md"
+        "https://github.com/litmuschaos/litmus/blob/master/adopters/AppAnywhere.md",
     },
     {
       name: "Open EBS",
+      image: "/svg/OpenEBS.svg",
       url:
-        "https://github.com/litmuschaos/litmus/blob/master/adopters/openebs.md"
+        "https://github.com/litmuschaos/litmus/blob/master/adopters/openebs.md",
     },
     {
       name: "Zerebrium",
+      image: "/svg/Zebrium.svg",
       url:
-        "https://github.com/litmuschaos/litmus/blob/master/adopters/zebrium.md"
-    }
-  ]
+        "https://github.com/litmuschaos/litmus/blob/master/adopters/zebrium.md",
+    },
+  ],
 };
 
 const community = {
@@ -72,29 +76,29 @@ const community = {
     {
       name: "Github",
       image: "/svg/Github.svg",
-      url: "https://github.com/litmuschaos/litmus"
+      url: "https://github.com/litmuschaos/litmus",
     },
     {
       name: "Slack",
       image: "/svg/Slack.svg",
-      url: "https://slack.litmuschaos.io/"
+      url: "https://slack.litmuschaos.io/",
     },
     {
       name: "Twitter",
       image: "/svg/Twitter.svg",
-      url: "https://twitter.com/LitmusChaos"
+      url: "https://twitter.com/LitmusChaos",
     },
     {
       name: "Dev",
       image: "/svg/Dev.svg",
-      url: "https://dev.to/t/litmuschaos/latest"
+      url: "https://dev.to/t/litmuschaos/latest",
     },
     {
       name: "YouTube",
       image: "/svg/YouTube.svg",
-      url: "https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw"
-    }
-  ]
+      url: "https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw",
+    },
+  ],
 };
 
 export { sitemap, resources, top_adopters, community };
