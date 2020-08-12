@@ -1,9 +1,9 @@
 import React from "react";
+import { Button } from "../../../components/button";
+import { SectionLight } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
 import { VideoFrame } from "../../../components/videoBox";
-import { Button } from "../../../components/button";
 import { useTheme } from "../../../styles";
-import { SectionLight } from "../../../components/layout";
 import { CommunityText } from "./globalStyle";
 
 // Component
@@ -24,7 +24,10 @@ const LitmusCommunityVideo: React.FC = () => {
         <Paragraph textAlign="center">{paragraphText}</Paragraph>
       </CommunityText>
 
-      <VideoFrame />
+      <VideoFrame
+        width="47.188rem"
+        src="https://www.youtube.com/embed/yhWgzN90SME"
+      />
 
       <Button
         style={{ margin: "3rem 0" }}

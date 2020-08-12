@@ -1,27 +1,36 @@
 import React from "react";
 import styled from "styled-components";
 
-const VideoBox = styled.iframe`
-  width: 100%;
-  height: 100%;
+interface IVideoBox {
+  width: string;
+}
+
+interface IVideoFrame extends IVideoBox {
+  src: string;
+}
+
+const VideoBox = styled.iframe<IVideoBox>`
+  width: ${props => props.width};
+  height: calc(${props => props.width} / (16 / 9));
+  max-width: 100%;
+  max-height: calc((100vw - 2.5rem) / (16 / 9));
 `;
 
 const VideoDiv = styled.div`
-  width: ${(props) => (props.theme.screens.sm ? "90%" : "40%")};
-  height: ${(props) => (props.theme.screens.sm ? "14rem" : "25rem")};
-  margin: 0 auto;
+  padding: ${props => (props.theme.screens.sm ? "0" : "1rem")};
 `;
 
-const VideoFrame: React.FC = () => {
+const VideoFrame: React.FC<IVideoFrame> = ({ width, src }) => {
   return (
     <VideoDiv>
       <VideoBox
-        src="https://www.youtube.com/embed/yhWgzN90SME"
+        width={width}
+        src={src}
         frameBorder="0"
         allow="accelerometer"
         picture-in-picture
         allowFullScreen
-      ></VideoBox>
+      />
     </VideoDiv>
   );
 };
