@@ -1,56 +1,31 @@
 import React from "react";
-import styled, { useTheme } from "styled-components";
+import { useTheme } from "styled-components";
+import { IconCircle } from "../../icon-circle";
 import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
 import { Heading, Paragraph, Subheading } from "../../texts";
 
-interface IColor {
-  color: (opacity: number) => string;
-}
-
-const OuterCircle = styled.div<IColor>`
-  width: 6.25rem;
-  height: 6.25rem;
-  display: grid;
-  place-items: center;
-  border: 1px solid ${props => props.color(0.2)};
-  border-radius: 50%;
-  background: transparent;
-`;
-
-const InnerCircle = styled.div<IColor>`
-  width: 5rem;
-  height: 5rem;
-  display: grid;
-  place-items: center;
-  background: ${props => props.color(1)};
-  box-shadow: 0px 19px 33px ${props => props.color(0.25)};
-  border-radius: 50%;
-`;
-
-const CardIcon: React.FC<IColor> = ({ color }) => {
-  return (
-    <div>
-      <OuterCircle color={color as any}>
-        <InnerCircle color={color as any}>
-          <div>icon</div>
-        </InnerCircle>
-      </OuterCircle>
-    </div>
-  );
-};
-
 interface IInfoSection {
   color: (opacity: number) => string;
+  imgSrc: string;
   title: string;
   description: string;
 }
 
-const InfoSection: React.FC<IInfoSection> = ({ color, title, description }) => {
+const InfoSection: React.FC<IInfoSection> = ({
+  color,
+  title,
+  description,
+  imgSrc,
+}) => {
   const { md } = useTheme().screens;
 
   return (
-    <BoundedContainer width={md ? "80%" : "20rem"} margin="1rem">
-      <CardIcon color={color} />
+    <BoundedContainer
+      breakpoint="sm"
+      width={md ? "80%" : "20rem"}
+      margin="1rem"
+    >
+      <IconCircle color={color} src={imgSrc} alt={title} />
       <Subheading>{title}</Subheading>
       <Paragraph>{description}</Paragraph>
     </BoundedContainer>
@@ -73,25 +48,29 @@ const CloudNativeWay: React.FC = () => {
           <ResponsiveRow breakpoint="md">
             <InfoSection
               color={purple}
+              imgSrc="/svg/declarative-chaos.svg"
               title="Declarative chaos"
               description="Litmus provides chaos CRDs to manage chaos. Using chaos API, orchestration, scheduling and complex workflow management can be done declaratively."
             />
             <InfoSection
               color={darkGreen}
-              title="Declarative chaos"
-              description="Litmus provides chaos CRDs to manage chaos. Using chaos API, orchestration, scheduling and complex workflow management can be done declaratively."
+              imgSrc="/svg/ready-experiments.svg"
+              title="Ready experiments"
+              description="Most of the generic chaos experiments are readily available for you to get started with your initial chaos engineering needs."
             />
           </ResponsiveRow>
           <ResponsiveRow breakpoint="md">
             <InfoSection
               color={lightGreen}
-              title="Declarative chaos"
-              description="Litmus provides chaos CRDs to manage chaos. Using chaos API, orchestration, scheduling and complex workflow management can be done declaratively."
+              imgSrc="/svg/create-your-own.svg"
+              title="Create your own"
+              description="SDK is available in GO, Python and Ansible. A basic experiment structure is created quickly using SDK and developers and SREs just need to add the chaos logic into to make a new experiment."
             />
             <InfoSection
               color={yellow}
-              title="Declarative chaos"
-              description="Litmus provides chaos CRDs to manage chaos. Using chaos API, orchestration, scheduling and complex workflow management can be done declaratively."
+              imgSrc="/svg/chaos-workflows.svg"
+              title="Chaos Workflows"
+              description="Simple to complex chaos workflows are easy to construct. Use GitOps and the chaos workflows to scale your chaos engineering efforts and increase the resilience of your Kubernetes platform."
             />
           </ResponsiveRow>
         </div>

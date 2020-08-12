@@ -46,8 +46,8 @@ const OutlinedButton = styled.button`
   min-width: 2rem;
   padding: 0.5rem 2rem;
   background: transparent;
-  color: ${props => props.theme.colors.backgroundDark};
-  border: 0.05rem solid white;
+  color: black;
+  border: 0.05rem solid black;
   border-radius: 0.5rem;
   font-size: ${props => props.theme.fontSize.button};
   cursor: pointer;

@@ -2,12 +2,12 @@ import React from "react";
 import { useTheme } from "styled-components";
 // import { useTheme } from "../styles";
 import { Button, WhiteOnGreenButton } from "../../button";
-import { BoundedContainer, SectionDark } from "../../layout";
+import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
 import { Heading, Paragraph } from "../../texts";
 
 // Components
 
-const LeftHeaderContainer: React.FC = () => {
+const HeadText: React.FC = () => {
   const { sm } = useTheme().screens;
 
   const flexibleButton = (
@@ -17,7 +17,7 @@ const LeftHeaderContainer: React.FC = () => {
   );
 
   return (
-    <div>
+    <BoundedContainer breakpoint="md" width="40%" margin="6rem 0">
       <WhiteOnGreenButton>OPEN-SOURCE PLATFORM</WhiteOnGreenButton>
       <Heading>
         Chaos Engineering
@@ -30,16 +30,17 @@ const LeftHeaderContainer: React.FC = () => {
         weakness and start fixing it.
       </Paragraph>
       <div style={{ marginTop: "1rem" }}>{flexibleButton}</div>
-    </div>
+    </BoundedContainer>
   );
 };
 
 const Head: React.FC = () => {
   return (
     <SectionDark>
-      <BoundedContainer width="40%" margin="0">
-        <LeftHeaderContainer />
-      </BoundedContainer>
+      <ResponsiveRow breakpoint="md">
+        <HeadText />
+        <div style={{ width: "45%" }} />
+      </ResponsiveRow>
     </SectionDark>
   );
 };

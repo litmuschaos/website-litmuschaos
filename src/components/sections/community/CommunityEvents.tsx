@@ -1,11 +1,11 @@
 import React from "react";
-import { Heading, Paragraph } from "../../../components/texts";
+import { Card } from "../../../components/card";
 import {
   BoundedContainer,
   ResponsiveRow,
   SectionDark,
 } from "../../../components/layout";
-import { Card } from "../../../components/card";
+import { Heading, Paragraph } from "../../../components/texts";
 import { CommunityText } from "./globalStyle";
 
 const CommunityEvents: React.FC = () => {
@@ -21,7 +21,7 @@ const CommunityEvents: React.FC = () => {
             quam ligula fringilla risus.
           </Paragraph>
         </CommunityText>
-        <BoundedContainer width="40%" margin="0 auto">
+        <BoundedContainer breakpoint="sm" width="40%" margin="0 auto">
           <ResponsiveRow breakpoint="sm">
             <ResponsiveRow breakpoint="sm">
               <Card

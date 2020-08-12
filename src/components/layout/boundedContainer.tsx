@@ -1,32 +1,16 @@
-import React from "react";
 import styled from "styled-components";
 
 interface IBoundedContainer {
-  width: string;
-  children: React.ReactNode;
-  margin: string;
-}
-
-interface IPanelContainer {
+  breakpoint: string;
   width: string;
   margin: string;
 }
 
-const PanelContainer = styled.div<IPanelContainer>`
-  margin: ${(props) => (props.theme.screens.sm ? "1rem 0" : props.margin)};
-  width: ${(props) => (props.theme.screens.sm ? "100%" : props.width)};
+const BoundedContainer = styled.div<IBoundedContainer>`
+  margin: ${props =>
+    props.theme.screens[props.breakpoint] ? "1rem 0" : props.margin};
+  width: ${props =>
+    props.theme.screens[props.breakpoint] ? "100%" : props.width};
 `;
-
-const BoundedContainer: React.FC<IBoundedContainer> = ({
-  width,
-  children,
-  margin,
-}) => {
-  return (
-    <PanelContainer width={width} margin={margin}>
-      {children}
-    </PanelContainer>
-  );
-};
 
 export { BoundedContainer };

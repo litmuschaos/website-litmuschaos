@@ -53,7 +53,11 @@ const Footer: React.FC = () => {
         </>
       ) : (
         <Row>
-          <BoundedContainer width="30%" margin="-1.2rem 1rem 0 0">
+          <BoundedContainer
+            breakpoint="sm"
+            width="30%"
+            margin="-1.2rem 1rem 0 0"
+          >
             <Logo />
             <Copyright />
           </BoundedContainer>
