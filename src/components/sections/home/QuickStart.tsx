@@ -18,6 +18,7 @@ const FadedDiv = styled.div`
     props.theme.screens.md
       ? css`
           width: 0.625rem;
+          margin-bottom: 0;
           flex-direction: column;
           background: linear-gradient(
             0deg,
