@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 interface IResponsiveRow {
-  breakpoint: string;
+  breakpoint: "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "xxxl";
 }
 
 const ResponsiveRow = styled.div<IResponsiveRow>`

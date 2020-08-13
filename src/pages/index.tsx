@@ -2,6 +2,7 @@ import React from "react";
 import { Layout } from "../components/layout";
 import {
   CloudNativeWay,
+  GetStarted,
   Head,
   PurpleBox,
   QuickStart,
@@ -16,6 +17,7 @@ const App = () => {
       <Head />
       <CloudNativeWay />
       <QuickStart />
+      <GetStarted />
     </Layout>
   );
 };

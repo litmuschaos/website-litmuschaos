@@ -25,9 +25,19 @@ export default {
     backgroundLight: "#F9FAFC",
     backgroundDark: "#F4F5F7",
     spaceGrey: "#F1F2F6",
+    lightGray: "#EBEBEB",
     darkGray: "#6F6F6F",
     textPrimary: "#042A2B",
     textSecondary: "#5B44BA",
+
+    grayText: (opacity: number): string =>
+      opacityCheck(opacity)
+        ? `rgba(102, 102, 102, ${opacity})`
+        : `rgba(102, 102, 102, 1)`,
+    red: (opacity: number): string =>
+      opacityCheck(opacity)
+        ? `rgba(202, 44, 44, ${opacity})`
+        : `rgba(202, 44, 44, 1)`,
     purple: (opacity: number): string =>
       opacityCheck(opacity)
         ? `rgba(133, 140, 221, ${opacity})`

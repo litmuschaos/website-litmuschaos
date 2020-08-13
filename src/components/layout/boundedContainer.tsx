@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface IBoundedContainer {
-  breakpoint: string;
+  breakpoint: "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "xxxl";
   width: string;
   margin: string;
 }
