@@ -25,7 +25,9 @@ const InfoSection: React.FC<IInfoSection> = ({
       width={md ? "80%" : "20rem"}
       margin="1rem"
     >
-      <IconCircle color={color} src={imgSrc} alt={title} />
+      <IconCircle bgColor={color} effectColor={color} size={6.25}>
+        <img src={imgSrc} alt={title} />
+      </IconCircle>
       <Subheading>{title}</Subheading>
       <Paragraph>{description}</Paragraph>
     </BoundedContainer>

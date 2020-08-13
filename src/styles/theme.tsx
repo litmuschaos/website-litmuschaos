@@ -70,5 +70,12 @@ export default {
     purple:
       "linear-gradient(135.47deg, #858CDD 1.77%, rgba(133, 140, 221, 0) 64.41%), #5B44BA;",
     green: "linear-gradient(82.87deg, #109C68 25.92%, #25C087 78.64%);",
+    fadedLine: (deg: number) => `linear-gradient(
+            ${deg}deg,
+            rgba(235, 235, 235, 0) 0%,
+            #ebebeb 10%,
+            #ebebeb 85%,
+            rgba(235, 235, 235, 0) 100%
+          );`,
   },
 };

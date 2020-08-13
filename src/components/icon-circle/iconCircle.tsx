@@ -1,41 +1,49 @@
 import React from "react";
 import styled from "styled-components";
 
-interface IColor {
-  color: (opacity: number) => string;
+interface ICircle {
+  bgColor: (opacity: number) => string | string;
+  effectColor: (opacity: number) => string;
+  size: number;
 }
 
-const OuterCircle = styled.div<IColor>`
-  width: 6.25rem;
-  height: 6.25rem;
+const OuterCircle = styled.div<ICircle>`
+  width: ${props => props.size}rem;
+  height: ${props => props.size}rem;
   display: grid;
   place-items: center;
-  border: 1px solid ${props => props.color(0.2)};
-  border-radius: 50%;
-  background: transparent;
-`;
-
-const InnerCircle = styled.div<IColor>`
-  width: 5rem;
-  height: 5rem;
-  display: grid;
-  place-items: center;
-  background: ${props => props.color(1)};
-  box-shadow: 0px 19px 33px ${props => props.color(0.25)};
+  border: 1px solid ${props => props.effectColor(0.2)};
   border-radius: 50%;
 `;
 
-interface IIconCircle extends IColor {
-  src: string;
-  alt: string;
-}
+const InnerCircle = styled.div<ICircle>`
+  width: ${props => props.size}rem;
+  height: ${props => props.size}rem;
+  display: grid;
+  place-items: center;
+  background: ${props =>
+    typeof props.bgColor === "string" ? props.bgColor : props.bgColor(1)};
+  box-shadow: 0px 19px 33px ${props => props.effectColor(0.25)};
+  border-radius: 50%;
+`;
 
-const IconCircle: React.FC<IIconCircle> = ({ color, src, alt }) => {
+const IconCircle: React.FC<ICircle> = ({
+  size,
+  bgColor,
+  effectColor,
+  children,
+}) => {
+  const innerSize = size * 0.8;
+
   return (
     <div>
-      <OuterCircle color={color as any}>
-        <InnerCircle color={color as any}>
-          <img src={src} alt={alt} />
+      <OuterCircle bgColor={bgColor} effectColor={effectColor} size={size}>
+        <InnerCircle
+          bgColor={bgColor}
+          effectColor={effectColor}
+          size={innerSize}
+        >
+          {children}
         </InnerCircle>
       </OuterCircle>
     </div>

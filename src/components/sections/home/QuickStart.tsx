@@ -13,31 +13,19 @@ const FadedDiv = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 4.5rem;
-  margin-bottom: ${props => (props.theme.screens.xl ? "8rem" : "0")};
+  margin-bottom: ${props => (props.theme.screens.xl ? "10rem" : "0")};
   ${props =>
     props.theme.screens.md
       ? css`
           width: 0.625rem;
           margin-bottom: 0;
           flex-direction: column;
-          background: linear-gradient(
-            0deg,
-            rgba(235, 235, 235, 0) 0%,
-            #ebebeb 10%,
-            #ebebeb 85%,
-            rgba(235, 235, 235, 0) 100%
-          );
+          background: ${props => props.theme.gradient.fadedLine(0)};
         `
       : css`
           width: 100%;
           height: 0.625rem;
-          background: linear-gradient(
-            90deg,
-            rgba(235, 235, 235, 0) 0%,
-            #ebebeb 10%,
-            #ebebeb 85%,
-            rgba(235, 235, 235, 0) 100%
-          );
+          background: ${props => props.theme.gradient.fadedLine(90)};
         `}
 `;
 
@@ -81,7 +69,6 @@ const KnobInner = styled.div`
 `;
 
 const TextWrapper = styled.div`
-  position: relative;
   width: ${({ theme }) => (theme.screens.md ? "80vw" : "fit-content")};
   padding: ${({ theme }) =>
     theme.screens.md ? "0 0 2.5rem 2.5rem" : "2rem 2rem 0 0"};

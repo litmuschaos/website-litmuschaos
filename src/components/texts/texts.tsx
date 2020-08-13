@@ -7,7 +7,7 @@ interface IText {
 
 const Heading = styled.h1<IText>`
   line-height: 130%;
-  text-align: ${props => (props.textAlign ? props.textAlign : "left")};
+  text-align: ${props => props.textAlign ?? "left"};
   font-size: ${props =>
     props.theme.screens.md
       ? props.theme.fontSize.heading.md
@@ -17,7 +17,7 @@ const Heading = styled.h1<IText>`
 const Subheading = styled.p<IText>`
   line-height: 170%;
   font-weight: 600;
-  text-align: ${props => (props.textAlign ? props.textAlign : "left")};
+  text-align: ${props => props.textAlign ?? "left"};
   font-size: ${props =>
     props.theme.screens.md
       ? props.theme.fontSize.subHeading.md
@@ -26,7 +26,7 @@ const Subheading = styled.p<IText>`
 
 const Paragraph = styled.p<IText>`
   line-height: 170%;
-  text-align: ${props => (props.textAlign ? props.textAlign : "left")};
+  text-align: ${props => props.textAlign ?? "left"};
   color: ${props => props.theme.colors.darkGray};
   font-size: ${props =>
     props.theme.screens.md
@@ -34,10 +34,28 @@ const Paragraph = styled.p<IText>`
       : props.theme.fontSize.paragraph.lg};
 `;
 
-const SubText = styled.p<IText>`
+const UnderlinedPurpleText = styled.p<IText>`
+  line-height: 130%;
+  font-weight: 600;
+  text-align: ${props => props.textAlign ?? "left"};
+  color: ${props => props.theme.colors.textSecondary};
+  text-decoration: underline;
+  font-size: ${props =>
+    props.theme.screens.md
+      ? props.theme.fontSize.subHeading.md
+      : props.theme.fontSize.subHeading.lg};
+`;
+
+interface ISubText extends IText {
+  color?: string;
+  fontWeight?: string;
+}
+
+const SubText = styled.p<ISubText>`
   line-height: 150%;
-  text-align: ${props => (props.textAlign ? props.textAlign : "left")};
-  color: ${props => props.theme.colors.textPrimary};
+  text-align: ${props => props.textAlign ?? "left"};
+  color: ${props => props.color ?? props.theme.colors.textPrimary};
+  font-weight: ${props => props.fontWeight ?? "normal"};
   font-size: ${props =>
     props.theme.screens.md
       ? props.theme.fontSize.subText.md
@@ -50,7 +68,7 @@ interface ICode extends IText {
 
 const Code = styled.span<ICode>`
   line-height: 170%;
-  text-align: ${props => (props.textAlign ? props.textAlign : "left")};
+  text-align: ${props => props.textAlign ?? "left"};
   color: ${props => props.color(1)};
   word-wrap: break-word;
   font-size: ${props =>
@@ -74,4 +92,11 @@ const KubeCmd: React.FC<IKubeCmd> = ({ text }) => {
   );
 };
 
-export { Heading, Subheading, Paragraph, SubText, KubeCmd };
+export {
+  Heading,
+  Subheading,
+  Paragraph,
+  SubText,
+  KubeCmd,
+  UnderlinedPurpleText,
+};

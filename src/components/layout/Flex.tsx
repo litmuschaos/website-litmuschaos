@@ -19,4 +19,11 @@ const ColumnCenter = styled.div`
   height: 100%;
 `;
 
-export { Row, Column, ColumnCenter };
+const Center = styled.div`
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+`;
+
+export { Row, Column, ColumnCenter, Center };
