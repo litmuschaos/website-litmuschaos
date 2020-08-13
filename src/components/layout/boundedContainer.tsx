@@ -7,6 +7,7 @@ interface IBoundedContainer {
 }
 
 const BoundedContainer = styled.div<IBoundedContainer>`
+  max-width: 40rem;
   margin: ${props =>
     props.theme.screens[props.breakpoint] ? "1rem 0" : props.margin};
   width: ${props =>

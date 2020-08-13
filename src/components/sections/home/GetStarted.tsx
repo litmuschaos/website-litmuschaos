@@ -2,14 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { useTheme } from "../../../styles";
 import { IconCircle } from "../../icon-circle";
-import {
-  BoundedContainer,
-  Center,
-  ResponsiveRow,
-  SectionDark,
-} from "../../layout";
+import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
 import { Terminal } from "../../terminal";
-import { Heading, Paragraph, SubText, UnderlinedPurpleText } from "../../texts";
+import { Heading, Paragraph, PurpleText, SubText } from "../../texts";
 
 const FadedDiv = styled.div`
   display: flex;
@@ -45,8 +40,8 @@ const Step: React.FC<IStep> = ({ bullet, title, description }) => {
           {bullet}
         </SubText>
       </IconCircle>
-      <div style={{ padding: "0.5rem 0 0 2rem" }}>
-        <UnderlinedPurpleText>{title}</UnderlinedPurpleText>
+      <div style={{ padding: "0.5rem 0 0 2rem", maxWidth: "40rem" }}>
+        <PurpleText underline={true}>{title}</PurpleText>
         <br />
         <Paragraph>{description}</Paragraph>
       </div>
@@ -90,9 +85,7 @@ const GetStarted: React.FC = () => {
       <Heading textAlign="center">Get started with Litmus</Heading>
       <ResponsiveRow breakpoint="md" alignItems="start">
         <BoundedContainer breakpoint="md" width="50%" margin="0">
-          <Center>
-            <Terminal />
-          </Center>
+          <Terminal />
         </BoundedContainer>
         <GetStartedSteps />
       </ResponsiveRow>

@@ -34,12 +34,16 @@ const Paragraph = styled.p<IText>`
       : props.theme.fontSize.paragraph.lg};
 `;
 
-const UnderlinedPurpleText = styled.p<IText>`
+interface IPurpleText extends IText {
+  underline: boolean;
+}
+
+const PurpleText = styled.p<IPurpleText>`
   line-height: 130%;
   font-weight: 600;
   text-align: ${props => props.textAlign ?? "left"};
   color: ${props => props.theme.colors.textSecondary};
-  text-decoration: underline;
+  text-decoration: ${props => (props.underline ? "underline" : "none")};
   font-size: ${props =>
     props.theme.screens.md
       ? props.theme.fontSize.subHeading.md
@@ -92,11 +96,4 @@ const KubeCmd: React.FC<IKubeCmd> = ({ text }) => {
   );
 };
 
-export {
-  Heading,
-  Subheading,
-  Paragraph,
-  SubText,
-  KubeCmd,
-  UnderlinedPurpleText,
-};
+export { Heading, Subheading, Paragraph, SubText, KubeCmd, PurpleText };

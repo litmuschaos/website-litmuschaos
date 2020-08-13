@@ -1,7 +1,9 @@
 import React from "react";
+import { PreFooter } from "../components/footer";
 import { Layout } from "../components/layout";
 import {
   CloudNativeWay,
+  FeedBack,
   GetStarted,
   Head,
   PurpleBox,
@@ -18,6 +20,8 @@ const App = () => {
       <CloudNativeWay />
       <QuickStart />
       <GetStarted />
+      <FeedBack />
+      <PreFooter />
     </Layout>
   );
 };

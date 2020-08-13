@@ -95,7 +95,7 @@ const QuickStart: React.FC = () => {
   return (
     <SectionLight>
       <ResponsiveRow breakpoint="md">
-        <BoundedContainer breakpoint="md" width="35%" margin="0 0 2rem 0">
+        <BoundedContainer breakpoint="md" width="35%" margin="0 3rem 0 0">
           <ColumnCenter>
             <Heading>Start in minutes not in days</Heading>
             <Paragraph>

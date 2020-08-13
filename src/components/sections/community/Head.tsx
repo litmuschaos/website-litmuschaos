@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading, Paragraph } from "../../../components/texts";
-import { ResponsiveRow } from "../../../components/layout";
 import { Button } from "../../../components/button";
+import { ResponsiveRow } from "../../../components/layout";
+import { Heading, Paragraph } from "../../../components/texts";
 import { useTheme } from "../../../styles";
 
 // Styles
@@ -10,7 +10,7 @@ const HeaderText = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1rem 3rem;
-  width: ${(props) => (!props.theme.screens.sm ? "35%" : "")};
+  width: ${props => (!props.theme.screens.sm ? "35%" : "")};
 `;
 
 const CommunityImage = styled.img`
@@ -23,7 +23,7 @@ const Head: React.FC = () => {
   const { sm } = useTheme().screens;
 
   return (
-    <div style={{ height: "100%" }}>
+    <div style={{ height: "100%", marginTop: "1rem" }}>
       <ResponsiveRow breakpoint="sm">
         {sm ? (
           <></>

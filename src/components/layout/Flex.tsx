@@ -19,11 +19,14 @@ const ColumnCenter = styled.div`
   height: 100%;
 `;
 
-const Center = styled.div`
+interface ICenter {
+  fullHeight: boolean;
+}
+const Center = styled.div<ICenter>`
   display: grid;
   place-items: center;
   width: 100%;
-  height: 100%;
+  height: ${props => (props.fullHeight ? "100%" : "auto")};
 `;
 
 export { Row, Column, ColumnCenter, Center };

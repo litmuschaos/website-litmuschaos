@@ -3,6 +3,7 @@ import { useTheme } from "styled-components";
 import { IconCircle } from "../../icon-circle";
 import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
 import { Heading, Paragraph, Subheading } from "../../texts";
+import { ChaosBirdExp } from "./ChaosBirdExp";
 
 interface IInfoSection {
   color: (opacity: number) => string;
@@ -40,12 +41,11 @@ const CloudNativeWay: React.FC = () => {
   return (
     <SectionDark>
       <Heading textAlign="center">Do it the cloud-native way</Heading>
-      <ResponsiveRow breakpoint="lg">
-        <img
-          src="/svg/cloud-native-way.svg"
-          alt="chaos bird doing experiments"
-          width={lg ? "80%" : "30%"}
-        />
+      <ResponsiveRow breakpoint="xxl">
+        <BoundedContainer breakpoint="lg" width="40rem" margin="0">
+          <ChaosBirdExp />
+        </BoundedContainer>
+
         <div style={{ margin: lg ? "0" : "2rem 0 0 2rem" }}>
           <ResponsiveRow breakpoint="md">
             <InfoSection

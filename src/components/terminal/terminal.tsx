@@ -1,7 +1,21 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { TerminalPane } from "./terminalPane";
 import { TopBar } from "./topbar";
+
+const Wrapper = styled.div`
+  ${props =>
+    props.theme.screens.md
+      ? css`
+          display: block;
+        `
+      : css`
+          display: grid;
+          place-items: center;
+          width: 100%;
+          height: 100%;
+        `}
+`;
 
 const TerminalFrame = styled.div`
   max-width: 35rem;
@@ -12,10 +26,12 @@ const TerminalFrame = styled.div`
 
 const Terminal: React.FC = () => {
   return (
-    <TerminalFrame>
-      <TopBar />
-      <TerminalPane />
-    </TerminalFrame>
+    <Wrapper>
+      <TerminalFrame>
+        <TopBar />
+        <TerminalPane />
+      </TerminalFrame>
+    </Wrapper>
   );
 };
 
