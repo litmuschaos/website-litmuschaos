@@ -9,7 +9,14 @@ import { theme } from "../../../styles";
 // Styles
 const CommunityTextList = styled.div`
   width: 100%;
-  margin: 0;
+  margin: ${(props) =>
+    props.theme.screens.sm
+      ? "0"
+      : props.theme.screens.md
+      ? "0 2rem"
+      : props.theme.screens.xl
+      ? "0 3rem"
+      : "0"};
   display: flex;
   flex-direction: column;
 
@@ -45,8 +52,16 @@ const GreenTestTube = styled.img`
 `;
 
 const SlackBox = styled.div`
-  margin: ${(props) => (props.theme.screens.sm ? "0 auto" : "0 2rem")};
-  width: ${(props) => (props.theme.screens.sm ? "80%" : "25%")};
+  margin: ${(props) =>
+    props.theme.screens.sm
+      ? "0 auto"
+      : props.theme.screens.md
+      ? "0"
+      : "0 2rem"};
+  width: ${(props) =>
+    props.theme.screens.sm ? "80%" : props.theme.screens.md ? "40%" : "100%%"};
+  height: ${(props) =>
+    props.theme.screens.sm ? "100%" : props.theme.screens.md ? "100%" : "100%"};
   box-shadow: -0.2rem 0.3rem 0.7rem 0.1rem rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
 `;

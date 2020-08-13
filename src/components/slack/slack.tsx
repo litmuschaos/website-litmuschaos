@@ -13,7 +13,7 @@ const SlackBox = styled.div`
 `;
 
 const Slack: React.FC = () => {
-  const { sm } = useTheme().screens;
+  const { xl } = useTheme().screens;
   return (
     <SlackBox>
       <div
@@ -37,8 +37,8 @@ const Slack: React.FC = () => {
         >
           Connect with SREs and Chaos Engineering enthusiasts.
         </Paragraph>
-        <div>
-          <Button screen={sm ? "small" : "large"} gradientColor="purple">
+        <div style={{ flexWrap: "wrap" }}>
+          <Button screen={xl ? "small" : "large"} gradientColor="purple">
             Join the Channnel
           </Button>
         </div>
