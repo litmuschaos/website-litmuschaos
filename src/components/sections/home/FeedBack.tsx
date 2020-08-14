@@ -25,7 +25,7 @@ const AvatarDiv = styled.div`
 const UserQuote: React.FC<IUserQuote> = ({ quote, name, designation }) => {
   return (
     <BoundedContainer breakpoint="md" width="50%" margin="0 0 0 2rem">
-      <Center fullHeight={true}>
+      <Center>
         <div>
           <Heading>See what our users are saying about us</Heading>
           <br />

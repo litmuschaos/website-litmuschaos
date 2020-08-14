@@ -1,8 +1,7 @@
 import React from "react";
-import { PreFooter } from "../components/footer";
-import { theme } from "../styles";
 import { Layout } from "../components/layout";
 import { Nav } from "../components/nav";
+import { PreFooter } from "../components/preFooter";
 import {
   CloudNativeWay,
   FeedBack,

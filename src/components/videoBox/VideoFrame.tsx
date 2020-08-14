@@ -13,7 +13,7 @@ const VideoBox = styled.iframe<IVideoBox>`
   width: ${props => props.width};
   height: calc(${props => props.width} / (16 / 9));
   max-width: 100%;
-  max-height: calc((100vw - 2.5rem) / (16 / 9));
+  max-height: calc((100vw - 2rem) / (16 / 9));
 `;
 
 const VideoDiv = styled.div`

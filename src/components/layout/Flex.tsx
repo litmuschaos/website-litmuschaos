@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-const Row = styled.div`
+interface IRow {
+  wrap?: string;
+}
+const Row = styled.div<IRow>`
   display: flex;
   justify-content: space-between;
+  flex-wrap: ${props => props.wrap ?? "no-wrap"};
 `;
 
 const Column = styled.div`
@@ -19,14 +23,11 @@ const ColumnCenter = styled.div`
   height: 100%;
 `;
 
-interface ICenter {
-  fullHeight: boolean;
-}
 const Center = styled.div<ICenter>`
   display: grid;
   place-items: center;
   width: 100%;
-  height: ${props => (props.fullHeight ? "100%" : "auto")};
+  height: 100%;
 `;
 
 export { Row, Column, ColumnCenter, Center };

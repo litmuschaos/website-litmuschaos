@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading, Paragraph, Subheading } from "../../../components/texts";
-import { ResponsiveRow, Row } from "../../../components/layout";
 import { OutlinedButton } from "../../../components/button";
+import { ResponsiveRow, Row } from "../../../components/layout";
+import { Heading, Paragraph, Subheading } from "../../../components/texts";
 import { theme, useTheme } from "../../../styles";
-import { OctocatSM, OctocatMD } from "../../imageFetch/Octocat";
+import { OctocatMD, OctocatSM } from "../../imageFetch/Octocat";
 
 // Styles
 const HeaderText = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1rem 3rem;
-  width: ${(props) => (!props.theme.screens.sm ? "35%" : "")};
+  width: ${props => (!props.theme.screens.sm ? "35%" : "")};
 `;
 
 const Contributing: React.FC = () => {

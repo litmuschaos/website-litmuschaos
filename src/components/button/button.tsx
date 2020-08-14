@@ -14,15 +14,15 @@ interface IOutlinedButton {
 const Button = styled.button<IButton>`
   height: 3rem;
   min-width: 10rem;
-  width: ${(props) => (props.screen === "small" ? "70%" : "15rem")};
+  width: ${props => (props.screen === "small" ? "100%" : "18rem")};
   border: none;
-  background: ${(props) =>
+  background: ${props =>
     props.gradientColor === "purple"
       ? props.theme.gradient.purple
       : props.theme.gradient.green};
   color: white;
   border-radius: 0.25rem;
-  font-size: ${(props) => props.theme.fontSize.button};
+  font-size: ${props => props.theme.fontSize.button};
   cursor: pointer;
   :disabled {
     background: lightgray;
@@ -36,8 +36,8 @@ const WhiteOnGreenButton = styled.button`
   border: none;
   border-radius: 0.2rem;
   background: white;
-  color: ${(props) => props.theme.colors.darkGreen(1)};
-  font-size: ${(props) => props.theme.fontSize.small};
+  color: ${props => props.theme.colors.darkGreen(1)};
+  font-size: ${props => props.theme.fontSize.small};
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.08);
@@ -51,11 +51,11 @@ const OutlinedButton = styled.button<IOutlinedButton>`
   min-width: 2rem;
   padding: 0.5rem 2rem;
   background: transparent;
-  width: ${(props) => (props.theme.screens.sm ? "100%" : "max-content")};
-  color: ${(props) => props.backgroundColor};
-  border: 0.05rem solid ${(props) => props.backgroundColor};
+  width: ${props => (props.theme.screens.sm ? "100%" : "max-content")};
+  color: ${props => props.backgroundColor};
+  border: 0.05rem solid ${props => props.backgroundColor};
   border-radius: 0.5rem;
-  font-size: ${(props) => props.theme.fontSize.button};
+  font-size: ${props => props.theme.fontSize.button};
   cursor: pointer;
   :disabled {
     background: lightgray;

@@ -1,14 +1,13 @@
 import React from "react";
-import { PreFooter } from "../components/footer";
 import { Layout } from "../components/layout";
-import { theme } from "../styles";
 import { Nav } from "../components/nav";
+import { PreFooter } from "../components/preFooter";
 import {
   CommunityEvents,
+  Contributing,
   Head,
   JoinOurCommunity,
   LitmusCommunityVideo,
-  Contributing,
 } from "../components/sections/community";
 import { SEO } from "../components/seo";
 

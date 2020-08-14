@@ -46,24 +46,20 @@ const top_adopters = {
   links: [
     {
       name: "Intuit",
-      image: "/svg/Intuit.svg",
       url: "https://github.com/litmuschaos/litmus/blob/master/ADOPTERS.md",
     },
     {
       name: "Wipro",
-      image: "/svg/Wipro.svg",
       url:
         "https://github.com/litmuschaos/litmus/blob/master/adopters/AppAnywhere.md",
     },
     {
       name: "Open EBS",
-      image: "/svg/OpenEBS.svg",
       url:
         "https://github.com/litmuschaos/litmus/blob/master/adopters/openebs.md",
     },
     {
       name: "Zerebrium",
-      image: "/svg/Zebrium.svg",
       url:
         "https://github.com/litmuschaos/litmus/blob/master/adopters/zebrium.md",
     },

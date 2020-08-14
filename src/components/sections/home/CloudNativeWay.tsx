@@ -18,12 +18,12 @@ const InfoSection: React.FC<IInfoSection> = ({
   description,
   imgSrc,
 }) => {
-  const { md } = useTheme().screens;
+  const { xl } = useTheme().screens;
 
   return (
     <BoundedContainer
       breakpoint="sm"
-      width={md ? "80%" : "20rem"}
+      width={xl ? "80%" : "20rem"}
       margin="1rem"
     >
       <IconCircle bgColor={color} effectColor={color} size={6.25}>
@@ -37,17 +37,16 @@ const InfoSection: React.FC<IInfoSection> = ({
 
 const CloudNativeWay: React.FC = () => {
   const { purple, darkGreen, lightGreen, yellow } = useTheme().colors;
-  const { lg } = useTheme().screens;
   return (
     <SectionDark>
       <Heading textAlign="center">Do it the cloud-native way</Heading>
-      <ResponsiveRow breakpoint="xxl">
-        <BoundedContainer breakpoint="lg" width="40rem" margin="0">
+      <ResponsiveRow breakpoint="xl">
+        <BoundedContainer breakpoint="xl" width="50%" margin="0">
           <ChaosBirdExp />
         </BoundedContainer>
 
-        <div style={{ margin: lg ? "0" : "2rem 0 0 2rem" }}>
-          <ResponsiveRow breakpoint="md">
+        <BoundedContainer breakpoint="xl" width="45%" margin="0">
+          <ResponsiveRow breakpoint="xl">
             <InfoSection
               color={purple}
               imgSrc="/svg/declarative-chaos.svg"
@@ -61,7 +60,7 @@ const CloudNativeWay: React.FC = () => {
               description="Most of the generic chaos experiments are readily available for you to get started with your initial chaos engineering needs."
             />
           </ResponsiveRow>
-          <ResponsiveRow breakpoint="md">
+          <ResponsiveRow breakpoint="xl">
             <InfoSection
               color={lightGreen}
               imgSrc="/svg/create-your-own.svg"
@@ -75,7 +74,7 @@ const CloudNativeWay: React.FC = () => {
               description="Simple to complex chaos workflows are easy to construct. Use GitOps and the chaos workflows to scale your chaos engineering efforts and increase the resilience of your Kubernetes platform."
             />
           </ResponsiveRow>
-        </div>
+        </BoundedContainer>
       </ResponsiveRow>
     </SectionDark>
   );
