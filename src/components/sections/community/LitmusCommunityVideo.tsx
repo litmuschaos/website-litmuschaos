@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../../../components/button";
-import { SectionLight } from "../../../components/layout";
+import { SectionDark } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
 import { VideoFrame } from "../../../components/videoBox";
 import { useTheme } from "../../../styles";
@@ -13,7 +13,7 @@ const LitmusCommunityVideo: React.FC = () => {
   const paragraphText =
     "Creating chaos on YouTube. Subscribe to our channel for early updates on meeting recordings, tutorials, events and more";
   return (
-    <SectionLight style={{ textAlign: "center" }}>
+    <SectionDark style={{ textAlign: "center" }}>
       <Heading textAlign="center" style={{ margin: "0 auto" }}>
         See what’s happening in
         <br />
@@ -36,7 +36,7 @@ const LitmusCommunityVideo: React.FC = () => {
       >
         Visit Our Youtube
       </Button>
-    </SectionLight>
+    </SectionDark>
   );
 };
 

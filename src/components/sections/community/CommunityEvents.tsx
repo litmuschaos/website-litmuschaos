@@ -3,14 +3,14 @@ import { Card } from "../../../components/card";
 import {
   BoundedContainer,
   ResponsiveRow,
-  SectionDark,
+  SectionLight,
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
 import { CommunityText } from "./globalStyle";
 
 const CommunityEvents: React.FC = () => {
   return (
-    <SectionDark>
+    <SectionLight>
       <ResponsiveRow breakpoint="sm">
         <CommunityText>
           <Heading>Community Events</Heading>
@@ -43,7 +43,7 @@ const CommunityEvents: React.FC = () => {
           </ResponsiveRow>
         </BoundedContainer>
       </ResponsiveRow>
-    </SectionDark>
+    </SectionLight>
   );
 };
 

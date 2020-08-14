@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Heading } from "../../../components/texts";
 import { Slack } from "../../../components/slack";
-import { ResponsiveRow, SectionDark } from "../../../components/layout";
+import { ResponsiveRow, SectionLight } from "../../../components/layout";
 import { CommunityText } from "./globalStyle";
 import { theme } from "../../../styles";
 
@@ -69,7 +69,7 @@ const SlackBox = styled.div`
 // Component
 const JoinOurCommunity: React.FC = () => {
   return (
-    <SectionDark>
+    <SectionLight>
       <ResponsiveRow breakpoint="sm">
         <CommunityText>
           <Heading>Join our Community meetings</Heading>
@@ -141,7 +141,7 @@ const JoinOurCommunity: React.FC = () => {
           <Slack />
         </SlackBox>
       </ResponsiveRow>
-    </SectionDark>
+    </SectionLight>
   );
 };
 

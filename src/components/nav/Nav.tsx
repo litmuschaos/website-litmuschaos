@@ -17,12 +17,12 @@ const Logo: React.FC = () => (
 );
 
 const NavBar = styled.nav`
-  width: ${props => (props.theme.screens.xl ? "95%" : "100%")};
+  width: ${(props) => (props.theme.screens.xl ? "95%" : "100%")};
   padding-top: 1rem;
   display: flex;
   justify-content: space-around;
   position: relative;
-  z-index: ${props => props.theme.zIndex.nav};
+  z-index: ${(props) => props.theme.zIndex.nav};
 `;
 
 const LogoDiv = styled.div`
@@ -32,7 +32,7 @@ const LogoDiv = styled.div`
 
 const GitHubStars = styled.div`
   height: 2rem;
-  font-size: ${props => props.theme.fontSize.small.lg};
+  font-size: ${(props) => props.theme.fontSize.small.lg};
   padding: 0.5rem 0.5rem;
   margin-left: 1.5rem;
   margin-top: 0.4rem;
@@ -55,13 +55,13 @@ const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   li {
-    padding: ${props =>
+    padding: ${(props) =>
       props.theme.screens.mmd
         ? "1rem 0.3rem"
         : props.theme.screens.xl
         ? "0.7rem 0.5rem"
         : "1rem 1rem"};
-    font-size: ${props =>
+    font-size: ${(props) =>
       props.theme.screens.mmd ? "0.9rem" : props.theme.fontSize.button};
   }
 `;
@@ -118,25 +118,34 @@ const Nav: React.FC = () => {
         <>
           <LogoDiv>
             <Logo />
-            <GitHubStars>
-              <div
-                style={{
-                  position: "relative",
-                  margin: "-5% 0",
-                }}
-              >
-                <GithubIcon />
-              </div>
-              <SubText
-                style={{
-                  fontSize: "0.9rem",
-                  position: "relative",
-                  margin: "-5% 0.2rem",
-                }}
-              >
-                Stars
-              </SubText>
-            </GitHubStars>
+            <Link
+              to="route"
+              target="_blank"
+              onClick={(event) => {
+                event.preventDefault();
+                window.open("https://github.com/litmuschaos/litmus");
+              }}
+            >
+              <GitHubStars>
+                <div
+                  style={{
+                    position: "relative",
+                    margin: "-5% 0",
+                  }}
+                >
+                  <GithubIcon />
+                </div>
+                <SubText
+                  style={{
+                    fontSize: "0.9rem",
+                    position: "relative",
+                    margin: "-5% 0.2rem",
+                  }}
+                >
+                  Stars
+                </SubText>
+              </GitHubStars>
+            </Link>
           </LogoDiv>
           <Ul>
             <Link to="/">
@@ -150,7 +159,7 @@ const Nav: React.FC = () => {
             <Link
               to="route"
               target="_blank"
-              onClick={event => {
+              onClick={(event) => {
                 event.preventDefault();
                 window.open("https://dev.to/t/litmuschaos");
               }}

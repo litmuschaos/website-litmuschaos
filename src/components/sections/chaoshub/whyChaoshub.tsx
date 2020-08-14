@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {
   ResponsiveRow,
   BoundedContainer,
-  SectionDark,
+  SectionLight,
   Center,
   Row,
 } from "../../../components/layout";
@@ -108,12 +108,12 @@ const WhyChaoshubContent = (
 const WhyChaoshub: React.FC = () => {
   const { sm } = useTheme().screens;
   return (
-    <SectionDark>
+    <SectionLight>
       <ResponsiveRow breakpoint="lg">
         <BoundedContainer breakpoint="lg" width="50%" margin="0 0 0 2rem">
           <>{WhyChaoshubContent}</>
         </BoundedContainer>
-        <BoundedContainer breakpoint="md" width="50%" margin="3rem 0">
+        <BoundedContainer breakpoint="md" width="50%" margin="1rem 0">
           {sm ? (
             <>{UsefulLinksContent}</>
           ) : (
@@ -121,7 +121,7 @@ const WhyChaoshub: React.FC = () => {
           )}
         </BoundedContainer>
       </ResponsiveRow>
-    </SectionDark>
+    </SectionLight>
   );
 };
 

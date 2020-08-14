@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "../../../components/button";
-import { SectionDark } from "../../../components/layout";
+import { SectionLight } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
 import { useTheme } from "../../../styles";
 
@@ -46,7 +46,7 @@ const ReadyToStart: React.FC = () => {
   const paragraphText =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu felis nec arcu eleifend scelerisque. Curabitur facilisis, nibh sit amet tincidunt porttitor, orci lorem accumsan ex, quis scelerisque quam ligula fringilla risus.";
   return (
-    <SectionDark style={{ textAlign: "center" }}>
+    <SectionLight style={{ textAlign: "center" }}>
       <YellowTestTube src="./svg/testTubeYellow.svg" alt="Yellow Test Tube" />
 
       <Heading textAlign="center" style={{ margin: "0 auto" }}>
@@ -67,7 +67,7 @@ const ReadyToStart: React.FC = () => {
       >
         Go to ChaosHub
       </Button>
-    </SectionDark>
+    </SectionLight>
   );
 };
 

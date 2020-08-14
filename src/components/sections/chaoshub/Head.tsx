@@ -3,7 +3,7 @@ import { Button } from "../../../components/button";
 import {
   ResponsiveRow,
   BoundedContainer,
-  SectionLight,
+  SectionDark,
   Center,
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
@@ -38,7 +38,7 @@ const Head: React.FC = () => {
   const { sm } = useTheme().screens;
 
   return (
-    <SectionLight>
+    <SectionDark>
       <ResponsiveRow breakpoint="lg">
         <BoundedContainer breakpoint="lg" width="50%" margin="0">
           <ChaoshubImage />
@@ -51,7 +51,7 @@ const Head: React.FC = () => {
           )}
         </BoundedContainer>
       </ResponsiveRow>
-    </SectionLight>
+    </SectionDark>
   );
 };
 

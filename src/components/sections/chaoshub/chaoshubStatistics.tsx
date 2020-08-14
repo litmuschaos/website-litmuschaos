@@ -3,7 +3,7 @@ import { IconCircle } from "../../icon-circle";
 import {
   ResponsiveRow,
   BoundedContainer,
-  SectionLight,
+  SectionDark,
 } from "../../../components/layout";
 import { Paragraph } from "../../../components/texts";
 import { useTheme } from "../../../styles";
@@ -34,10 +34,10 @@ const StatCard: React.FC<IStatCard> = ({ color, description, imgSrc }) => {
 
 // Component
 const ChaoshubStatistics: React.FC = () => {
-  const { textSecondary } = useTheme().colors;
+  const { purple } = useTheme().colors;
 
   return (
-    <SectionLight>
+    <SectionDark>
       <ResponsiveRow breakpoint="xl">
         <BoundedContainer breakpoint="xl" width="50%" margin="0">
           Chaoshub
@@ -47,20 +47,20 @@ const ChaoshubStatistics: React.FC = () => {
 
         <BoundedContainer breakpoint="xl" width="45%" margin="0">
           <ResponsiveRow breakpoint="xl">
-            {/* <StatCard
-              color={textSecondary}
+            <StatCard
+              color={purple}
               imgSrc="./svg/declarative-chaos.svg"
               description="Litmus provides chaos CRDs to manage chaos. Using chaos API, orchestration, scheduling and complex workflow management can be done declaratively."
             />
             <StatCard
-              color={textSecondary}
+              color={purple}
               imgSrc="./svg/ready-experiments.svg"
               description="Most of the generic chaos experiments are readily available for you to get started with your initial chaos engineering needs."
-            /> */}
+            />
           </ResponsiveRow>
         </BoundedContainer>
       </ResponsiveRow>
-    </SectionLight>
+    </SectionDark>
   );
 };
 
