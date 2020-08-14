@@ -59,7 +59,7 @@ const top_adopters = {
         "https://github.com/litmuschaos/litmus/blob/master/adopters/openebs.md",
     },
     {
-      name: "Zerebrium",
+      name: "Zebrium",
       url:
         "https://github.com/litmuschaos/litmus/blob/master/adopters/zebrium.md",
     },

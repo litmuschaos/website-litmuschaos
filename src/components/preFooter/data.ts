@@ -3,6 +3,7 @@ const top_adopters = {
   links: [
     {
       name: "Intuit",
+      image: "/svg/Intuit.svg",
     },
     {
       name: "Wipro",
@@ -13,7 +14,7 @@ const top_adopters = {
       image: "/svg/OpenEBS.svg",
     },
     {
-      name: "Zerebrium",
+      name: "Zebrium",
       image: "/svg/Zebrium.svg",
     },
   ],
