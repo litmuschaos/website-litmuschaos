@@ -84,7 +84,9 @@ const Nav: React.FC = () => {
               left: "10%",
             }}
           >
-            <Logo />
+            <Link to="/">
+              <Logo />
+            </Link>
           </div>
           <ResponsiveNav>
             <GitHubStars
@@ -117,7 +119,9 @@ const Nav: React.FC = () => {
       ) : (
         <>
           <LogoDiv>
-            <Logo />
+            <Link to="/">
+              <Logo />
+            </Link>
             <Link
               to="route"
               target="_blank"
@@ -148,7 +152,7 @@ const Nav: React.FC = () => {
             </Link>
           </LogoDiv>
           <Ul>
-            <Link to="/">
+            <Link to="/whylitmus">
               <li>Why Litmus?</li>
             </Link>
 

@@ -23,9 +23,22 @@ const StatCard: React.FC<IStatCard> = ({ color, description, imgSrc }) => {
       width={xl ? "80%" : "20rem"}
       margin="1rem"
     >
-      <IconCircle bgColor={color} effectColor={color} size={6.25}>
-        <img src={imgSrc} alt="Icon" />
-      </IconCircle>
+      <div style={{ display: "flex" }}>
+        <IconCircle bgColor={color} effectColor={color} size={6.25}>
+          <img src={imgSrc} alt="Icon" />
+        </IconCircle>
+        <div
+          style={{
+            margin: "0 0.5rem",
+            fontSize: "4rem",
+            fontWeight: "bold",
+            height: "100%",
+            color: "#109B67",
+          }}
+        >
+          97000+
+        </div>
+      </div>
       <hr />
       <Paragraph>{description}</Paragraph>
     </BoundedContainer>
@@ -49,13 +62,14 @@ const ChaoshubStatistics: React.FC = () => {
           <ResponsiveRow breakpoint="xl">
             <StatCard
               color={purple}
-              imgSrc="./svg/declarative-chaos.svg"
-              description="Litmus provides chaos CRDs to manage chaos. Using chaos API, orchestration, scheduling and complex workflow management can be done declaratively."
+              imgSrc="./svg/number-of-experiments.svg"
+              description="Number of Experiments run"
             />
+
             <StatCard
               color={purple}
-              imgSrc="./svg/ready-experiments.svg"
-              description="Most of the generic chaos experiments are readily available for you to get started with your initial chaos engineering needs."
+              imgSrc="./svg/downloads.svg"
+              description="Number of Litmus Installations"
             />
           </ResponsiveRow>
         </BoundedContainer>

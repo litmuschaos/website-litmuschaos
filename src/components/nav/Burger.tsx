@@ -75,7 +75,7 @@ const Burger: React.FC = () => {
         <>
           <BurgerModal>
             <Ul>
-              <Link to="/">
+              <Link to="/whylitmus">
                 <li>Why Litmus?</li>
               </Link>
 
