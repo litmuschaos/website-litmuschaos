@@ -1,39 +1,9 @@
 import React from "react";
 import { useTheme } from "styled-components";
-import { IconCircle } from "../../icon-circle";
-import { ChaosBirdExp } from "../../imageFetch/ChaosBirdExp";
+import { ChaosBirdExp } from "../../image-fetch/ChaosBirdExp";
+import { InfoSection } from "../../info-section";
 import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
-import { Heading, Paragraph, Subheading } from "../../texts";
-
-interface IInfoSection {
-  color: (opacity: number) => string;
-  imgSrc: string;
-  title: string;
-  description: string;
-}
-
-const InfoSection: React.FC<IInfoSection> = ({
-  color,
-  title,
-  description,
-  imgSrc,
-}) => {
-  const { xl } = useTheme().screens;
-
-  return (
-    <BoundedContainer
-      breakpoint="sm"
-      width={xl ? "80%" : "20rem"}
-      margin="2rem 1rem"
-    >
-      <IconCircle bgColor={color} effectColor={color} size={6.25}>
-        <img src={imgSrc} alt={title} />
-      </IconCircle>
-      <Subheading style={{ margin: "1rem 0" }}>{title}</Subheading>
-      <Paragraph>{description}</Paragraph>
-    </BoundedContainer>
-  );
-};
+import { Heading } from "../../texts";
 
 const CloudNativeWay: React.FC = () => {
   const { purple, darkGreen, lightGreen, yellow } = useTheme().colors;

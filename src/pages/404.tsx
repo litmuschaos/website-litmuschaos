@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
-import styled from "styled-components";
 import React from "react";
-import { Image404 } from "../components/imageFetch/Image404";
+import styled from "styled-components";
+import { Image404 } from "../components/image-fetch/Image404";
 import { theme } from "../styles";
 
 const Background = styled.img`

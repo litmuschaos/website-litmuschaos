@@ -7,7 +7,7 @@ import {
 } from "../../../components/layout";
 import { Heading, Paragraph, Subheading } from "../../../components/texts";
 import { useTheme } from "../../../styles";
-import { OctoCat } from "../../imageFetch/OctoCat";
+import { OctoCat } from "../../image-fetch/OctoCat";
 
 interface IContributeButton {
   width: string;

@@ -7,7 +7,7 @@ import {
   SectionDark,
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
-import { ChaoshubImage } from "../../imageFetch/ChaosHubImage";
+import { ChaoshubImage } from "../../image-fetch/ChaosHubImage";
 
 const HeaderContent: React.FC = () => {
   return (

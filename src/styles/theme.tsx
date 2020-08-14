@@ -11,8 +11,8 @@ export default {
     mmd: 890,
     lg: 1024,
     xl: 1280,
-    xxl: 1600,
-    xxxl: 1920,
+    xxl: 1350,
+    xxxl: 1600,
   },
   fontSize: {
     heading: { lg: "2.2rem", md: "1.75rem" },

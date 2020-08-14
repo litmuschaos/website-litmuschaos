@@ -1,6 +1,5 @@
 import React from "react";
 import { Layout } from "../components/layout";
-import { PreFooter } from "../components/preFooter";
 import {
   ChaoshubStatistics,
   Head,
@@ -17,7 +16,6 @@ const ChaosHub = () => {
       <WhyChaoshub />
       <ChaoshubStatistics />
       <ReadyToStart />
-      <PreFooter />
     </Layout>
   );
 };

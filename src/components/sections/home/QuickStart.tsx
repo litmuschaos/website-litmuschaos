@@ -7,7 +7,7 @@ import {
   SectionLight,
 } from "../../layout";
 import { Heading, Paragraph, SubText } from "../../texts";
-import { VideoFrame } from "../../videoBox";
+import { VideoFrame } from "../../video-box";
 
 const FadedDiv = styled.div`
   display: flex;

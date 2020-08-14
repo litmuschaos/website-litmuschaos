@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Avatar } from "../../imageFetch/Avatar";
-import { ChaosBirdFeedback } from "../../imageFetch/ChaosBirdFeedback";
+import { Avatar } from "../../image-fetch/Avatar";
+import { ChaosBirdFeedback } from "../../image-fetch/ChaosBirdFeedback";
 import {
   BoundedContainer,
   Center,

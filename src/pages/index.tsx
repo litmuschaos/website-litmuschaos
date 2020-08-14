@@ -1,7 +1,6 @@
 import React from "react";
-import { PurpleBox } from "../components/imageFetch/PurpleBox";
+import { PurpleBox } from "../components/image-fetch/PurpleBox";
 import { Layout } from "../components/layout";
-import { PreFooter } from "../components/preFooter";
 import {
   CloudNativeWay,
   FeedBack,
@@ -21,7 +20,6 @@ const App = () => {
       <QuickStart />
       <GetStarted />
       <FeedBack />
-      <PreFooter />
     </Layout>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import { Layout } from "../components/layout";
-import { PreFooter } from "../components/preFooter";
 import {
   CommunityEvents,
   Contributing,
@@ -19,7 +18,6 @@ const Community = () => {
       <LitmusCommunityVideo />
       <CommunityEvents />
       <Contributing />
-      <PreFooter />
     </Layout>
   );
 };

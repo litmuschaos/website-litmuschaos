@@ -5,6 +5,7 @@ import { CSSDebugger } from "../css-debugger";
 // Components
 import { Footer } from "../footer";
 import { Nav } from "../nav";
+import { PreFooter } from "../pre-footer";
 
 const Container = styled.div`
   position: relative;
@@ -18,6 +19,7 @@ const Layout: React.FC = ({ children }) => {
         <Nav />
         <CSSDebugger />
         <main>{children}</main>
+        <PreFooter />
         <Footer />
       </Container>
     </ThemeProvider>

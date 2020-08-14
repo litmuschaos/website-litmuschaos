@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "../components/layout";
-import { Head } from "../components/sections/whylitmus";
+import { Features, Head } from "../components/sections/whylitmus";
 import { SEO } from "../components/seo";
 
 const WhyLitmus = () => {
@@ -8,6 +8,7 @@ const WhyLitmus = () => {
     <Layout>
       <SEO />
       <Head />
+      <Features />
     </Layout>
   );
 };

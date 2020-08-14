@@ -7,7 +7,7 @@ import {
   SectionDark,
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
-import { ChaosBirdSteps } from "../../imageFetch/ChaosBirdSteps";
+import { ChaosBirdSteps } from "../../image-fetch/ChaosBirdSteps";
 
 const HeaderContent: React.FC = () => {
   return (

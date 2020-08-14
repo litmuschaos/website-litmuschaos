@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "../../../components/button";
 import { SectionDark } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
-import { VideoFrame } from "../../../components/videoBox";
+import { VideoFrame } from "../../video-box";
 import { CommunityText } from "./globalStyle";
 
 // Component
