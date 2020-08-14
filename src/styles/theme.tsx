@@ -20,7 +20,7 @@ export default {
     paragraph: { lg: "1rem", md: "0.875rem" },
     subText: { lg: "1.25rem", md: "1.125rem" },
     button: "1.125rem",
-    small: "0.875rem",
+    small: { lg: "0.875rem", md: "0.75rem" },
   },
   colors: {
     backgroundLight: "#F9FAFC",
