@@ -7,7 +7,7 @@ import { Footer } from "../footer";
 
 const Container = styled.div`
   position: relative;
-  z-index: ${(props) => props.theme.zIndex.content};
+  z-index: ${props => props.theme.zIndex.content};
 `;
 
 const Layout: React.FC = ({ children }) => {

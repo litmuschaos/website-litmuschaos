@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { useTheme } from "../../styles";
 import { OutlinedButton } from "../button/index";
 import { GithubIcon } from "../github-icon/index";
-import { SubText } from "../texts";
 import { Link } from "../link/index";
+import { SubText } from "../texts";
 import Burger from "./Burger";
 
 // interface INavBar {
@@ -21,12 +21,12 @@ const Logo: React.FC = () => (
 );
 
 const NavBar = styled.nav`
-  width: ${(props) => (props.theme.screens.xl ? "95%" : "100%")};
+  width: ${props => (props.theme.screens.xl ? "95%" : "100%")};
   padding-top: 1rem;
   display: flex;
   justify-content: space-around;
   position: relative;
-  z-index: ${(props) => props.theme.zIndex.nav};
+  z-index: ${props => props.theme.zIndex.nav};
 `;
 
 const LogoDiv = styled.div`
@@ -36,7 +36,7 @@ const LogoDiv = styled.div`
 
 const GitHubStars = styled.div`
   height: 2rem;
-  font-size: ${(props) => props.theme.fontSize.small};
+  font-size: ${props => props.theme.fontSize.small.lg};
   padding: 0.5rem 0.5rem;
   margin-left: 1.5rem;
   margin-top: 0.4rem;
@@ -59,13 +59,13 @@ const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   li {
-    padding: ${(props) =>
+    padding: ${props =>
       props.theme.screens.mmd
         ? "1rem 0.3rem"
         : props.theme.screens.xl
         ? "0.7rem 0.5rem"
         : "1rem 1rem"};
-    font-size: ${(props) =>
+    font-size: ${props =>
       props.theme.screens.mmd ? "0.9rem" : props.theme.fontSize.button};
   }
 `;
