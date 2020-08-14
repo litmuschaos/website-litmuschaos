@@ -81,7 +81,7 @@ const Features: React.FC = () => {
           >
             <FeatureSection
               color={lightGreen}
-              imgSrc="/svg/experiment.svg"
+              imgSrc="/svg/chaos-portal.svg"
               title="Chaos Portal for chaos at scale"
               description="Litmus Portal provides capabilities to orchestrate complex chaos workflows, monitor chaos events and metrics around chaos experiments. Workflows running on multiple Kubernetes clusters can be managed from this portal. Multiple team members can share the workflows management together."
             />
