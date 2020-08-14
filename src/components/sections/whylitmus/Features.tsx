@@ -28,13 +28,13 @@ const Features: React.FC = () => {
           <BoundedContainer
             breakpoint="xxl"
             width="55%"
-            margin="6rem 0 12rem 5rem"
+            margin="6rem 0 9rem 5rem"
           >
             <FeatureSection
               color={purple}
               imgSrc="/svg/experiment.svg"
               title="Easy to write chaos experiments"
-              description="SDK is available in GO, Python and Ansible. A basic experiment structure is created quickly using SDK and developers and SREs just need to add the chaos logic into to make a new experiment. Your chaos logic is turned into a well orchestrated chaos experiment quickly and easily. "
+              description="SDK is available in GO, Python and Ansible. A basic experiment structure is created quickly using SDK and developers and SREs just need to add the chaos logic into to make a new experiment. Your chaos logic is turned into a well orchestrated chaos experiment quickly and easily."
             />
           </BoundedContainer>
         </ResponsiveRow>
@@ -43,13 +43,13 @@ const Features: React.FC = () => {
           <BoundedContainer
             breakpoint="xxl"
             width="55%"
-            margin="6rem 2rem 12rem 0"
+            margin="6rem 2rem 10rem 0"
           >
             <FeatureSection
               color={darkGreen}
-              imgSrc="/svg/experiment.svg"
-              title="Easy to write chaos experiments"
-              description="SDK is available in GO, Python and Ansible. A basic experiment structure is created quickly using SDK and developers and SREs just need to add the chaos logic into to make a new experiment. Your chaos logic is turned into a well orchestrated chaos experiment quickly and easily. "
+              imgSrc="/svg/declarative-chaos2.svg"
+              title="Declarative chaos management"
+              description="Chaos management is 100% declarative. Done cloud-native way. Litmus provides CRDs and a chaos operator to manage the life cycle of chaos. This capability also helps in scaling the chaos to chaos workflows."
             />
           </BoundedContainer>
 
@@ -62,24 +62,28 @@ const Features: React.FC = () => {
           <BoundedContainer
             breakpoint="xxl"
             width="55%"
-            margin="6rem 0 12rem 2rem"
+            margin="6rem 0 9rem 2rem"
           >
             <FeatureSection
               color={yellow}
-              imgSrc="/svg/experiment.svg"
-              title="Easy to write chaos experiments"
-              description="SDK is available in GO, Python and Ansible. A basic experiment structure is created quickly using SDK and developers and SREs just need to add the chaos logic into to make a new experiment. Your chaos logic is turned into a well orchestrated chaos experiment quickly and easily. "
+              imgSrc="/svg/application-specific.svg"
+              title="Application specific experiments"
+              description="Litmus provides not only the ability to introduce chaos into infrastructure and Kubernetes resources but also into application itself.  These application specific experiments help in identifyin the weaknesses related to faults related to applications that run on Kubernetes."
             />
           </BoundedContainer>
         </ResponsiveRow>
 
         <ResponsiveRow breakpoint="xxl">
-          <BoundedContainer breakpoint="xxl" width="55%" margin="6rem 2rem 0 0">
+          <BoundedContainer
+            breakpoint="xxl"
+            width="55%"
+            margin="6rem 2rem 9rem 0"
+          >
             <FeatureSection
               color={lightGreen}
               imgSrc="/svg/experiment.svg"
-              title="Easy to write chaos experiments"
-              description="SDK is available in GO, Python and Ansible. A basic experiment structure is created quickly using SDK and developers and SREs just need to add the chaos logic into to make a new experiment. Your chaos logic is turned into a well orchestrated chaos experiment quickly and easily. "
+              title="Chaos Portal for chaos at scale"
+              description="Litmus Portal provides capabilities to orchestrate complex chaos workflows, monitor chaos events and metrics around chaos experiments. Workflows running on multiple Kubernetes clusters can be managed from this portal. Multiple team members can share the workflows management together."
             />
           </BoundedContainer>
 
