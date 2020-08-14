@@ -7,7 +7,7 @@ import {
   SectionDark,
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
-import { ChaoshubImage } from "../chaoshub/chaoshubImage";
+import { ChaoshubImage } from "../../imageFetch/ChaoshubImage";
 
 const HeaderContent = (
   <div>

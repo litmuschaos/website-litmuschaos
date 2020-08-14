@@ -7,11 +7,9 @@ import {
   SectionDark,
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
-import { useTheme } from "../../../styles";
-import { ChaoshubImage } from "./index";
+import { ChaoshubImage } from "../../imageFetch/ChaoshubImage";
 
 const HeaderContent: React.FC = () => {
-  const { sm } = useTheme().screens;
   return (
     <div>
       <Heading>

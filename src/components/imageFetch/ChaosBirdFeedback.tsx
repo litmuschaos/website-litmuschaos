@@ -2,17 +2,17 @@ import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import React from "react";
 import styled from "styled-components";
-import { Center } from "../../layout";
+import { Center } from "../layout";
 
 const Wrapper = styled.div`
   width: 100%;
   height: fit-content;
 `;
 
-const ChaosBirdExp: React.FC = () => {
+const ChaosBirdFeedback: React.FC = () => {
   const data = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "cloud-native-way.png" }) {
+      image: file(relativePath: { eq: "feedback.png" }) {
         childImageSharp {
           fluid(maxWidth: 700, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
@@ -28,7 +28,7 @@ const ChaosBirdExp: React.FC = () => {
       <Wrapper>
         <Img
           fluid={data.image.childImageSharp.fluid}
-          alt="Choas Bird doing experiments"
+          alt="Choas Bird taking feedback"
           style={{ margin: "auto" }}
         />
       </Wrapper>
@@ -36,4 +36,4 @@ const ChaosBirdExp: React.FC = () => {
   );
 };
 
-export { ChaosBirdExp };
+export { ChaosBirdFeedback };

@@ -1,19 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  ResponsiveRow,
-  BoundedContainer,
-  SectionLight,
-  Center,
-  Row,
-} from "../../../components/layout";
-import {
-  Heading,
-  Paragraph,
-  PurpleText,
-  SubText,
-} from "../../../components/texts";
 import { useTheme } from "../../../styles";
+import {
+  BoundedContainer,
+  Center,
+  ResponsiveRow,
+  Row,
+  SectionLight,
+} from "../../layout";
+import { Heading, Paragraph, PurpleText, SubText } from "../../texts";
 
 const UsefulLinks = styled.ul`
   li {

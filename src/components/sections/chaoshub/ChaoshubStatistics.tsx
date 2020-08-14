@@ -1,12 +1,8 @@
 import React from "react";
-import { IconCircle } from "../../icon-circle";
-import {
-  ResponsiveRow,
-  BoundedContainer,
-  SectionDark,
-} from "../../../components/layout";
-import { Paragraph } from "../../../components/texts";
 import { useTheme } from "../../../styles";
+import { IconCircle } from "../../icon-circle";
+import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
+import { Paragraph } from "../../texts";
 
 interface IStatCard {
   color: (opacity: number) => string;
