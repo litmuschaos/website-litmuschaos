@@ -4,6 +4,7 @@ import { theme } from "../../styles";
 import { CSSDebugger } from "../css-debugger";
 // Components
 import { Footer } from "../footer";
+import { Nav } from "../nav";
 
 const Container = styled.div`
   position: relative;
@@ -14,6 +15,7 @@ const Layout: React.FC = ({ children }) => {
   return (
     <ThemeProvider theme={theme()}>
       <Container>
+        <Nav />
         <CSSDebugger />
         <main>{children}</main>
         <Footer />

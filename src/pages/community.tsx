@@ -1,6 +1,5 @@
 import React from "react";
 import { Layout } from "../components/layout";
-import { Nav } from "../components/nav";
 import { PreFooter } from "../components/preFooter";
 import {
   CommunityEvents,
@@ -14,7 +13,6 @@ import { SEO } from "../components/seo";
 const Community = () => {
   return (
     <Layout>
-      <Nav />
       <SEO />
       <Head />
       <JoinOurCommunity />

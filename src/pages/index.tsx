@@ -1,6 +1,5 @@
 import React from "react";
 import { Layout } from "../components/layout";
-import { Nav } from "../components/nav";
 import { PreFooter } from "../components/preFooter";
 import {
   CloudNativeWay,
@@ -15,7 +14,6 @@ import { SEO } from "../components/seo";
 const App = () => {
   return (
     <Layout>
-      <Nav />
       <SEO />
       <PurpleBox />
       <Head />
