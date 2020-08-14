@@ -3,13 +3,10 @@ import { Button } from "../../../components/button";
 import { SectionDark } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
 import { VideoFrame } from "../../../components/videoBox";
-import { useTheme } from "../../../styles";
 import { CommunityText } from "./globalStyle";
 
 // Component
 const LitmusCommunityVideo: React.FC = () => {
-  const { sm } = useTheme().screens.sm;
-
   const paragraphText =
     "Creating chaos on YouTube. Subscribe to our channel for early updates on meeting recordings, tutorials, events and more";
   return (
@@ -29,11 +26,7 @@ const LitmusCommunityVideo: React.FC = () => {
         src="https://www.youtube.com/embed/yhWgzN90SME"
       />
 
-      <Button
-        style={{ margin: "3rem 0" }}
-        screen={sm ? "small" : "large"}
-        gradientColor="purple"
-      >
+      <Button style={{ margin: "3rem 0" }} gradientColor="purple">
         Visit Our Youtube
       </Button>
     </SectionDark>

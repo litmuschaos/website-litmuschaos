@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Button } from "../../../components/button";
 import { SectionLight } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
-import { useTheme } from "../../../styles";
 
 const CommunityText = styled.div`
   width: ${(props) => (props.theme.screens.sm ? "85%" : "60%")};
@@ -41,8 +40,6 @@ const GreenTestTube = styled.img`
 
 // Component
 const ReadyToStart: React.FC = () => {
-  const { sm } = useTheme().screens.sm;
-
   const paragraphText =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu felis nec arcu eleifend scelerisque. Curabitur facilisis, nibh sit amet tincidunt porttitor, orci lorem accumsan ex, quis scelerisque quam ligula fringilla risus.";
   return (
@@ -60,11 +57,7 @@ const ReadyToStart: React.FC = () => {
         <Paragraph textAlign="center">{paragraphText}</Paragraph>
       </CommunityText>
 
-      <Button
-        style={{ margin: "3rem 0" }}
-        screen={sm ? "small" : "large"}
-        gradientColor="purple"
-      >
+      <Button style={{ margin: "3rem 0" }} gradientColor="purple">
         Go to ChaosHub
       </Button>
     </SectionLight>
