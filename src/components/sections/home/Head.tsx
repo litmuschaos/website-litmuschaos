@@ -10,11 +10,7 @@ import { Heading, Paragraph } from "../../texts";
 const HeadText: React.FC = () => {
   const { sm, md } = useTheme().screens;
 
-  const flexibleButton = (
-    <Button screen={sm ? "small" : "large"} gradientColor="purple">
-      Get Started
-    </Button>
-  );
+  const flexibleButton = <Button gradientColor="purple">Get Started</Button>;
 
   const HeadContent = (
     <>

@@ -38,9 +38,7 @@ const Slack: React.FC = () => {
           Connect with SREs and Chaos Engineering enthusiasts.
         </Paragraph>
         <div style={{ flexWrap: "wrap" }}>
-          <Button screen={xl ? "small" : "large"} gradientColor="purple">
-            Join the Channnel
-          </Button>
+          <Button gradientColor="purple">Join the Channnel</Button>
         </div>
       </div>
     </SlackBox>

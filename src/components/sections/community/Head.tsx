@@ -52,9 +52,7 @@ const Head: React.FC = () => {
             Engineering and help Kubernetes infrastructures be resilient. Let’s
             make this journey wonderful together.
           </Paragraph>
-          <Button screen={sm ? "small" : "large"} gradientColor="purple">
-            Get Started
-          </Button>
+          <Button gradientColor="purple">Get Started</Button>
         </HeaderText>
       </ResponsiveRow>
     </div>

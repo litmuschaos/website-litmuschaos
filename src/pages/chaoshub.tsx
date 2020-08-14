@@ -1,15 +1,15 @@
 import React from "react";
-import { PreFooter } from "../components/preFooter";
 import { Layout } from "../components/layout";
-import { SEO } from "../components/seo";
+import { PreFooter } from "../components/preFooter";
 import {
-  Head,
-  WhyChaoshub,
   ChaoshubStatistics,
+  Head,
   ReadyToStart,
+  WhyChaoshub,
 } from "../components/sections/chaoshub";
+import { SEO } from "../components/seo";
 
-const App = () => {
+const ChaosHub = () => {
   return (
     <Layout>
       <SEO />
@@ -22,4 +22,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default ChaosHub;

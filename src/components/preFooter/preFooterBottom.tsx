@@ -42,9 +42,7 @@ const PreFooterBottom: React.FC = () => {
                 find weaknesses in their applications and infrastructure
               </Paragraph>
               <br />
-              <Button screen={sm ? "small" : "large"} gradientColor="purple">
-                Get started with Litmus
-              </Button>
+              <Button gradientColor="purple">Get started with Litmus</Button>
             </div>
           </Center>
         </BoundedContainer>

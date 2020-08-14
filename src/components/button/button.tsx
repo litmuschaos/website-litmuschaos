@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 interface IButton {
   gradientColor: "purple" | "green";
-  screen: "small" | "large";
 }
 
 interface IOutlinedButton {
@@ -14,7 +13,7 @@ interface IOutlinedButton {
 const Button = styled.button<IButton>`
   height: 3rem;
   min-width: 10rem;
-  width: ${props => (props.screen === "small" ? "100%" : "18rem")};
+  width: ${props => (props.theme.screens.sm ? "100%" : "18rem")};
   border: none;
   background: ${props =>
     props.gradientColor === "purple"

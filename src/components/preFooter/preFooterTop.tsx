@@ -42,9 +42,7 @@ const PreFooterTop: React.FC = () => {
             and share your chaos engeneering story to the community
           </Paragraph>
           <br />
-          <Button screen={sm ? "small" : "large"} gradientColor="green">
-            Become an Adopter
-          </Button>
+          <Button gradientColor="green">Become an Adopter</Button>
         </HorizontalWrap>
       </ResponsiveRow>
     </SectionDark>
