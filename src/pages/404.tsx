@@ -88,7 +88,6 @@ const NotFoundPage: React.FC = () => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-evenly",
-            background: "green",
           }}
         >
           {Content404Small}
