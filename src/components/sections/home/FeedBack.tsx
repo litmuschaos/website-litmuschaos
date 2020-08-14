@@ -28,7 +28,11 @@ const UserQuote: React.FC<IUserQuote> = ({ quote, name, designation }) => {
       <Center>
         <div>
           <Heading>See what our users are saying about us</Heading>
-          <br />
+          <img
+            src="/svg/apostrophe.svg"
+            alt="quotes"
+            style={{ margin: "2rem 0 1rem 0" }}
+          />
           <Paragraph>{quote}</Paragraph>
           <br />
           <AvatarDiv>
