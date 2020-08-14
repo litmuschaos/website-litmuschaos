@@ -28,7 +28,7 @@ const Image404: React.FC = () => {
       <Wrapper>
         <Img
           fluid={data.image.childImageSharp.fluid}
-          alt="Choas Bird doing experiments"
+          alt="Page not found image"
           style={{ margin: "auto" }}
         />
       </Wrapper>

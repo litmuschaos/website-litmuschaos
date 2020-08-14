@@ -28,7 +28,7 @@ const ChaoshubImage: React.FC = () => {
       <Wrapper>
         <Img
           fluid={data.image.childImageSharp.fluid}
-          alt="Choas Bird doing experiments"
+          alt="Choas Bird looking at chaos experiments"
           style={{ margin: "auto" }}
         />
       </Wrapper>

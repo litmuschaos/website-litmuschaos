@@ -9,10 +9,10 @@ const Wrapper = styled.div`
   height: fit-content;
 `;
 
-const OctoCat: React.FC = () => {
+const ChaosBirdSteps: React.FC = () => {
   const data = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "octocat.png" }) {
+      image: file(relativePath: { eq: "chaos-bird-steps.png" }) {
         childImageSharp {
           fluid(maxWidth: 700, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
@@ -28,7 +28,7 @@ const OctoCat: React.FC = () => {
       <Wrapper>
         <Img
           fluid={data.image.childImageSharp.fluid}
-          alt="Github Octocat"
+          alt="Choas Bird climbing stairs towars resilience"
           style={{ margin: "auto" }}
         />
       </Wrapper>
@@ -36,4 +36,4 @@ const OctoCat: React.FC = () => {
   );
 };
 
-export { OctoCat };
+export { ChaosBirdSteps };
