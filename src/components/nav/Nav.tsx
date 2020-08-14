@@ -7,10 +7,6 @@ import { SubText } from "../texts";
 import { Link } from "../link/index";
 import Burger from "./Burger";
 
-// interface INavBar {
-//   backgroundColor: string;
-// }
-
 const Logo: React.FC = () => (
   <img
     src="/svg/litmus-logo-purple.svg"
@@ -26,6 +22,7 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-around;
   position: relative;
+  background: transparent;
   z-index: ${(props) => props.theme.zIndex.nav};
 `;
 
@@ -147,11 +144,18 @@ const Nav: React.FC = () => {
               <li>Why Litmus?</li>
             </Link>
 
-            <Link to="#" className="listItems">
+            <Link to="/chaoshub" className="listItems">
               <li>Chaoshub</li>
             </Link>
 
-            <Link to="#">
+            <Link
+              to="route"
+              target="_blank"
+              onClick={(event) => {
+                event.preventDefault();
+                window.open("https://dev.to/t/litmuschaos");
+              }}
+            >
               <li>Blogs</li>
             </Link>
 
