@@ -6,6 +6,7 @@ import {
   Head,
   WhyChaoshub,
   ChaoshubStatistics,
+  ReadyToStart,
 } from "../components/sections/chaoshub";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       <Head />
       <WhyChaoshub />
       <ChaoshubStatistics />
+      <ReadyToStart />
       <PreFooter />
     </Layout>
   );
