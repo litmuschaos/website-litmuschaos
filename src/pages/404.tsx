@@ -1,6 +1,6 @@
-import React from "react";
-import { Image404 } from "../components/imageFetch/404/index";
 import { Link } from "gatsby";
+import React from "react";
+import { Image404 } from "../components/imageFetch/Image404";
 
 // Component
 const NotFoundPage: React.FC = () => {

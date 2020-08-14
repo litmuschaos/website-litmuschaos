@@ -1,9 +1,9 @@
 import React from "react";
 import { useTheme } from "styled-components";
 import { IconCircle } from "../../icon-circle";
+import { ChaosBirdExp } from "../../imageFetch/ChaosBirdExp";
 import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
 import { Heading, Paragraph, Subheading } from "../../texts";
-import { ChaosBirdExp } from "./ChaosBirdExp";
 
 interface IInfoSection {
   color: (opacity: number) => string;

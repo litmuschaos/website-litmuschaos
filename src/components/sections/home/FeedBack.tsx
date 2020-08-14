@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Avatar } from "../../imageFetch/Avatar";
+import { ChaosBirdFeedback } from "../../imageFetch/ChaosBirdFeedback";
 import {
   BoundedContainer,
   Center,
@@ -7,8 +9,6 @@ import {
   SectionLight,
 } from "../../layout";
 import { Heading, Paragraph, PurpleText } from "../../texts";
-import { Avatar } from "./Avatar";
-import { ChaosBirdFeedback } from "./ChaosBirdFeedback";
 
 interface IUserQuote {
   quote: string;

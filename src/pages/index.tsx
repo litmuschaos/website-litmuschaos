@@ -1,4 +1,5 @@
 import React from "react";
+import { PurpleBox } from "../components/imageFetch/PurpleBox";
 import { Layout } from "../components/layout";
 import { PreFooter } from "../components/preFooter";
 import {
@@ -6,7 +7,6 @@ import {
   FeedBack,
   GetStarted,
   Head,
-  PurpleBox,
   QuickStart,
 } from "../components/sections/home";
 import { SEO } from "../components/seo";

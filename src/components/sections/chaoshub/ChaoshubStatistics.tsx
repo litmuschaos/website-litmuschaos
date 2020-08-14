@@ -1,14 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { IconCircle } from "../../icon-circle";
-import {
-  ResponsiveRow,
-  BoundedContainer,
-  SectionDark,
-} from "../../../components/layout";
-import { Paragraph, Heading } from "../../../components/texts";
-import { Button } from "../../button";
 import { useTheme } from "../../../styles";
+import { IconCircle } from "../../icon-circle";
+import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
+import { Paragraph, Heading } from "../../texts";
+import { Button } from "../../button";
 
 const Divider = styled.div`
   height: 0.5rem;
