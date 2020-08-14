@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "../../components/button";
-import { useTheme } from "../../styles";
 import { Paragraph, Subheading } from "../texts";
 
 const SlackBox = styled.div`
@@ -13,7 +12,6 @@ const SlackBox = styled.div`
 `;
 
 const Slack: React.FC = () => {
-  const { xl } = useTheme().screens;
   return (
     <SlackBox>
       <div
@@ -38,7 +36,9 @@ const Slack: React.FC = () => {
           Connect with SREs and Chaos Engineering enthusiasts.
         </Paragraph>
         <div style={{ flexWrap: "wrap" }}>
-          <Button gradientColor="purple">Join the Channnel</Button>
+          <Button style={{ width: "80%" }} gradientColor="purple">
+            Join the Channnel
+          </Button>
         </div>
       </div>
     </SlackBox>

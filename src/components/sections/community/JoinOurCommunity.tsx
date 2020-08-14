@@ -9,16 +9,15 @@ import { theme } from "../../../styles";
 // Styles
 const CommunityTextList = styled.div`
   width: 100%;
-  margin: ${(props) =>
-    props.theme.screens.sm
-      ? "0"
-      : props.theme.screens.md
-      ? "0 2rem"
-      : props.theme.screens.xl
-      ? "0 3rem"
-      : "0"};
+  margin: ${(props) => (props.theme.screens.sm ? "0" : "0 4%")};
   display: flex;
   flex-direction: column;
+
+  ul {
+    margin: 1rem 0.5rem;
+    padding: 0 2rem;
+    width: ${(props) => (props.theme.screens.sm ? "50%" : "100%")};
+  }
 
   li {
     list-style: none;
@@ -40,15 +39,36 @@ const CommunityTextList = styled.div`
 const BlueTestTube = styled.img`
   position: absolute;
   width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${(props) => (props.theme.screens.sm ? "90%" : "")};
-  left: ${(props) => (props.theme.screens.sm ? "50%" : "10%")};
+  margin-top: ${(props) => (props.theme.screens.sm ? "13rem" : "")};
+  left: ${(props) =>
+    props.theme.screens.sm
+      ? "50%"
+      : props.theme.screens.md
+      ? "8%"
+      : props.theme.screens.xl
+      ? "8%"
+      : "10%"};
 `;
 
 const GreenTestTube = styled.img`
   position: absolute;
   width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${(props) => (props.theme.screens.sm ? "105%" : "6%")};
-  left: ${(props) => (props.theme.screens.sm ? "65%" : "45%")};
+  margin-top: ${(props) =>
+    props.theme.screens.sm
+      ? "17rem"
+      : props.theme.screens.md
+      ? "6%"
+      : props.theme.screens.xl
+      ? "8%"
+      : "6%"};
+  left: ${(props) =>
+    props.theme.screens.sm
+      ? "65%"
+      : props.theme.screens.md
+      ? "50%"
+      : props.theme.screens.xl
+      ? "40%"
+      : "45%"};
 `;
 
 const SlackBox = styled.div`

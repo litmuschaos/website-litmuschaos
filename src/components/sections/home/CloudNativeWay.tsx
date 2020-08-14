@@ -24,12 +24,12 @@ const InfoSection: React.FC<IInfoSection> = ({
     <BoundedContainer
       breakpoint="sm"
       width={xl ? "80%" : "20rem"}
-      margin="1rem"
+      margin="2rem 1rem"
     >
       <IconCircle bgColor={color} effectColor={color} size={6.25}>
         <img src={imgSrc} alt={title} />
       </IconCircle>
-      <Subheading>{title}</Subheading>
+      <Subheading style={{ margin: "1rem 0" }}>{title}</Subheading>
       <Paragraph>{description}</Paragraph>
     </BoundedContainer>
   );
