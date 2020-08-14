@@ -13,7 +13,7 @@ const FadedDiv = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 4.5rem;
-  margin-bottom: ${props => (props.theme.screens.xl ? "10rem" : "2rem")};
+  margin-bottom: ${props => (props.theme.screens.xl ? "10rem" : "5rem")};
   ${props =>
     props.theme.screens.md
       ? css`

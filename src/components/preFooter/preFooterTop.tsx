@@ -10,6 +10,8 @@ const Image = styled.img`
 `;
 
 const HorizontalWrap = styled.div`
+  min-width: 25%;
+  max-width: 100%;
   margin: ${props => (props.theme.screens.md ? " 2rem 0" : "0 1rem")};
 `;
 
@@ -17,7 +19,7 @@ const PreFooterTop: React.FC = () => {
   const { sm } = useTheme().screens;
   return (
     <SectionDark>
-      <ResponsiveRow breakpoint="md">
+      <ResponsiveRow breakpoint="md" justifyContent="space-evenly">
         <HorizontalWrap>
           <Subheading style={{ margin: "0.5rem 0" }}>Created by</Subheading>
           <img src="./svg/mayadata-logo.svg" alt="Mayadata Logo" />

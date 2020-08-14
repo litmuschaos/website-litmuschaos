@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 interface IResponsiveRow {
   breakpoint: "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "xxxl";
   alignItems?: string;
+  justifyContent?: string;
 }
 
 const ResponsiveRow = styled.div<IResponsiveRow>`
@@ -16,7 +17,7 @@ const ResponsiveRow = styled.div<IResponsiveRow>`
         `
       : css`
           flex-direction: row;
-          justify-content: center;
+          justify-content: ${props.justifyContent ?? "center"};
         `};
 `;
 
