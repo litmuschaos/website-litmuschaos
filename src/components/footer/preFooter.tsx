@@ -8,37 +8,37 @@ import { CommunityText } from "../sections/community";
 import { top_adopters } from "./data";
 
 const Image = styled.img`
-  width: ${props => (props.theme.screens.sm ? "3.5rem" : "18%")};
+  width: ${(props) => (props.theme.screens.sm ? "3.5rem" : "18%")};
   display: flex;
 `;
 
 const HorizontalSpacing = styled.div`
-  width: ${props => (props.theme.screens.sm ? "100%" : "80%")};
+  width: ${(props) => (props.theme.screens.sm ? "100%" : "80%")};
   margin-bottom: 2rem;
 `;
 
 const BlueBackgroundEllipse = styled.img`
   position: relative;
-  top: ${props => (props.theme.screens.xl ? "20%" : "-15%")};
+  top: ${(props) => (props.theme.screens.xl ? "20%" : "-15%")};
   width: 100%;
 `;
 
 const CNCFBlock = styled.div`
   position: relative;
   z-index: 1;
-  background: ${props => props.theme.colors.backgroundLight};
-  width: ${props => (props.theme.screens.xl ? "100%" : "35rem")};
+  background: ${(props) => props.theme.colors.backgroundLight};
+  width: ${(props) => (props.theme.screens.xl ? "100%" : "35rem")};
   border-radius: 0.5rem;
   box-shadow: -0.2rem 0.3rem 0.7rem 0.1rem rgba(0, 0, 0, 0.3);
-  height: ${props => (props.theme.screens.xl ? "7rem" : "10rem")};
-  margin-top: ${props =>
+  height: ${(props) => (props.theme.screens.xl ? "7rem" : "10rem")};
+  margin-top: ${(props) =>
     props.theme.screens.sm ? "0" : props.theme.screens.xl ? "-50%" : "-70%"};
 `;
 
 const CNCFText = styled.div`
   position: relative;
   z-index: 1;
-  width: ${props =>
+  width: ${(props) =>
     props.theme.screens.sm ? "100%" : props.theme.screens.xl ? "80%" : "50%"};
   margin: 2rem auto;
 `;
@@ -50,11 +50,11 @@ const CNCFLogo = styled.img`
   top: 0;
   bottom: 0;
   margin: auto;
-  width: ${props => (props.theme.screens.sm ? "15rem" : "25rem")};
+  width: ${(props) => (props.theme.screens.sm ? "15rem" : "25rem")};
 `;
 
 const HorizontalWrap = styled.div`
-  margin: ${props => (props.theme.screens.sm ? "0 2rem" : "0 5rem")};
+  margin: ${(props) => (props.theme.screens.sm ? "0 2rem" : "0 5rem")};
   width: 85%;
 `;
 
@@ -73,7 +73,7 @@ const PreFooterLow: React.FC = () => {
             weaknesses in their applications and infrastructure
           </Paragraph>
           <Button
-            style={{ margin: "2rem 0" }}
+            style={{ margin: "2rem 0", height: "auto", padding: "0.5rem 2rem" }}
             screen={sm ? "large" : "small"}
             gradientColor="purple"
           >
@@ -125,7 +125,7 @@ const PreFooterUp: React.FC = () => {
         <HorizontalWrap>
           <Subheading style={{ margin: "0.5rem 0" }}>Adopted by</Subheading>
           <Row>
-            {top_adopters.links.map(link => (
+            {top_adopters.links.map((link) => (
               <Image src={link.image} alt={`${link.name} logo`} />
             ))}
           </Row>

@@ -1,6 +1,8 @@
 import React from "react";
 import { PreFooter } from "../components/footer";
+import { theme } from "../styles";
 import { Layout } from "../components/layout";
+import { Nav } from "../components/nav";
 import {
   CloudNativeWay,
   FeedBack,
@@ -14,6 +16,7 @@ import { SEO } from "../components/seo";
 const App = () => {
   return (
     <Layout>
+      <Nav />
       <SEO />
       <PurpleBox />
       <Head />

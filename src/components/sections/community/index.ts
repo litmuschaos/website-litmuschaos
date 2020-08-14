@@ -3,3 +3,4 @@ export * from "./Head";
 export * from "./JoinOurCommunity";
 export * from "./LitmusCommunityVideo";
 export * from "./CommunityEvents";
+export * from "./Contributing";
