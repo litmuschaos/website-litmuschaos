@@ -2,7 +2,7 @@ import React from "react";
 import styled, { useTheme } from "styled-components";
 import { Button } from "../button";
 import { ResponsiveRow, Row, SectionDark } from "../layout";
-import { Paragraph, Subheading } from "../texts";
+import { Paragraph, SubHeading } from "../texts";
 import { top_adopters } from "./data";
 
 const Image = styled.img`
@@ -21,12 +21,12 @@ const PreFooterTop: React.FC = () => {
     <SectionDark>
       <ResponsiveRow breakpoint="md" justifyContent="space-evenly">
         <HorizontalWrap>
-          <Subheading style={{ margin: "0.5rem 0" }}>Created by</Subheading>
+          <SubHeading style={{ margin: "0.5rem 0" }}>Created by</SubHeading>
           <img src="./svg/mayadata-logo.svg" alt="Mayadata Logo" />
         </HorizontalWrap>
 
         <HorizontalWrap>
-          <Subheading style={{ margin: "0.5rem 0" }}>Adopted by</Subheading>
+          <SubHeading style={{ margin: "0.5rem 0" }}>Adopted by</SubHeading>
           <Row wrap="wrap">
             {top_adopters.links.map(link => (
               <Image src={link.image} alt={`${link.name} logo`} />
@@ -35,9 +35,9 @@ const PreFooterTop: React.FC = () => {
         </HorizontalWrap>
 
         <HorizontalWrap>
-          <Subheading style={{ margin: "0.5rem 0" }}>
+          <SubHeading style={{ margin: "0.5rem 0" }}>
             Add yourself to the adopters
-          </Subheading>
+          </SubHeading>
           <Paragraph>
             and share your chaos engeneering story to the community
           </Paragraph>

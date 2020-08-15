@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "../../components/button";
-import { Paragraph, Subheading } from "../texts";
+import { Paragraph, SubHeading } from "../texts";
 
 const SlackBox = styled.div`
   background: white;
@@ -26,9 +26,9 @@ const Slack: React.FC = () => {
           src="./svg/slackWithLabel.svg"
           alt="Slack Logo"
         />
-        <Subheading textAlign="center" style={{ margin: "1rem 0" }}>
+        <SubHeading textAlign="center" style={{ margin: "1rem 0" }}>
           Join #Litmus on Kubernetes Slack
-        </Subheading>
+        </SubHeading>
         <Paragraph
           textAlign="center"
           style={{ marginBottom: "0.7rem", fontSize: "0.7rem" }}

@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "styled-components";
 import { IconCircle } from "../icon-circle";
 import { BoundedContainer } from "../layout";
-import { Paragraph, Subheading } from "../texts";
+import { Paragraph, SubHeading } from "../texts";
 
 interface IInfoSection {
   color: (opacity: number) => string;
@@ -29,7 +29,7 @@ const InfoSection: React.FC<IInfoSection> = ({
         <img src={imgSrc} alt={title} />
       </IconCircle>
 
-      <Subheading>{title}</Subheading>
+      <SubHeading>{title}</SubHeading>
       <Paragraph>{description}</Paragraph>
     </BoundedContainer>
   );

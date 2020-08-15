@@ -14,7 +14,7 @@ const Heading = styled.h1<IText>`
       : props.theme.fontSize.heading.lg};
 `;
 
-const Subheading = styled.p<IText>`
+const SubHeading = styled.p<IText>`
   line-height: 170%;
   font-weight: 600;
   text-align: ${props => props.textAlign ?? "left"};
@@ -96,4 +96,21 @@ const KubeCmd: React.FC<IKubeCmd> = ({ text }) => {
   );
 };
 
-export { Heading, Subheading, Paragraph, SubText, KubeCmd, PurpleText };
+const GreenStats = styled.p`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: ${props => (props.theme.screens.md ? "3.18rem" : "4rem")};
+  font-weight: bold;
+  color: ${props => props.theme.colors.darkGreen(1)};
+`;
+
+export {
+  Heading,
+  SubHeading,
+  Paragraph,
+  SubText,
+  KubeCmd,
+  PurpleText,
+  GreenStats,
+};

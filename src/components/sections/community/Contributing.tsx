@@ -5,7 +5,7 @@ import {
   ResponsiveRow,
   SectionDark,
 } from "../../../components/layout";
-import { Heading, Paragraph, Subheading } from "../../../components/texts";
+import { Heading, Paragraph, SubHeading } from "../../../components/texts";
 import { useTheme } from "../../../styles";
 import { OctoCat } from "../../image-fetch/OctoCat";
 
@@ -62,7 +62,7 @@ const Contributing: React.FC = () => {
             <br />
             <br />
 
-            <Subheading>Contribute your chaos experiments</Subheading>
+            <SubHeading>Contribute your chaos experiments</SubHeading>
             <br />
             <Paragraph>
               We are devoted to being an open source driven community and appeal
