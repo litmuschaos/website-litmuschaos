@@ -26,7 +26,11 @@ const HeaderContent: React.FC = () => {
         them. Chaos experiments can help.
       </Paragraph>
       <br />
-      <a target="_blank" href="https://hub.litmuschaos.io/">
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://hub.litmuschaos.io/"
+      >
         <Button gradientColor="purple">Get Started</Button>
       </a>
     </div>

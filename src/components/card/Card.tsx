@@ -41,7 +41,7 @@ const Card: React.FC<ICard> = ({
 }) => {
   return (
     <CardBox>
-      <a target="_blank" href={link}>
+      <a rel="noopener noreferrer" target="_blank" href={link}>
         <InnerCard width={width} height={height}>
           <div style={{ margin: "0 auto", objectFit: "contain" }}>{image}</div>
           <SubText

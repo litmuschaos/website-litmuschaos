@@ -83,7 +83,11 @@ const Nav: React.FC = () => {
       </Link>
 
       <GithubWrapper>
-        <a target="_blank" href="https://github.com/litmuschaos/litmus">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://github.com/litmuschaos/litmus"
+        >
           <GitHubStars>
             <GithubIcon />
             <SmallText style={{ margin: "0.4rem" }}>Star</SmallText>
@@ -101,7 +105,11 @@ const Nav: React.FC = () => {
           </Center>
         </Link>
 
-        <a target="_blank" href="https://github.com/litmuschaos/litmus">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://github.com/litmuschaos/litmus"
+        >
           <Center>
             <GitHubStars>
               <GithubIcon />
@@ -137,6 +145,7 @@ const Nav: React.FC = () => {
 
         <GettingStarted>
           <a
+            rel="noopener noreferrer"
             target="_blank"
             href="https://docs.litmuschaos.io/docs/getstarted/"
           >

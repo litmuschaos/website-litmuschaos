@@ -26,6 +26,7 @@ const LitmusCommunityVideo: React.FC = () => {
       />
 
       <a
+        rel="noopener noreferrer"
         target="_target"
         href="https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw"
       >

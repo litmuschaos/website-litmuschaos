@@ -26,7 +26,11 @@ const HeadText: React.FC = () => {
         weakness and start fixing it.
       </Paragraph>
       <div style={{ marginTop: "1rem" }}>
-        <a target="_blank" href="https://docs.litmuschaos.io/docs/getstarted/">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://docs.litmuschaos.io/docs/getstarted/"
+        >
           {flexibleButton}
         </a>
       </div>

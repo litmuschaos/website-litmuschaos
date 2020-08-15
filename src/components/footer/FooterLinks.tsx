@@ -51,7 +51,7 @@ const Links: React.FC<LinkProps> = ({ data, showImage, internalLink }) => {
               </List>
             </GatsbyLink>
           ) : (
-            <a href={link.url} target="_">
+            <a rel="noopener noreferrer" href={link.url} target="_blank">
               <List>
                 {showImage && <img src={link.image} alt={link.name} />}
                 <div>{link.name}</div>

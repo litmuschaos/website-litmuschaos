@@ -19,16 +19,9 @@ const GithubIcon: React.FC = () => {
   const imageData = data.icon.childImageSharp.fixed;
   return (
     <div>
-      <a
-        href="https://github.com/litmuschaos/litmus"
-        rel="noopener noreferrer"
-        target="_blank"
-        style={{ cursor: "pointer" }}
-      >
-        <Center>
-          <Img fixed={imageData} alt="GitHub Icon" />
-        </Center>
-      </a>
+      <Center>
+        <Img fixed={imageData} alt="GitHub Icon" />
+      </Center>
     </div>
   );
 };

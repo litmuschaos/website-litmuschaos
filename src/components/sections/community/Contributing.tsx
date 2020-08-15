@@ -61,7 +61,11 @@ const Contributing: React.FC = () => {
               #litmuschaos tag for your blog to get featured.
             </Paragraph>
             <br />
-            <a target="_blank" href="https://dev.to/t/litmuschaos">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://dev.to/t/litmuschaos"
+            >
               <ContributeButton
                 width="30%"
                 src="/svg/dev-purple.svg"
@@ -89,6 +93,7 @@ const Contributing: React.FC = () => {
             <br />
 
             <a
+              rel="noopener noreferrer"
               target="_blank"
               href="https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md"
             >

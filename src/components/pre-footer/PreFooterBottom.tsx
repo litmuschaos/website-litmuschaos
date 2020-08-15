@@ -43,6 +43,7 @@ const PreFooterBottom: React.FC = () => {
               </Paragraph>
               <br />
               <a
+                rel="noopener noreferrer"
                 target="_blank"
                 href="https://docs.litmuschaos.io/docs/getstarted/"
               >
@@ -57,7 +58,11 @@ const PreFooterBottom: React.FC = () => {
           <CNCFText>
             <Paragraph textAlign="center">
               We are a{" "}
-              <a target="_blank" href="https://www.cncf.io/">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.cncf.io/"
+              >
                 <PurpleText
                   fontSize="paragraph"
                   fontWeight={400}

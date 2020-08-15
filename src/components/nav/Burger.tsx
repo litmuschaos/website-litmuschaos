@@ -12,10 +12,17 @@ const StyledBurger = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  align-items: flex-end;
 
   .line {
-    width: 70%;
-    margin-left: 30%;
+    border: 0.125rem solid white;
+    border-radius: 0.125rem;
+  }
+  .big {
+    width: 2.2rem;
+  }
+  .small {
+    width: 1.7rem;
   }
 `;
 
@@ -65,9 +72,9 @@ const Burger: React.FC = () => {
     <>
       <div onClick={handleSwitch}>
         <StyledBurger>
-          <button />
-          <button className="line" />
-          <button className="line" />
+          <div className="line big" />
+          <div className="line small" />
+          <div className="line small" />
         </StyledBurger>
       </div>
       {open ? (
@@ -100,6 +107,7 @@ const Burger: React.FC = () => {
               <li>
                 <GettingStarted>
                   <a
+                    rel="noopener noreferrer"
                     target="_blank"
                     href="https://docs.litmuschaos.io/docs/getstarted/"
                   >
