@@ -24,6 +24,7 @@ const VideoFrame: React.FC<IVideoFrame> = ({ width, src }) => {
   return (
     <VideoDiv>
       <VideoBox
+        title="youtube video"
         width={width}
         src={src}
         frameBorder="0"

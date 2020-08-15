@@ -2,12 +2,12 @@ import React from "react";
 import styled, { css, useTheme } from "styled-components";
 
 interface IMenuButton {
-  color: (opacity: number) => string;
+  bgColor: (opacity: number) => string;
 }
 
 const MenuButton = styled.div<IMenuButton>`
   border-radius: 50%;
-  background-color: ${props => props.color(1)};
+  background-color: ${props => props.bgColor(1)};
   ${({ theme }) =>
     theme.screens.md
       ? css`
@@ -60,9 +60,9 @@ const TopBar: React.FC = () => {
   return (
     <TopBarDiv>
       <ButtonGroup>
-        <MenuButton color={red} />
-        <MenuButton color={darkGreen} />
-        <MenuButton color={yellow} />
+        <MenuButton bgColor={red} />
+        <MenuButton bgColor={darkGreen} />
+        <MenuButton bgColor={yellow} />
       </ButtonGroup>
       <TopBarText> Install Litmus </TopBarText>
     </TopBarDiv>

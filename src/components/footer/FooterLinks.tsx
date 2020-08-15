@@ -44,19 +44,23 @@ const Links: React.FC<LinkProps> = ({ data, showImage, internalLink }) => {
       <ListBox>
         {data.links.map(link =>
           internalLink ? (
-            <GatsbyLink to={link.url}>
-              <List>
-                {showImage && <img src={link.image} alt={link.name} />}
+            <List key={link.name}>
+              <GatsbyLink to={link.url}>
+                {showImage && (
+                  <img src={link.image} alt={`${link.name} icon`} />
+                )}
                 <div>{link.name}</div>
-              </List>
-            </GatsbyLink>
+              </GatsbyLink>
+            </List>
           ) : (
-            <a rel="noopener noreferrer" href={link.url} target="_blank">
-              <List>
-                {showImage && <img src={link.image} alt={link.name} />}
+            <List key={link.name}>
+              <a rel="noopener noreferrer" href={link.url} target="_blank">
+                {showImage && (
+                  <img src={link.image} alt={`${link.name} icon`} />
+                )}
                 <div>{link.name}</div>
-              </List>
-            </a>
+              </a>
+            </List>
           )
         )}
       </ListBox>

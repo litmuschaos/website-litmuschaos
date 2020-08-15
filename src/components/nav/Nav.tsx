@@ -120,28 +120,32 @@ const Nav: React.FC = () => {
       </LogoDiv>
 
       <Ul>
-        <Link to="/whylitmus">
-          <li>Why Litmus?</li>
-        </Link>
+        <li>
+          <Link to="/whylitmus">Why Litmus?</Link>
+        </li>
 
-        <Link to="/chaoshub" className="listItems">
-          <li>Chaoshub</li>
-        </Link>
+        <li>
+          <Link to="/chaoshub" className="listItems">
+            Chaoshub
+          </Link>
+        </li>
 
-        <Link
-          to="route"
-          target="_blank"
-          onClick={event => {
-            event.preventDefault();
-            window.open("https://dev.to/t/litmuschaos");
-          }}
-        >
-          <li>Blogs</li>
-        </Link>
+        <li>
+          <Link
+            to="route"
+            target="_blank"
+            onClick={event => {
+              event.preventDefault();
+              window.open("https://dev.to/t/litmuschaos");
+            }}
+          >
+            Blogs
+          </Link>
+        </li>
 
-        <Link to="/community">
-          <li>Community</li>
-        </Link>
+        <li>
+          <Link to="/community">Community</Link>
+        </li>
 
         <GettingStarted>
           <a

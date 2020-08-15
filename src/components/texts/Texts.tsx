@@ -70,13 +70,13 @@ const SubText = styled.p<ISubText>`
 `;
 
 interface ICode extends IText {
-  color: (opacity: number) => string;
+  bgColor: (opacity: number) => string;
 }
 
 const Code = styled.span<ICode>`
   line-height: 170%;
   text-align: ${props => props.textAlign ?? "left"};
-  color: ${props => props.color(1)};
+  color: ${props => props.bgColor(1)};
   word-wrap: break-word;
   font-size: ${props =>
     props.theme.screens.md
@@ -91,10 +91,10 @@ const KubeCmd: React.FC<IKubeCmd> = ({ text }) => {
 
   return (
     <p>
-      <Code color={yellow}>kubectl&nbsp;</Code>
-      <Code color={purple}>apply&nbsp;</Code>
-      <Code color={red}>-f&nbsp;</Code>
-      <Code color={grayText}>{text}</Code>
+      <Code bgColor={yellow}>kubectl&nbsp;</Code>
+      <Code bgColor={purple}>apply&nbsp;</Code>
+      <Code bgColor={red}>-f&nbsp;</Code>
+      <Code bgColor={grayText}>{text}</Code>
     </p>
   );
 };
