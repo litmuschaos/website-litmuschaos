@@ -13,15 +13,15 @@ module.exports = {
     author: siteAuthor,
     url: siteUrl,
     keywords: siteKeywords,
-    image: siteImage
+    image: siteImage,
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/images`,
-        name: "images"
-      }
+        name: "images",
+      },
     },
     {
       resolve: "gatsby-plugin-react-axe",
@@ -31,8 +31,8 @@ module.exports = {
         // See: https://github.com/dequelabs/axe-core/blob/master/doc/API.md#api-name-axeconfigure
         axeOptions: {
           // Your axe-core options.
-        }
-      }
+        },
+      },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
@@ -54,16 +54,16 @@ module.exports = {
           {
             src: "icons/icon_512x512.png",
             sizes: "512x512",
-            types: "image/png"
+            types: "image/png",
           },
           {
             src: "icons/icon_192x192.png",
             sizes: "192x192",
-            types: "image/png"
-          }
-        ]
-      }
+            types: "image/png",
+          },
+        ],
+      },
     },
-    `gatsby-plugin-offline`
-  ]
+    `gatsby-plugin-offline`,
+  ],
 };

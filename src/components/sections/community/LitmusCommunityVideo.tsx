@@ -1,9 +1,8 @@
 import React from "react";
 import { Button } from "../../../components/button";
-import { SectionDark } from "../../../components/layout";
+import { SectionDark, BoundedContainer } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
 import { VideoFrame } from "../../video-box";
-import { CommunityText } from "./globalStyle";
 
 // Component
 const LitmusCommunityVideo: React.FC = () => {
@@ -17,9 +16,9 @@ const LitmusCommunityVideo: React.FC = () => {
         the Litmus community
       </Heading>
 
-      <CommunityText style={{ margin: "2rem auto" }}>
+      <BoundedContainer breakpoint="sm" width="80%" margin="2rem auto">
         <Paragraph textAlign="center">{paragraphText}</Paragraph>
-      </CommunityText>
+      </BoundedContainer>
 
       <VideoFrame
         width="47.188rem"

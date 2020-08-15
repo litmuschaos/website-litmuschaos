@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Paragraph, SubText } from "../texts";
 
 interface ICard {
-  image: string;
+  image: React.ReactNode;
   width: string;
   height: string;
   subheading: string;
@@ -16,8 +16,8 @@ interface IInnerCard {
 }
 
 const CardBox = styled.div`
-  width: ${props => (props.theme.screens.xl ? "90%" : "30%")};
-  margin: ${props => (props.theme.screens.xl ? "1rem 0" : "0 1rem")};
+  width: ${(props) => (props.theme.screens.xl ? "90%" : "30%")};
+  margin: ${(props) => (props.theme.screens.xl ? "1rem 0" : "0 1rem")};
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
@@ -25,22 +25,18 @@ const CardBox = styled.div`
 `;
 
 const InnerCard = styled.div<IInnerCard>`
-  width: ${props => (props.theme.screens.xl ? "90%" : props.width)};
-  height: ${props => (props.theme.screens.xl ? "18rem" : props.height)};
-  margin: ${props => (props.theme.screens.xl ? "0.5rem auto" : "0")};
+  width: ${(props) => (props.theme.screens.xl ? "90%" : props.width)};
+  height: ${(props) => (props.theme.screens.xl ? "18rem" : props.height)};
+  margin: ${(props) => (props.theme.screens.xl ? "0.5rem auto" : "0")};
 `;
 
 const Card: React.FC<ICard> = ({ image, width, height, subheading, body }) => {
   return (
     <CardBox>
       <InnerCard width={width} height={height}>
-        <img
-          style={{ height: "8rem", margin: "0 auto", objectFit: "cover" }}
-          src={image}
-          alt="Slack Logo"
-        />
+        <div style={{ margin: "0 auto", objectFit: "contain" }}>{image}</div>
         <SubText
-          style={{ padding: "0.5rem 1.5rem 0 1.5rem", fontWeight: "bold" }}
+          style={{ margin: "0.5rem 1.6rem 0 1.6rem", fontWeight: "bold" }}
         >
           {subheading}
         </SubText>

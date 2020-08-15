@@ -6,6 +6,8 @@ import {
   SectionLight,
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
+import { CNCFImage } from "../../image-fetch/CNCF";
+import { CommunitySyncUpImage } from "../../image-fetch/CommunitySyncUp";
 
 const CommunityEvents: React.FC = () => {
   return (
@@ -27,17 +29,17 @@ const CommunityEvents: React.FC = () => {
             <Card
               width="100%"
               height="100%"
-              subheading="CNCF Meetup"
+              subheading="Kubernetes Chaos Engineering Meetup"
               body=" Discussion about the best practices and tutorials for practicing chaos engineering"
-              image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mariaclusters.com%2Fimg%2Findex%2Fcncf.png&f=1&nofb=1"
+              image={<CNCFImage />}
             />
 
             <Card
               width="100%"
               height="100%"
               subheading="Community Sync Up"
-              body="Meet and learn from the maintainers, contributors, and developers of Litmus"
-              image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblog.mayadata.io%2Fhubfs%2F1.7Release-01-1.jpg%23keepProtocol&f=1&nofb=1"
+              body="Meet and learn from the maintainers, contributors, and developers of Litmus everything about Chaos Engineering."
+              image={<CommunitySyncUpImage />}
             />
           </ResponsiveRow>
         </BoundedContainer>

@@ -10,41 +10,42 @@ const Background = styled.img`
   z-index: -1;
 `;
 
+const Content404 = (
+  <>
+    <div style={{ margin: "10% 0" }}>
+      <h1 style={{ width: "100%", margin: "3% 40%", fontWeight: "bold" }}>
+        Whoops!
+        <br />
+        This page is unavailable
+      </h1>
+      <p style={{ width: "100%", margin: "0 40%" }}>
+        The page does not exist, or please try again later
+      </p>
+
+      <Link to="/">
+        <button
+          style={{
+            margin: "5rem 40%",
+            padding: "1rem 2rem",
+            width: "50%",
+            background: "#5B44BA",
+            borderRadius: "0.3rem",
+            color: "#ffff",
+          }}
+        >
+          Go back home
+        </button>
+      </Link>
+    </div>
+    <div style={{ width: "50%", margin: "8% 0", height: "100%" }}>
+      <Image404 />
+    </div>
+  </>
+);
+
 // Component
 const NotFoundPage: React.FC = () => {
-  const { sm, mmd, lg, xl } = theme().screens;
-  const Content404 = (
-    <>
-      <div style={{ margin: "10% 0" }}>
-        <h1 style={{ width: "100%", margin: "3% 40%", fontWeight: "bold" }}>
-          Whoops!
-          <br />
-          This page is unavailable
-        </h1>
-        <p style={{ width: "100%", margin: "0 40%" }}>
-          The page does not exist, or please try again later
-        </p>
-
-        <Link to="/">
-          <button
-            style={{
-              margin: "5rem 40%",
-              padding: "1rem 2rem",
-              width: "50%",
-              background: "#5B44BA",
-              borderRadius: "0.3rem",
-              color: "#ffff",
-            }}
-          >
-            Go back home
-          </button>
-        </Link>
-      </div>
-      <div style={{ width: "50%", margin: "8% 0", height: "100%" }}>
-        <Image404 />
-      </div>
-    </>
-  );
+  const { mmd, lg, xl } = theme().screens;
 
   const Content404Small = (
     <>
@@ -82,17 +83,7 @@ const NotFoundPage: React.FC = () => {
   return (
     <>
       <Background src="/svg/404Background.svg" alt="404 Background" />
-      {sm ? (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
-          }}
-        >
-          {Content404Small}
-        </div>
-      ) : mmd ? (
+      {mmd ? (
         <div
           style={{
             display: "flex",
