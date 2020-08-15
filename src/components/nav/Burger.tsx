@@ -15,8 +15,10 @@ const StyledBurger = styled.div`
   align-items: flex-end;
 
   .line {
-    border: 0.125rem solid white;
-    border-radius: 0.125rem;
+    height: 0.35rem;
+    background-color: white;
+    border: 1px solid ${props => props.theme.colors.textSecondary};
+    border-radius: 0.5rem;
   }
   .big {
     width: 2.2rem;
@@ -48,7 +50,7 @@ const Ul = styled.ul`
 `;
 
 const BurgerModal = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 1;
   left: 0;
   top: 5rem;
