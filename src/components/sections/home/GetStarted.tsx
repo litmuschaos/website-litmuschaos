@@ -41,7 +41,9 @@ const Step: React.FC<IStep> = ({ bullet, title, description }) => {
         </SubText>
       </IconCircle>
       <div style={{ padding: "0.5rem 0 0 2rem", maxWidth: "40rem" }}>
-        <PurpleText underline={true}>{title}</PurpleText>
+        <PurpleText fontSize="subHeading" fontWeight={600} underline={true}>
+          {title}
+        </PurpleText>
         <br />
         <Paragraph>{description}</Paragraph>
       </div>

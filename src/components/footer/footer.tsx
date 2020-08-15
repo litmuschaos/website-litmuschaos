@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
       <div>
         <hr style={{ margin: "1rem auto" }} />
         <Paragraph style={{ textAlign: "center" }}>
-          Originally created by Mayadata
+          Originally created by MayaData
         </Paragraph>
       </div>
     </SectionLight>

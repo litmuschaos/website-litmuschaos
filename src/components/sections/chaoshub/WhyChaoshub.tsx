@@ -49,19 +49,19 @@ const UsefulLinksContent: React.FC = () => {
       <UsefulLinks>
         <li>
           <GreenDot />
-          <PurpleText style={{ fontSize: "1rem" }} underline={true}>
+          <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
             How to use ChaosHub?
           </PurpleText>
         </li>
         <li>
           <GreenDot />
-          <PurpleText style={{ fontSize: "1rem" }} underline={true}>
+          <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
             Your own private hub?
           </PurpleText>
         </li>
         <li>
           <GreenDot />
-          <PurpleText style={{ fontSize: "1rem" }} underline={true}>
+          <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
             Contributing new experiments
           </PurpleText>
         </li>

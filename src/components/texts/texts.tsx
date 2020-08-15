@@ -36,18 +36,20 @@ const Paragraph = styled.p<IText>`
 
 interface IPurpleText extends IText {
   underline: boolean;
+  fontWeight: number;
+  fontSize: "heading" | "subHeading" | "paragraph" | "subText" | "button";
 }
 
 const PurpleText = styled.p<IPurpleText>`
   line-height: 130%;
-  font-weight: 600;
+  font-weight: ${props => props.fontWeight};
   text-align: ${props => props.textAlign ?? "left"};
   color: ${props => props.theme.colors.textSecondary};
   text-decoration: ${props => (props.underline ? "underline" : "none")};
   font-size: ${props =>
     props.theme.screens.md
-      ? props.theme.fontSize.subHeading.md
-      : props.theme.fontSize.subHeading.lg};
+      ? props.theme.fontSize[props.fontSize].md
+      : props.theme.fontSize[props.fontSize].lg};
 `;
 
 interface ISubText extends IText {

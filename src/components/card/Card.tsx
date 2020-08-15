@@ -39,7 +39,9 @@ const Card: React.FC<ICard> = ({ image, width, height, subheading, body }) => {
           src={image}
           alt="Slack Logo"
         />
-        <SubText style={{ margin: "0.5 1.5rem 0 1.5rem", fontWeight: "bold" }}>
+        <SubText
+          style={{ padding: "0.5rem 1.5rem 0 1.5rem", fontWeight: "bold" }}
+        >
           {subheading}
         </SubText>
         <Paragraph style={{ padding: "1rem 1.5rem" }}>{body}</Paragraph>
