@@ -1,12 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "../link/index";
 import { useTheme } from "../../styles";
 import { OutlinedButton } from "../button";
+import { Link } from "../link/index";
 
 const StyledBurger = styled.div`
-  position: absolute;
-  right: 5%;
   margin: 0 0.7rem;
   margin-top: 0.5rem;
   height: 1.5rem;
@@ -38,7 +36,7 @@ const Ul = styled.ul`
   }
 
   li:active {
-    background-color: ${(props) => props.theme.colors.purple(0.2)};
+    background-color: ${props => props.theme.colors.purple(0.2)};
   }
 `;
 
@@ -50,8 +48,9 @@ const BurgerModal = styled.div`
   width: 100%;
   height: 20rem;
   margin: 0 3%;
-  overflow: auto;
-  background: #ffffff;
+  border-radius: 0.25rem;
+  background: white;
+  box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.1);
 `;
 
 const Burger: React.FC = () => {
@@ -86,7 +85,7 @@ const Burger: React.FC = () => {
               <Link
                 to="route"
                 target="_blank"
-                onClick={(event) => {
+                onClick={event => {
                   event.preventDefault();
                   window.open("https://dev.to/t/litmuschaos");
                 }}

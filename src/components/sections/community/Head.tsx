@@ -47,7 +47,7 @@ const Head: React.FC = () => {
           <CommunityImage />
         </BoundedContainer>
 
-        <BoundedContainer breakpoint="md" width="40%" margin="2rem 0 0 2rem">
+        <BoundedContainer breakpoint="lg" width="40%" margin="2rem 0 0 2rem">
           <Center fullHeight={true}>
             <HeaderContent />
           </Center>

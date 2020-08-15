@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import React from "react";
+import { Center } from "../layout";
 
 const GithubIcon: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -24,7 +25,9 @@ const GithubIcon: React.FC = () => {
         target="_blank"
         style={{ cursor: "pointer" }}
       >
-        <Img fixed={imageData} alt="GitHub Icon" />
+        <Center>
+          <Img fixed={imageData} alt="GitHub Icon" />
+        </Center>
       </a>
     </div>
   );

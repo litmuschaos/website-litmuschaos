@@ -3,18 +3,10 @@ import styled from "styled-components";
 import { useTheme } from "../../styles";
 import { OutlinedButton } from "../button/index";
 import { GithubIcon } from "../image-fetch/GithubIcon";
+import { Center } from "../layout";
 import { Link } from "../link/index";
-import { SubText } from "../texts";
+import { SmallText } from "../texts";
 import Burger from "./Burger";
-
-const Logo: React.FC = () => (
-  <img
-    src="/svg/litmus-logo-purple.svg"
-    width="128"
-    alt="litmus logo"
-    style={{ marginBottom: "1rem" }}
-  />
-);
 
 const NavBar = styled.nav`
   width: ${props => (props.theme.screens.xl ? "95%" : "100%")};
@@ -31,9 +23,10 @@ const LogoDiv = styled.div`
 `;
 
 const GitHubStars = styled.div`
+  width: fit-content;
   height: 2rem;
   font-size: ${props => props.theme.fontSize.small.lg};
-  padding: 0.5rem 0.5rem;
+  padding: 0 0.5rem;
   margin-left: 1.5rem;
   margin-top: 0.4rem;
   border: 1px solid #000000;
@@ -66,123 +59,84 @@ const Ul = styled.ul`
   }
 `;
 
-const ResponsiveNav = styled.div`
+const GithubWrapper = styled.div`
+  flex-grow: 1;
+  align-self: flex-end;
   display: flex;
-  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 0.5rem;
 `;
+
+const Logo: React.FC = () => (
+  <img src="/svg/litmus-logo-purple.svg" width="128" alt="litmus logo" />
+);
 
 const Nav: React.FC = () => {
   const { md } = useTheme().screens;
 
-  return (
+  return md ? (
     <NavBar>
-      {md ? (
-        <>
-          <div
-            style={{
-              position: "absolute",
-              left: "10%",
-            }}
-          >
-            <Link to="/">
-              <Logo />
-            </Link>
-          </div>
-          <ResponsiveNav>
-            <GitHubStars
-              style={{
-                position: "absolute",
-                right: "20%",
-              }}
-            >
-              <div
-                style={{
-                  position: "relative",
-                  margin: "-7% 0",
-                }}
-              >
-                <GithubIcon />
-              </div>
-              <SubText
-                style={{
-                  fontSize: "0.8rem",
-                  position: "relative",
-                  margin: "-7% 0.2rem",
-                }}
-              >
-                Stars
-              </SubText>
-            </GitHubStars>
-            <Burger />
-          </ResponsiveNav>
-        </>
-      ) : (
-        <>
-          <LogoDiv>
-            <Link to="/">
-              <Logo />
-            </Link>
-            <Link
-              to="route"
-              target="_blank"
-              onClick={event => {
-                event.preventDefault();
-                window.open("https://github.com/litmuschaos/litmus");
-              }}
-            >
-              <GitHubStars>
-                <div
-                  style={{
-                    position: "relative",
-                    margin: "-5% 0",
-                  }}
-                >
-                  <GithubIcon />
-                </div>
-                <SubText
-                  style={{
-                    fontSize: "0.9rem",
-                    position: "relative",
-                    margin: "-5% 0.2rem",
-                  }}
-                >
-                  Stars
-                </SubText>
-              </GitHubStars>
-            </Link>
-          </LogoDiv>
-          <Ul>
-            <Link to="/whylitmus">
-              <li>Why Litmus?</li>
-            </Link>
+      <Link to="/">
+        <Center style={{ marginLeft: "1rem" }}>
+          <Logo />
+        </Center>
+      </Link>
 
-            <Link to="/chaoshub" className="listItems">
-              <li>Chaoshub</li>
-            </Link>
+      <GithubWrapper>
+        <a target="_blank" href="https://github.com/litmuschaos/litmus">
+          <GitHubStars>
+            <GithubIcon />
+            <SmallText style={{ margin: "0.4rem" }}>Star</SmallText>
+          </GitHubStars>
+        </a>
+      </GithubWrapper>
+      <Burger />
+    </NavBar>
+  ) : (
+    <NavBar>
+      <LogoDiv>
+        <Link to="/">
+          <Center>
+            <Logo />
+          </Center>
+        </Link>
 
-            <Link
-              to="route"
-              target="_blank"
-              onClick={event => {
-                event.preventDefault();
-                window.open("https://dev.to/t/litmuschaos");
-              }}
-            >
-              <li>Blogs</li>
-            </Link>
+        <a target="_blank" href="https://github.com/litmuschaos/litmus">
+          <GitHubStars>
+            <GithubIcon />
+            <SmallText style={{ margin: "0.3rem" }}>Star</SmallText>
+          </GitHubStars>
+        </a>
+      </LogoDiv>
 
-            <Link to="/community">
-              <li>Community</li>
-            </Link>
+      <Ul>
+        <Link to="/whylitmus">
+          <li>Why Litmus?</li>
+        </Link>
 
-            <GettingStarted>
-              <OutlinedButton backgroundColor="black">
-                Get Started
-              </OutlinedButton>
-            </GettingStarted>
-          </Ul>
-        </>
-      )}
+        <Link to="/chaoshub" className="listItems">
+          <li>Chaoshub</li>
+        </Link>
+
+        <Link
+          to="route"
+          target="_blank"
+          onClick={event => {
+            event.preventDefault();
+            window.open("https://dev.to/t/litmuschaos");
+          }}
+        >
+          <li>Blogs</li>
+        </Link>
+
+        <Link to="/community">
+          <li>Community</li>
+        </Link>
+
+        <GettingStarted>
+          <OutlinedButton backgroundColor="black">Get Started</OutlinedButton>
+        </GettingStarted>
+      </Ul>
     </NavBar>
   );
 };

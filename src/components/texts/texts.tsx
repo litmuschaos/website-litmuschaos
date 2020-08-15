@@ -107,6 +107,15 @@ const GreenStats = styled.p`
   color: ${props => props.theme.colors.darkGreen(1)};
 `;
 
+const SmallText = styled.p<IText>`
+  text-align: ${props => props.textAlign ?? "left"};
+  color: ${props => props.color ?? props.theme.colors.textPrimary};
+  font-size: ${props =>
+    props.theme.screens.md
+      ? props.theme.fontSize.small.md
+      : props.theme.fontSize.small.lg};
+`;
+
 export {
   Heading,
   SubHeading,
@@ -115,4 +124,5 @@ export {
   KubeCmd,
   PurpleText,
   GreenStats,
+  SmallText,
 };

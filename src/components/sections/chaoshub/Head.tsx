@@ -41,7 +41,7 @@ const Head: React.FC = () => {
           <ChaoshubImage />
         </BoundedContainer>
 
-        <BoundedContainer breakpoint="md" width="50%" margin="2rem 0 0 2rem">
+        <BoundedContainer breakpoint="lg" width="50%" margin="2rem 0 0 2rem">
           <Center fullHeight={true}>
             <HeaderContent />
           </Center>

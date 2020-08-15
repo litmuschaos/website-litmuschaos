@@ -1,118 +1,64 @@
-import { Link } from "gatsby";
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { Button } from "../components/button";
 import { Image404 } from "../components/image-fetch/Image404";
-import { theme } from "../styles";
+import { BoundedContainer, Center, ResponsiveRow } from "../components/layout";
+import { Paragraph } from "../components/texts";
+import { theme, useTheme } from "../styles";
 
-const Background = styled.img`
-  position: absolute;
-  height: 100%;
-  z-index: -1;
+const BackgroundDiv = styled.div`
+  width: 100vw;
+  height: 100vh;
+  padding: 5rem 2rem;
+  background: url("/svg/404Background.svg") no-repeat;
+  background-size: cover;
 `;
 
-const Content404 = (
-  <>
-    <div style={{ margin: "10% 0" }}>
-      <h1 style={{ width: "100%", margin: "3% 40%", fontWeight: "bold" }}>
+const Content: React.FC = () => {
+  const { textSecondary } = useTheme().colors;
+  const { lg, xxxl } = useTheme().screens;
+  return (
+    <div style={{ marginLeft: lg ? 0 : "2rem" }}>
+      <h1 style={{ fontSize: lg ? "2.5rem" : xxxl ? "3.5rem" : "4rem" }}>
         Whoops!
         <br />
         This page is unavailable
       </h1>
-      <p style={{ width: "100%", margin: "0 40%" }}>
-        The page does not exist, or please try again later
-      </p>
+      <br />
 
-      <Link to="/">
-        <button
-          style={{
-            margin: "5rem 40%",
-            padding: "1rem 2rem",
-            width: "50%",
-            background: "#5B44BA",
-            borderRadius: "0.3rem",
-            color: "#ffff",
-          }}
-        >
-          Go back home
-        </button>
-      </Link>
+      <Paragraph>The page does not exist, or please try again later</Paragraph>
+      <br />
+
+      <Button backgroundColor={textSecondary}>Go back home</Button>
     </div>
-    <div style={{ width: "50%", margin: "8% 0", height: "100%" }}>
-      <Image404 />
-    </div>
-  </>
-);
+  );
+};
 
 // Component
 const NotFoundPage: React.FC = () => {
-  const { mmd, lg, xl } = theme().screens;
-
-  const Content404Small = (
-    <>
-      <div style={{ margin: "10% 0" }}>
-        <h1 style={{ width: "75%", margin: "3% 25%", fontWeight: "bold" }}>
-          Whoops!
-          <br />
-          This page is unavailable
-        </h1>
-        <p style={{ width: "75%", margin: "0 25%" }}>
-          The page does not exist, or please try again later
-        </p>
-
-        <Link to="/">
-          <button
-            style={{
-              margin: "5rem 25%",
-              padding: "1rem 2rem",
-              width: "50%",
-              background: "#5B44BA",
-              borderRadius: "0.3rem",
-              color: "#ffff",
-            }}
-          >
-            Go back home
-          </button>
-        </Link>
-      </div>
-      <div style={{ width: "50%", margin: "0 auto", height: "100%" }}>
-        <Image404 />
-      </div>
-    </>
-  );
-
   return (
-    <>
-      <Background src="/svg/404Background.svg" alt="404 Background" />
-      {mmd ? (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            flexDirection: "column",
-          }}
-        >
-          {Content404Small}
-        </div>
-      ) : lg ? (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            margin: "0 -4rem",
-          }}
-        >
-          {Content404}
-        </div>
-      ) : xl ? (
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          {Content404}
-        </div>
-      ) : (
-        <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-          {Content404}
-        </div>
-      )}
-    </>
+    <ThemeProvider theme={theme()}>
+      <BackgroundDiv>
+        <Center>
+          <ResponsiveRow breakpoint="lg">
+            <BoundedContainer
+              breakpoint="lg"
+              width="50%"
+              margin="0"
+              style={{ maxWidth: "100%" }}
+            >
+              <Center fullHeight={true}>
+                <Content />
+              </Center>
+            </BoundedContainer>
+
+            <BoundedContainer breakpoint="lg" width="50%" margin="0 0 0 2rem">
+              <Image404 />
+            </BoundedContainer>
+          </ResponsiveRow>
+        </Center>
+      </BackgroundDiv>
+    </ThemeProvider>
   );
 };
 

@@ -35,7 +35,7 @@ const Head: React.FC = () => {
   return (
     <SectionDark>
       <ResponsiveRow breakpoint="lg">
-        <BoundedContainer breakpoint="md" width="35%" margin="0">
+        <BoundedContainer breakpoint="lg" width="35%" margin="0">
           <Center fullHeight={true}>
             <HeaderContent />
           </Center>
