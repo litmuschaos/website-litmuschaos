@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "gatsby";
 import styled, { css } from "styled-components";
-import { useTheme } from "../../styles";
 import { Button } from "../button";
 import {
   BoundedContainer,
@@ -21,14 +21,12 @@ const CNCFText = styled.div`
       : css`
           width: 20rem;
           margin: 0 auto;
-          margin-top: ${props =>
+          margin-top: ${(props) =>
             props.theme.screens.xxxl ? "-7rem" : "-8rem"};
         `}
 `;
 
 const PreFooterBottom: React.FC = () => {
-  const { sm } = useTheme().screens;
-
   return (
     <SectionDark>
       <ResponsiveRow breakpoint="lg">
@@ -43,7 +41,16 @@ const PreFooterBottom: React.FC = () => {
                 find weaknesses in their applications and infrastructure
               </Paragraph>
               <br />
-              <Button gradientColor="purple">Get started with Litmus</Button>
+              <Link
+                to="route"
+                target="_blank"
+                onClick={(event) => {
+                  event.preventDefault();
+                  window.open("https://docs.litmuschaos.io/docs/getstarted/");
+                }}
+              >
+                <Button gradientColor="purple">Get started with Litmus</Button>
+              </Link>
             </div>
           </Center>
         </BoundedContainer>

@@ -7,7 +7,7 @@ import { Links } from "./footerLinks";
 
 const Logo: React.FC = () => (
   <img
-    src="/svg/litmus-logo.svg"
+    src="/svg/litmus-logo-purple.svg"
     width="128"
     alt="litmus logo"
     style={{ marginBottom: "1rem" }}

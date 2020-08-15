@@ -11,7 +11,7 @@ const sitemap = {
     },
     {
       name: "Blog",
-      url: "/blog",
+      url: "https://dev.to/t/litmuschaos",
     },
     {
       name: "Community",

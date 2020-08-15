@@ -1,40 +1,41 @@
 import React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import { Button } from "../../../components/button";
 import { SectionLight } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
 
 const CommunityText = styled.div`
-  width: ${props => (props.theme.screens.sm ? "85%" : "60%")};
-  margin: ${props => (props.theme.screens.sm ? "0 auto" : "0 5rem")};
+  width: ${(props) => (props.theme.screens.sm ? "85%" : "60%")};
+  margin: ${(props) => (props.theme.screens.sm ? "0 auto" : "0 5rem")};
   display: flex;
   flex-direction: column;
 `;
 
 const BlueTestTube = styled.img`
   position: absolute;
-  width: ${props => (props.theme.screens.sm ? "5%" : "3%")};
-  margin-top: ${props => (props.theme.screens.sm ? "-3%" : "6%")};
-  left: ${props =>
+  width: ${(props) => (props.theme.screens.sm ? "5%" : "3%")};
+  margin-top: ${(props) => (props.theme.screens.sm ? "-3%" : "6%")};
+  left: ${(props) =>
     props.theme.screens.sm ? "85%" : props.theme.screens.xl ? "15%" : "20%"};
-  transform: ${props =>
+  transform: ${(props) =>
     props.theme.screens.sm ? "rotate(50deg)" : "rotate(0)"};
 `;
 
 const YellowTestTube = styled.img`
-  display: ${props => (props.theme.screens.sm ? "none" : "block")};
+  display: ${(props) => (props.theme.screens.sm ? "none" : "block")};
   position: absolute;
   width: 3%;
   margin-top: -2%;
-  left: ${props => (props.theme.screens.xl ? "12%" : "15%")};
+  left: ${(props) => (props.theme.screens.xl ? "12%" : "15%")};
 `;
 
 const GreenTestTube = styled.img`
   position: absolute;
-  width: ${props => (props.theme.screens.sm ? "7%" : "3%")};
-  margin-top: ${props => (props.theme.screens.sm ? "-10%" : "0")};
-  left: ${props => (props.theme.screens.sm ? "90%" : "80%")};
-  transform: ${props =>
+  width: ${(props) => (props.theme.screens.sm ? "7%" : "3%")};
+  margin-top: ${(props) => (props.theme.screens.sm ? "-10%" : "0")};
+  left: ${(props) => (props.theme.screens.sm ? "90%" : "80%")};
+  transform: ${(props) =>
     props.theme.screens.sm ? "rotate(-50deg)" : "rotate(0)"};
 `;
 
@@ -57,9 +58,18 @@ const ReadyToStart: React.FC = () => {
         <Paragraph textAlign="center">{paragraphText}</Paragraph>
       </CommunityText>
 
-      <Button style={{ margin: "3rem 0" }} gradientColor="purple">
-        Go to ChaosHub
-      </Button>
+      <Link
+        to="route"
+        target="_blank"
+        onClick={(event) => {
+          event.preventDefault();
+          window.open("https://hub.litmuschaos.io/");
+        }}
+      >
+        <Button style={{ margin: "3rem 0" }} gradientColor="purple">
+          Go to ChaosHub
+        </Button>
+      </Link>
     </SectionLight>
   );
 };

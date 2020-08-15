@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import {
   BoundedContainer,
@@ -126,33 +127,62 @@ const JoinOurCommunity: React.FC = () => {
               <ul>
                 <li>
                   <GreenDot />
-                  <PurpleText
-                    fontSize="paragraph"
-                    fontWeight={400}
-                    underline={true}
+                  <Link
+                    to="route"
+                    target="_blank"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      window.open("https://zoom.us/j/91358162694");
+                    }}
                   >
-                    Meeting
-                  </PurpleText>
+                    <PurpleText
+                      fontSize="paragraph"
+                      fontWeight={400}
+                      underline={true}
+                    >
+                      Meeting
+                    </PurpleText>
+                  </Link>
                 </li>
                 <li>
                   <GreenDot />
-                  <PurpleText
-                    fontSize="paragraph"
-                    fontWeight={400}
-                    underline={true}
+                  <Link
+                    to="route"
+                    target="_blank"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      window.open("https://github.com/litmuschaos/litmus");
+                    }}
                   >
-                    Meta Repository
-                  </PurpleText>
+                    <PurpleText
+                      fontSize="paragraph"
+                      fontWeight={400}
+                      underline={true}
+                    >
+                      Meta Repository
+                    </PurpleText>
+                  </Link>
                 </li>
                 <li>
                   <GreenDot />
-                  <PurpleText
-                    fontSize="paragraph"
-                    fontWeight={400}
-                    underline={true}
+                  <Link
+                    to="route"
+                    target="_blank"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      window.open(
+                        "https://github.com/litmuschaos/litmus/milestones"
+                      );
+                    }}
                   >
-                    Release Tracker
-                  </PurpleText>
+                    <PurpleText
+                      fontSize="paragraph"
+                      fontWeight={400}
+                      underline={true}
+                    >
+                      Release Tracker
+                    </PurpleText>
+                  </Link>
                 </li>
               </ul>
             </CommunityTextList>

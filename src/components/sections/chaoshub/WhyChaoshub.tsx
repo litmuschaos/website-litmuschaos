@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import { useTheme } from "../../../styles";
 import {
@@ -35,11 +36,11 @@ const GreenDot = styled.div`
   border-radius: 50%;
   margin-right: 1rem;
   margin-top: 0.4rem;
-  background-color: ${props => props.theme.colors.darkGreen(1)};
+  background-color: ${(props) => props.theme.colors.darkGreen(1)};
 `;
 
 const Divider = styled.hr`
-  border: 1px solid ${props => props.theme.colors.darkGreen(0.25)};
+  border: 1px solid ${(props) => props.theme.colors.darkGreen(0.25)};
 `;
 
 const UsefulLinksContent: React.FC = () => {
@@ -49,21 +50,52 @@ const UsefulLinksContent: React.FC = () => {
       <UsefulLinks>
         <li>
           <GreenDot />
-          <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
-            How to use ChaosHub?
-          </PurpleText>
+          <Link
+            to="route"
+            target="_blank"
+            onClick={(event) => {
+              event.preventDefault();
+              window.open("https://docs.litmuschaos.io/docs/chaoshub/");
+            }}
+          >
+            <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
+              How to use ChaosHub?
+            </PurpleText>
+          </Link>
         </li>
         <li>
           <GreenDot />
-          <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
-            Your own private hub?
-          </PurpleText>
+          <Link
+            to="route"
+            target="_blank"
+            onClick={(event) => {
+              event.preventDefault();
+              window.open(
+                "https://docs.litmuschaos.io/docs/getstarted/#install-litmus"
+              );
+            }}
+          >
+            <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
+              Your own private hub?
+            </PurpleText>
+          </Link>
         </li>
         <li>
           <GreenDot />
-          <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
-            Contributing new experiments
-          </PurpleText>
+          <Link
+            to="route"
+            target="_blank"
+            onClick={(event) => {
+              event.preventDefault();
+              window.open(
+                "https://github.com/litmuschaos/chaos-charts/blob/master/CONTRIBUTING.md"
+              );
+            }}
+          >
+            <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
+              Contributing new experiments
+            </PurpleText>
+          </Link>
         </li>
       </UsefulLinks>
     </div>
