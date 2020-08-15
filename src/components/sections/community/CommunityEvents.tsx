@@ -6,13 +6,12 @@ import {
   SectionLight,
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
-import { CommunityText } from "./globalStyle";
 
 const CommunityEvents: React.FC = () => {
   return (
     <SectionLight>
-      <ResponsiveRow breakpoint="sm">
-        <CommunityText>
+      <ResponsiveRow breakpoint="xl">
+        <BoundedContainer breakpoint="xl" width="40%" margin="0 2rem 0 0">
           <Heading>Community Events</Heading>
           <Paragraph style={{ margin: "1rem 0" }}>
             Our resolve is to reach the global community and escalate the value
@@ -22,9 +21,9 @@ const CommunityEvents: React.FC = () => {
             You can also conduct your own meetup, join our community, and put
             forward your idea.
           </Paragraph>
-        </CommunityText>
-        <BoundedContainer breakpoint="sm" width="40%" margin="0 auto">
-          <ResponsiveRow breakpoint="sm">
+        </BoundedContainer>
+        <BoundedContainer breakpoint="xl" width="40rem" margin="0 auto">
+          <ResponsiveRow breakpoint="xl">
             <Card
               width="100%"
               height="100%"
