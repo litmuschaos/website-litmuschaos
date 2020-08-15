@@ -7,10 +7,12 @@ import {
   ResponsiveRow,
   SectionDark,
 } from "../layout";
-import { Heading, Paragraph } from "../texts";
+import { Heading, Paragraph, PurpleText } from "../texts";
 import { CNCFLogo } from "./CNCFLogo";
 
 const CNCFText = styled.div`
+  position: relative;
+  z-index: 2;
   ${({ theme }) =>
     theme.screens.lg
       ? css`
@@ -54,7 +56,18 @@ const PreFooterBottom: React.FC = () => {
           <CNCFLogo />
           <CNCFText>
             <Paragraph textAlign="center">
-              We are a Cloud Native Computing Foundation sandbox project
+              We are a{" "}
+              <a target="_blank" href="https://www.cncf.io/">
+                <PurpleText
+                  fontSize="paragraph"
+                  fontWeight={400}
+                  underline={true}
+                  style={{ display: "inline" }}
+                >
+                  Cloud Native Computing Foundation
+                </PurpleText>{" "}
+              </a>
+              sandbox project
             </Paragraph>
           </CNCFText>
         </BoundedContainer>

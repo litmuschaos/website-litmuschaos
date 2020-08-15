@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../../../components/button";
-import { SectionDark, BoundedContainer } from "../../../components/layout";
+import { BoundedContainer, SectionDark } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
 import { VideoFrame } from "../../video-box";
 
@@ -22,12 +22,17 @@ const LitmusCommunityVideo: React.FC = () => {
 
       <VideoFrame
         width="47.188rem"
-        src="https://www.youtube.com/embed/yhWgzN90SME"
+        src="https://www.youtube.com/embed/t3KygaEYCuU"
       />
 
-      <Button style={{ margin: "3rem 0" }} gradientColor="purple">
-        Visit Our Youtube
-      </Button>
+      <a
+        target="_target"
+        href="https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw"
+      >
+        <Button style={{ margin: "3rem 0" }} gradientColor="purple">
+          Visit Our Youtube
+        </Button>
+      </a>
     </SectionDark>
   );
 };

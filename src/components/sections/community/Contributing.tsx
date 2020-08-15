@@ -12,9 +12,14 @@ import { OctoCat } from "../../image-fetch/OctoCat";
 interface IContributeButton {
   width: string;
   src: string;
+  text: string;
 }
 
-const ContributeButton: React.FC<IContributeButton> = ({ width, src }) => {
+const ContributeButton: React.FC<IContributeButton> = ({
+  width,
+  src,
+  text,
+}) => {
   const { textSecondary } = useTheme().colors;
 
   return (
@@ -32,7 +37,7 @@ const ContributeButton: React.FC<IContributeButton> = ({ width, src }) => {
           width="20"
           alt="Dev Icon"
         />
-        <p>Go to dev.to</p>
+        <p>{text}</p>
       </div>
     </OutlinedButton>
   );
@@ -56,12 +61,16 @@ const Contributing: React.FC = () => {
               #litmuschaos tag for your blog to get featured.
             </Paragraph>
             <br />
-
-            <ContributeButton width="30%" src="/svg/dev-purple.svg" />
+            <a target="_blank" href="https://dev.to/t/litmuschaos">
+              <ContributeButton
+                width="30%"
+                src="/svg/dev-purple.svg"
+                text="Go to dev.to"
+              />
+            </a>
             <br />
             <br />
             <br />
-
             <SubHeading>Contribute your chaos experiments</SubHeading>
             <br />
             <Paragraph>
@@ -79,7 +88,16 @@ const Contributing: React.FC = () => {
             </Paragraph>
             <br />
 
-            <ContributeButton width="55%" src="/svg/github-purple.svg" />
+            <a
+              target="_blank"
+              href="https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md"
+            >
+              <ContributeButton
+                width="55%"
+                src="/svg/github-purple.svg"
+                text="About contibuting on our GitHub"
+              />
+            </a>
           </div>
         </BoundedContainer>
       </ResponsiveRow>

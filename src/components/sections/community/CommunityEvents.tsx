@@ -32,6 +32,7 @@ const CommunityEvents: React.FC = () => {
               subheading="Kubernetes Chaos Engineering Meetup"
               body=" Discussion about the best practices and tutorials for practicing chaos engineering"
               image={<CNCFImage />}
+              link="https://community.cncf.io/kubernetes-chaos-engineering-meetup-group/"
             />
 
             <Card
@@ -40,6 +41,7 @@ const CommunityEvents: React.FC = () => {
               subheading="Community Sync Up"
               body="Meet and learn from the maintainers, contributors, and developers of Litmus everything about Chaos Engineering."
               image={<CommunitySyncUpImage />}
+              link="https://zoom.us/j/91358162694"
             />
           </ResponsiveRow>
         </BoundedContainer>
