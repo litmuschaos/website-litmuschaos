@@ -16,10 +16,12 @@ const ListBox = styled.ul`
 
 const List = styled.li`
   text-decoration: none;
-  display: flex;
-  margin-top: 1rem;
-  img {
-    margin-right: 1rem;
+  a {
+    display: flex;
+    margin-top: 1rem;
+    img {
+      margin-right: 1rem;
+    }
   }
 `;
 
