@@ -36,37 +36,43 @@ const CommunityTextList = styled.div`
 
 const BlueTestTube = styled.img`
   position: absolute;
-  width: ${props => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${props => (props.theme.screens.sm ? "13rem" : "")};
-  left: ${props =>
+  width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
+  margin-top: ${(props) => (props.theme.screens.sm ? "10rem" : "-8rem")};
+  left: ${(props) =>
     props.theme.screens.sm
       ? "50%"
       : props.theme.screens.md
       ? "8%"
+      : props.theme.screens.mmd
+      ? "5%"
       : props.theme.screens.xl
+      ? "13%"
+      : props.theme.screens.xxxl
       ? "8%"
-      : "10%"};
+      : "14%"};
 `;
 
 const GreenTestTube = styled.img`
   position: absolute;
-  width: ${props => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${props =>
+  width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
+  margin-top: ${(props) =>
     props.theme.screens.sm
-      ? "17rem"
-      : props.theme.screens.md
-      ? "6%"
+      ? "12rem"
       : props.theme.screens.xl
-      ? "8%"
-      : "6%"};
-  left: ${props =>
+      ? "-4rem"
+      : props.theme.screens.xxxl
+      ? "-3rem"
+      : "-3rem"};
+  left: ${(props) =>
     props.theme.screens.sm
       ? "65%"
-      : props.theme.screens.md
-      ? "50%"
+      : props.theme.screens.mmd
+      ? "80%"
       : props.theme.screens.xl
-      ? "40%"
-      : "45%"};
+      ? "70%"
+      : props.theme.screens.xxxl
+      ? "49%"
+      : "47%"};
 `;
 
 const GreenDot = styled.div`
@@ -75,7 +81,7 @@ const GreenDot = styled.div`
   border-radius: 50%;
   margin-right: 1rem;
   margin-top: 0.4rem;
-  background-color: ${props => props.theme.colors.darkGreen(1)};
+  background-color: ${(props) => props.theme.colors.darkGreen(1)};
 `;
 
 // Component
