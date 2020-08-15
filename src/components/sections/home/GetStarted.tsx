@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
+import { YamlContext } from "../../../context";
 import { useTheme } from "../../../styles";
 import { IconCircle } from "../../icon-circle";
 import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
@@ -25,10 +26,17 @@ interface IStep {
   bullet: string;
   title: string;
   description: string;
+  yamlLink?: string;
 }
 
-const Step: React.FC<IStep> = ({ bullet, title, description }) => {
+const Step: React.FC<IStep> = ({ bullet, title, description, yamlLink }) => {
   const { gradient, colors } = useTheme();
+  const { setYamlLink } = useContext(YamlContext);
+
+  const handleClick = (yamlLink: string) => {
+    setYamlLink(yamlLink);
+  };
+
   return (
     <div style={{ display: "flex" }}>
       <IconCircle
@@ -41,7 +49,12 @@ const Step: React.FC<IStep> = ({ bullet, title, description }) => {
         </SubText>
       </IconCircle>
       <div style={{ padding: "0.5rem 0 0 2rem", maxWidth: "40rem" }}>
-        <PurpleText fontSize="subHeading" fontWeight={600} underline={true}>
+        <PurpleText
+          fontSize="subHeading"
+          fontWeight={600}
+          underline={true}
+          onClick={() => yamlLink && handleClick(yamlLink)}
+        >
           {title}
         </PurpleText>
         <br />
@@ -62,6 +75,7 @@ const GetStartedSteps: React.FC = () => {
             description="Install Litmus with a helm chart. Default options will get you a
           minimal version of Litmus to run or schedule individual chaos
           experiments."
+            yamlLink="https://litmuschaos.github.io/litmus/litmus-operator-v1.7.0.yaml"
           />
           <Step
             bullet="2"
@@ -69,6 +83,7 @@ const GetStartedSteps: React.FC = () => {
             description="Install Litmus with a helm chart. Default options will get you a
           minimal version of Litmus to run or schedule individual chaos
           experiments."
+            yamlLink="https://hub.litmuschaos.io/api/chaos/1.7.0?file=charts/generic/experiments.yaml"
           />
           <Step
             bullet="3"
@@ -82,16 +97,23 @@ const GetStartedSteps: React.FC = () => {
 };
 
 const GetStarted: React.FC = () => {
+  const [yamlLink, setYamlLink] = useState(
+    "https://litmuschaos.github.io/litmus/litmus-operator-v1.7.0.yaml"
+  );
+  const initialValue = { yamlLink: yamlLink, setYamlLink: setYamlLink };
+
   return (
-    <SectionDark>
-      <Heading textAlign="center">Get started with Litmus</Heading>
-      <ResponsiveRow breakpoint="md" alignItems="start">
-        <BoundedContainer breakpoint="md" width="50%" margin="0">
-          <Terminal />
-        </BoundedContainer>
-        <GetStartedSteps />
-      </ResponsiveRow>
-    </SectionDark>
+    <YamlContext.Provider value={initialValue}>
+      <SectionDark>
+        <Heading textAlign="center">Get started with Litmus</Heading>
+        <ResponsiveRow breakpoint="md" alignItems="start">
+          <BoundedContainer breakpoint="md" width="50%" margin="0">
+            <Terminal />
+          </BoundedContainer>
+          <GetStartedSteps />
+        </ResponsiveRow>
+      </SectionDark>
+    </YamlContext.Provider>
   );
 };
 

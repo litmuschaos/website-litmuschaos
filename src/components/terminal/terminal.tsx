@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled, { css } from "styled-components";
-import { TerminalPane } from "./terminalPane";
+import { YamlContext } from "../../context";
+import { KubeCmd } from "../texts";
 import { TopBar } from "./topbar";
 
 const Wrapper = styled.div`
@@ -24,12 +25,23 @@ const TerminalFrame = styled.div`
   box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.08);
 `;
 
+const Body = styled.div`
+  background-color: white;
+  border-radius: 0 0 0.5rem 0.5rem;
+  height: ${props => (props.theme.screens.md ? "10rem" : "18.125rem")};
+  padding: ${props => (props.theme.screens.md ? "0.875rem" : "1.25rem")};
+`;
+
 const Terminal: React.FC = () => {
+  const { yamlLink } = useContext(YamlContext);
+
   return (
     <Wrapper>
       <TerminalFrame>
         <TopBar />
-        <TerminalPane />
+        <Body>
+          <KubeCmd text={yamlLink} />
+        </Body>
       </TerminalFrame>
     </Wrapper>
   );

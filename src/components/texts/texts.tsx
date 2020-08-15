@@ -46,6 +46,7 @@ const PurpleText = styled.p<IPurpleText>`
   text-align: ${props => props.textAlign ?? "left"};
   color: ${props => props.theme.colors.textSecondary};
   text-decoration: ${props => (props.underline ? "underline" : "none")};
+  cursor: ${props => (props.underline ? "pointer" : "auto")};
   font-size: ${props =>
     props.theme.screens.md
       ? props.theme.fontSize[props.fontSize].md
