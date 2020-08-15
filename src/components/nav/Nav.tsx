@@ -102,10 +102,12 @@ const Nav: React.FC = () => {
         </Link>
 
         <a target="_blank" href="https://github.com/litmuschaos/litmus">
-          <GitHubStars>
-            <GithubIcon />
-            <SmallText style={{ margin: "0.3rem" }}>Star</SmallText>
-          </GitHubStars>
+          <Center>
+            <GitHubStars>
+              <GithubIcon />
+              <SmallText style={{ margin: "0.3rem" }}>Star</SmallText>
+            </GitHubStars>
+          </Center>
         </a>
       </LogoDiv>
 
