@@ -4,7 +4,29 @@ const siteDescription =
 const siteAuthor = "@litmuschaos";
 const siteUrl = "https://litmuschaos.io";
 const siteImage = `${siteUrl}/icons/icon_512x512.png`;
-const siteKeywords = ["gatsby", "typescript", "starter", "javascript", "react"];
+const siteKeywords = [
+  "chaos engineering",
+  "Litmus Chaos",
+  "litmus",
+  "devOps",
+  "SRE",
+  "Cloud-Native",
+  "CNCF",
+  "mayadata",
+  "openebs",
+  "Kubernetes",
+  "Docker",
+  "containerized",
+  "dataMonitoring",
+  "DataStorage",
+  "workload",
+  "deployment",
+  "ci/cd",
+  "cd",
+  "ci",
+  "DataAgility",
+  "multicloud",
+];
 
 module.exports = {
   siteMetadata: {
