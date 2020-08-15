@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import styled, { css } from "styled-components";
 import { Button } from "../button";
 import {
@@ -21,7 +20,7 @@ const CNCFText = styled.div`
       : css`
           width: 20rem;
           margin: 0 auto;
-          margin-top: ${(props) =>
+          margin-top: ${props =>
             props.theme.screens.xxxl ? "-7rem" : "-8rem"};
         `}
 `;
@@ -41,16 +40,12 @@ const PreFooterBottom: React.FC = () => {
                 find weaknesses in their applications and infrastructure
               </Paragraph>
               <br />
-              <Link
-                to="route"
+              <a
                 target="_blank"
-                onClick={(event) => {
-                  event.preventDefault();
-                  window.open("https://docs.litmuschaos.io/docs/getstarted/");
-                }}
+                href="https://docs.litmuschaos.io/docs/getstarted/"
               >
                 <Button gradientColor="purple">Get started with Litmus</Button>
-              </Link>
+              </a>
             </div>
           </Center>
         </BoundedContainer>

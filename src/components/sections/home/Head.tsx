@@ -25,7 +25,11 @@ const HeadText: React.FC = () => {
         chaos workflows. Resilience of your Kubernetes starts with finding a
         weakness and start fixing it.
       </Paragraph>
-      <div style={{ marginTop: "1rem" }}>{flexibleButton}</div>
+      <div style={{ marginTop: "1rem" }}>
+        <a target="_blank" href="https://docs.litmuschaos.io/docs/getstarted/">
+          {flexibleButton}
+        </a>
+      </div>
     </>
   );
 

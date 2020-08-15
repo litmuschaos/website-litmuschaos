@@ -1,1 +1,1 @@
-export * from "./preFooter";
+export * from "./PreFooter";

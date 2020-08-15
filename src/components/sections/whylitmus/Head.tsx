@@ -24,8 +24,9 @@ const HeaderContent: React.FC = () => {
         using Portal. Take control of resilience of your Kubernetes.
       </Paragraph>
       <br />
-
-      <Button gradientColor="purple">Get Started</Button>
+      <a target="_blank" href="https://docs.litmuschaos.io/docs/getstarted/">
+        <Button gradientColor="purple">Get Started</Button>
+      </a>
     </div>
   );
 };

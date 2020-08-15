@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled, { css } from "styled-components";
 import { YamlContext } from "../../context";
 import { KubeCmd } from "../texts";
-import { TopBar } from "./topbar";
+import { TopBar } from "./TopBar";
 
 const Wrapper = styled.div`
   ${props =>

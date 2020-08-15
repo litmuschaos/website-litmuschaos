@@ -136,7 +136,12 @@ const Nav: React.FC = () => {
         </Link>
 
         <GettingStarted>
-          <OutlinedButton backgroundColor="black">Get Started</OutlinedButton>
+          <a
+            target="_blank"
+            href="https://docs.litmuschaos.io/docs/getstarted/"
+          >
+            <OutlinedButton backgroundColor="black">Get Started</OutlinedButton>
+          </a>
         </GettingStarted>
       </Ul>
     </NavBar>

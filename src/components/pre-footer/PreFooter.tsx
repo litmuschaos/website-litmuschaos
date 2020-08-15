@@ -1,6 +1,6 @@
 import React from "react";
-import { PreFooterBottom } from "./preFooterBottom";
-import { PreFooterTop } from "./preFooterTop";
+import { PreFooterBottom } from "./PreFooterBottom";
+import { PreFooterTop } from "./PreFooterTop";
 
 const PreFooter: React.FC = () => {
   return (

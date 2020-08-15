@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { Button } from "../../../components/button";
 import {
   BoundedContainer,
@@ -27,17 +26,9 @@ const HeaderContent: React.FC = () => {
         them. Chaos experiments can help.
       </Paragraph>
       <br />
-
-      <Link
-        to="route"
-        target="_blank"
-        onClick={(event) => {
-          event.preventDefault();
-          window.open("https://hub.litmuschaos.io/");
-        }}
-      >
+      <a target="_blank" href="https://hub.litmuschaos.io/">
         <Button gradientColor="purple">Get Started</Button>
-      </Link>
+      </a>
     </div>
   );
 };

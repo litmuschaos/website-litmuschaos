@@ -3,7 +3,7 @@ import { useTheme } from "../../styles";
 import { BoundedContainer, Column, Row, SectionLight } from "../layout";
 import { Paragraph } from "../texts";
 import { community, resources, sitemap, top_adopters } from "./data";
-import { Links } from "./footerLinks";
+import { Links } from "./FooterLinks";
 
 const Logo: React.FC = () => (
   <img

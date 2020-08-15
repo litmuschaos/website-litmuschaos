@@ -1,7 +1,7 @@
-import React from "react";
-import { SEO } from "../seo";
-import { render, cleanup } from "@testing-library/react";
+import { cleanup, render } from "@testing-library/react";
 import * as Gatsby from "gatsby";
+import React from "react";
+import { SEO } from "../SEO";
 const useStaticQuery = jest.spyOn(Gatsby, "useStaticQuery");
 
 beforeEach(() => {
@@ -11,9 +11,9 @@ beforeEach(() => {
         siteMetadata: {
           title: "Test",
           description: "Test",
-          author: "@test"
-        }
-      }
+          author: "@test",
+        },
+      },
     };
   });
 });

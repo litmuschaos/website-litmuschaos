@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "../../styles";
-import { CSSDebugger } from "../css-debugger";
 // Components
 import { Footer } from "../footer";
 import { Nav } from "../nav";
@@ -17,7 +16,6 @@ const Layout: React.FC = ({ children }) => {
     <ThemeProvider theme={theme()}>
       <Container>
         <Nav />
-        <CSSDebugger />
         <main>{children}</main>
         <PreFooter />
         <Footer />
