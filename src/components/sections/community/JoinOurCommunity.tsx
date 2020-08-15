@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "gatsby";
+import React from "react";
 import styled from "styled-components";
 import {
   BoundedContainer,
@@ -37,9 +37,9 @@ const CommunityTextList = styled.div`
 
 const BlueTestTube = styled.img`
   position: absolute;
-  width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${(props) => (props.theme.screens.sm ? "10rem" : "-8rem")};
-  left: ${(props) =>
+  width: ${props => (props.theme.screens.sm ? "15%" : "3%")};
+  margin-top: ${props => (props.theme.screens.sm ? "10rem" : "-8rem")};
+  left: ${props =>
     props.theme.screens.sm
       ? "50%"
       : props.theme.screens.md
@@ -55,8 +55,8 @@ const BlueTestTube = styled.img`
 
 const GreenTestTube = styled.img`
   position: absolute;
-  width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${(props) =>
+  width: ${props => (props.theme.screens.sm ? "15%" : "3%")};
+  margin-top: ${props =>
     props.theme.screens.sm
       ? "12rem"
       : props.theme.screens.xl
@@ -64,7 +64,7 @@ const GreenTestTube = styled.img`
       : props.theme.screens.xxxl
       ? "-3rem"
       : "-3rem"};
-  left: ${(props) =>
+  left: ${props =>
     props.theme.screens.sm
       ? "65%"
       : props.theme.screens.mmd
@@ -82,7 +82,7 @@ const GreenDot = styled.div`
   border-radius: 50%;
   margin-right: 1rem;
   margin-top: 0.4rem;
-  background-color: ${(props) => props.theme.colors.darkGreen(1)};
+  background-color: ${props => props.theme.colors.darkGreen(1)};
 `;
 
 // Component
@@ -94,7 +94,7 @@ const JoinOurCommunity: React.FC = () => {
           <Heading>Join our Community meetings</Heading>
           <br />
           <PurpleText fontSize="subHeading" underline={false} fontWeight={500}>
-            We meet on every 3rd saturday of the month!
+            We meet on every 3rd Wednesday of the month!
           </PurpleText>
           <br />
           <BlueTestTube src="./svg/testTubeBlue.svg" alt="Blue Test Tube" />
@@ -130,7 +130,7 @@ const JoinOurCommunity: React.FC = () => {
                   <Link
                     to="route"
                     target="_blank"
-                    onClick={(event) => {
+                    onClick={event => {
                       event.preventDefault();
                       window.open("https://zoom.us/j/91358162694");
                     }}
@@ -149,7 +149,7 @@ const JoinOurCommunity: React.FC = () => {
                   <Link
                     to="route"
                     target="_blank"
-                    onClick={(event) => {
+                    onClick={event => {
                       event.preventDefault();
                       window.open("https://github.com/litmuschaos/litmus");
                     }}
@@ -168,7 +168,7 @@ const JoinOurCommunity: React.FC = () => {
                   <Link
                     to="route"
                     target="_blank"
-                    onClick={(event) => {
+                    onClick={event => {
                       event.preventDefault();
                       window.open(
                         "https://github.com/litmuschaos/litmus/milestones"

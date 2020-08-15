@@ -11,8 +11,7 @@
     "url": "https://github.com/litmuschaos/website-litmuschaos/issues"
   },
   "scripts": {
-    "develop": "gatsby develop",
-    "dev": "npm run develop",
+    "dev": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
     "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
     "lint:watch": "esw -w . --ext ts --ext tsx --ext js --ext jsx",
@@ -20,14 +19,11 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "serve": "gatsby serve",
-    "storybook": "start-storybook -p 6006",
     "clean": "gatsby clean",
     "build": "gatsby build",
-    "build:storybook": "build-storybook",
     "update": "ncu -u"
   },
   "dependencies": {
-    "framer-motion": "^1.9.1",
     "gatsby": "^2.19.32",
     "gatsby-image": "^2.2.43",
     "gatsby-plugin-manifest": "^2.2.44",

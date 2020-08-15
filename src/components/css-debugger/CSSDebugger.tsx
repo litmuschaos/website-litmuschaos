@@ -1,8 +1,7 @@
-import { motion } from "framer-motion";
 import React, { ComponentProps, useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 
-const ToggleDebugButton = styled(motion.button).attrs(() => ({
+const ToggleDebugButton = styled.button.attrs(() => ({
   drag: true,
   dragMomentum: false,
   whileHover: { scale: 1.05 },

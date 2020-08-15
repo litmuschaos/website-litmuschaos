@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "gatsby";
+import React from "react";
 import styled from "styled-components";
 import { useTheme } from "../../../styles";
 import {
@@ -36,11 +36,11 @@ const GreenDot = styled.div`
   border-radius: 50%;
   margin-right: 1rem;
   margin-top: 0.4rem;
-  background-color: ${(props) => props.theme.colors.darkGreen(1)};
+  background-color: ${props => props.theme.colors.darkGreen(1)};
 `;
 
 const Divider = styled.hr`
-  border: 1px solid ${(props) => props.theme.colors.darkGreen(0.25)};
+  border: 1px solid ${props => props.theme.colors.darkGreen(0.25)};
 `;
 
 const UsefulLinksContent: React.FC = () => {
@@ -53,7 +53,7 @@ const UsefulLinksContent: React.FC = () => {
           <Link
             to="route"
             target="_blank"
-            onClick={(event) => {
+            onClick={event => {
               event.preventDefault();
               window.open("https://docs.litmuschaos.io/docs/chaoshub/");
             }}
@@ -68,15 +68,13 @@ const UsefulLinksContent: React.FC = () => {
           <Link
             to="route"
             target="_blank"
-            onClick={(event) => {
+            onClick={event => {
               event.preventDefault();
-              window.open(
-                "https://docs.litmuschaos.io/docs/getstarted/#install-litmus"
-              );
+              window.open("https://docs.litmuschaos.io/docs/chaos-workflows/");
             }}
           >
             <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
-              Your own private hub?
+              Your own Chaos Workflows
             </PurpleText>
           </Link>
         </li>
@@ -85,7 +83,7 @@ const UsefulLinksContent: React.FC = () => {
           <Link
             to="route"
             target="_blank"
-            onClick={(event) => {
+            onClick={event => {
               event.preventDefault();
               window.open(
                 "https://github.com/litmuschaos/chaos-charts/blob/master/CONTRIBUTING.md"
