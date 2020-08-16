@@ -4,16 +4,11 @@ node_js: stable
 env:
   global:
     - COMMIT=${TRAVIS_COMMIT::6}
-before_install:
-  - npm install -g gatsby-cli
 sudo: required
 services:
   - docker
-before_script:
-  - npm install
-  - npm -v
 script:
-  - npm run build
+  - docker build . -t litmuschaos/www-litmuschaos-io
 after_success:
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then export REPO=litmuschaos/www-litmuschaos-io;
     docker login -u "$DOCKER_USER" -p "$DOCKER_PASS" && docker build -t $REPO:$COMMIT . && docker push $REPO;
