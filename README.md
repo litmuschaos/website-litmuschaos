@@ -1,32 +1,60 @@
-# Litmuschaos
+# LitmusChaos
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flitmuschaos%2Fwebsite-litmuschaos.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Flitmuschaos%2Fwebsite-litmuschaos?ref=badge_shield)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
+# Development Setup
 
-## Development server
+## Prerequisite
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Install Node.js and npm. Follow the instructions [here](https://nodejs.org/en/download/current/).
 
-## Code scaffolding
+## Tech Stack from Frontend
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [x] [Gatsby](https://www.gatsbyjs.com/)
+- [x] [Typescript](https://www.typescriptlang.org/)
+- [x] [Styled Components](https://styled-components.com/)
 
-## Build
+## Start Frontend
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Install it and run:
 
-## Running unit tests
+```bash
+npm i
+npm run dev
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Build it and serve:
 
-## Running end-to-end tests
+```bash
+npm run build
+npm run serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Dev setup: Enable Prettier [OPTIONAL]
 
-## Further help
+1.  Step: Install the Prettier plugin (e.g. the one of Esben Petersen)
+2.  Add the following snippet to your settings in VSCode:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```json
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+       "source.organizeImports": true // optional
+   },
+```
+
+## Usage
+
+Open your browser and go to `http://localhost:8000/` to access the frontend
+
+# Resources
+
+### Our Standup open community meeting link:
+
+Feel free to drop by and participate in our discussion of new open source projects [here](https://zoom.us/j/91358162694)
+
+### Visit our main Litmus repo:
+
+Were are more than welcoming to a new contributor, pay a visit and star it for updates right [here](https://github.com/litmuschaos/litmus)
 
 ## License
 
