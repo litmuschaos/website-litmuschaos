@@ -89,6 +89,7 @@ const GetStartedSteps: React.FC = () => {
             bullet="3"
             title="Run chaos"
             description="Create a chaos engine and attach the experiments you have installed. Run the chaos engine manifest through kubectl to run your chaos experiment."
+            yamlLink="chaosengine.yaml"
           />
         </Wrapper>
       </FadedDiv>

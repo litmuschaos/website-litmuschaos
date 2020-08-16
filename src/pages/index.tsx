@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { PurpleBox } from "../components/image-fetch/PurpleBox";
 import { Layout } from "../components/layout";
 import {

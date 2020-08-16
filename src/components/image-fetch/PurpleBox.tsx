@@ -34,7 +34,7 @@ const PurpleBox: React.FC = () => {
     data.mobile.childImageSharp.fluid,
     {
       ...data.desktop.childImageSharp.fluid,
-      media: `(min-width: 768px)`,
+      media: `(min-width: 780px)`,
     },
   ];
   return (

@@ -11,7 +11,7 @@
     "url": "https://github.com/litmuschaos/website-litmuschaos/issues"
   },
   "scripts": {
-    "dev": "set DEBUG=SSG* && gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
     "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
     "lint:watch": "esw -w . --ext ts --ext tsx --ext js --ext jsx",
@@ -29,6 +29,8 @@
     "@types/redux-logger": "^3.0.8",
     "gatsby": "^2.19.32",
     "gatsby-image": "^2.2.43",
+    "gatsby-plugin-google-analytics": "^2.3.13",
+    "gatsby-plugin-google-tagmanager": "^2.3.11",
     "gatsby-plugin-manifest": "^2.2.44",
     "gatsby-plugin-offline": "^3.0.37",
     "gatsby-plugin-react-axe": "^0.4.0",

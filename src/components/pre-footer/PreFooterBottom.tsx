@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { useTheme } from "../../styles";
 import { Button } from "../button";
+import { CNCFLogo } from "../image-fetch/CNCFLogo";
 import {
   BoundedContainer,
   Center,
@@ -8,7 +10,6 @@ import {
   SectionDark,
 } from "../layout";
 import { Heading, Paragraph, PurpleText } from "../texts";
-import { CNCFLogo } from "./CNCFLogo";
 
 const CNCFText = styled.div`
   position: relative;
@@ -27,7 +28,21 @@ const CNCFText = styled.div`
         `}
 `;
 
+const CNCFLogoDiv = styled.div`
+  background: white;
+  box-shadow: 0px 8.55652px 24.9565px rgba(0, 0, 0, 0.06);
+  border-radius: 0.625rem;
+  padding: 1.375rem 1.875rem;
+  margin-bottom: 2rem;
+
+  img {
+    margin: 0 auto;
+    width: ${props => (props.theme.screens.sm ? "90%" : "60%")};
+  }
+`;
+
 const PreFooterBottom: React.FC = () => {
+  const { lg } = useTheme().screens;
   return (
     <SectionDark>
       <ResponsiveRow breakpoint="lg">
@@ -54,7 +69,13 @@ const PreFooterBottom: React.FC = () => {
         </BoundedContainer>
 
         <BoundedContainer breakpoint="lg" width="50%" margin="0">
-          <CNCFLogo />
+          {lg ? (
+            <CNCFLogoDiv>
+              <img src="/svg/cncf-color.svg" alt="CNCF Logo" />
+            </CNCFLogoDiv>
+          ) : (
+            <CNCFLogo />
+          )}
           <CNCFText>
             <Paragraph textAlign="center">
               We are a{" "}

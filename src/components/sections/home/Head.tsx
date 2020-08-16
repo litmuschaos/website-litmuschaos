@@ -1,12 +1,17 @@
 import React from "react";
-import { useTheme } from "styled-components";
+import styled, { useTheme } from "styled-components";
 // import { useTheme } from "../styles";
 import { Button, WhiteOnGreenButton } from "../../button";
 import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
-import { Heading, Paragraph } from "../../texts";
+import { Paragraph } from "../../texts";
+
+const MainHeading = styled.h1`
+  margin: 1rem 0;
+  line-height: 130%;
+  font-size: ${props => (props.theme.screens.md ? "2rem" : "2.6rem")};
+`;
 
 // Components
-
 const HeadText: React.FC = () => {
   const { sm, md } = useTheme().screens;
 
@@ -14,12 +19,12 @@ const HeadText: React.FC = () => {
 
   const HeadContent = (
     <>
-      <WhiteOnGreenButton>OPEN-SOURCE PLATFORM</WhiteOnGreenButton>
-      <Heading style={{ margin: "1rem 0" }}>
+      <WhiteOnGreenButton>CLOUD-NATIVE</WhiteOnGreenButton>
+      <MainHeading>
         Chaos Engineering
         <br />
         for your Kubernetes
-      </Heading>
+      </MainHeading>
       <Paragraph>
         Kubernetes developers and SREs use Litmus to create, manage and monitor
         chaos workflows. Resilience of your Kubernetes starts with finding a

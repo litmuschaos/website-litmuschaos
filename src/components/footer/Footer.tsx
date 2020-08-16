@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
   const { md } = useTheme().screens;
 
   return (
-    <SectionLight>
+    <SectionLight style={{ padding: md ? "3rem 2rem" : "5rem 10rem" }}>
       {md ? (
         <>
           <Logo />
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
       <div>
         <hr style={{ margin: "1rem auto" }} />
         <Paragraph style={{ textAlign: "center" }}>
-          Found by{" "}
+          Founded by{" "}
           <a
             rel="noopener noreferrer"
             target="_blank"
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
               MayaData
             </PurpleText>
           </a>
-          &nbsp; &#10084;
+          &nbsp;❤️
         </Paragraph>
       </div>
     </SectionLight>

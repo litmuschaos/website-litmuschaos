@@ -64,7 +64,7 @@ const FeedBack: React.FC = () => {
         <UserQuote
           quote="Litmus is one of the most promising open source chaos engineering frameworks that takes into account proper chaos engineering principles while providing autonomy and  extensibility to the users."
           name="Andreas Krivas"
-          designation="Chief Architect at Telus Digital"
+          designation="Lead Cloud-Native Engineer at Container-Solutions"
         />
       </ResponsiveRow>
     </SectionLight>
