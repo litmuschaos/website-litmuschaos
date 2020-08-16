@@ -6,12 +6,18 @@ import { ResponsiveRow } from '../layout'
 import { Button } from "../button";
 
 const Mayadata: React.FC = () => {
-  const { sm } = useTheme().screens
+  const { sm,xl } = useTheme().screens
   if(sm )
   {
     return(
     <img className="MayadataLogo" width="278px" src="/svg/Mayadata.svg" alt="Mayadata Logo" />
    )
+  }
+  else if(xl)
+  {
+    return(
+      <img className="MayadataLogo" width="278px" src="/svg/Mayadata.svg" alt="Mayadata Logo" />
+     )
   }
   else
   {
@@ -199,9 +205,9 @@ const AdopterColumn: React.FC = () => {
 
 const JoinAsAdopter: React.FC = () => {
     
-    const { sm,lg} = useTheme().screens
+    const { sm,lg,xl} = useTheme().screens
     const flexibleButton = (
-      <Button screen={sm ? "small" : "large"} style={{ marginTop :"-4rem" , fontSize : "0.875rem"}} gradientColor="green">
+      <Button screen={sm ? "small" : "large"} style={{ marginTop :"-4rem", fontSize : "0.875rem"}} gradientColor="green">
         List Yourself As an Adopter
       </Button>
     );
@@ -213,6 +219,17 @@ const JoinAsAdopter: React.FC = () => {
         </div>
     } 
     else if(lg)
+    {
+      return (
+        <div style={{ margin:'1rem', maxWidth : "25rem"}}>
+          <h5 className="AdopterHeading">Add yourself to the adopters <br/>
+          <span style={{color : "#6F6F6F", fontSize: "1rem", fontWeight : "normal"}}>and share your chaos engineering story to the community.</span></h5>
+          <button style={{width : "100%", height: "3.75rem", borderRadius: "0.1875rem", border:"none",color: "white", backgroundImage : "linear-gradient(135.47deg, #109C68 1.77%, #25C087)"}} >
+            List yourself as adopter</button>
+        </div>
+      )
+    }
+    if(xl)
     {
       return (
         <div style={{ margin:'1rem', maxWidth : "25rem"}}>
