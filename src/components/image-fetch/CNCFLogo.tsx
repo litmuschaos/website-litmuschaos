@@ -14,7 +14,7 @@ const CNCFLogo: React.FC = () => {
     query {
       mobile: file(relativePath: { eq: "CNCFMobile.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300, quality: 100) {
+          fluid(maxWidth: 250, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
