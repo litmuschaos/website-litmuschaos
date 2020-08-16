@@ -9,7 +9,7 @@ import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
 const FeaturesDiv = styled.div`
   position: relative;
   overflow: hidden;
-  padding-top: ${props => (props.theme.xxl ? "2rem" : "0")};
+  padding-top: ${(props) => (props.theme.xxl ? "2rem" : "0")};
   padding-bottom: 5rem;
 `;
 
@@ -34,7 +34,7 @@ const Features: React.FC = () => {
               color={purple}
               imgSrc="/svg/experiment.svg"
               title="Easy to write chaos experiments"
-              description="SDK is available in GO, Python and Ansible. A basic experiment structure is created quickly using SDK and developers and SREs just need to add the chaos logic into to make a new experiment. Your chaos logic is turned into a well orchestrated chaos experiment quickly and easily."
+              description="SDK is available in GO, Python and Ansible. A basic chaos experiment structure is created quickly using SDK. Developers and SREs just need to add the chaos logic into to make a new experiment. Your chaos logic is turned into a well orchestrated chaos experiment quickly and easily."
             />
           </BoundedContainer>
         </ResponsiveRow>
@@ -49,7 +49,7 @@ const Features: React.FC = () => {
               color={darkGreen}
               imgSrc="/svg/declarative-chaos2.svg"
               title="Declarative chaos management"
-              description="Chaos management is 100% declarative. Done cloud-native way. Litmus provides CRDs and a chaos operator to manage the life cycle of chaos. This capability also helps in scaling the chaos to chaos workflows."
+              description="Chaos management is 100% declarative. Done the cloud-native way. Litmus provides CRDs and a chaos operator to manage the life cycle of chaos. This capability also helps in scaling the chaos to chaos workflows."
             />
           </BoundedContainer>
 
@@ -68,7 +68,7 @@ const Features: React.FC = () => {
               color={yellow}
               imgSrc="/svg/application-specific.svg"
               title="Application specific experiments"
-              description="Litmus provides not only the ability to introduce chaos into infrastructure and Kubernetes resources but also into application itself.  These application specific experiments help in identifyin the weaknesses related to faults related to applications that run on Kubernetes."
+              description="Litmus provides not only the ability to introduce chaos into infrastructure and Kubernetes resources but also into application itself. These application specific experiments help in identifyin the weaknesses related to the application faults."
             />
           </BoundedContainer>
         </ResponsiveRow>
