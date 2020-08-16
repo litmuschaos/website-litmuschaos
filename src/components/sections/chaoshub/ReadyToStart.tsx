@@ -44,28 +44,30 @@ const ReadyToStart: React.FC = () => {
     "You have many ready to use generic chaos experiments. Choose a simple one like a pod-delete chaos and start your learning on chaos.";
   return (
     <SectionLight style={{ textAlign: "center" }}>
-      <YellowTestTube src="/svg/testTubeYellow.svg" alt="Yellow Test Tube" />
+      <div>
+        <YellowTestTube src="/svg/testTubeYellow.svg" alt="Yellow Test Tube" />
 
-      <Heading textAlign="center" style={{ margin: "0 auto" }}>
-        Ready to start using ChaosHub?
-      </Heading>
+        <Heading textAlign="center" style={{ margin: "0 auto" }}>
+          Ready to start using ChaosHub?
+        </Heading>
 
-      <BlueTestTube src="/svg/testTubeBlue.svg" alt="Blue Test Tube" />
-      <GreenTestTube src="/svg/testTubeGreen.svg" alt="Green Test Tube" />
+        <BlueTestTube src="/svg/testTubeBlue.svg" alt="Blue Test Tube" />
+        <GreenTestTube src="/svg/testTubeGreen.svg" alt="Green Test Tube" />
 
-      <CommunityText style={{ margin: "2rem auto" }}>
-        <Paragraph textAlign="center">{paragraphText}</Paragraph>
-      </CommunityText>
+        <CommunityText style={{ margin: "2rem auto" }}>
+          <Paragraph textAlign="center">{paragraphText}</Paragraph>
+        </CommunityText>
 
-      <a
-        rel="noopener noreferrer"
-        target="_blank"
-        href="https://hub.litmuschaos.io/"
-      >
-        <Button style={{ margin: "3rem 0" }} gradientColor="purple">
-          Go to ChaosHub
-        </Button>
-      </a>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://hub.litmuschaos.io/"
+        >
+          <Button style={{ margin: "3rem 0" }} gradientColor="purple">
+            Go to ChaosHub
+          </Button>
+        </a>
+      </div>
     </SectionLight>
   );
 };

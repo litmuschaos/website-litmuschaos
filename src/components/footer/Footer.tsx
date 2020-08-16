@@ -32,61 +32,63 @@ const Footer: React.FC = () => {
 
   return (
     <SectionLight style={{ padding: md ? "3rem 2rem" : "5rem 10rem" }}>
-      {md ? (
-        <>
-          <Logo />
-          <Column>
-            <Row>
-              <Links data={sitemap} showImage={false} internalLink={true} />
-              <Links data={resources} showImage={true} internalLink={false} />
-            </Row>
-            <Row>
-              <Links
-                data={top_adopters}
-                showImage={false}
-                internalLink={false}
-              />
-              <Links data={community} showImage={true} internalLink={false} />
-            </Row>
-          </Column>
-          <Copyright />
-        </>
-      ) : (
-        <Row>
-          <BoundedContainer
-            breakpoint="sm"
-            width="30%"
-            margin="-1.2rem 1rem 0 0"
-          >
-            <Logo />
-            <Copyright />
-          </BoundedContainer>
-          <Links data={sitemap} showImage={false} internalLink={true} />
-          <Links data={resources} showImage={true} internalLink={false} />
-          <Links data={top_adopters} showImage={false} internalLink={false} />
-          <Links data={community} showImage={true} internalLink={false} />
-        </Row>
-      )}
       <div>
-        <hr style={{ margin: "1rem auto" }} />
-        <Paragraph style={{ textAlign: "center" }}>
-          Founded by{" "}
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://mayadata.io/"
-          >
-            <PurpleText
-              fontSize="paragraph"
-              fontWeight={400}
-              underline={true}
-              style={{ display: "inline" }}
+        {md ? (
+          <>
+            <Logo />
+            <Column>
+              <Row>
+                <Links data={sitemap} showImage={false} internalLink={true} />
+                <Links data={resources} showImage={true} internalLink={false} />
+              </Row>
+              <Row>
+                <Links
+                  data={top_adopters}
+                  showImage={false}
+                  internalLink={false}
+                />
+                <Links data={community} showImage={true} internalLink={false} />
+              </Row>
+            </Column>
+            <Copyright />
+          </>
+        ) : (
+          <Row>
+            <BoundedContainer
+              breakpoint="sm"
+              width="30%"
+              margin="-1.2rem 1rem 0 0"
             >
-              MayaData
-            </PurpleText>
-          </a>
-          &nbsp;❤️
-        </Paragraph>
+              <Logo />
+              <Copyright />
+            </BoundedContainer>
+            <Links data={sitemap} showImage={false} internalLink={true} />
+            <Links data={resources} showImage={true} internalLink={false} />
+            <Links data={top_adopters} showImage={false} internalLink={false} />
+            <Links data={community} showImage={true} internalLink={false} />
+          </Row>
+        )}
+        <div>
+          <hr style={{ margin: "1rem auto" }} />
+          <Paragraph style={{ textAlign: "center" }}>
+            Founded by{" "}
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://mayadata.io/"
+            >
+              <PurpleText
+                fontSize="paragraph"
+                fontWeight={400}
+                underline={true}
+                style={{ display: "inline" }}
+              >
+                MayaData
+              </PurpleText>
+            </a>
+            &nbsp;❤️
+          </Paragraph>
+        </div>
       </div>
     </SectionLight>
   );
