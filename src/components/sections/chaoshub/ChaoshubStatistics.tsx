@@ -1,39 +1,28 @@
 import React from "react";
-import styled from "styled-components";
 import { useTheme } from "../../../styles";
-import { Button } from "../../button";
 import { StatCard } from "../../info-section";
 import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
-import { Heading, SubText } from "../../texts";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../redux/reducers";
+import { Heading } from "../../texts";
 
-const WhiteDot = styled.div`
-  display: inline-block;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  margin-right: 0.438rem;
-  background-color: white;
-`;
+// const WhiteDot = styled.div`
+//   display: inline-block;
+//   width: 0.75rem;
+//   height: 0.75rem;
+//   border-radius: 50%;
+//   margin-right: 0.438rem;
+//   background-color: white;
+// `;
 
 // Component
 const ChaoshubStatistics: React.FC = () => {
   const { purple } = useTheme().colors;
 
-  let communityData: any = {};
-
-  try {
-    communityData = useSelector((state: RootState) => state.communityData);
-  } catch (err) {
-    console.log(err);
-  }
-
   return (
     <SectionDark>
       <ResponsiveRow breakpoint="xl">
         <BoundedContainer breakpoint="xl" width="50%" margin="0">
-          <Button
+          {/* TODO: LIVE Button  */}
+          {/* <Button
             style={{
               width: "fit-content",
               minWidth: "7.063rem",
@@ -51,10 +40,10 @@ const ChaoshubStatistics: React.FC = () => {
             >
               LIVE
             </SubText>
-          </Button>
+          </Button> */}
 
           <Heading style={{ margin: "1rem 0" }}>
-            Chaoshub
+            ChaosHub
             <br />
             Statistics
           </Heading>
@@ -64,27 +53,16 @@ const ChaoshubStatistics: React.FC = () => {
           <ResponsiveRow breakpoint="xl">
             <StatCard
               color={purple}
-              imgSrc="./svg/number-of-experiments.svg"
+              imgSrc="/svg/number-of-experiments.svg"
               description="Number of Experiments run"
-              stats={
-                communityData.google
-                  ? parseInt(communityData.google.totalRuns, 10).toString()
-                  : "0"
-              }
+              stats="100K+"
             />
 
             <StatCard
               color={purple}
-              imgSrc="./svg/downloads.svg"
+              imgSrc="/svg/downloads.svg"
               description="Number of Litmus Installations"
-              stats={
-                communityData.google
-                  ? parseInt(
-                      communityData.google.operatorInstalls,
-                      10
-                    ).toString()
-                  : "0"
-              }
+              stats="15K+"
             />
           </ResponsiveRow>
         </BoundedContainer>
