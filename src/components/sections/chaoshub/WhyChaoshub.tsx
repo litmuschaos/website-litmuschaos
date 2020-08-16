@@ -107,11 +107,13 @@ const WhyChaoshubContent: React.FC = () => {
       <br />
       <Divider />
       <Row>
-        <GreenStats style={{ margin: "1rem 1rem" }}>&#60;90%</GreenStats>
+        <GreenStats style={{ margin: "1rem 1rem" }}>&gt;90%</GreenStats>
         <Paragraph style={{ margin: "1rem 0" }}>
-          of the resilience of your service depends on fixing or tuning the
-          weaknesses in the configuration or code of the rest of micro services
-          including Kubernetes.
+          The resilience of your service depends not just on your application
+          but on the stability or implementation of other cloud-native
+          applications or Kubernetes platform. More than 90% of the times your
+          service can get affected because some other application is not
+          resilient.
         </Paragraph>
       </Row>
       <Divider />

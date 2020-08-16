@@ -45,14 +45,14 @@ const ReadyToStart: React.FC = () => {
     "You have many ready to use generic chaos experiments. Choose a simple one like a pod-delete chaos and start your learning on chaos.";
   return (
     <SectionLight style={{ textAlign: "center" }}>
-      <YellowTestTube src="./svg/testTubeYellow.svg" alt="Yellow Test Tube" />
+      <YellowTestTube src="/svg/testTubeYellow.svg" alt="Yellow Test Tube" />
 
       <Heading textAlign="center" style={{ margin: "0 auto" }}>
         Ready to start using ChaosHub?
       </Heading>
 
-      <BlueTestTube src="./svg/testTubeBlue.svg" alt="Blue Test Tube" />
-      <GreenTestTube src="./svg/testTubeGreen.svg" alt="Green Test Tube" />
+      <BlueTestTube src="/svg/testTubeBlue.svg" alt="Blue Test Tube" />
+      <GreenTestTube src="/svg/testTubeGreen.svg" alt="Green Test Tube" />
 
       <CommunityText style={{ margin: "2rem auto" }}>
         <Paragraph textAlign="center">{paragraphText}</Paragraph>

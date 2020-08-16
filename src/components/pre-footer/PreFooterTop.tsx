@@ -34,7 +34,7 @@ const PreFooterTop: React.FC = () => {
             target="_blank"
             href="https://mayadata.io/"
           >
-            <MayadataImage src="./svg/mayadata-logo.svg" alt="Mayadata Logo" />
+            <MayadataImage src="/svg/mayadata-logo.svg" alt="Mayadata Logo" />
           </a>
         </HorizontalWrap>
 

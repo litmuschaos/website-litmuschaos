@@ -28,7 +28,7 @@ const GitHubStars = styled.div`
   font-size: ${props => props.theme.fontSize.small.lg};
   padding: 0 0.5rem;
   margin-left: ${props => (props.theme.screens.md ? "0.5rem" : "1.5rem")};
-  margin-top: 0.4rem;
+  margin-top: ${props => (props.theme.screens.md ? 0 : "0.4rem")};
   border: 1px solid #000000;
   border-radius: 0.5rem;
   display: flex;

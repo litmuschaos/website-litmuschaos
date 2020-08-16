@@ -53,14 +53,14 @@ const ChaoshubStatistics: React.FC = () => {
           <ResponsiveRow breakpoint="xl">
             <StatCard
               color={purple}
-              imgSrc="./svg/number-of-experiments.svg"
+              imgSrc="/svg/number-of-experiments.svg"
               description="Number of Experiments run"
               stats="100K+"
             />
 
             <StatCard
               color={purple}
-              imgSrc="./svg/downloads.svg"
+              imgSrc="/svg/downloads.svg"
               description="Number of Litmus Installations"
               stats="15K+"
             />
