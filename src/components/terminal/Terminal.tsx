@@ -19,7 +19,14 @@ const Wrapper = styled.div`
 `;
 
 const TerminalFrame = styled.div`
-  max-width: 35rem;
+  width: ${props =>
+    props.theme.screens.md
+      ? "auto"
+      : props.theme.screens.mmd
+      ? "20rem"
+      : props.theme.screens.xl
+      ? "25rem"
+      : "35rem"};
   height: fit-content;
   border-radius: 0.5rem;
   box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.08);

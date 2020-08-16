@@ -89,7 +89,7 @@ const GetStartedSteps: React.FC = () => {
             bullet="3"
             title="Run chaos"
             description="Create a chaos engine and attach the experiments you have installed. Run the chaos engine manifest through kubectl to run your chaos experiment."
-            yamlLink="kubectl apply -f chaosengine.yaml"
+            yamlLink="chaosengine.yaml"
           />
         </Wrapper>
       </FadedDiv>
@@ -106,13 +106,15 @@ const GetStarted: React.FC = () => {
   return (
     <YamlContext.Provider value={initialValue}>
       <SectionDark>
-        <Heading textAlign="center">Get started with Litmus</Heading>
-        <ResponsiveRow breakpoint="md" alignItems="start">
-          <BoundedContainer breakpoint="md" width="50%" margin="0">
-            <Terminal />
-          </BoundedContainer>
-          <GetStartedSteps />
-        </ResponsiveRow>
+        <div>
+          <Heading textAlign="center">Get started with Litmus</Heading>
+          <ResponsiveRow breakpoint="md" alignItems="start">
+            <BoundedContainer breakpoint="md" width="50%" margin="0">
+              <Terminal />
+            </BoundedContainer>
+            <GetStartedSteps />
+          </ResponsiveRow>
+        </div>
       </SectionDark>
     </YamlContext.Provider>
   );

@@ -94,30 +94,32 @@ const Knob: React.FC<IKnob> = ({ text }) => {
 const QuickStart: React.FC = () => {
   return (
     <SectionLight>
-      <ResponsiveRow breakpoint="md">
-        <BoundedContainer breakpoint="md" width="35%" margin="0 3rem 0 0">
-          <ColumnCenter>
-            <Heading>Start in minutes not in days</Heading>
-            <Paragraph>
-              A chaos workflow can be scheduled within minutes from scratch with
-              almost no learning curve. Th initial start of your chaos
-              engineering journey is straight forward.
-            </Paragraph>
-          </ColumnCenter>
-        </BoundedContainer>
-        <VideoFrame
-          width="40rem"
-          src="https://www.youtube.com/embed/W5hmNbaYPfM"
-        />
-      </ResponsiveRow>
-      <FadedDiv>
-        <Knob text="Install Litmus through helm chart" />
-        <Knob text="Choose a workflow template" />
-        <Knob text="Tune chaos experiments" />
-        <Knob text="Schedule the workflow" />
-        <Knob text="Find weaknesses if any" />
-        <Knob text="Observe chaos analytics" />
-      </FadedDiv>
+      <div>
+        <ResponsiveRow breakpoint="md">
+          <BoundedContainer breakpoint="md" width="35%" margin="0 3rem 0 0">
+            <ColumnCenter>
+              <Heading>Start in minutes not in days</Heading>
+              <Paragraph>
+                A chaos workflow can be scheduled within minutes from scratch
+                with almost no learning curve. Th initial start of your chaos
+                engineering journey is straight forward.
+              </Paragraph>
+            </ColumnCenter>
+          </BoundedContainer>
+          <VideoFrame
+            width="40rem"
+            src="https://www.youtube.com/embed/W5hmNbaYPfM"
+          />
+        </ResponsiveRow>
+        <FadedDiv>
+          <Knob text="Install Litmus through helm chart" />
+          <Knob text="Choose a workflow template" />
+          <Knob text="Tune chaos experiments" />
+          <Knob text="Schedule the workflow" />
+          <Knob text="Find weaknesses if any" />
+          <Knob text="Observe chaos analytics" />
+        </FadedDiv>
+      </div>
     </SectionLight>
   );
 };

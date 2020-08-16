@@ -10,6 +10,8 @@ import Burger from "./Burger";
 
 const NavBar = styled.nav`
   width: ${props => (props.theme.screens.xl ? "95%" : "100%")};
+  max-width: 132rem;
+  margin: 0 auto;
   padding-top: 1rem;
   display: flex;
   justify-content: space-around;
