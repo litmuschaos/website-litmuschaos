@@ -13,8 +13,12 @@ import useActions from "../redux/actions/index";
 import * as AnalyticsActions from "../redux/actions/analytics";
 
 const App = () => {
-  const analyticsAction = useActions(AnalyticsActions);
-  analyticsAction.loadCommunityAnalytics();
+  try {
+    const analyticsAction = useActions(AnalyticsActions);
+    analyticsAction.loadCommunityAnalytics();
+  } catch (err) {
+    console.log(err);
+  }
 
   return (
     <Layout>

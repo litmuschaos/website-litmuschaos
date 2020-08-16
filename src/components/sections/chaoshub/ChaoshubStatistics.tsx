@@ -21,7 +21,13 @@ const WhiteDot = styled.div`
 const ChaoshubStatistics: React.FC = () => {
   const { purple } = useTheme().colors;
 
-  const communityData = useSelector((state: RootState) => state.communityData);
+  let communityData: any = {};
+
+  try {
+    communityData = useSelector((state: RootState) => state.communityData);
+  } catch (err) {
+    console.log(err);
+  }
 
   return (
     <SectionDark>
@@ -61,7 +67,7 @@ const ChaoshubStatistics: React.FC = () => {
               imgSrc="./svg/number-of-experiments.svg"
               description="Number of Experiments run"
               stats={
-                communityData.google.totalRuns
+                communityData.google
                   ? parseInt(communityData.google.totalRuns, 10).toString()
                   : "0"
               }
@@ -72,7 +78,7 @@ const ChaoshubStatistics: React.FC = () => {
               imgSrc="./svg/downloads.svg"
               description="Number of Litmus Installations"
               stats={
-                communityData.google.operatorInstalls
+                communityData.google
                   ? parseInt(
                       communityData.google.operatorInstalls,
                       10
