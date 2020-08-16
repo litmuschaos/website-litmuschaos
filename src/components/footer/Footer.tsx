@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
       <div>
         <hr style={{ margin: "1rem auto" }} />
         <Paragraph style={{ textAlign: "center" }}>
-          Found by{" "}
+          Founded by{" "}
           <a
             rel="noopener noreferrer"
             target="_blank"
