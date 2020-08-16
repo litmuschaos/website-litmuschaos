@@ -13,6 +13,7 @@ export default {
     xl: 1280,
     xxl: 1350,
     xxxl: 1600,
+    xxxxl: 1800,
   },
   fontSize: {
     heading: { lg: "2.2rem", md: "1.75rem" },
