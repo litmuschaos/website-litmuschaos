@@ -1,8 +1,8 @@
 const sitemap = {
-  title: "Site map",
+  title: "Sitemap",
   links: [
     {
-      name: "Why litmus?",
+      name: "Why Litmus?",
       url: "/whylitmus",
     },
     {
@@ -54,7 +54,7 @@ const top_adopters = {
         "https://github.com/litmuschaos/litmus/blob/master/adopters/AppAnywhere.md",
     },
     {
-      name: "Open EBS",
+      name: "OpenEBS",
       url:
         "https://github.com/litmuschaos/litmus/blob/master/adopters/openebs.md",
     },
@@ -67,10 +67,10 @@ const top_adopters = {
 };
 
 const community = {
-  title: "Join the community",
+  title: "Join the Community",
   links: [
     {
-      name: "Github",
+      name: "GitHub",
       image: "/svg/Github.svg",
       url: "https://github.com/litmuschaos/litmus",
     },
@@ -85,7 +85,7 @@ const community = {
       url: "https://twitter.com/LitmusChaos",
     },
     {
-      name: "Dev",
+      name: "Blog",
       image: "/svg/Dev.svg",
       url: "https://dev.to/t/litmuschaos/latest",
     },

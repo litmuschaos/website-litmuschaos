@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from "../../styles";
 import { BoundedContainer, Column, Row, SectionLight } from "../layout";
-import { Paragraph } from "../texts";
+import { Paragraph, PurpleText } from "../texts";
 import { community, resources, sitemap, top_adopters } from "./data";
 import { Links } from "./FooterLinks";
 
@@ -70,7 +70,22 @@ const Footer: React.FC = () => {
       <div>
         <hr style={{ margin: "1rem auto" }} />
         <Paragraph style={{ textAlign: "center" }}>
-          Originally created by MayaData
+          Found by{" "}
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://mayadata.io/"
+          >
+            <PurpleText
+              fontSize="paragraph"
+              fontWeight={400}
+              underline={true}
+              style={{ display: "inline" }}
+            >
+              MayaData
+            </PurpleText>
+          </a>
+          &nbsp; &#10084;
         </Paragraph>
       </div>
     </SectionLight>

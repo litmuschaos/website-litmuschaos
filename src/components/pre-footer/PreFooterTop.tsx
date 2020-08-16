@@ -13,7 +13,7 @@ const Image = styled.img`
 const HorizontalWrap = styled.div`
   min-width: 25%;
   max-width: 100%;
-  margin: ${props => (props.theme.screens.md ? " 2rem 0" : "0 1rem")};
+  margin: ${(props) => (props.theme.screens.md ? " 2rem 0" : "0 1rem")};
 `;
 
 const PreFooterTop: React.FC = () => {
@@ -21,14 +21,16 @@ const PreFooterTop: React.FC = () => {
     <SectionDark>
       <ResponsiveRow breakpoint="md" justifyContent="space-evenly">
         <HorizontalWrap>
-          <SubHeading style={{ margin: "0.5rem 0" }}>Created by</SubHeading>
+          <SubHeading style={{ margin: "0.5rem 0" }}>
+            Originally created by
+          </SubHeading>
           <img src="./svg/mayadata-logo.svg" alt="Mayadata Logo" />
         </HorizontalWrap>
 
         <HorizontalWrap>
           <SubHeading style={{ margin: "0.5rem 0" }}>Adopted by</SubHeading>
           <Row wrap="wrap">
-            {top_adopters.links.map(link => (
+            {top_adopters.links.map((link) => (
               <Image
                 key={link.name}
                 src={link.image}
@@ -45,11 +47,11 @@ const PreFooterTop: React.FC = () => {
           <Paragraph>
             and share your chaos engeneering story to the community
           </Paragraph>
-          <br />'
+          <br />
           <Link
             to="route"
             target="_blank"
-            onClick={event => {
+            onClick={(event) => {
               event.preventDefault();
               window.open(
                 "https://github.com/litmuschaos/litmus/blob/master/ADOPTERS.md"
