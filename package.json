@@ -24,6 +24,9 @@
     "update": "ncu -u"
   },
   "dependencies": {
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/redux-logger": "^3.0.8",
     "gatsby": "^2.19.32",
     "gatsby-image": "^2.2.43",
     "gatsby-plugin-google-analytics": "^2.3.13",
@@ -38,10 +41,16 @@
     "gatsby-plugin-typescript": "^2.2.2",
     "gatsby-source-filesystem": "^2.1.50",
     "gatsby-transformer-sharp": "^2.3.17",
+    "localforage": "^1.9.0",
     "modern-css-reset": "^1.1.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
     "styled-components": "^5.0.1",
     "use-media": "^1.4.0"
   },

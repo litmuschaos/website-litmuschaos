@@ -9,8 +9,17 @@ import {
   QuickStart,
 } from "../components/sections/home";
 import { SEO } from "../components/seo";
+import useActions from "../redux/actions/index";
+import * as AnalyticsActions from "../redux/actions/analytics";
 
 const App = () => {
+  try {
+    const analyticsAction = useActions(AnalyticsActions);
+    analyticsAction.loadCommunityAnalytics();
+  } catch (err) {
+    console.log(err);
+  }
+
   return (
     <Layout>
       <SEO />
