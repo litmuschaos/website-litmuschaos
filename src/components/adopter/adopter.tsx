@@ -143,7 +143,7 @@ const Zerebrium: React.FC = () => {
 };
 
 const CreatedByColumn: React.FC = () => {
-  const { sm,lg } = useTheme().screens
+  const { sm,lg,xl } = useTheme().screens
   if (sm) {
     return <div style={{ margin: '0 1rem' }}>
       <h5 className="AdopterHeading">Created By</h5>
@@ -151,6 +151,13 @@ const CreatedByColumn: React.FC = () => {
     </div>
   } 
   else if(lg)
+  {
+    return <div style={{ margin: '1rem' }}>
+      <h5 className="AdopterHeading">Created By</h5>
+            <Mayadata />
+    </div>
+  }
+  else if(xl)
   {
     return <div style={{ margin: '1rem' }}>
       <h5 className="AdopterHeading">Created By</h5>
@@ -170,7 +177,7 @@ const CreatedByColumn: React.FC = () => {
 
 
 const AdopterColumn: React.FC = () => {
-  const { sm,lg } = useTheme().screens
+  const { sm,lg,xl } = useTheme().screens
   if (sm) {
     return <div style={{ margin: '0 auto 0 1rem' , width :"80vw" } }>
       <h5 className="AdopterHeading">Adopted By</h5>
@@ -181,6 +188,16 @@ const AdopterColumn: React.FC = () => {
     </div>
   } 
   else if(lg)
+  {
+    return <div style={{ margin: '1rem' , width :"24rem" } }>
+    <h5 className="AdopterHeading">Adopted By</h5>
+          <div className="AdopterLogos">
+             
+            <Wipro /><OpenEBS /><Intuit /><Zerebrium />
+          </div>  
+  </div>
+  }
+  else if(xl)
   {
     return <div style={{ margin: '1rem' , width :"24rem" } }>
     <h5 className="AdopterHeading">Adopted By</h5>
@@ -232,7 +249,7 @@ const JoinAsAdopter: React.FC = () => {
     if(xl)
     {
       return (
-        <div style={{ margin:'1rem', maxWidth : "25rem"}}>
+        <div style={{ margin:'1rem', maxWidth : "20.625rem"}}>
           <h5 className="AdopterHeading">Add yourself to the adopters <br/>
           <span style={{color : "#6F6F6F", fontSize: "1rem", fontWeight : "normal"}}>and share your chaos engineering story to the community.</span></h5>
           <button style={{width : "100%", height: "3.75rem", borderRadius: "0.1875rem", border:"none",color: "white", backgroundImage : "linear-gradient(135.47deg, #109C68 1.77%, #25C087)"}} >
