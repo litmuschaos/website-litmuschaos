@@ -27,7 +27,7 @@ const GitHubStars = styled.div`
   height: 2rem;
   font-size: ${props => props.theme.fontSize.small.lg};
   padding: 0 0.5rem;
-  margin-left: 1.5rem;
+  margin-left: ${props => (props.theme.screens.md ? "0.5rem" : "1.5rem")};
   margin-top: 0.4rem;
   border: 1px solid #000000;
   border-radius: 0.5rem;
@@ -59,16 +59,27 @@ const Ul = styled.ul`
   }
 `;
 
-const GithubWrapper = styled.div`
-  flex-grow: 1;
-  align-self: flex-end;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 0.5rem;
-`;
+const NavLinks: React.FC = () => (
+  <LogoDiv>
+    <Link to="/">
+      <Center>
+        <img src="/svg/litmus-logo-purple.svg" width="128" alt="litmus logo" />
+      </Center>
+    </Link>
 
-const Logo: React.FC = () => (
-  <img src="/svg/litmus-logo-purple.svg" width="128" alt="litmus logo" />
+    <a
+      rel="noopener noreferrer"
+      target="_blank"
+      href="https://github.com/litmuschaos/litmus"
+    >
+      <Center>
+        <GitHubStars>
+          <GithubIcon />
+          <SmallText style={{ margin: "0.3rem" }}>Star</SmallText>
+        </GitHubStars>
+      </Center>
+    </a>
+  </LogoDiv>
 );
 
 const Nav: React.FC = () => {
@@ -76,48 +87,12 @@ const Nav: React.FC = () => {
 
   return md ? (
     <NavBar>
-      <Link to="/">
-        <Center style={{ marginLeft: "1rem" }}>
-          <Logo />
-        </Center>
-      </Link>
-
-      <GithubWrapper>
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://github.com/litmuschaos/litmus"
-        >
-          <GitHubStars>
-            <GithubIcon />
-            <SmallText style={{ margin: "0.4rem" }}>Star</SmallText>
-          </GitHubStars>
-        </a>
-      </GithubWrapper>
+      <NavLinks />
       <Burger />
     </NavBar>
   ) : (
     <NavBar>
-      <LogoDiv>
-        <Link to="/">
-          <Center>
-            <Logo />
-          </Center>
-        </Link>
-
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://github.com/litmuschaos/litmus"
-        >
-          <Center>
-            <GitHubStars>
-              <GithubIcon />
-              <SmallText style={{ margin: "0.3rem" }}>Star</SmallText>
-            </GitHubStars>
-          </Center>
-        </a>
-      </LogoDiv>
+      <NavLinks />
 
       <Ul>
         <li>
