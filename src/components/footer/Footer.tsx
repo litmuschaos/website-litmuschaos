@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
   const { md } = useTheme().screens;
 
   return (
-    <SectionLight>
+    <SectionLight style={{ padding: "5rem 10rem" }}>
       {md ? (
         <>
           <Logo />
