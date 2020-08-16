@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { Button } from "../button";
+import { CNCFLogo } from "../image-fetch/CNCFLogo";
 import {
   BoundedContainer,
   Center,
@@ -8,7 +9,6 @@ import {
   SectionDark,
 } from "../layout";
 import { Heading, Paragraph, PurpleText } from "../texts";
-import { CNCFLogo } from "./CNCFLogo";
 
 const CNCFText = styled.div`
   position: relative;

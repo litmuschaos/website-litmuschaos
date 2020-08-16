@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
               MayaData
             </PurpleText>
           </a>
-          &nbsp; &#10084;
+          &nbsp;❤️
         </Paragraph>
       </div>
     </SectionLight>
