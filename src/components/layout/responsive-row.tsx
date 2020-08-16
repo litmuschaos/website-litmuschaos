@@ -12,7 +12,6 @@ const PanelContainer = styled.div`
         `
       : css`
           flex-direction: row;
-          align-items: center;
           justify-content: center;
         `};
 `;

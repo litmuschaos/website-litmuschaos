@@ -11,11 +11,8 @@ interface IPanelContainer {
 }
 
 const PanelContainer = styled.div<IPanelContainer>`
+  margin: 1rem;
   width: ${props => (props.theme.screens.sm ? "100%" : props.width)};
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-flow:row wrap;
 `;
 
 const BoundedContainer: React.FC<IBoundedContainer> = ({ width, children }) => {
