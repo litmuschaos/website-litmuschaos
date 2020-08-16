@@ -5,6 +5,9 @@ import { Button } from "../../button";
 import { StatCard } from "../../info-section";
 import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
 import { Heading, SubText } from "../../texts";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../redux/reducers";
+import formatCount from "../../../utils/formatCount";
 
 const WhiteDot = styled.div`
   display: inline-block;
@@ -18,6 +21,8 @@ const WhiteDot = styled.div`
 // Component
 const ChaoshubStatistics: React.FC = () => {
   const { purple } = useTheme().colors;
+
+  const communityData = useSelector((state: RootState) => state.communityData);
 
   return (
     <SectionDark>
@@ -56,14 +61,16 @@ const ChaoshubStatistics: React.FC = () => {
               color={purple}
               imgSrc="./svg/number-of-experiments.svg"
               description="Number of Experiments run"
-              stats="90K+"
+              stats={formatCount(parseInt(communityData.google.totalRuns, 10))}
             />
 
             <StatCard
               color={purple}
               imgSrc="./svg/downloads.svg"
               description="Number of Litmus Installations"
-              stats="14K+"
+              stats={formatCount(
+                parseInt(communityData.google.operatorInstalls, 10)
+              )}
             />
           </ResponsiveRow>
         </BoundedContainer>
