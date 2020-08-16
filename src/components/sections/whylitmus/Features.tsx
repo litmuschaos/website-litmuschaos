@@ -18,7 +18,7 @@ const Features: React.FC = () => {
   const { purple, darkGreen, lightGreen, yellow } = useTheme().colors;
 
   return (
-    <SectionDark>
+    <SectionDark style={{ marginTop: "-2rem" }}>
       <FeaturesDiv>
         {xxl ? <></> : <FeaturesImage />}
 

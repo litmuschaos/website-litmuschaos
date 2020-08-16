@@ -14,7 +14,7 @@ const HeadText: React.FC = () => {
 
   const HeadContent = (
     <>
-      <WhiteOnGreenButton>OPEN-SOURCE PLATFORM</WhiteOnGreenButton>
+      <WhiteOnGreenButton>CLOUD-NATIVE</WhiteOnGreenButton>
       <Heading style={{ margin: "1rem 0" }}>
         Chaos Engineering
         <br />

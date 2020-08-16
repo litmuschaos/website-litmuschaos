@@ -126,7 +126,7 @@ const Nav: React.FC = () => {
 
         <li>
           <Link to="/chaoshub" className="listItems">
-            Chaoshub
+            ChaosHub
           </Link>
         </li>
 

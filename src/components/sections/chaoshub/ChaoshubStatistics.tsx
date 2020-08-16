@@ -44,7 +44,7 @@ const ChaoshubStatistics: React.FC = () => {
           </Button>
 
           <Heading style={{ margin: "1rem 0" }}>
-            Chaoshub
+            ChaosHub
             <br />
             Statistics
           </Heading>
