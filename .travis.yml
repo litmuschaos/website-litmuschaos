@@ -11,6 +11,7 @@ services:
   - docker
 before_script:
   - npm install
+  - npm -v
 script:
   - npm run build
 after_success:
