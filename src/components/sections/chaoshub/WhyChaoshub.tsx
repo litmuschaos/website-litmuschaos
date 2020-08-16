@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import { useTheme } from "../../../styles";
@@ -50,50 +49,39 @@ const UsefulLinksContent: React.FC = () => {
       <UsefulLinks>
         <li>
           <GreenDot />
-          <Link
-            to="route"
+          <a
+            rel="noopener noreferrer"
             target="_blank"
-            onClick={event => {
-              event.preventDefault();
-              window.open("https://docs.litmuschaos.io/docs/chaoshub/");
-            }}
+            href="https://docs.litmuschaos.io/docs/chaoshub/"
           >
             <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
               How to use ChaosHub?
             </PurpleText>
-          </Link>
+          </a>
         </li>
         <li>
           <GreenDot />
-          <Link
-            to="route"
+          <a
+            rel="noopener noreferrer"
             target="_blank"
-            onClick={event => {
-              event.preventDefault();
-              window.open("https://docs.litmuschaos.io/docs/chaos-workflows/");
-            }}
+            href="https://docs.litmuschaos.io/docs/chaos-workflows/"
           >
             <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
               Your own Chaos Workflows
             </PurpleText>
-          </Link>
+          </a>
         </li>
         <li>
           <GreenDot />
-          <Link
-            to="route"
+          <a
+            rel="noopener noreferrer"
             target="_blank"
-            onClick={event => {
-              event.preventDefault();
-              window.open(
-                "https://github.com/litmuschaos/chaos-charts/blob/master/CONTRIBUTING.md"
-              );
-            }}
+            href="https://github.com/litmuschaos/chaos-charts/blob/master/CONTRIBUTING.md"
           >
             <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
               Contributing new experiments
             </PurpleText>
-          </Link>
+          </a>
         </li>
       </UsefulLinks>
     </div>

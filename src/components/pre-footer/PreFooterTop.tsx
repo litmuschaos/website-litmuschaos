@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import { Button } from "../button";
@@ -59,18 +58,13 @@ const PreFooterTop: React.FC = () => {
             and share your chaos engeneering story to the community
           </Paragraph>
           <br />
-          <Link
-            to="route"
+          <a
+            rel="noopener noreferrer"
             target="_blank"
-            onClick={event => {
-              event.preventDefault();
-              window.open(
-                "https://github.com/litmuschaos/litmus/blob/master/ADOPTERS.md"
-              );
-            }}
+            href="https://github.com/litmuschaos/litmus/blob/master/ADOPTERS.md"
           >
             <Button gradientColor="green">Become an Adopter</Button>
-          </Link>
+          </a>
         </HorizontalWrap>
       </ResponsiveRow>
     </SectionDark>

@@ -106,16 +106,13 @@ const Nav: React.FC = () => {
         </li>
 
         <li>
-          <Link
-            to="route"
+          <a
+            rel="noopener noreferrer"
             target="_blank"
-            onClick={event => {
-              event.preventDefault();
-              window.open("https://dev.to/t/litmuschaos");
-            }}
+            href="https://dev.to/t/litmuschaos"
           >
             Blogs
-          </Link>
+          </a>
         </li>
 
         <li>

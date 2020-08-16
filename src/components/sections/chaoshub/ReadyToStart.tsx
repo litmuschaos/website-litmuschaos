@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import { Button } from "../../../components/button";
@@ -58,18 +57,15 @@ const ReadyToStart: React.FC = () => {
         <Paragraph textAlign="center">{paragraphText}</Paragraph>
       </CommunityText>
 
-      <Link
-        to="route"
+      <a
+        rel="noopener noreferrer"
         target="_blank"
-        onClick={event => {
-          event.preventDefault();
-          window.open("https://hub.litmuschaos.io/");
-        }}
+        href="https://hub.litmuschaos.io/"
       >
         <Button style={{ margin: "3rem 0" }} gradientColor="purple">
           Go to ChaosHub
         </Button>
-      </Link>
+      </a>
     </SectionLight>
   );
 };

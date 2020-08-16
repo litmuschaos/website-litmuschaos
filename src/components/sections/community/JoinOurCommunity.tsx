@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import {
@@ -127,13 +126,10 @@ const JoinOurCommunity: React.FC = () => {
               <ul>
                 <li>
                   <GreenDot />
-                  <Link
-                    to="route"
+                  <a
+                    rel="noopener noreferrer"
                     target="_blank"
-                    onClick={event => {
-                      event.preventDefault();
-                      window.open("https://zoom.us/j/91358162694");
-                    }}
+                    href="https://zoom.us/j/91358162694/"
                   >
                     <PurpleText
                       fontSize="paragraph"
@@ -142,17 +138,14 @@ const JoinOurCommunity: React.FC = () => {
                     >
                       Meeting
                     </PurpleText>
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <GreenDot />
-                  <Link
-                    to="route"
+                  <a
+                    rel="noopener noreferrer"
                     target="_blank"
-                    onClick={event => {
-                      event.preventDefault();
-                      window.open("https://github.com/litmuschaos/litmus");
-                    }}
+                    href="https://github.com/litmuschaos/litmus"
                   >
                     <PurpleText
                       fontSize="paragraph"
@@ -161,19 +154,14 @@ const JoinOurCommunity: React.FC = () => {
                     >
                       Meta Repository
                     </PurpleText>
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <GreenDot />
-                  <Link
-                    to="route"
+                  <a
+                    rel="noopener noreferrer"
                     target="_blank"
-                    onClick={event => {
-                      event.preventDefault();
-                      window.open(
-                        "https://github.com/litmuschaos/litmus/milestones"
-                      );
-                    }}
+                    href="https://github.com/litmuschaos/litmus/milestones"
                   >
                     <PurpleText
                       fontSize="paragraph"
@@ -182,7 +170,7 @@ const JoinOurCommunity: React.FC = () => {
                     >
                       Release Tracker
                     </PurpleText>
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </CommunityTextList>
