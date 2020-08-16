@@ -7,7 +7,7 @@ import { VideoFrame } from "../../video-box";
 // Component
 const LitmusCommunityVideo: React.FC = () => {
   const paragraphText =
-    "Creating chaos on YouTube. Subscribe to our channel for early updates on meeting recordings, tutorials, events and more";
+    "We update recordings of our events on YouTube. Subscribe to our channel for early updates on meeting recordings, tutorials, events and more";
   return (
     <SectionDark style={{ textAlign: "center" }}>
       <Heading textAlign="center" style={{ margin: "0 auto" }}>

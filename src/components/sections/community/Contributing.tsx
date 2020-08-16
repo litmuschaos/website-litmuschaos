@@ -85,10 +85,9 @@ const Contributing: React.FC = () => {
               LitmusChaos.
               <br />
               <br />
-              Begin now on CONTRIBUTING.md or check the CONTRIBUTING.md file in
-              the respective Litmus repository for instructions on how to
-              contribute. Feel free to discuss about your contributions on our
-              slack channel.
+              Check out the CONTRIBUTING.md page on Litmus repository for
+              instructions on how to contribute. Feel free to discuss about your
+              contributions on our slack channel.
             </Paragraph>
             <br />
 

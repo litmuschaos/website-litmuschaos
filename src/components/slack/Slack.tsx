@@ -24,7 +24,7 @@ const Slack: React.FC = () => {
       />
       <br />
       <SubHeading textAlign="center" style={{ margin: "1rem 0" }}>
-        Join #Litmus on Kubernetes Slack
+        Join #litmus on Kubernetes Slack
       </SubHeading>
       <Paragraph textAlign="center">
         Connect with SREs and Chaos Engineering enthusiasts.

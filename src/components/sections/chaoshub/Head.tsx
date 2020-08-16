@@ -13,17 +13,20 @@ const HeaderContent: React.FC = () => {
   return (
     <div>
       <Heading>
-        Your Experiments for
+        A public repository for
         <br />
-        Kubernetes are ready!
+        Kubernetes Chaos
+        <br />
+        Experiments
       </Heading>
       <br />
 
       <Paragraph>
         It is all about sharing with the community. Chaos experiments are no
         different. The success of your chaos engineering efforts in your
-        organization depends on the extent of chaos scenarios you build in into
-        them. Chaos experiments can help.
+        organization depends on the extent of chaos scenarios you built in into
+        them. The ready chaos experiments on the hub can help cover a major
+        chunk of them.
       </Paragraph>
       <br />
       <a

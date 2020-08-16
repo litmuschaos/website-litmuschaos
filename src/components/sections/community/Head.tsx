@@ -21,15 +21,14 @@ const HeaderContent: React.FC = () => {
 
       <Paragraph>
         Created by our users, contributors, and adopters, the Litmus community
-        truly believes in adding to the value of open source culture where
-        serving the community is of utmost priority to us, and imparting the
-        value of cloud-native chaos is all that matters.
+        truly believes in adding to the value of open source culture. Serving
+        and listening to the community is a priority to us.
         <br />
         <br />
         We welcome Kubernetes SREs and Developers to join this zealous community
-        to learn and share all about cloud-native Chaos Engineering and help
-        Kubernetes infrastructures be resilient. Let’s make this journey
-        wonderful together.
+        to learn and share all about Cloud-Native Chaos Engineering. There are
+        many contributors in our community who are ready to mentor those who
+        want to contribute. Ask a question in our slack channel.
       </Paragraph>
       <br />
 
