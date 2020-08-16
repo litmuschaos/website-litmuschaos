@@ -7,7 +7,6 @@ import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
 import { Heading, SubText } from "../../texts";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/reducers";
-import formatCount from "../../../utils/formatCount";
 
 const WhiteDot = styled.div`
   display: inline-block;
@@ -61,16 +60,25 @@ const ChaoshubStatistics: React.FC = () => {
               color={purple}
               imgSrc="./svg/number-of-experiments.svg"
               description="Number of Experiments run"
-              stats={formatCount(parseInt(communityData.google.totalRuns, 10))}
+              stats={
+                communityData.google.totalRuns
+                  ? parseInt(communityData.google.totalRuns, 10).toString()
+                  : "0"
+              }
             />
 
             <StatCard
               color={purple}
               imgSrc="./svg/downloads.svg"
               description="Number of Litmus Installations"
-              stats={formatCount(
-                parseInt(communityData.google.operatorInstalls, 10)
-              )}
+              stats={
+                communityData.google.operatorInstalls
+                  ? parseInt(
+                      communityData.google.operatorInstalls,
+                      10
+                    ).toString()
+                  : "0"
+              }
             />
           </ResponsiveRow>
         </BoundedContainer>
