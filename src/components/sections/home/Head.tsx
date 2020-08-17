@@ -8,7 +8,7 @@ import { Paragraph } from "../../texts";
 const MainHeading = styled.h1`
   margin: 1rem 0;
   line-height: 130%;
-  font-size: ${props => (props.theme.screens.md ? "2rem" : "2.6rem")};
+  font-size: ${(props) => (props.theme.screens.md ? "2rem" : "2.6rem")};
 `;
 
 // Components
@@ -26,9 +26,10 @@ const HeadText: React.FC = () => {
         for your Kubernetes
       </MainHeading>
       <Paragraph>
-        Kubernetes developers and SREs use Litmus to create, manage and monitor
-        chaos workflows. Resilience of your Kubernetes starts with finding a
-        weakness and start fixing it.
+        Chaos engineering is fundamental to increasing the resilience of today’s
+        cloud native, highly dynamic applications and infrastructure. Kubernetes
+        developers and SREs use Litmus to create, manage and monitor chaos
+        workflows by extending Kubernetes itself.
       </Paragraph>
       <div style={{ marginTop: "1rem" }}>
         <a

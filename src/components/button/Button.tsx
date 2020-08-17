@@ -41,7 +41,6 @@ const WhiteOnGreenButton = styled.button`
   color: ${(props) => props.theme.colors.darkGreen(1)};
   font-size: ${(props) => props.theme.fontSize.small.lg};
   font-weight: bold;
-  cursor: pointer;
   box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.08);
   :disabled {
     background: lightgray;
