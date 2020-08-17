@@ -1,28 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { AnalyticsData } from "../../../models/analytics";
 import { useTheme } from "../../../styles";
+import { Button } from "../../button";
 import { StatCard } from "../../info-section";
 import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
-import { Heading } from "../../texts";
+import { Heading, SubText } from "../../texts";
 
-// const WhiteDot = styled.div`
-//   display: inline-block;
-//   width: 0.75rem;
-//   height: 0.75rem;
-//   border-radius: 50%;
-//   margin-right: 0.438rem;
-//   background-color: white;
-// `;
+const WhiteDot = styled.div`
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  margin-right: 0.438rem;
+  background-color: white;
+`;
 
 // Component
 const ChaoshubStatistics: React.FC = () => {
   const { purple } = useTheme().colors;
 
+  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
+    totalRuns: 0,
+    operatorInstalls: 0,
+  });
+
+  useEffect(() => {
+    fetch("https://hub.litmuschaos.io/api/community")
+      .then(response => response.json())
+      .then(data =>
+        setAnalyticsData({
+          totalRuns: data.google.totalRuns,
+          operatorInstalls: data.google.operatorInstalls,
+        })
+      );
+  }, [analyticsData]);
+
   return (
     <SectionDark>
       <ResponsiveRow breakpoint="xl">
         <BoundedContainer breakpoint="xl" width="50%" margin="0">
-          {/* TODO: LIVE Button  */}
-          {/* <Button
+          <Button
             style={{
               width: "fit-content",
               minWidth: "7.063rem",
@@ -40,7 +58,7 @@ const ChaoshubStatistics: React.FC = () => {
             >
               LIVE
             </SubText>
-          </Button> */}
+          </Button>
 
           <Heading style={{ margin: "1rem 0" }}>
             ChaosHub
@@ -55,14 +73,14 @@ const ChaoshubStatistics: React.FC = () => {
               color={purple}
               imgSrc="/svg/number-of-experiments.svg"
               description="Number of Experiments run"
-              stats="100K+"
+              stats={analyticsData.totalRuns}
             />
 
             <StatCard
               color={purple}
               imgSrc="/svg/downloads.svg"
               description="Number of Litmus Installations"
-              stats="15K+"
+              stats={analyticsData.operatorInstalls}
             />
           </ResponsiveRow>
         </BoundedContainer>

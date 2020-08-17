@@ -16,7 +16,7 @@ const Divider = styled.div`
 interface IStatCard {
   color: (opacity: number) => string;
   imgSrc: string;
-  stats: string;
+  stats: number;
   description: string;
 }
 
