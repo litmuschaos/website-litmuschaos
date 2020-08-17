@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 const StyledImage = styled(Img)`
   margin: auto;
   width: 50%;
-  height: ${(props) =>
+  height: ${props =>
     props.theme.screens.sm
       ? "7rem"
       : props.theme.screens.xl
