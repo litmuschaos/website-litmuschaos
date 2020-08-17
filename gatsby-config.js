@@ -1,4 +1,4 @@
-const siteTitle = "LitmusChaos";
+const siteTitle = "Litmus - Chaos Engineering for Kubernetes";
 const siteDescription =
   "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.";
 const siteAuthor = "@litmuschaos";
