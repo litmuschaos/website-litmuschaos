@@ -103,7 +103,7 @@ const GreenStats = styled.p`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: ${props => (props.theme.screens.md ? "3.18rem" : "4rem")};
+  font-size: ${props => (props.theme.screens.md ? "3rem" : "3.5rem")};
   font-weight: bold;
   color: ${props => props.theme.colors.darkGreen(1)};
 `;
