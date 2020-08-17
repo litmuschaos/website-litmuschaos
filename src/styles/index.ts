@@ -18,12 +18,12 @@ const theme = (): DefaultTheme => {
     const value = media({ maxWidth: screens[key] });
     return {
       ...accum,
-      [key]: value
+      [key]: value,
     };
   }, {});
   return {
     ...themeValues,
-    screens: breakpointSizes
+    screens: breakpointSizes,
   };
 };
 
