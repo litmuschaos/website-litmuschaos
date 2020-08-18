@@ -39,6 +39,27 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-92076314-26",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: true,
+        // The IP anonymization feature in Google Analytics anonymizes the last digits of the user's IP (optional)
+        anonymize: true,
+        // Defers execution of google analytics script after page load
+        defer: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "UA-92076314-26",
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/images`,
@@ -103,36 +124,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-92076314-26",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
-        // The IP anonymization feature in Google Analytics anonymizes the last digits of the user's IP (optional)
-        anonymize: true,
-        // Respect Do Not Track (optional)
-        respectDNT: true,
-        // Avoids sending pageview hits from custom paths
-        exclude: ["/404/"],
-        // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 500,
-        // Defers execution of google analytics script after page load
-        defer: true,
-        // Any additional optional fields
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "litmuschaos.io",
-      },
-    },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "UA-92076314-26",
-        includeInDevelopment: false,
-        defaultDataLayer: { platform: "gatsby" },
-      },
-    },
   ],
 };
