@@ -21,7 +21,21 @@ const Copyright: React.FC = () => (
     </Paragraph>
     <Paragraph>
       The Linux Foundation has registered trademarks and uses trademarks. For a
-      list of trademarks of The Linux Foundation, please see our Trademark Usage
+      list of trademarks of The Linux Foundation, please see{" "}
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://www.linuxfoundation.org/trademark-usage/"
+      >
+        <PurpleText
+          fontSize="paragraph"
+          fontWeight={400}
+          underline={true}
+          style={{ display: "inline" }}
+        >
+          our Trademark Usage
+        </PurpleText>
+      </a>{" "}
       page.
     </Paragraph>
   </>
