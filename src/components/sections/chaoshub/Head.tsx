@@ -45,11 +45,15 @@ const Head: React.FC = () => {
   return (
     <SectionDark>
       <ResponsiveRow breakpoint="lg">
-        <BoundedContainer breakpoint="lg" width="50%" margin="0">
+        <BoundedContainer breakpoint="lg" width="50%" margin="-4rem 0">
           <ChaoshubImage />
         </BoundedContainer>
 
-        <BoundedContainer breakpoint="lg" width="50%" margin="2rem 0 0 2rem">
+        <BoundedContainer
+          breakpoint="lg"
+          width="50%"
+          margin="-4rem 0 -4rem 2rem"
+        >
           <Center fullHeight={true}>
             <HeaderContent />
           </Center>
