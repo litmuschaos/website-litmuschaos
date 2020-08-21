@@ -9,7 +9,7 @@ import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
 const FeaturesDiv = styled.div`
   position: relative;
   overflow: hidden;
-  padding-top: ${props => (props.theme.xxl ? "2rem" : "0")};
+  padding-top: ${(props) => (props.theme.xxl ? "2rem" : "0")};
   padding-bottom: 5rem;
 `;
 
@@ -69,7 +69,7 @@ const Features: React.FC = () => {
                 color={yellow}
                 imgSrc="/svg/application-specific.svg"
                 title="Application specific experiments"
-                description="Litmus provides not only the ability to introduce chaos into infrastructure and Kubernetes resources but also into application itself. These application specific experiments help in identifyin the weaknesses related to the application faults."
+                description="Litmus provides not only the ability to introduce chaos into infrastructure and Kubernetes resources but also into application itself. These application specific experiments help in identifying the weaknesses related to the application faults."
               />
             </BoundedContainer>
           </ResponsiveRow>

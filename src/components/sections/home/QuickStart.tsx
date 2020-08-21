@@ -13,19 +13,19 @@ const FadedDiv = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 4.5rem;
-  margin-bottom: ${props => (props.theme.screens.xl ? "10rem" : "5rem")};
-  ${props =>
+  margin-bottom: ${(props) => (props.theme.screens.xl ? "10rem" : "5rem")};
+  ${(props) =>
     props.theme.screens.md
       ? css`
           width: 0.625rem;
           margin-bottom: 0;
           flex-direction: column;
-          background: ${props => props.theme.gradient.fadedLine(0)};
+          background: ${(props) => props.theme.gradient.fadedLine(0)};
         `
       : css`
           width: 100%;
           height: 0.625rem;
-          background: ${props => props.theme.gradient.fadedLine(90)};
+          background: ${(props) => props.theme.gradient.fadedLine(90)};
         `}
 `;
 
@@ -35,7 +35,7 @@ const KnobOuter = styled.div`
   background: white;
   border-radius: 50%;
   box-shadow: 0px 9px 11px rgba(91, 68, 186, 0.15);
-  ${props =>
+  ${(props) =>
     props.theme.screens.md
       ? css`
           position: absolute;
@@ -54,9 +54,9 @@ const KnobOuter = styled.div`
 const KnobInner = styled.div`
   display: grid;
   place-items: center;
-  background: ${props => props.theme.colors.darkGreen(1)};
+  background: ${(props) => props.theme.colors.darkGreen(1)};
   border-radius: 50%;
-  ${props =>
+  ${(props) =>
     props.theme.screens.md
       ? css`
           width: 0.625rem;
@@ -101,7 +101,7 @@ const QuickStart: React.FC = () => {
               <Heading>Start in minutes not in days</Heading>
               <Paragraph>
                 A chaos workflow can be scheduled within minutes from scratch
-                with almost no learning curve. Th initial start of your chaos
+                with almost no learning curve. The initial start of your chaos
                 engineering journey is straight forward.
               </Paragraph>
             </ColumnCenter>

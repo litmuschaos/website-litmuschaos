@@ -9,14 +9,14 @@ import { SmallText } from "../texts";
 import Burger from "./Burger";
 
 const NavBar = styled.nav`
-  width: ${props => (props.theme.screens.xl ? "95%" : "100%")};
+  width: ${(props) => (props.theme.screens.xl ? "95%" : "100%")};
   max-width: 132rem;
   margin: 0 auto;
   padding-top: 1rem;
   display: flex;
   justify-content: space-around;
   position: relative;
-  z-index: ${props => props.theme.zIndex.nav};
+  z-index: ${(props) => props.theme.zIndex.nav};
 `;
 
 const LogoDiv = styled.div`
@@ -27,10 +27,9 @@ const LogoDiv = styled.div`
 const GitHubStars = styled.div`
   width: fit-content;
   height: 2rem;
-  font-size: ${props => props.theme.fontSize.small.lg};
+  font-size: ${(props) => props.theme.fontSize.small.lg};
   padding: 0 0.5rem;
-  margin-left: ${props => (props.theme.screens.md ? "0.5rem" : "1.5rem")};
-  margin-top: ${props => (props.theme.screens.md ? 0 : "0.4rem")};
+  margin-left: ${(props) => (props.theme.screens.md ? "0.5rem" : "1.5rem")};
   border: 1px solid #000000;
   border-radius: 0.5rem;
   display: flex;
@@ -50,13 +49,13 @@ const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   li {
-    padding: ${props =>
+    padding: ${(props) =>
       props.theme.screens.mmd
         ? "1rem 0.3rem"
         : props.theme.screens.xl
         ? "0.7rem 0.5rem"
         : "1rem 1rem"};
-    font-size: ${props =>
+    font-size: ${(props) =>
       props.theme.screens.mmd ? "0.9rem" : props.theme.fontSize.button};
   }
 `;

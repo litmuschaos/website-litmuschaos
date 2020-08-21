@@ -13,12 +13,12 @@ const FadedDiv = styled.div`
   justify-content: space-between;
   width: 0.625rem;
   margin-left: 2rem;
-  background: ${props => props.theme.gradient.fadedLine(0)};
+  background: ${(props) => props.theme.gradient.fadedLine(0)};
 `;
 
 const Wrapper = styled.div`
-  width: ${props => (props.theme.screens.md ? "80vw" : "40vw")};
-  padding-top: ${props => (props.theme.screens.md ? "2rem" : "1rem")};
+  width: ${(props) => (props.theme.screens.md ? "80vw" : "40vw")};
+  padding-top: ${(props) => (props.theme.screens.md ? "2rem" : "1rem")};
   margin-left: -1.4rem;
 `;
 
@@ -80,9 +80,7 @@ const GetStartedSteps: React.FC = () => {
           <Step
             bullet="2"
             title="Get experiments"
-            description="Install Litmus with a helm chart. Default options will get you a
-          minimal version of Litmus to run or schedule individual chaos
-          experiments."
+            description="Browse and install the required experiments from ChaosHub. When you install them, they become custom resources which you can tune."
             yamlLink="https://hub.litmuschaos.io/api/chaos/1.7.0?file=charts/generic/experiments.yaml"
           />
           <Step

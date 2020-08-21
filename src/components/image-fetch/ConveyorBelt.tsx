@@ -13,7 +13,7 @@ const ConveyorBelt: React.FC = () => {
     query {
       image: file(relativePath: { eq: "conveyor-belt.png" }) {
         childImageSharp {
-          fluid(maxWidth: 700, quality: 100) {
+          fluid(maxWidth: 1100, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
