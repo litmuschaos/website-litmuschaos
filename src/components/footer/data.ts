@@ -45,6 +45,11 @@ const top_adopters = {
   title: "Top Adopters",
   links: [
     {
+      name: "Okteto",
+      url:
+        "https://github.com/litmuschaos/litmus/blob/master/adopters/okteto.md",
+    },
+    {
       name: "Intuit",
       url: "https://github.com/litmuschaos/litmus/blob/master/ADOPTERS.md",
     },
