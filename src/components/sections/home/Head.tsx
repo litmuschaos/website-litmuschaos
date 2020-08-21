@@ -8,7 +8,7 @@ import { Paragraph } from "../../texts";
 const MainHeading = styled.h1`
   margin: 1rem 0;
   line-height: 130%;
-  font-size: ${props => (props.theme.screens.md ? "2rem" : "2.6rem")};
+  font-size: ${(props) => (props.theme.screens.md ? "2rem" : "2.6rem")};
 `;
 
 // Components
@@ -19,7 +19,7 @@ const HeadText: React.FC = () => {
 
   const HeadContent = (
     <>
-      <WhiteOnGreenButton>CLOUD-NATIVE</WhiteOnGreenButton>
+      <WhiteOnGreenButton disabled>CLOUD-NATIVE</WhiteOnGreenButton>
       <MainHeading>
         Chaos Engineering
         <br />
