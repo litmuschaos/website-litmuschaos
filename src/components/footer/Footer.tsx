@@ -17,11 +17,13 @@ const Logo: React.FC = () => (
 const Copyright: React.FC = () => (
   <>
     <Paragraph>
-      Copyright © 2020 LitmusChaos Authors. All rights reserved.
+      Copyright © {new Date().getFullYear()} LitmusChaos Authors. All rights
+      reserved.
     </Paragraph>
     <Paragraph>
-      Copyright © 2020 The Linux Foundation has registered trademarks and uses
-      trademarks. For a list of trademarks of The Linux Foundation, please see{" "}
+      Copyright © {new Date().getFullYear()} The Linux Foundation has registered
+      trademarks and uses trademarks. For a list of trademarks of The Linux
+      Foundation, please see{" "}
       <a
         rel="noopener noreferrer"
         target="_blank"
