@@ -2,6 +2,10 @@ const top_adopters = {
   title: "Top Adopters",
   links: [
     {
+      name: "Okteto",
+      image: "/svg/Okteto.svg",
+    },
+    {
       name: "Intuit",
       image: "/svg/Intuit.svg",
     },
