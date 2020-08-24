@@ -20,8 +20,8 @@ const Copyright: React.FC = () => (
       Copyright © 2020 LitmusChaos Authors. All rights reserved.
     </Paragraph>
     <Paragraph>
-      The Linux Foundation has registered trademarks and uses trademarks. For a
-      list of trademarks of The Linux Foundation, please see{" "}
+      Copyright © 2020 The Linux Foundation has registered trademarks and uses
+      trademarks. For a list of trademarks of The Linux Foundation, please see{" "}
       <a
         rel="noopener noreferrer"
         target="_blank"
