@@ -55,7 +55,7 @@ const PreFooterTop: React.FC = () => {
             Add yourself to the adopters
           </SubHeading>
           <Paragraph>
-            and share your chaos engeneering story to the community
+            and share your chaos engineering story to the community
           </Paragraph>
           <br />
           <a
