@@ -32,7 +32,7 @@ const CommunityEvents: React.FC = () => {
               subheading="Kubernetes Chaos Engineering Meetup"
               body=" Discussion about the best practices and tutorials for practicing chaos engineering"
               image={<CNCFImage />}
-              link="https://community.cncf.io/kubernetes-chaos-engineering-meetup-group/"
+              link="https://community.cncf.io/events/details/cncf-kubernetes-chaos-engineering-meetup-group-presents-kubernetes-chaos-engineering-meetup-1/#/"
             />
 
             <Card
