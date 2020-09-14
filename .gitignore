@@ -8,7 +8,7 @@
 package-lock.json
 # dependencies
 /node_modules
-/public
+/public/page-data
 
 # IDEs and editors
 /.idea
