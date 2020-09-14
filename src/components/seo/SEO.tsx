@@ -1,6 +1,6 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
 
 type MetaItem = {
   name: string;
@@ -17,7 +17,7 @@ type SEOProps = {
   image?: string;
 };
 
-const SEO: React.FC<SEOProps> = props => {
+const SEO: React.FC<SEOProps> = (props) => {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -27,7 +27,6 @@ const SEO: React.FC<SEOProps> = props => {
           author
           url
           keywords
-          image
         }
       }
     }
@@ -42,14 +41,12 @@ const SEO: React.FC<SEOProps> = props => {
     author,
     meta = [],
     keywords = [],
-    image,
   } = siteMetadata;
   const siteTitle = props.title || title;
   const siteDescription = props.description || description;
   const siteUrl = props.url || url;
   const siteAuthor = props.author || author;
-  const siteImage = props.image || image;
-  const facebookImage = "https://i.ibb.co/gPFkhfp/site-Image.png";
+  const siteImage = "https://i.ibb.co/qgv3Kg9/site-Image.png";
   const siteKeywords = [...keywords, props.keywords].join(",");
   const metaData = [
     {
@@ -82,7 +79,7 @@ const SEO: React.FC<SEOProps> = props => {
     },
     {
       property: "og:image",
-      content: facebookImage,
+      content: siteImage,
     },
     {
       name: "twitter:card",
