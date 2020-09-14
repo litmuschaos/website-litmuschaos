@@ -15,7 +15,7 @@ const top_adopters = {
     },
     {
       name: "WeScale",
-      image: "/svg/weScaleBlack.png",
+      image: "/svg/weScaleColor.png",
     },
     {
       name: "Open EBS",
