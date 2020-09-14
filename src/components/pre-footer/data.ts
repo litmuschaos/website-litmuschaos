@@ -14,6 +14,10 @@ const top_adopters = {
       image: "/svg/Wipro.svg",
     },
     {
+      name: "WeScale",
+      image: "/svg/weScaleBlack.png",
+    },
+    {
       name: "Open EBS",
       image: "/svg/OpenEBS.svg",
     },
