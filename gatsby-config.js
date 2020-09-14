@@ -3,7 +3,6 @@ const siteDescription =
   "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.";
 const siteAuthor = "@litmuschaos";
 const siteUrl = "https://litmuschaos.io";
-const siteImage = `${siteUrl}/icons/siteImage.png`;
 const siteKeywords = [
   "chaos engineering",
   "Litmus Chaos",
@@ -35,7 +34,6 @@ module.exports = {
     author: siteAuthor,
     url: siteUrl,
     keywords: siteKeywords,
-    image: siteImage,
   },
   plugins: [
     {
