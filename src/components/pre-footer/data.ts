@@ -14,16 +14,16 @@ const top_adopters = {
       image: "/svg/Wipro.svg",
     },
     {
-      name: "WeScale",
-      image: "/svg/weScaleColor.png",
-    },
-    {
       name: "Open EBS",
       image: "/svg/OpenEBS.svg",
     },
     {
       name: "Zebrium",
       image: "/svg/Zebrium.svg",
+    },
+    {
+      name: "WeScale",
+      image: "/svg/weScale.png",
     },
   ],
 };
