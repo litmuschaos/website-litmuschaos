@@ -14,6 +14,7 @@ const StyledBurger = styled.div`
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-end;
+  cursor: pointer;
 
   .line {
     height: 0.35rem;
