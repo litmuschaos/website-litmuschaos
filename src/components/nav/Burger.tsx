@@ -5,6 +5,7 @@ import { OutlinedButton } from "../button";
 import { Link } from "../link/index";
 
 const StyledBurger = styled.div`
+  position: relative;
   margin: 0 0.7rem;
   margin-top: 0.5rem;
   height: 1.5rem;
@@ -50,13 +51,12 @@ const Ul = styled.ul`
 `;
 
 const BurgerModal = styled.div`
-  position: fixed;
+  position: absolute;
   z-index: 1;
   left: 0;
   top: 5rem;
   width: 100%;
   height: 20rem;
-  margin: 0 3%;
   border-radius: 0.25rem;
   background: white;
   box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.1);
@@ -78,54 +78,52 @@ const Burger: React.FC = () => {
           <div className="line small" />
           <div className="line small" />
         </StyledBurger>
-      </div>
-      {open ? (
-        <>
-          <BurgerModal>
-            <Ul>
-              <li>
-                <Link to="/whylitmus">Why Litmus?</Link>
-              </li>
+        {open && (
+          <>
+            <BurgerModal>
+              <Ul>
+                <li>
+                  <Link to="/whylitmus">Why Litmus?</Link>
+                </li>
 
-              <li>
-                <Link to="/chaoshub" className="listItems">
-                  ChaosHub
-                </Link>
-              </li>
+                <li>
+                  <Link to="/chaoshub" className="listItems">
+                    ChaosHub
+                  </Link>
+                </li>
 
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://dev.to/t/litmuschaos"
-                >
-                  Blogs
-                </a>
-              </li>
-
-              <li>
-                <Link to="/community">Community</Link>
-              </li>
-
-              <li>
-                <GettingStarted>
+                <li>
                   <a
                     rel="noopener noreferrer"
                     target="_blank"
-                    href="https://docs.litmuschaos.io/docs/getstarted/"
+                    href="https://dev.to/t/litmuschaos"
                   >
-                    <OutlinedButton backgroundColor={textSecondary}>
-                      Get Started
-                    </OutlinedButton>
+                    Blogs
                   </a>
-                </GettingStarted>
-              </li>
-            </Ul>
-          </BurgerModal>
-        </>
-      ) : (
-        <></>
-      )}
+                </li>
+
+                <li>
+                  <Link to="/community">Community</Link>
+                </li>
+
+                <li>
+                  <GettingStarted>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://docs.litmuschaos.io/docs/getstarted/"
+                    >
+                      <OutlinedButton backgroundColor={textSecondary}>
+                        Get Started
+                      </OutlinedButton>
+                    </a>
+                  </GettingStarted>
+                </li>
+              </Ul>
+            </BurgerModal>
+          </>
+            )}
+      </div>
     </>
   );
 };
