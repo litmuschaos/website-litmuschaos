@@ -13,11 +13,11 @@ const StyledImage = styled(Img)`
   width: 100%;
   height: ${(props) =>
     props.theme.screens.sm
-      ? "7rem"
+      ? "8rem"
       : props.theme.screens.xl
       ? "10rem"
       : "10rem"};
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 const HacktoberFestImage: React.FC = () => {
