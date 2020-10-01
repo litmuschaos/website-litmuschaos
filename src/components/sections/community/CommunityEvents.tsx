@@ -39,9 +39,9 @@ const CommunityEvents: React.FC = () => {
               width="100%"
               height="100%"
               subheading="HacktoberFest"
-              body="Contribute to LitmusChaos and get a chance to win not only swags but also a grand prize from MayaData"
+              body="Contribute to LitmusChaos and get a chance to win not only swags but also a grand prize and much more"
               image={<HacktoberFestImage />}
-              link="https://hacktoberfest.digitalocean.com/"
+              link="https://mayadata.io/hacktoberfest-2020"
             />
 
             <Card
