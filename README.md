@@ -42,7 +42,7 @@ npm run serve
    },
 ```
 
-## Usage
+## How to access the frontend?
 
 Open your browser and go to `http://localhost:8000/` to access the frontend
 
@@ -59,3 +59,4 @@ Were are more than welcoming to a new contributor, pay a visit and star it for u
 ## License
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flitmuschaos%2Fwebsite-litmuschaos.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Flitmuschaos%2Fwebsite-litmuschaos?ref=badge_large)
+## Happy coding😀😀!
