@@ -2,6 +2,10 @@ const top_adopters = {
   title: "Top Adopters",
   links: [
     {
+      name: "NetApp",
+      image: "/svg/netapp.svg",
+    },
+    {
       name: "Okteto",
       image: "/svg/Okteto.svg",
     },
@@ -24,7 +28,7 @@ const top_adopters = {
     {
       name: "WeScale",
       image: "/svg/weScale.png",
-    },
+    }
   ],
 };
 
