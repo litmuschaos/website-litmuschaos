@@ -15,7 +15,16 @@ const MainHeading = styled.h1`
 const HeadText: React.FC = () => {
   const { sm, md } = useTheme().screens;
 
-  const flexibleButton = <Button gradientColor="purple">Get Started</Button>;
+  const flexibleButton = (
+    <Button
+      gradientColor="purple"
+      onClick={() =>
+        window.open("https://docs.litmuschaos.io/docs/getstarted/")
+      }
+    >
+      Get Started
+    </Button>
+  );
 
   const HeadContent = (
     <>
@@ -31,15 +40,7 @@ const HeadText: React.FC = () => {
         developers and SREs use Litmus to create, manage and monitor chaos
         workflows by extending Kubernetes itself.
       </Paragraph>
-      <div style={{ marginTop: "1rem" }}>
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://docs.litmuschaos.io/docs/getstarted/"
-        >
-          {flexibleButton}
-        </a>
-      </div>
+      <div style={{ marginTop: "1rem" }}>{flexibleButton}</div>
     </>
   );
 
@@ -58,7 +59,9 @@ const HeadText: React.FC = () => {
 
 const Head: React.FC = () => {
   return (
-    <SectionDark>
+    <SectionDark
+      style={{ background: "none", position: "relative", zIndex: 50 }}
+    >
       <ResponsiveRow breakpoint="md">
         <HeadText />
         <div style={{ width: "45%" }} />

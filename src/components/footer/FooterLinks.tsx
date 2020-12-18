@@ -3,9 +3,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Title = styled.div`
-  color: ${props => props.theme.colors.textSecondary};
+  color: ${(props) => props.theme.colors.textSecondary};
   font-weight: 600;
-  font-size: ${props => props.theme.fontSize.paragraph};
+  font-size: ${(props) => props.theme.fontSize.paragraph};
   margin-bottom: 1.5rem;
 `;
 
@@ -16,6 +16,7 @@ const ListBox = styled.ul`
 
 const List = styled.li`
   text-decoration: none;
+  list-style: none;
   a {
     display: flex;
     margin-top: 1rem;
@@ -44,7 +45,7 @@ const Links: React.FC<LinkProps> = ({ data, showImage, internalLink }) => {
     <div style={{ margin: "1rem" }}>
       <Title>{data.title}</Title>
       <ListBox>
-        {data.links.map(link =>
+        {data.links.map((link) =>
           internalLink ? (
             <List key={link.name}>
               <GatsbyLink to={link.url}>
