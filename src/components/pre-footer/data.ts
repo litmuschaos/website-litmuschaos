@@ -2,16 +2,16 @@ const top_adopters = {
   title: "Top Adopters",
   links: [
     {
-      name: "NetApp",
-      image: "/svg/netapp.svg",
+      name: "Intuit",
+      image: "/svg/Intuit.svg",
     },
     {
       name: "Okteto",
       image: "/svg/Okteto.svg",
     },
     {
-      name: "Intuit",
-      image: "/svg/Intuit.svg",
+      name: "NetApp",
+      image: "/svg/netapp.svg",
     },
     {
       name: "Wipro",
@@ -27,7 +27,11 @@ const top_adopters = {
     },
     {
       name: "WeScale",
-      image: "/svg/weScale.png",
+      image: "/svg/weScale.svg",
+    },
+    {
+      name: "Keptn",
+      image: "/svg/keptn.svg",
     }
   ],
 };
