@@ -59,11 +59,6 @@ const Footer: React.FC = () => {
                 <Links data={resources} showImage={true} internalLink={false} />
               </Row>
               <Row>
-                {/* <Links
-                  data={top_adopters}
-                  showImage={false}
-                  internalLink={false}
-                /> */}
                 <Links data={community} showImage={true} internalLink={false} />
               </Row>
             </Column>
@@ -96,7 +91,6 @@ const Footer: React.FC = () => {
               <Row>
                 <Links data={sitemap} showImage={false} internalLink={true} />
                 <Links data={resources} showImage={true} internalLink={false} />
-                {/* <Links data={top_adopters} showImage={false} internalLink={false} /> */}
                 <Links data={community} showImage={true} internalLink={false} />
               </Row>
             </div>

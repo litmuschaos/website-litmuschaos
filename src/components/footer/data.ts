@@ -41,36 +41,6 @@ const resources = {
   ],
 };
 
-// const top_adopters = {
-//   title: "Top Adopters",
-//   links: [
-//     {
-//       name: "Okteto",
-//       url:
-//         "https://github.com/litmuschaos/litmus/blob/master/adopters/okteto.md",
-//     },
-//     {
-//       name: "Intuit",
-//       url: "https://github.com/litmuschaos/litmus/blob/master/ADOPTERS.md",
-//     },
-//     {
-//       name: "Wipro",
-//       url:
-//         "https://github.com/litmuschaos/litmus/blob/master/adopters/AppAnywhere.md",
-//     },
-//     {
-//       name: "OpenEBS",
-//       url:
-//         "https://github.com/litmuschaos/litmus/blob/master/adopters/openebs.md",
-//     },
-//     {
-//       name: "Zebrium",
-//       url:
-//         "https://github.com/litmuschaos/litmus/blob/master/adopters/zebrium.md",
-//     },
-//   ],
-// };
-
 const community = {
   title: "Join the Community",
   links: [
