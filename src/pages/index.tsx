@@ -14,8 +14,8 @@ const App = () => {
   return (
     <Layout>
       <SEO />
-      <PurpleBox />
       <Head />
+      <PurpleBox />
       <CloudNativeWay />
       <QuickStart />
       <GetStarted />

@@ -7,7 +7,7 @@ import {
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
 import { CNCFImage } from "../../image-fetch/CNCF";
-import { HacktoberFestImage } from "../../image-fetch/HacktoberFest";
+import { CommunitySyncUpImage } from "../../image-fetch/CommunitySyncUp";
 
 const CommunityEvents: React.FC = () => {
   return (
@@ -26,23 +26,23 @@ const CommunityEvents: React.FC = () => {
         </BoundedContainer>
         <BoundedContainer breakpoint="xl" width="40rem" margin="0 auto">
           <ResponsiveRow breakpoint="xl">
-            {/* <Card
+            <Card
               width="100%"
               height="100%"
               subheading="Community Sync Up"
               body="Meet and learn from the maintainers, contributors, and developers of Litmus everything about Chaos Engineering."
               image={<CommunitySyncUpImage />}
               link="https://zoom.us/j/91358162694"
-            /> */}
+            />
 
-            <Card
+            {/* <Card
               width="100%"
               height="100%"
               subheading="HacktoberFest"
               body="Contribute to LitmusChaos and get a chance to win not only swags but also a grand prize and much more"
               image={<HacktoberFestImage />}
               link="https://mayadata.io/hacktoberfest-2020"
-            />
+            /> */}
 
             <Card
               width="100%"

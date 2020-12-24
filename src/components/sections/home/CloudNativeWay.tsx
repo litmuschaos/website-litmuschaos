@@ -36,7 +36,7 @@ const CloudNativeWay: React.FC = () => {
                 color={lightGreen}
                 imgSrc="/svg/create-your-own.svg"
                 title="Create your own"
-                description="SDK is available in GO, Python and Ansible. A basic experiment structure is created quickly using SDK and developers and SREs just need to add the chaos logic into to make a new experiment."
+                description="The Litmus SDK is available in GO, Python, and Ansible. A basic experiment structure is created quickly using SDK. Kubernetes developers and SREs need to add chaos logic to create a new experiment."
               />
               <InfoSection
                 color={yellow}

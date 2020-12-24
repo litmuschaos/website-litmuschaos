@@ -12,7 +12,6 @@ const NavBar = styled.nav`
   width: ${(props) => (props.theme.screens.xl ? "95%" : "100%")};
   max-width: 132rem;
   margin: 0 auto;
-  padding-top: 1rem;
   display: flex;
   justify-content: space-around;
   position: relative;
@@ -38,7 +37,7 @@ const GitHubStars = styled.div`
   justify-content: center;
 `;
 
-const GettingStarted = styled.div`
+const OutlinedNavButton = styled.div`
   margin-top: 0.5rem;
   margin-left: 2rem;
   margin-right: -4rem;
@@ -54,7 +53,7 @@ const Ul = styled.ul`
         ? "1rem 0.3rem"
         : props.theme.screens.xl
         ? "0.7rem 0.5rem"
-        : "1rem 1rem"};
+        : "1rem 0.65rem"};
     font-size: ${(props) =>
       props.theme.screens.mmd ? "0.9rem" : props.theme.fontSize.button};
   }
@@ -120,15 +119,17 @@ const Nav: React.FC = () => {
           <Link to="/community">Community</Link>
         </li>
 
-        <GettingStarted>
+        <OutlinedNavButton>
           <a
             rel="noopener noreferrer"
             target="_blank"
-            href="https://docs.litmuschaos.io/docs/getstarted/"
+            href="https://www.katacoda.com/litmusbot/scenarios/getting-started-with-litmus"
           >
-            <OutlinedButton backgroundColor="black">Get Started</OutlinedButton>
+            <OutlinedButton backgroundColor="black">
+              Interactive Tutorial
+            </OutlinedButton>
           </a>
-        </GettingStarted>
+        </OutlinedNavButton>
       </Ul>
     </NavBar>
   );
