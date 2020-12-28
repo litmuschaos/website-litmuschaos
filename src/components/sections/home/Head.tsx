@@ -60,7 +60,7 @@ const HeadText: React.FC = () => {
 const Head: React.FC = () => {
   return (
     <SectionDark
-      style={{ background: "none", position: "relative", zIndex: 50 }}
+      style={{ background: "none", position: "relative", zIndex: 49 }}
     >
       <ResponsiveRow breakpoint="md">
         <HeadText />
