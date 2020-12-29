@@ -19,7 +19,7 @@ const StyledBurger = styled.div`
   .line {
     height: 0.35rem;
     background-color: white;
-    border: 1px solid ${props => props.theme.colors.textSecondary};
+    border: 1px solid ${(props) => props.theme.colors.textSecondary};
     border-radius: 0.5rem;
   }
   .big {
@@ -44,10 +44,11 @@ const Ul = styled.ul`
     margin: 1rem 0;
     padding: 0.3rem 0;
     font-weight: 600;
+    list-style: none;
   }
 
   li:active {
-    background-color: ${props => props.theme.colors.purple(0.2)};
+    background-color: ${(props) => props.theme.colors.purple(0.2)};
   }
 `;
 
@@ -123,7 +124,7 @@ const Burger: React.FC = () => {
               </Ul>
             </BurgerModal>
           </>
-            )}
+        )}
       </div>
     </>
   );
