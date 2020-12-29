@@ -45,6 +45,7 @@ const OutlinedNavButton = styled.div`
 
 const Ul = styled.ul`
   list-style: none;
+  text-decoration: none;
   display: flex;
   flex-flow: row nowrap;
   li {
