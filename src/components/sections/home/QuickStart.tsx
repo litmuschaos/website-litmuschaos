@@ -108,7 +108,7 @@ const QuickStart: React.FC = () => {
           </BoundedContainer>
           <VideoFrame
             width="40rem"
-            src="https://www.youtube.com/embed/W5hmNbaYPfM"
+            src="https://www.youtube.com/embed/rOrKegj5ePI"
           />
         </ResponsiveRow>
         <FadedDiv>
