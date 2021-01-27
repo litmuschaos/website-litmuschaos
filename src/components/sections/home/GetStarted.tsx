@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
-import { YamlContext } from "../../../context";
+import { IYamlContext, YamlContext } from "../../../context";
 import { useTheme } from "../../../styles";
 import { IconCircle } from "../../icon-circle";
 import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
@@ -65,6 +65,8 @@ const Step: React.FC<IStep> = ({ bullet, title, description, yamlLink }) => {
 };
 
 const GetStartedSteps: React.FC = () => {
+  const { latestVersion } = useContext(YamlContext);
+
   return (
     <BoundedContainer breakpoint="md" width="50%" margin="0">
       <FadedDiv>
@@ -73,13 +75,13 @@ const GetStartedSteps: React.FC = () => {
             bullet="1"
             title="Install Litmus"
             description="Install the Litmus control plane"
-            yamlLink="https://litmuschaos.github.io/litmus/litmus-operator-v1.12.yaml"
+            yamlLink={`https://litmuschaos.github.io/litmus/litmus-operator-v${latestVersion}.yaml`}
           />
           <Step
             bullet="2"
             title="Get experiments"
             description="Browse and install the required experiments from ChaosHub. When you install them, they become custom resources which you can tune."
-            yamlLink="https://hub.litmuschaos.io/api/chaos/1.12.0?file=charts/generic/experiments.yaml"
+            yamlLink={`https://hub.litmuschaos.io/api/chaos/${latestVersion}?file=charts/generic/experiments.yaml`}
           />
           <Step
             bullet="3"
@@ -95,9 +97,26 @@ const GetStartedSteps: React.FC = () => {
 
 const GetStarted: React.FC = () => {
   const [yamlLink, setYamlLink] = useState(
-    "https://litmuschaos.github.io/litmus/litmus-operator-v1.12.yaml"
+    "https://litmuschaos.github.io/litmus/litmus-operator-v1.9.0.yaml"
   );
-  const initialValue = { yamlLink: yamlLink, setYamlLink: setYamlLink };
+  const [latestVersion, setLatestVersion] = useState<string>("");
+
+  useEffect(() => {
+    fetch("https://hub.litmuschaos.io/api/version")
+      .then((response) => response.json())
+      .then((data) => {
+        setLatestVersion(data[0]);
+        setYamlLink(
+          `https://litmuschaos.github.io/litmus/litmus-operator-v${data[0]}.yaml`
+        );
+      });
+  }, []);
+
+  const initialValue: IYamlContext = {
+    yamlLink: yamlLink,
+    setYamlLink: setYamlLink,
+    latestVersion: latestVersion,
+  };
 
   return (
     <YamlContext.Provider value={initialValue}>
