@@ -72,14 +72,14 @@ const GetStartedSteps: React.FC = () => {
           <Step
             bullet="1"
             title="Install Litmus"
-            description="Install the Litmus control plane" 
-            yamlLink="https://litmuschaos.github.io/litmus/litmus-operator-v1.11.2.yaml"
+            description="Install the Litmus control plane"
+            yamlLink="https://litmuschaos.github.io/litmus/litmus-operator-v1.12.yaml"
           />
           <Step
             bullet="2"
             title="Get experiments"
             description="Browse and install the required experiments from ChaosHub. When you install them, they become custom resources which you can tune."
-            yamlLink="https://hub.litmuschaos.io/api/chaos/1.11.1?file=charts/generic/experiments.yaml"
+            yamlLink="https://hub.litmuschaos.io/api/chaos/1.12.0?file=charts/generic/experiments.yaml"
           />
           <Step
             bullet="3"
@@ -95,7 +95,7 @@ const GetStartedSteps: React.FC = () => {
 
 const GetStarted: React.FC = () => {
   const [yamlLink, setYamlLink] = useState(
-    "https://litmuschaos.github.io/litmus/litmus-operator-v1.11.2.yaml"
+    "https://litmuschaos.github.io/litmus/litmus-operator-v1.12.yaml"
   );
   const initialValue = { yamlLink: yamlLink, setYamlLink: setYamlLink };
 
