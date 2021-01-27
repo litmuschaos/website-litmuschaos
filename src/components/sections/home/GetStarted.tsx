@@ -105,16 +105,11 @@ const GetStarted: React.FC = () => {
     fetch("https://hub.litmuschaos.io/api/version")
       .then((response) => response.json())
       .then((data) => {
-        for (let i = 0; i < data.length; i++) {
-          // Iterating through all the releases to extract out the monthly ones
-          if (data[i].split(".")[2] === "0") {
-            setLatestVersion(data[i]); // Set the latest monthly release version
-            setYamlLink(
-              `https://litmuschaos.github.io/litmus/litmus-operator-v${data[i]}.yaml`
-            );
-            break;
-          }
-        }
+        const version = data[0].slice(0, data[0].length - 1) + "0";
+        setLatestVersion(version); // Set the latest monthly release version
+        setYamlLink(
+          `https://litmuschaos.github.io/litmus/litmus-operator-v${version}.yaml`
+        );
       });
   }, []);
 
