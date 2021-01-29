@@ -34,7 +34,7 @@ const ChaoshubStatistics: React.FC = () => {
           operatorInstalls: data.google.operatorInstalls,
         })
       );
-  }, [analyticsData]);
+  }, []);
 
   return (
     <SectionDark>
