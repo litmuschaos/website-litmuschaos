@@ -6,7 +6,9 @@ import { top_adopters } from "./data";
 
 const Image = styled.img`
   margin: ${(props) =>
-    props.theme.screens.md ? "2rem 0.5rem 1rem 0" : "0 2rem 0.5rem 0"};
+    props.theme.screens.md ? "2rem 0.5rem 1rem 0" : "0 2rem 2rem 0"};
+  height: 2.5rem;
+  line-height: 2.5rem;
 `;
 
 const PreFooterBottom: React.FC = () => {

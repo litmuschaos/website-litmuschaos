@@ -1,12 +1,14 @@
 import React from "react";
 
-interface IYamlContext {
+export interface IYamlContext {
   yamlLink: string;
   setYamlLink: React.Dispatch<React.SetStateAction<string>>;
+  latestVersion: string;
 }
 const YamlContext = React.createContext<IYamlContext>({
   yamlLink: "",
   setYamlLink: () => {},
+  latestVersion: "",
 });
 
 export { YamlContext };
