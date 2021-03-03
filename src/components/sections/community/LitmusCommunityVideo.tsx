@@ -22,7 +22,7 @@ const LitmusCommunityVideo: React.FC = () => {
 
       <VideoFrame
         width="47.188rem"
-        src="https://www.youtube.com/embed/au6MQQ4bVHI"
+        src="https://www.youtube.com/embed/251UJFjEs0A"
       />
 
       <a
