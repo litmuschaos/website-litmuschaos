@@ -3,7 +3,7 @@ const top_adopters = {
   links: [
     {
       name: "Intuit",
-      image: "/svg/Intuit.svg",
+      image: "/svg/intuit.png",
     },
     {
       name: "Okteto",
@@ -23,7 +23,7 @@ const top_adopters = {
     },
     {
       name: "Open EBS",
-      image: "/svg/OpenEBS.svg",
+      image: "/svg/openEBS.png",
     },
     {
       name: "WeScale",
@@ -31,12 +31,20 @@ const top_adopters = {
     },
     {
       name: "Kublr",
-      image: "/svg/kublr.svg",
+      image: "/svg/kublr.png",
     },
     {
       name: "Zebrium",
       image: "/svg/Zebrium.svg",
     },
+    {
+      name: "Orange",
+      image: "/svg/Orange.jpeg",
+    },
+    {
+      name: "Kube Flare",
+      image: "/svg/KubeFlare.png",
+    }
   ],
 };
 
