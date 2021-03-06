@@ -6,6 +6,10 @@ const top_adopters = {
       image: "/svg/intuit.png",
     },
     {
+      name: "RedHat",
+      image: "/svg/redhat.png",
+    },
+    {
       name: "Okteto",
       image: "/svg/Okteto.svg",
     },
