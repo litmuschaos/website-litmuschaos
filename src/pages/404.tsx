@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { Button } from "../components/button";
 import { Image404 } from "../components/image-fetch/Image404";
 import { BoundedContainer, Center, ResponsiveRow } from "../components/layout";
+import { Link } from "../components/link";
 import { Paragraph } from "../components/texts";
 import { theme, useTheme } from "../styles";
 
@@ -28,8 +29,9 @@ const Content: React.FC = () => {
 
       <Paragraph>The page does not exist, or please try again later</Paragraph>
       <br />
-
-      <Button backgroundColor={textSecondary}>Go back home</Button>
+      <Link to="/">
+        <Button backgroundColor={textSecondary}>Go back home</Button>
+      </Link>
     </div>
   );
 };
