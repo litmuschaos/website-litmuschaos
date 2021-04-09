@@ -36,9 +36,9 @@ const CommunityTextList = styled.div`
 
 const BlueTestTube = styled.img`
   position: absolute;
-  width: ${props => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${props => (props.theme.screens.sm ? "10rem" : "-8rem")};
-  left: ${props =>
+  width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
+  margin-top: ${(props) => (props.theme.screens.sm ? "10rem" : "-8rem")};
+  left: ${(props) =>
     props.theme.screens.sm
       ? "50%"
       : props.theme.screens.md
@@ -54,8 +54,8 @@ const BlueTestTube = styled.img`
 
 const GreenTestTube = styled.img`
   position: absolute;
-  width: ${props => (props.theme.screens.sm ? "15%" : "3%")};
-  margin-top: ${props =>
+  width: ${(props) => (props.theme.screens.sm ? "15%" : "3%")};
+  margin-top: ${(props) =>
     props.theme.screens.sm
       ? "12rem"
       : props.theme.screens.xl
@@ -63,7 +63,7 @@ const GreenTestTube = styled.img`
       : props.theme.screens.xxxl
       ? "-3rem"
       : "-3rem"};
-  left: ${props =>
+  left: ${(props) =>
     props.theme.screens.sm
       ? "65%"
       : props.theme.screens.mmd
@@ -81,7 +81,7 @@ const GreenDot = styled.div`
   border-radius: 50%;
   margin-right: 1rem;
   margin-top: 0.4rem;
-  background-color: ${props => props.theme.colors.darkGreen(1)};
+  background-color: ${(props) => props.theme.colors.darkGreen(1)};
 `;
 
 // Component
@@ -134,7 +134,8 @@ const JoinOurCommunity: React.FC = () => {
                     <PurpleText
                       fontSize="paragraph"
                       fontWeight={400}
-                      underline={true}
+                      cursor="pointer"
+                      underline={false}
                     >
                       Meeting
                     </PurpleText>
@@ -150,7 +151,8 @@ const JoinOurCommunity: React.FC = () => {
                     <PurpleText
                       fontSize="paragraph"
                       fontWeight={400}
-                      underline={true}
+                      cursor="pointer"
+                      underline={false}
                     >
                       Meta Repository
                     </PurpleText>
@@ -166,7 +168,8 @@ const JoinOurCommunity: React.FC = () => {
                     <PurpleText
                       fontSize="paragraph"
                       fontWeight={400}
-                      underline={true}
+                      cursor="pointer"
+                      underline={false}
                     >
                       Release Tracker
                     </PurpleText>

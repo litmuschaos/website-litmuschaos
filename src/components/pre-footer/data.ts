@@ -2,12 +2,16 @@ const top_adopters = {
   title: "Top Adopters",
   links: [
     {
-      name: "Intuit",
-      image: "/svg/intuit.png",
+      name: "VMware",
+      image: "/svg/vmware.png",
     },
     {
       name: "RedHat",
       image: "/svg/redhat.png",
+    },
+    {
+      name: "Intuit",
+      image: "/svg/intuit.png",
     },
     {
       name: "Okteto",
@@ -31,7 +35,7 @@ const top_adopters = {
     },
     {
       name: "WeScale",
-      image: "/svg/weScale.svg",
+      image: "/svg/weScale.png",
     },
     {
       name: "Kublr",
