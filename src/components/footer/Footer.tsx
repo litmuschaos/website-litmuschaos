@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://mayadata.io/"
+              href="https://chaosnative.com/"
             >
               <PurpleText
                 fontSize="paragraph"
@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
                 underline={true}
                 style={{ display: "inline" }}
               >
-                MayaData
+                ChaosNative
               </PurpleText>
             </a>
             &nbsp;❤️
