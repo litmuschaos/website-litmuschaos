@@ -38,11 +38,7 @@ const UserQuote: React.FC<IUserQuote> = ({ quote, name, designation }) => {
           <AvatarDiv>
             <Avatar />
             <div style={{ height: "fit-content" }}>
-              <PurpleText
-                fontSize="subHeading"
-                fontWeight={600}
-                underline={false}
-              >
+              <PurpleText fontSize="subHeading" fontWeight={600}>
                 {name}
               </PurpleText>
               <Paragraph>{designation}</Paragraph>

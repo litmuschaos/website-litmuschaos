@@ -52,8 +52,8 @@ const Step: React.FC<IStep> = ({ bullet, title, description, yamlLink }) => {
         <PurpleText
           fontSize="subHeading"
           fontWeight={600}
-          underline={true}
           onClick={() => yamlLink && handleClick(yamlLink)}
+          style={{ cursor: "pointer" }}
         >
           {title}
         </PurpleText>

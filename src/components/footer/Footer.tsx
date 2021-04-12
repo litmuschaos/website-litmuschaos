@@ -33,7 +33,6 @@ const Copyright: React.FC = () => (
         <PurpleText
           fontSize="paragraph"
           fontWeight={400}
-          underline={true}
           style={{ display: "inline" }}
         >
           our Trademark Usage
@@ -117,22 +116,21 @@ const Footer: React.FC = () => {
         <div>
           <hr style={{ margin: "1rem auto" }} />
           <Paragraph style={{ textAlign: "center" }}>
-            Founded by{" "}
+            Originally created by{" "}
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://mayadata.io/"
+              href="https://chaosnative.com/"
             >
               <PurpleText
                 fontSize="paragraph"
                 fontWeight={400}
-                underline={true}
                 style={{ display: "inline" }}
               >
-                MayaData
+                ChaosNative Inc
               </PurpleText>
-            </a>
-            &nbsp;❤️
+            </a>{" "}
+            team
           </Paragraph>
         </div>
       </div>
