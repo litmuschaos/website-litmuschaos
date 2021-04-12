@@ -35,11 +35,11 @@ const GreenDot = styled.div`
   border-radius: 50%;
   margin-right: 1rem;
   margin-top: 0.4rem;
-  background-color: ${props => props.theme.colors.darkGreen(1)};
+  background-color: ${(props) => props.theme.colors.darkGreen(1)};
 `;
 
 const Divider = styled.hr`
-  border: 1px solid ${props => props.theme.colors.darkGreen(0.25)};
+  border: 1px solid ${(props) => props.theme.colors.darkGreen(0.25)};
 `;
 
 const UsefulLinksContent: React.FC = () => {
@@ -54,7 +54,7 @@ const UsefulLinksContent: React.FC = () => {
             target="_blank"
             href="https://docs.litmuschaos.io/docs/chaoshub/"
           >
-            <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
+            <PurpleText fontSize="paragraph" fontWeight={500}>
               How to use ChaosHub?
             </PurpleText>
           </a>
@@ -66,7 +66,7 @@ const UsefulLinksContent: React.FC = () => {
             target="_blank"
             href="https://docs.litmuschaos.io/docs/chaos-workflows/"
           >
-            <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
+            <PurpleText fontSize="paragraph" fontWeight={500}>
               Your own Chaos Workflows
             </PurpleText>
           </a>
@@ -78,7 +78,7 @@ const UsefulLinksContent: React.FC = () => {
             target="_blank"
             href="https://github.com/litmuschaos/chaos-charts/blob/master/CONTRIBUTING.md"
           >
-            <PurpleText fontSize="paragraph" fontWeight={500} underline={true}>
+            <PurpleText fontSize="paragraph" fontWeight={500}>
               Contributing new experiments
             </PurpleText>
           </a>

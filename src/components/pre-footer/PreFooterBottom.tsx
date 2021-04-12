@@ -6,6 +6,7 @@ import { top_adopters } from "./data";
 
 const Image = styled.img`
   height: 4rem;
+  width: auto;
   line-height: 3rem;
 `;
 

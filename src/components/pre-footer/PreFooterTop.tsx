@@ -87,7 +87,6 @@ const PreFooterTop: React.FC = () => {
                 <PurpleText
                   fontSize="paragraph"
                   fontWeight={400}
-                  underline={true}
                   style={{ display: "inline" }}
                 >
                   Cloud Native Computing Foundation
