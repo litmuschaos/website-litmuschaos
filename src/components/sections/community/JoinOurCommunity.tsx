@@ -92,7 +92,7 @@ const JoinOurCommunity: React.FC = () => {
         <BoundedContainer breakpoint="xl" width="60%" margin="0">
           <Heading>Join our Community meetings</Heading>
           <br />
-          <PurpleText fontSize="subHeading" underline={false} fontWeight={500}>
+          <PurpleText fontSize="subHeading" fontWeight={500}>
             We meet on every 3rd Wednesday of the month!
           </PurpleText>
           <br />
@@ -131,12 +131,7 @@ const JoinOurCommunity: React.FC = () => {
                     target="_blank"
                     href="https://zoom.us/j/91358162694/"
                   >
-                    <PurpleText
-                      fontSize="paragraph"
-                      fontWeight={400}
-                      cursor="pointer"
-                      underline={false}
-                    >
+                    <PurpleText fontSize="paragraph" fontWeight={400}>
                       Meeting
                     </PurpleText>
                   </a>
@@ -148,12 +143,7 @@ const JoinOurCommunity: React.FC = () => {
                     target="_blank"
                     href="https://github.com/litmuschaos/litmus"
                   >
-                    <PurpleText
-                      fontSize="paragraph"
-                      fontWeight={400}
-                      cursor="pointer"
-                      underline={false}
-                    >
+                    <PurpleText fontSize="paragraph" fontWeight={400}>
                       Meta Repository
                     </PurpleText>
                   </a>
@@ -165,12 +155,7 @@ const JoinOurCommunity: React.FC = () => {
                     target="_blank"
                     href="https://github.com/litmuschaos/litmus/milestones"
                   >
-                    <PurpleText
-                      fontSize="paragraph"
-                      fontWeight={400}
-                      cursor="pointer"
-                      underline={false}
-                    >
+                    <PurpleText fontSize="paragraph" fontWeight={400}>
                       Release Tracker
                     </PurpleText>
                   </a>

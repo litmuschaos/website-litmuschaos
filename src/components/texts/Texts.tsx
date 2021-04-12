@@ -35,7 +35,6 @@ const Paragraph = styled.p<IText>`
 `;
 
 interface IPurpleText extends IText {
-  underline: boolean;
   fontWeight: number;
   cursor?: string;
   fontSize: "heading" | "subHeading" | "paragraph" | "subText" | "button";
@@ -46,8 +45,7 @@ const PurpleText = styled.p<IPurpleText>`
   font-weight: ${(props) => props.fontWeight};
   text-align: ${(props) => props.textAlign ?? "left"};
   color: ${(props) => props.theme.colors.textSecondary};
-  text-decoration: ${(props) => (props.underline ? "underline" : "none")};
-  cursor: ${(props) => props.cursor ?? "auto"};
+  text-decoration: "none";
   font-size: ${(props) =>
     props.theme.screens.md
       ? props.theme.fontSize[props.fontSize].md

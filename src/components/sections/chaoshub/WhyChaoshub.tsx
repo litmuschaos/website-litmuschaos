@@ -54,12 +54,7 @@ const UsefulLinksContent: React.FC = () => {
             target="_blank"
             href="https://docs.litmuschaos.io/docs/chaoshub/"
           >
-            <PurpleText
-              fontSize="paragraph"
-              cursor="pointer"
-              fontWeight={500}
-              underline={false}
-            >
+            <PurpleText fontSize="paragraph" fontWeight={500}>
               How to use ChaosHub?
             </PurpleText>
           </a>
@@ -71,12 +66,7 @@ const UsefulLinksContent: React.FC = () => {
             target="_blank"
             href="https://docs.litmuschaos.io/docs/chaos-workflows/"
           >
-            <PurpleText
-              fontSize="paragraph"
-              cursor="pointer"
-              fontWeight={500}
-              underline={false}
-            >
+            <PurpleText fontSize="paragraph" fontWeight={500}>
               Your own Chaos Workflows
             </PurpleText>
           </a>
@@ -88,12 +78,7 @@ const UsefulLinksContent: React.FC = () => {
             target="_blank"
             href="https://github.com/litmuschaos/chaos-charts/blob/master/CONTRIBUTING.md"
           >
-            <PurpleText
-              fontSize="paragraph"
-              cursor="pointer"
-              fontWeight={500}
-              underline={false}
-            >
+            <PurpleText fontSize="paragraph" fontWeight={500}>
               Contributing new experiments
             </PurpleText>
           </a>
