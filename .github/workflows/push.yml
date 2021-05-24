@@ -41,7 +41,7 @@ jobs:
           then
             docker build . -f Dockerfile -t ${{ secrets.REPONAME }}/${{ secrets.IMAGE_NAME }}:${IMG_TAG}
           else if [ $branch == "staging" ]
-            docker build . -f Dockerfile -t ${{ secrets.REPONAME }}/${{ secrets.IMAGE_NAME }}:${branch}-${IMG_TAG}
+            docker build . -f Dockerfile -t ${{ secrets.REPONAME }}/${{ secrets.STAGING_IMAGE_NAME }}:${branch}-${IMG_TAG}
           fi
 
       - name: Login to DockerHub
@@ -59,7 +59,7 @@ jobs:
           then
             docker push ${{ secrets.REPONAME }}/${{ secrets.IMAGE_NAME }}:${IMG_TAG}
           else if [ $branch == "staging" ]
-            docker push ${{ secrets.REPONAME }}/${{ secrets.IMAGE_NAME }}:${branch}-${IMG_TAG}
+            docker push ${{ secrets.REPONAME }}/${{ secrets.STAGING_IMAGE_NAME }}:${branch}-${IMG_TAG}
           fi
 
 
