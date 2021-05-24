@@ -8,8 +8,9 @@ sudo: required
 services:
   - docker
 script:
-  - docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
-  - docker build . -t litmuschaos/www-litmuschaos-io
+  - if [ "$TRAVIS_PULL_REQUEST" = "true" ];
+    docker login -u "$DOCKER_USER" -p "$DOCKER_PASS" && docker build . -t litmuschaos/www-litmuschaos-io;
+    fi
 after_success:
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then export REPO=litmuschaos/www-litmuschaos-io;
     docker login -u "$DOCKER_USER" -p "$DOCKER_PASS" && docker build -t $REPO:$COMMIT . && docker push $REPO;
