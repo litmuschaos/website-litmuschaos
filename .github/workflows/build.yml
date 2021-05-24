@@ -1,9 +1,6 @@
 name: build-pipeline
 
 on:
-  push:
-    branches:
-      - fix-master
   pull_request:
     branches:
       - master
