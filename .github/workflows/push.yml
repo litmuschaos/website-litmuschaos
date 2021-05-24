@@ -63,5 +63,3 @@ jobs:
           then
             docker push ${{ secrets.REPONAME }}/${{ secrets.STAGING_IMAGE_NAME }}:${branch}-${IMG_TAG}
           fi
-
-
