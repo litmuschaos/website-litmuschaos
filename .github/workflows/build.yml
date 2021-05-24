@@ -1,38 +1,23 @@
 name: build-pipeline
+
 on:
+  push:
+    branches:
+      - fix-master
+
   pull_request:
     branches:
       - master
       - staging
 jobs:
-  get-envs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - shell: bash
-        run: |
-          echo export IMG_TAG=${GITHUB_SHA::6} >> env-vars
-      - name: Uploading envs
-        uses: actions/upload-artifact@v2
-        with:
-          name: env_artifact
-          path: env-vars
-
   docker-build-or-push:
-    runs-on: ubuntu-latest
     needs:
       - get-envs
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Downloading image artficate
-        uses: actions/download-artifact@v2
-        with:
-          name: env_artifact
       - name: Build docker image
         shell: bash
         run: |
           source env-vars
-          docker build . -f Dockerfile -t ${{ secrets.REPONAME }}/${{ secrets.IMAGE_NAME }}:${IMG_TAG}
- 
+          docker build . -f Dockerfile
