@@ -42,6 +42,7 @@ jobs:
           then
             docker build . -f Dockerfile -t ${{ secrets.REPONAME }}/${{ secrets.IMAGE_NAME }}:${IMG_TAG}
           elif [ $branch == "staging" ]
+          then
             docker build . -f Dockerfile -t ${{ secrets.REPONAME }}/${{ secrets.STAGING_IMAGE_NAME }}:${branch}-${IMG_TAG}
           fi
 
@@ -60,6 +61,7 @@ jobs:
           then
             docker push ${{ secrets.REPONAME }}/${{ secrets.IMAGE_NAME }}:${IMG_TAG}
           elif [ $branch == "staging" ]
+          then
             docker push ${{ secrets.REPONAME }}/${{ secrets.STAGING_IMAGE_NAME }}:${branch}-${IMG_TAG}
           fi
 
