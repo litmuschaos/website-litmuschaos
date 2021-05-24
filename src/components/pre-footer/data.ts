@@ -52,6 +52,14 @@ const top_adopters = {
     {
       name: "Kube Flare",
       image: "/svg/KubeFlare.png",
+    },
+    {
+      name: "Anuta Networks",
+      image: "/svg/AnutaNetworks.png",
+    },
+    {
+      name: "Kitopi",
+      image: "/svg/Kitopi.png",
     }
   ],
 };
