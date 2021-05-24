@@ -11,8 +11,7 @@ on:
       - staging
 jobs:
   docker-build-or-push:
-    needs:
-      - get-envs
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
