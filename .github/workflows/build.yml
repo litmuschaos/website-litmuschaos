@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - fix-master
-
   pull_request:
     branches:
       - master
       - staging
+
 jobs:
   docker-build-or-push:
     runs-on: ubuntu-latest
@@ -18,5 +18,4 @@ jobs:
       - name: Build docker image
         shell: bash
         run: |
-          source env-vars
           docker build . -f Dockerfile
