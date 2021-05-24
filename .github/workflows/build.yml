@@ -34,8 +34,5 @@ jobs:
         shell: bash
         run: |
           source env-vars
-          branch=${GITHUB_REF#refs/*/}
-          if [ $branch == "master" ]
-          then
-            docker build . -f Dockerfile -t ${{ secrets.REPONAME }}/${{ secrets.IMAGE_NAME }}:${IMG_TAG}
-          fi
+          docker build . -f Dockerfile -t ${{ secrets.REPONAME }}/${{ secrets.IMAGE_NAME }}:${IMG_TAG}
+ 
