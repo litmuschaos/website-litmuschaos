@@ -41,7 +41,7 @@ jobs:
           if [ $branch == "master" ]
           then
             docker build . -f Dockerfile -t ${{ secrets.REPONAME }}/${{ secrets.IMAGE_NAME }}:${IMG_TAG}
-          else if [ $branch == "staging" ]
+          elif [ $branch == "staging" ]
             docker build . -f Dockerfile -t ${{ secrets.REPONAME }}/${{ secrets.STAGING_IMAGE_NAME }}:${branch}-${IMG_TAG}
           fi
 
@@ -59,7 +59,7 @@ jobs:
           if [ $branch == "master" ]
           then
             docker push ${{ secrets.REPONAME }}/${{ secrets.IMAGE_NAME }}:${IMG_TAG}
-          else if [ $branch == "staging" ]
+          elif [ $branch == "staging" ]
             docker push ${{ secrets.REPONAME }}/${{ secrets.STAGING_IMAGE_NAME }}:${branch}-${IMG_TAG}
           fi
 
