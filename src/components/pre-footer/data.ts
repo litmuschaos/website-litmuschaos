@@ -60,6 +60,14 @@ const top_adopters = {
     {
       name: "Kitopi",
       image: "/svg/Kitopi.png",
+    },
+    {
+      name: "Lenskart",
+      image: "/svg/lenskart.svg",
+    },
+    {
+      name: "Halodoc",
+      image: "/svg/halodoc.svg",
     }
   ],
 };
