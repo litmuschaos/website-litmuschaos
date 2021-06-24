@@ -19,12 +19,10 @@ const LitmusCommunityVideo: React.FC = () => {
       <BoundedContainer breakpoint="sm" width="80%" margin="2rem auto">
         <Paragraph textAlign="center">{paragraphText}</Paragraph>
       </BoundedContainer>
-
       <VideoFrame
         width="47.188rem"
-        src="https://www.youtube.com/embed/251UJFjEs0A"
+        src="https://www.youtube.com/embed/fi-vhKE5vKI"
       />
-
       <a
         rel="noopener noreferrer"
         target="_target"
