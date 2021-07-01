@@ -241,11 +241,6 @@ const adoptersContent = [
         "There are frequent releases and it is well maintained",
       ],
     },
-    benefits: {
-      heading: "Benefits in using Litmus.",
-      subtext:
-        "Litmus has a wide variety of generic test cases for Kubernetes workload and Infrastructure and provides a very easy way for end-to-end automation of resiliency test cases.",
-    },
     other: {
       heading: "Other Resources",
       videoUrl: "https://youtu.be/UOhjFbCrncw",

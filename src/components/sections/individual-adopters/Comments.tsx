@@ -41,12 +41,12 @@ const Why: React.FC<Icontent> = ({ adopter }) => {
       <Row>
         <Img src={`/assets/bullets/${adopter.key}/why.svg`} />
         <TextBox>
-          <SubHeading>{adopter?.why.heading}</SubHeading>
+          <SubHeading>{adopter?.why?.heading}</SubHeading>
           <br />
-          <SubTextGray>{adopter?.why.subtext}</SubTextGray>
+          <SubTextGray>{adopter?.why?.subtext}</SubTextGray>
           <SubTextGray>
             <List>
-              {adopter?.why.list.map((adopter: any) => {
+              {adopter?.why?.list?.map((adopter: any) => {
                 return <li>{adopter}</li>;
               })}
             </List>
@@ -62,9 +62,9 @@ const How: React.FC<Icontent> = ({ adopter }) => {
       <Row>
         <Img src={`/assets/bullets/${adopter.key}/how.svg`} />
         <TextBox>
-          <SubHeading>{adopter?.how.heading}</SubHeading>
+          <SubHeading>{adopter?.how?.heading}</SubHeading>
           <br />
-          <SubTextGray>{adopter?.how.subtext}</SubTextGray>
+          <SubTextGray>{adopter?.how?.subtext}</SubTextGray>
           <SubTextGray>
             <List>
               {adopter?.how?.list?.map((adopter: any) => {
@@ -81,11 +81,11 @@ const Benefits: React.FC<Icontent> = ({ adopter }) => {
   return (
     <ContentSection>
       <Row>
-        <Img src={`/assets/bullets/${adopter.key}/benefits.svg`} />
+        <Img src={`/assets/bullets/${adopter?.key}/benefits.svg`} />
         <TextBox>
-          <SubHeading>{adopter?.benefits.heading}</SubHeading>
+          <SubHeading>{adopter?.benefits?.heading}</SubHeading>
           <br />
-          <SubTextGray>{adopter?.benefits.subtext}</SubTextGray>
+          <SubTextGray>{adopter?.benefits?.subtext}</SubTextGray>
           <SubTextGray>
             <List>
               {adopter?.benefits?.list?.map((adopter: any) => {
@@ -104,11 +104,11 @@ const Other: React.FC<Icontent> = ({ adopter }) => {
       <Row>
         <Img src={`/assets/bullets/${adopter.key}/others.svg`} />
         <TextBox>
-          <SubHeading>{adopter?.other.heading}</SubHeading>
+          <SubHeading>{adopter?.other?.heading}</SubHeading>
           <SubTextGray>
-            {adopter?.other.list ? (
+            {adopter?.other?.list ? (
               <List>
-                {adopter?.other.list.map((adopter: any) => {
+                {adopter?.other?.list?.map((adopter: any) => {
                   return <li>{adopter}</li>;
                 })}
               </List>
@@ -116,16 +116,16 @@ const Other: React.FC<Icontent> = ({ adopter }) => {
               <>
                 <br />
                 Videos:{" "}
-                <a rel="noopener noreferrer" href={adopter?.other.videoUrl}>
-                  {adopter?.other.videoUrl}
+                <a rel="noopener noreferrer" href={adopter?.other?.videoUrl}>
+                  {adopter?.other?.videoUrl}
                 </a>
                 {adopter?.other.blogUrl ? (
                   <>
                     <br />
                     <br />
                     Blogs:{" "}
-                    <a rel="noopener noreferrer" href={adopter?.other.blogUrl}>
-                      {adopter?.other.blogUrl}
+                    <a rel="noopener noreferrer" href={adopter?.other?.blogUrl}>
+                      {adopter?.other?.blogUrl}
                     </a>
                   </>
                 ) : (
