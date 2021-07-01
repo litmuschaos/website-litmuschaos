@@ -25,6 +25,10 @@ export default {
   },
   colors: {
     black: "#000000",
+    white: "#FFFFFF",
+    boxShadowCol1: "rgba(0, 0, 0, 0.18)",
+    boxShadowCol2: "rgba(0, 0, 0, 0.22)",
+    dropShadowNavbarDesktop: "rgba(225, 225, 225, 0.5)",
     backgroundLight: "#F9FAFC",
     backgroundDark: "#F4F5F7",
     spaceGrey: "#F1F2F6",

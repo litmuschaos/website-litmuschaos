@@ -6,7 +6,6 @@ import { useLocation } from "@reach/router";
 
 const Intuit = () => {
   const location = useLocation();
-  console.log(location.pathname);
   const urlSlug = location.pathname
     ?.replace(/\/$/, "")
     .split("/")

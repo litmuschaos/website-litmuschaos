@@ -62,9 +62,9 @@ const SlideDownMenuDesktop = styled.div`
   position: absolute;
   display: none;
   right: 0;
-  background: #ffffff;
-  box-shadow: 0px 4.8px 14.4px rgba(0, 0, 0, 0.18),
-    0px 25.6px 57.6px rgba(0, 0, 0, 0.22);
+  background: ${props => props.theme.colors.white};
+  box-shadow: 0px 4.8px 14.4px ${props => props.theme.colors.boxShadowCol1},
+    0px 25.6px 57.6px ${props => props.theme.colors.boxShadowCol2};
   border-radius: 10px;
   padding: 1rem 0;
   width: 200px;
@@ -88,7 +88,7 @@ const DropDownLinksDesktop = styled(Link)`
   font-size: 0.95rem;
   transition: all 100ms ease-in;
   &:hover {
-    background: rgba(225, 225, 225, 0.5);
+    background: ${props => props.theme.colors.dropShadowNavbarDesktop};
     color: #000;
   }
 `;
@@ -127,7 +127,6 @@ const Nav: React.FC = () => {
   ) : (
     <NavBar>
       <NavLinks />
-
       <Ul>
         <li>
           <Link to="/whylitmus">Why Litmus?</Link>

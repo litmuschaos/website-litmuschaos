@@ -7,7 +7,6 @@ import { useLocation } from "@reach/router";
 
 const Orange = () => {
   const location = useLocation();
-  console.log(location.pathname);
   const urlSlug = location.pathname
     ?.replace(/\/$/, "")
     .split("/")

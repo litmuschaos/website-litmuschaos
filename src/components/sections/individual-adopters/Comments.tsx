@@ -45,15 +45,11 @@ const Why: React.FC<Icontent> = ({ adopter }) => {
           <br />
           <SubTextGray>{adopter?.why.subtext}</SubTextGray>
           <SubTextGray>
-            {adopter?.why.list ? (
-              <List>
-                {adopter?.why.list.map((adopter: any) => {
-                  return <li>{adopter}</li>;
-                })}
-              </List>
-            ) : (
-              <></>
-            )}
+            <List>
+              {adopter?.why.list.map((adopter: any) => {
+                return <li>{adopter}</li>;
+              })}
+            </List>
           </SubTextGray>
         </TextBox>
       </Row>
@@ -70,15 +66,11 @@ const How: React.FC<Icontent> = ({ adopter }) => {
           <br />
           <SubTextGray>{adopter?.how.subtext}</SubTextGray>
           <SubTextGray>
-            {adopter?.how.list ? (
-              <List>
-                {adopter?.how.list.map((adopter: any) => {
-                  return <li>{adopter}</li>;
-                })}
-              </List>
-            ) : (
-              <></>
-            )}
+            <List>
+              {adopter?.how?.list?.map((adopter: any) => {
+                return <li>{adopter}</li>;
+              })}
+            </List>
           </SubTextGray>
         </TextBox>
       </Row>
@@ -95,15 +87,11 @@ const Benefits: React.FC<Icontent> = ({ adopter }) => {
           <br />
           <SubTextGray>{adopter?.benefits.subtext}</SubTextGray>
           <SubTextGray>
-            {adopter?.benefits.list ? (
-              <List>
-                {adopter?.benefits.list.map((adopter: any) => {
-                  return <li>{adopter}</li>;
-                })}
-              </List>
-            ) : (
-              <></>
-            )}
+            <List>
+              {adopter?.benefits?.list?.map((adopter: any) => {
+                return <li>{adopter}</li>;
+              })}
+            </List>
           </SubTextGray>
         </TextBox>
       </Row>

@@ -31,9 +31,9 @@ left: 0;
   z-index: 1000;
 
   &:after {
-    content="This is shit";
-    color: #FFFFFF;
-    background-color: #000000;
+    content="";
+    color: ${props => props.theme.colors.white};
+    background-color: ${props => props.theme.colors.white};
     height: 20px;
   }
 `;
@@ -57,7 +57,7 @@ const CloseButton = styled.span`
 `;
 
 const Modal: React.FC<Icontent> = ({ url, handleClick }) => {
-  const { redhat, orange, lenskart, anutanetworks } = adoptersData;
+  const video = adoptersData.filter(fil => fil.key === url)[0];
   return (
     <Backdrop>
       <IframeContainer>
@@ -67,17 +67,7 @@ const Modal: React.FC<Icontent> = ({ url, handleClick }) => {
         <iframe
           width="100%"
           height="100%"
-          src={
-            url?.includes("redhat")
-              ? redhat.videoUrl
-              : url?.includes("orange")
-              ? orange.videoUrl
-              : url?.includes("lenskart")
-              ? lenskart.videoUrl
-              : url?.includes("anutanetworks")
-              ? anutanetworks.videoUrl
-              : ""
-          }
+          src={video.videoUrl}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

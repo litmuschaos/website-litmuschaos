@@ -6,7 +6,6 @@ import { useLocation } from "@reach/router";
 
 const Kitopi = () => {
   const location = useLocation();
-  console.log(location.pathname);
   const urlSlug = location.pathname
     ?.replace(/\/$/, "")
     .split("/")

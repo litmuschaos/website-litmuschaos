@@ -29,7 +29,6 @@ const Hero: React.FC<Icontent> = ({ url }) => {
   const images = getAdopterHeroImg();
   const image = adoptersContent.filter((item: any) => item.key === url)[0];
   const adopter = adoptersData.filter((item: any) => item.key === url)[0];
-  console.log(adopter);
   const { heading, subheading, company } = adopter;
 
   const Logo = () => <GatsbyImage image={images[image.key]} alt={image.key} />;
