@@ -17,7 +17,7 @@ const SwagButtonContainer = styled.div`
 
 const SwagLink = styled.a`
   padding: 0 1rem;
-  color: #7e8f9a;
+  color: ${props => props.theme.colors.swagBtnLink};
   font-size: 1rem;
   line-height: 1.2rem;
 `;

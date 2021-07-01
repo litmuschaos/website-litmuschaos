@@ -12,7 +12,7 @@ const getAdopterCardImg = () => {
           node {
             relativeDirectory
             childImageSharp {
-              gatsbyImageData(width: 200, quality: 100, layout: CONSTRAINED)
+              gatsbyImageData(width: 200, quality: 100)
             }
           }
         }
