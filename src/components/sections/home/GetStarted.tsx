@@ -3,7 +3,12 @@ import styled from "styled-components";
 import { IYamlContext, YamlContext } from "../../../context";
 import { useTheme } from "../../../styles";
 import { IconCircle } from "../../icon-circle";
-import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
+import {
+  BoundedContainer,
+  Center,
+  ResponsiveRow,
+  SectionDark,
+} from "../../layout";
 import { Terminal } from "../../terminal";
 import { Heading, Paragraph, PurpleText, SubText } from "../../texts";
 
@@ -13,12 +18,12 @@ const FadedDiv = styled.div`
   justify-content: space-between;
   width: 0.625rem;
   margin-left: 2rem;
-  background: ${(props) => props.theme.gradient.fadedLine(0)};
+  background: ${props => props.theme.gradient.fadedLine(0)};
 `;
 
 const Wrapper = styled.div`
-  width: ${(props) => (props.theme.screens.md ? "80vw" : "40vw")};
-  padding-top: ${(props) => (props.theme.screens.md ? "2rem" : "1rem")};
+  width: ${props => (props.theme.screens.md ? "80vw" : "40vw")};
+  padding-top: ${props => (props.theme.screens.md ? "2rem" : "1rem")};
   margin-left: -1.4rem;
 `;
 
@@ -103,8 +108,8 @@ const GetStarted: React.FC = () => {
 
   useEffect(() => {
     fetch("https://hub.litmuschaos.io/api/version")
-      .then((response) => response.json())
-      .then((data) => {
+      .then(response => response.json())
+      .then(data => {
         const version = data[0].slice(0, data[0].length - 1) + "0";
         setLatestVersion(version); // Set the latest monthly release version
         setYamlLink(
@@ -122,7 +127,7 @@ const GetStarted: React.FC = () => {
   return (
     <YamlContext.Provider value={initialValue}>
       <SectionDark>
-        <div>
+        <Center>
           <Heading textAlign="center">Get started with Litmus</Heading>
           <ResponsiveRow breakpoint="md" alignItems="start">
             <BoundedContainer breakpoint="md" width="50%" margin="0">
@@ -130,7 +135,7 @@ const GetStarted: React.FC = () => {
             </BoundedContainer>
             <GetStartedSteps />
           </ResponsiveRow>
-        </div>
+        </Center>
       </SectionDark>
     </YamlContext.Provider>
   );

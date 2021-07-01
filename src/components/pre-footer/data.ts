@@ -1,14 +1,14 @@
 const top_adopters = {
   title: "Top Adopters",
   links: [
-    {
-      name: "VMware",
-      image: "/svg/vmware.png",
-    },
-    {
-      name: "RedHat",
-      image: "/svg/redhat.png",
-    },
+    // {
+    //   name: "VMware",
+    //   image: "/svg/vmware.png",
+    // },
+    // {
+    //   name: "RedHat",
+    //   image: "/svg/redhat.png",
+    // },
     {
       name: "Intuit",
       image: "/svg/intuit.png",
@@ -37,38 +37,38 @@ const top_adopters = {
       name: "WeScale",
       image: "/svg/weScale.png",
     },
-    {
-      name: "Kublr",
-      image: "/svg/kublr.png",
-    },
+    // {
+    //   name: "Kublr",
+    //   image: "/svg/kublr.png",
+    // },
     {
       name: "Zebrium",
       image: "/svg/Zebrium.svg",
     },
-    {
-      name: "Orange",
-      image: "/svg/Orange.jpeg",
-    },
-    {
-      name: "Kube Flare",
-      image: "/svg/KubeFlare.png",
-    },
-    {
-      name: "Anuta Networks",
-      image: "/svg/AnutaNetworks.png",
-    },
-    {
-      name: "Kitopi",
-      image: "/svg/Kitopi.png",
-    },
-    {
-      name: "Lenskart",
-      image: "/svg/lenskart.svg",
-    },
-    {
-      name: "Halodoc",
-      image: "/svg/halodoc.svg",
-    }
+    // {
+    //   name: "Orange",
+    //   image: "/svg/Orange.jpeg",
+    // },
+    // {
+    //   name: "Kube Flare",
+    //   image: "/svg/KubeFlare.png",
+    // },
+    // {
+    //   name: "Anuta Networks",
+    //   image: "/svg/AnutaNetworks.png",
+    // },
+    // {
+    //   name: "Kitopi",
+    //   image: "/svg/Kitopi.png",
+    // },
+    // {
+    //   name: "Lenskart",
+    //   image: "/svg/lenskart.svg",
+    // },
+    // {
+    //   name: "Halodoc",
+    //   image: "/svg/halodoc.svg",
+    // }
   ],
 };
 

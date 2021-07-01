@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 interface IRow {
   wrap?: string;
+  space?: boolean;
+  strict?: boolean;
 }
 const Row = styled.div<IRow>`
   display: flex;
-  justify-content: space-between;
+  max-width: ${props => (props.strict ? "1200px !important" : "")};
   flex-wrap: ${props => props.wrap ?? "no-wrap"};
+  justify-content: ${props => (props.space ? "space-between" : "")};
 `;
 
 const Column = styled.div`
@@ -23,7 +26,7 @@ const ColumnCenter = styled.div`
   height: 100%;
 `;
 
-const Center = styled.div<ICenter>`
+const Center = styled.div`
   display: grid;
   place-items: center;
   width: 100%;

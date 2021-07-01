@@ -2,14 +2,19 @@ import React from "react";
 import { useTheme } from "styled-components";
 import { ChaosBirdExp } from "../../image-fetch/ChaosBirdExp";
 import { InfoSection } from "../../info-section";
-import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
+import {
+  BoundedContainer,
+  Center,
+  ResponsiveRow,
+  SectionDark,
+} from "../../layout";
 import { Heading } from "../../texts";
 
 const CloudNativeWay: React.FC = () => {
   const { purple, darkGreen, lightGreen, yellow } = useTheme().colors;
   return (
     <SectionDark>
-      <div>
+      <Center>
         <Heading textAlign="center">Do it the cloud-native way</Heading>
         <ResponsiveRow breakpoint="xl">
           <BoundedContainer breakpoint="xl" width="50%" margin="0">
@@ -47,7 +52,7 @@ const CloudNativeWay: React.FC = () => {
             </ResponsiveRow>
           </BoundedContainer>
         </ResponsiveRow>
-      </div>
+      </Center>
     </SectionDark>
   );
 };

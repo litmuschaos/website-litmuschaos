@@ -24,6 +24,7 @@ export default {
     small: { lg: "0.875rem", md: "0.75rem" },
   },
   colors: {
+    black: "#000000",
     backgroundLight: "#F9FAFC",
     backgroundDark: "#F4F5F7",
     spaceGrey: "#F1F2F6",
@@ -31,6 +32,8 @@ export default {
     darkGray: "#6F6F6F",
     textPrimary: "#042A2B",
     textSecondary: "#5B44BA",
+    darkBlue: "#005797",
+    lightBlue: "#03B5B0",
 
     grayText: (opacity: number): string =>
       opacityCheck(opacity)

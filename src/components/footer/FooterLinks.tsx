@@ -3,9 +3,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Title = styled.div`
-  color: ${(props) => props.theme.colors.textSecondary};
+  color: ${props => props.theme.colors.textSecondary};
   font-weight: 600;
-  font-size: ${(props) => props.theme.fontSize.paragraph};
+  font-size: ${props => props.theme.fontSize.paragraph};
   margin-bottom: 1.5rem;
 `;
 
@@ -26,6 +26,26 @@ const List = styled.li`
   }
 `;
 
+const LinkColumn = styled.div`
+  margin: 1rem;
+  &:nth-child(3) {
+    width: 50%;
+
+    & li {
+      float: left;
+      min-width: 5rem;
+      margin-right: 1rem;
+      & a {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        & img {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+`;
+
 interface Link {
   name: string;
   image?: string;
@@ -42,10 +62,10 @@ interface LinkProps {
 }
 const Links: React.FC<LinkProps> = ({ data, showImage, internalLink }) => {
   return (
-    <div style={{ margin: "1rem" }}>
+    <LinkColumn>
       <Title>{data.title}</Title>
       <ListBox>
-        {data.links.map((link) =>
+        {data.links.map(link =>
           internalLink ? (
             <List key={link.name}>
               <GatsbyLink to={link.url}>
@@ -67,7 +87,7 @@ const Links: React.FC<LinkProps> = ({ data, showImage, internalLink }) => {
           )
         )}
       </ListBox>
-    </div>
+    </LinkColumn>
   );
 };
 
