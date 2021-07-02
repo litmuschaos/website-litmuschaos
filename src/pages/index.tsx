@@ -1,4 +1,3 @@
-import { RouteComponentProps, Router } from "@reach/router";
 import React from "react";
 import { PurpleBox } from "../components/image-fetch/PurpleBox";
 import { Layout } from "../components/layout";
@@ -13,7 +12,7 @@ import { BannerHome } from "../components/sections/home/Banner";
 import { SEO } from "../components/seo";
 
 const App = () => {
-  const Home: React.FC<RouteComponentProps> = () => (
+  return (
     <Layout>
       <SEO />
       <Head />
@@ -24,12 +23,6 @@ const App = () => {
       <GetStarted />
       <FeedBack />
     </Layout>
-  );
-
-  return (
-    <Router>
-      <Home path="/" />
-    </Router>
   );
 };
 
