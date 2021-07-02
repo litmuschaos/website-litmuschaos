@@ -1,3 +1,4 @@
+import { useMatch } from "@reach/router";
 import React from "react";
 import styled from "styled-components";
 import { useTheme } from "../../styles";
@@ -9,17 +10,21 @@ import { SmallText } from "../texts";
 import Burger from "./Burger";
 
 const NavBar = styled.nav`
-  width: ${props => (props.theme.screens.xl ? "95%" : "100%")};
-  max-width: 132rem;
+  width: ${props => (props.theme.screens.xl ? "calc(100% - 3rem)" : "100%")};
+  max-width: 1200px;
   margin: 0 auto;
+  padding: ${props => (props.theme.screens.md ? "1.4rem 0" : "0")};
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   position: relative;
   z-index: ${props => props.theme.zIndex.nav};
 `;
 
 const LogoDiv = styled.div`
   display: flex;
+`;
+const MobBurgerDiv = styled(LogoDiv)`
+  justify-content: space-between;
 `;
 
 const GitHubStars = styled.div`
@@ -55,6 +60,12 @@ const Ul = styled.ul`
         : "1rem 0.65rem"};
     font-size: ${props =>
       props.theme.screens.mmd ? "0.9rem" : props.theme.fontSize.button};
+    a {
+      color: ${props =>
+        props.color === "white"
+          ? props.theme.colors.white
+          : props.theme.colors.black};
+    }
   }
 `;
 
@@ -69,6 +80,9 @@ const SlideDownMenuDesktop = styled.div`
   padding: 1rem 0;
   width: 200px;
   border-radius: 6px;
+  a {
+    color: ${props => props.theme.colors.black} !important;
+  }
 `;
 
 const DropDownNavElement = styled.li`
@@ -93,41 +107,71 @@ const DropDownLinksDesktop = styled(Link)`
   }
 `;
 
-const NavLinks: React.FC = () => (
-  <LogoDiv>
-    <Link to="/">
-      <Center>
-        <img src="/svg/litmus-logo-purple.svg" width="128" alt="litmus logo" />
-      </Center>
-    </Link>
+const NavLinks: React.FC = () => {
+  const { md } = useTheme().screens;
+  return (
+    <LogoDiv>
+      <Link to="/">
+        <Center>
+          <img
+            src="/svg/litmus-logo-purple.svg"
+            width="128"
+            alt="litmus logo"
+          />
+        </Center>
+      </Link>
 
-    <a
-      rel="noopener noreferrer"
-      target="_blank"
-      href="https://github.com/litmuschaos/litmus"
-    >
-      <Center>
-        <GitHubStars>
-          <GithubIcon />
-          <SmallText style={{ margin: "0.3rem" }}>Star</SmallText>
-        </GitHubStars>
-      </Center>
-    </a>
-  </LogoDiv>
-);
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://github.com/litmuschaos/litmus"
+      >
+        {!md && (
+          <Center>
+            <a
+              href="https://github.com/litmuschaos/litmus"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubStars>
+                <GithubIcon />
+                <SmallText style={{ margin: "0.3rem" }}>Star</SmallText>
+              </GitHubStars>
+            </a>
+          </Center>
+        )}
+      </a>
+    </LogoDiv>
+  );
+};
 
 const Nav: React.FC = () => {
+  const match = useMatch("/");
   const { md } = useTheme().screens;
 
   return md ? (
     <NavBar>
       <NavLinks />
-      <Burger />
+      <MobBurgerDiv>
+        <Center>
+          <a
+            href="https://github.com/litmuschaos/litmus"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubStars style={{ marginRight: "0.8rem" }}>
+              <GithubIcon />
+              <SmallText style={{ margin: "0.3rem" }}>Star</SmallText>
+            </GitHubStars>
+          </a>
+        </Center>
+        <Burger />
+      </MobBurgerDiv>
     </NavBar>
   ) : (
     <NavBar>
       <NavLinks />
-      <Ul>
+      <Ul color={`${match && `white`}`}>
         <li>
           <Link to="/whylitmus">Why Litmus?</Link>
         </li>
@@ -154,7 +198,7 @@ const Nav: React.FC = () => {
         </DropDownNavElement>
         <OutlinedNavButton>
           <a rel="noopener noreferrer" target="_blank" href="#">
-            <OutlinedButton backgroundColor="purple">
+            <OutlinedButton backgroundColor={`${match ? `white` : `purple`}`}>
               Get Started
             </OutlinedButton>
           </a>

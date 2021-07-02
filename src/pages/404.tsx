@@ -49,7 +49,7 @@ const NotFoundPage: React.FC = () => {
               margin="0"
               style={{ maxWidth: "100%" }}
             >
-              <Center fullHeight={true}>
+              <Center >
                 <Content />
               </Center>
             </BoundedContainer>

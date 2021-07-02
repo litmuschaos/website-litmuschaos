@@ -4,7 +4,7 @@ import {
   BoundedContainer,
   Center,
   ResponsiveRow,
-  SectionDark,
+  SectionDark
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
 import { ChaoshubImage } from "../../image-fetch/ChaosHubImage";
@@ -54,7 +54,7 @@ const Head: React.FC = () => {
           width="50%"
           margin="-4rem 0 -4rem 2rem"
         >
-          <Center fullHeight={true}>
+          <Center >
             <HeaderContent />
           </Center>
         </BoundedContainer>
@@ -64,3 +64,4 @@ const Head: React.FC = () => {
 };
 
 export { Head };
+

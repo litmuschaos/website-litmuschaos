@@ -14,7 +14,7 @@ interface IOutlinedButton {
 // Default Button Styles
 const Button = styled.button<IButton>`
   height: 3rem;
-  min-width: 10rem;
+  // min-width: 10rem;
   width: ${props =>
     props.width ? props.width : props.theme.screens.sm ? "100%" : "18rem"};
   border: none;
@@ -26,7 +26,7 @@ const Button = styled.button<IButton>`
       : props.backgroundColor};
   color: white;
   border-radius: 0.25rem;
-  font-size: ${props => props.theme.fontSize.button};
+  font-size: ${props => props.theme.screens.md ? props.theme.fontSize.button.md : props.theme.fontSize.button.lg};
   cursor: pointer;
   :disabled {
     background: lightgray;
@@ -73,3 +73,4 @@ const OutlinedButton = styled.button<IOutlinedButton>`
 `;
 
 export { Button, OutlinedButton, WhiteOnGreenButton };
+

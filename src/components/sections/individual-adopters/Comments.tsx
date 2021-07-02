@@ -41,9 +41,9 @@ const Why: React.FC<Icontent> = ({ adopter }) => {
       <Row>
         <Img src={`/assets/bullets/${adopter.key}/why.svg`} />
         <TextBox>
-          <SubHeading>{adopter?.why?.heading}</SubHeading>
+          <SubHeading>{adopter.why.heading}</SubHeading>
           <br />
-          <SubTextGray>{adopter?.why?.subtext}</SubTextGray>
+          <SubTextGray>{adopter.why.subtext}</SubTextGray>
           <SubTextGray>
             <List>
               {adopter?.why?.list?.map((adopter: any) => {
@@ -62,9 +62,9 @@ const How: React.FC<Icontent> = ({ adopter }) => {
       <Row>
         <Img src={`/assets/bullets/${adopter.key}/how.svg`} />
         <TextBox>
-          <SubHeading>{adopter?.how?.heading}</SubHeading>
+          <SubHeading>{adopter.how.heading}</SubHeading>
           <br />
-          <SubTextGray>{adopter?.how?.subtext}</SubTextGray>
+          <SubTextGray>{adopter.how.subtext}</SubTextGray>
           <SubTextGray>
             <List>
               {adopter?.how?.list?.map((adopter: any) => {
@@ -83,12 +83,12 @@ const Benefits: React.FC<Icontent> = ({ adopter }) => {
       <Row>
         <Img src={`/assets/bullets/${adopter?.key}/benefits.svg`} />
         <TextBox>
-          <SubHeading>{adopter?.benefits?.heading}</SubHeading>
+          <SubHeading>{adopter.benefits?.heading}</SubHeading>
           <br />
-          <SubTextGray>{adopter?.benefits?.subtext}</SubTextGray>
+          <SubTextGray>{adopter.benefits?.subtext}</SubTextGray>
           <SubTextGray>
             <List>
-              {adopter?.benefits?.list?.map((adopter: any) => {
+              {adopter.benefits?.list?.map((adopter: any) => {
                 return <li>{adopter}</li>;
               })}
             </List>
@@ -99,27 +99,21 @@ const Benefits: React.FC<Icontent> = ({ adopter }) => {
   );
 };
 const Other: React.FC<Icontent> = ({ adopter }) => {
-  return adopter.other.heading ? (
+  return (
     <ContentSection>
       <Row>
         <Img src={`/assets/bullets/${adopter.key}/others.svg`} />
         <TextBox>
-          <SubHeading>{adopter?.other?.heading}</SubHeading>
+          <SubHeading>{adopter.other.heading}</SubHeading>
           <SubTextGray>
-            {adopter?.other?.list ? (
-              <List>
-                {adopter?.other?.list?.map((adopter: any) => {
-                  return <li>{adopter}</li>;
-                })}
-              </List>
-            ) : (
+            {adopter?.other?.videoUrl && (
               <>
                 <br />
                 Videos:{" "}
                 <a rel="noopener noreferrer" href={adopter?.other?.videoUrl}>
                   {adopter?.other?.videoUrl}
                 </a>
-                {adopter?.other.blogUrl ? (
+                {adopter?.other.blogUrl && (
                   <>
                     <br />
                     <br />
@@ -128,8 +122,6 @@ const Other: React.FC<Icontent> = ({ adopter }) => {
                       {adopter?.other?.blogUrl}
                     </a>
                   </>
-                ) : (
-                  <></>
                 )}
               </>
             )}
@@ -137,8 +129,6 @@ const Other: React.FC<Icontent> = ({ adopter }) => {
         </TextBox>
       </Row>
     </ContentSection>
-  ) : (
-    <></>
   );
 };
 
@@ -147,10 +137,10 @@ const Comments: React.FC<Icontent> = ({ url }) => {
 
   return (
     <SectionLight>
-      <Why adopter={adopter} />
-      <How adopter={adopter} />
-      <Benefits adopter={adopter} />
-      <Other adopter={adopter} />
+      {adopter.why.heading && <Why adopter={adopter} />}
+      {adopter.how.heading && <How adopter={adopter} />}
+      {adopter.benefits?.heading && <Benefits adopter={adopter} />}
+      {adopter.other.heading && <Other adopter={adopter} />}
     </SectionLight>
   );
 };

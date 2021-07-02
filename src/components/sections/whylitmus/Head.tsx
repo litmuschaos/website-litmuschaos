@@ -4,7 +4,7 @@ import {
   BoundedContainer,
   Center,
   ResponsiveRow,
-  SectionDark,
+  SectionDark
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
 import { ChaosBirdSteps } from "../../image-fetch/ChaosBirdSteps";
@@ -41,7 +41,7 @@ const Head: React.FC = () => {
     <SectionDark>
       <ResponsiveRow breakpoint="lg">
         <BoundedContainer breakpoint="lg" width="35%" margin="0">
-          <Center fullHeight={true}>
+          <Center >
             <HeaderContent />
           </Center>
         </BoundedContainer>
@@ -55,3 +55,4 @@ const Head: React.FC = () => {
 };
 
 export { Head };
+

@@ -23,7 +23,7 @@ const AdoptersImage: React.FC = () => {
     }
   `);
   return (
-    <Center fullHeight={false}>
+    <Center>
       <Wrapper>
         <Img
           fluid={data.image.childImageSharp.fluid}

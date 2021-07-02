@@ -12,7 +12,7 @@ const getAdopterVideoImg = () => {
           node {
             relativeDirectory
             childImageSharp {
-              gatsbyImageData(height: 150, quality: 100, layout: CONSTRAINED)
+              gatsbyImageData(height: 150, quality: 100)
             }
           }
         }

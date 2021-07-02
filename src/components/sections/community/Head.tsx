@@ -4,7 +4,7 @@ import {
   BoundedContainer,
   Center,
   ResponsiveRow,
-  SectionDark,
+  SectionDark
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
 import { CommunityImage } from "../../image-fetch/CommunityImage";
@@ -53,7 +53,7 @@ const Head: React.FC = () => {
         </BoundedContainer>
 
         <BoundedContainer breakpoint="lg" width="40%" margin="2rem 0 0 2rem">
-          <Center fullHeight={true}>
+          <Center >
             <HeaderContent />
           </Center>
         </BoundedContainer>
@@ -63,3 +63,4 @@ const Head: React.FC = () => {
 };
 
 export { Head };
+
