@@ -14,10 +14,10 @@ import { Heading, SubText } from "../../texts";
 import { adoptersContent, adoptersData } from "./data";
 
 const HeadingBig = styled(Heading)`
-  color: ${props => props.color};
+  color: ${(props) => props.color};
 `;
 const SubTextBig = styled(SubText)`
-  color: ${props => props.color};
+  color: ${(props) => props.color};
 `;
 
 interface Icontent {
@@ -47,7 +47,7 @@ const Hero: React.FC<Icontent> = ({ url }) => {
         </p>
       </Row>
       <Center>
-        <ResponsiveRow flexDirection breakpoint="md">
+        <ResponsiveRow reverseColumn breakpoint="md">
           <FreeBoundedContainer breakpoint="md" width="60%" margin="0">
             <br />
             <HeadingBig color={textPrimary}>{heading}</HeadingBig>

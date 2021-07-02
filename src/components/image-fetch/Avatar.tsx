@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
 
@@ -9,22 +9,19 @@ const Wrapper = styled.div`
 `;
 
 const Avatar: React.FC = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      icon: file(relativePath: { eq: "avatar.png" }) {
-        childImageSharp {
-          fixed(height: 80, width: 80) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  icon: file(relativePath: {eq: "avatar.png"}) {
+    childImageSharp {
+      gatsbyImageData(height: 80, width: 80, layout: FIXED)
     }
-  `);
+  }
+}
+`);
 
-  const imageData = data.icon.childImageSharp.fixed;
+  const imageData = data.icon.childImageSharp.gatsbyImageData;
   return (
     <Wrapper>
-      <Img fixed={imageData} alt="Avatar" />
+      <GatsbyImage image={imageData} alt="Avatar" />
     </Wrapper>
   );
 };

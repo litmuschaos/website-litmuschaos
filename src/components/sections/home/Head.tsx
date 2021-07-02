@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styled, { useTheme } from "styled-components";
-// import { useTheme } from "../styles";
 import { Button, WhiteOnGreenButton } from "../../button";
 import {
   BoundedContainer,
@@ -13,7 +12,7 @@ import { Paragraph } from "../../texts";
 const MainHeading = styled.h1`
   margin: 1rem 0;
   line-height: 130%;
-  font-size: ${props => (props.theme.screens.md ? "2rem" : "2.6rem")};
+  font-size: ${(props) => (props.theme.screens.md ? "2rem" : "2.6rem")};
 `;
 
 const GithubTile = styled.div`
@@ -65,8 +64,8 @@ const HeadText: React.FC = () => {
   useEffect(() => {
     (async () => {
       await fetch(url)
-        .then(response => response.json())
-        .then(data => {
+        .then((response) => response.json())
+        .then((data) => {
           setGithub({
             stars: data.stargazers_count,
             watchers: data.watchers_count,

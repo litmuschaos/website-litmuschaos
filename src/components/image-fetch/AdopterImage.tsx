@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
 import { Center } from "../layout";
@@ -10,26 +10,21 @@ const Wrapper = styled.div`
 `;
 
 const AdoptersImage: React.FC = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      image: file(relativePath: { eq: "adopters.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 700, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  image: file(relativePath: {eq: "adopters.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 700, quality: 100, layout: CONSTRAINED)
     }
-  `);
+  }
+}
+`);
   return (
     <Center>
       <Wrapper>
-        <Img
-          fluid={data.image.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.image.childImageSharp.gatsbyImageData}
           alt="Choas Bird with abopters"
-          style={{ margin: "auto" }}
-        />
+          style={{ margin: "auto" }} />
       </Wrapper>
     </Center>
   );

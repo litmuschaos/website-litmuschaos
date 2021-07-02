@@ -1,26 +1,23 @@
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import { Center } from "../layout";
 
 const GithubIcon: React.FC = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      icon: file(relativePath: { eq: "github-icon.png" }) {
-        childImageSharp {
-          fixed(height: 20, width: 20) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  icon: file(relativePath: {eq: "github-icon.png"}) {
+    childImageSharp {
+      gatsbyImageData(height: 20, width: 20, layout: FIXED)
     }
-  `);
+  }
+}
+`);
 
-  const imageData = data.icon.childImageSharp.fixed;
+  const imageData = data.icon.childImageSharp.gatsbyImageData;
   return (
     <div>
       <Center>
-        <Img fixed={imageData} alt="GitHub Icon" />
+        <GatsbyImage image={imageData} alt="GitHub Icon" />
       </Center>
     </div>
   );

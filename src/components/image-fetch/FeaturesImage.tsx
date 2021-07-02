@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
 
@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   height: 100%;
 `;
 
-const StyledImage = styled(Img)`
+const StyledImage = styled(GatsbyImage)`
   margin: auto;
   width: 100%;
   object-fit: cover;
@@ -17,13 +17,10 @@ const StyledImage = styled(Img)`
 
 const FeaturesImage: React.FC = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       image: file(relativePath: { eq: "features-image.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1024, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
+          gatsbyImageData(width: 1024, quality: 100, layout: CONSTRAINED)
         }
       }
     }
@@ -32,7 +29,7 @@ const FeaturesImage: React.FC = () => {
   return (
     <Wrapper>
       <StyledImage
-        fluid={data.image.childImageSharp.fluid}
+        image={data.image.childImageSharp.gatsbyImageData}
         alt="Image of Litmus Features"
       />
     </Wrapper>

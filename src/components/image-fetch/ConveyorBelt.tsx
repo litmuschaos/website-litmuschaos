@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
 
@@ -9,26 +9,21 @@ const Wrapper = styled.div`
 `;
 
 const ConveyorBelt: React.FC = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      image: file(relativePath: { eq: "conveyor-belt.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1100, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  image: file(relativePath: {eq: "conveyor-belt.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 1100, quality: 100, layout: CONSTRAINED)
     }
-  `);
+  }
+}
+`);
 
   return (
     <Wrapper>
-      <Img
-        fluid={data.image.childImageSharp.fluid}
+      <GatsbyImage
+        image={data.image.childImageSharp.gatsbyImageData}
         alt="Choas Bird taking feedback"
-        style={{ margin: "auto" }}
-      />
+        style={{ margin: "auto" }} />
     </Wrapper>
   );
 };

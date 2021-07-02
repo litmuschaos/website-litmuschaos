@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
 import { Center } from "../layout";
@@ -10,27 +10,22 @@ const Wrapper = styled.div`
 `;
 
 const Orange: React.FC = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      image: file(relativePath: { eq: "orange.png" }) {
-        childImageSharp {
-          fluid(maxHeight: 100, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  image: file(relativePath: {eq: "orange.png"}) {
+    childImageSharp {
+      gatsbyImageData(height: 100, quality: 100, layout: CONSTRAINED)
     }
-  `);
+  }
+}
+`);
 
   return (
     <Center>
       <Wrapper>
-        <Img
-          fluid={data.image.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.image.childImageSharp.gatsbyImageData}
           alt="Orange"
-          style={{ margin: "auto" }}
-        />
+          style={{ margin: "auto" }} />
       </Wrapper>
     </Center>
   );
