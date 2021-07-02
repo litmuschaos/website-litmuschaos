@@ -5,6 +5,7 @@ import { Head } from "../components/sections/adopters/Head";
 import ListAdopters from "../components/sections/adopters/ListAdopter";
 import { Comments } from "../components/sections/individual-adopters/Comments";
 import { Hero } from "../components/sections/individual-adopters/Hero";
+import { SliderCTA } from "../components/sections/individual-adopters/SliderCTA";
 import { Video } from "../components/sections/individual-adopters/Video";
 
 const Adopters: React.FC = () => {
@@ -39,6 +40,7 @@ const Adopter = (props: Iadopters) => {
         <Hero url={props.adopterName} />
         <Video url={props.adopterName} />
         <Comments url={props.adopterName} />
+        <SliderCTA />
       </Layout>
     </>
   );

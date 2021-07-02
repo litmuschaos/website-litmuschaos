@@ -2,14 +2,14 @@ import { Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import styled, { useTheme } from "styled-components";
+import { getAdopterHeroImg } from "../../image-fetch/AdopterHeroImg";
 import {
   Center,
   FreeBoundedContainer,
   ResponsiveRow,
   Row,
   SectionLight,
-} from "../../../components/layout";
-import { getAdopterHeroImg } from "../../image-fetch/AdopterHeroImg";
+} from "../../layout";
 import { Heading, SubText } from "../../texts";
 import { adoptersContent, adoptersData } from "./data";
 
