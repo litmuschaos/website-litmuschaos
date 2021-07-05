@@ -24,9 +24,6 @@
     "update": "ncu -u"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "@reach/router": "^1.3.4",
     "@types/react-slick": "^0.23.4",
     "babel-core": "^6.26.3",
     "gatsby": "^3.8.1",
