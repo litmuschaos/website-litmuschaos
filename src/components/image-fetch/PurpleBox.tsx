@@ -1,45 +1,40 @@
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 
-const PurpleBoxImage = styled(Img)`
+const PurpleBoxImage = styled(GatsbyImage)`
   top: 0;
   right: 0;
   width: 60%;
 `;
 
 const PurpleBox: React.FC = () => {
+  const { md } = useTheme().screens;
   const data = useStaticQuery(graphql`
-    query {
+    {
       mobile: file(relativePath: { eq: "purple-box-md.png" }) {
         childImageSharp {
-          fluid(maxWidth: 700, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
+          gatsbyImageData(width: 700, quality: 100, layout: CONSTRAINED)
         }
       }
       desktop: file(relativePath: { eq: "purple-box.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
+          gatsbyImageData(width: 1000, quality: 100, layout: CONSTRAINED)
         }
       }
     }
   `);
   const sources = [
-    data.mobile.childImageSharp.fluid,
+    data.mobile.childImageSharp.gatsbyImageData,
     {
-      ...data.desktop.childImageSharp.fluid,
+      ...data.desktop.childImageSharp.gatsbyImageData,
       media: `(min-width: 780px)`,
     },
   ];
   return (
     <PurpleBoxImage
-      fluid={sources}
+      image={md ? sources[0] : sources[1]}
       alt="banner image"
       style={{ position: "absolute" }}
     />

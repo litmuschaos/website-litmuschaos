@@ -4,20 +4,24 @@ interface IResponsiveRow {
   breakpoint: "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "xxxl";
   alignItems?: string;
   justifyContent?: string;
+  reverseColumn?: boolean;
+  reverseRow?: boolean;
+  marginBottom?: string;
 }
 
 const ResponsiveRow = styled.div<IResponsiveRow>`
   width: 100%;
   display: flex;
+  margin-bottom: ${props => (props.marginBottom ? props.marginBottom : "")};
   ${props =>
     props.theme.screens[props.breakpoint]
       ? css`
-          flex-direction: column;
+          flex-direction: ${props.reverseColumn ? "column-reverse" : "column"};
           align-items: ${props.alignItems ?? "center"};
         `
       : css`
-          flex-direction: row;
-          justify-content: ${props.justifyContent ?? "center"};
+          flex-direction: ${props.reverseRow ? "row-reverse" : "row"};
+          justify-content: ${props.justifyContent ?? "space-between"};
         `};
 `;
 

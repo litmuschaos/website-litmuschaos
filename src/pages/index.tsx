@@ -8,6 +8,7 @@ import {
   Head,
   QuickStart,
 } from "../components/sections/home";
+import { BannerHome } from "../components/sections/home/Banner";
 import { SEO } from "../components/seo";
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <SEO />
       <Head />
       <PurpleBox />
+      <BannerHome />
       <CloudNativeWay />
       <QuickStart />
       <GetStarted />

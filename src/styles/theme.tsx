@@ -20,10 +20,16 @@ export default {
     subHeading: { lg: "1.5rem", md: "1.125rem" },
     paragraph: { lg: "1rem", md: "0.875rem" },
     subText: { lg: "1.25rem", md: "1.125rem" },
-    button: "1.125rem",
+    button: { lg: "1.125rem", md: "0.875rem" },
     small: { lg: "0.875rem", md: "0.75rem" },
   },
   colors: {
+    black: "#000000",
+    white: "#FFFFFF",
+    boxShadowCol1: "rgba(0, 0, 0, 0.18)",
+    boxShadowCol2: "rgba(0, 0, 0, 0.22)",
+    dropShadowNavbarDesktop: "rgba(225, 225, 225, 0.5)",
+    swagBtnLink: "#7e8f9a",
     backgroundLight: "#F9FAFC",
     backgroundDark: "#F4F5F7",
     spaceGrey: "#F1F2F6",
@@ -31,6 +37,15 @@ export default {
     darkGray: "#6F6F6F",
     textPrimary: "#042A2B",
     textSecondary: "#5B44BA",
+    darkBlue: "#005797",
+    lightBlue: "#03B5B0",
+    CTAredhat: "#000000",
+    CTAanutanetworks: "#03B5B0",
+    CTAorange: "#181818",
+    CTAkitopi: "#E1F0F2",
+    CTAintuit: "#1F2022",
+    CTAlenskart: "#005797",
+    CTAhalodoc: "linear-gradient(266.12deg, #90062F 0%, #E9094C 99.53%)",
 
     grayText: (opacity: number): string =>
       opacityCheck(opacity)

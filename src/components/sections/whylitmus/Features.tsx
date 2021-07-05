@@ -1,7 +1,7 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
 import { useTheme } from "../../../styles";
-import { ConveyorBelt } from "../../image-fetch/ConveyorBelt";
 import { FeaturesImage } from "../../image-fetch/FeaturesImage";
 import { FeatureSection } from "../../info-section";
 import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
@@ -91,7 +91,12 @@ const Features: React.FC = () => {
             {xxl ? <></> : <div style={{ width: "45%" }}></div>}
           </ResponsiveRow>
         </FeaturesDiv>
-        <ConveyorBelt />
+        <div style={{ margin: "auto" }}>
+          <StaticImage
+            src="../../../images/conveyor-belt.png"
+            alt="Conveyor belt"
+          />
+        </div>
       </div>
     </SectionDark>
   );

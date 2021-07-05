@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 html {
   font-family: "Ubuntu", sans-serif;
@@ -52,4 +53,11 @@ text {
 ::selection {
   color: white;
   background: #858cdd;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+.slick-slide > div {
+  padding: 0 10px;
 }
