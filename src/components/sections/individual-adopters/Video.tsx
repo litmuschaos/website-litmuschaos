@@ -6,18 +6,18 @@ import { Center, SectionLight } from "../../layout";
 import { adoptersContent, adoptersData } from "./data";
 import { Modal } from "./Modal";
 
-interface Icontent {
+interface IContent {
   url?: string;
   handleclick?: any;
 }
 
-const VideoBox = styled.div<Icontent>`
+const VideoBox = styled.div<IContent>`
   position: relative;
   width: 100%;
   height: 75vw;
-  max-width: 1024px;
+  max-width: 64rem;
   max-height: 640px;
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.url?.includes("redhat")
       ? props.theme.colors.black
       : props.url?.includes("orange")
@@ -48,15 +48,10 @@ const Overlay = styled.div`
 `;
 
 const PlayButton = styled.div`
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // margin: 25% 0 0 50%;
-  // transform: translate(-50%, -100%);
   opacity: 50%;
   cursor: pointer;
   z-index: 20;
-  width: ${props => (props.theme.screens.xs ? "50px" : "")};
+  width: ${(props) => (props.theme.screens.xs ? "50px" : "")};
   & > img {
     width: 100%;
   }
@@ -66,7 +61,7 @@ const PlayButton = styled.div`
   }
 `;
 
-const Video: React.FC<Icontent> = ({ url }) => {
+const Video: React.FC<IContent> = ({ url }) => {
   const [open, setOpen] = useState(false);
   const images = getAdopterVideoImg();
   const image = adoptersContent.filter((item: any) => item.key === url)[0];
@@ -96,16 +91,18 @@ const Video: React.FC<Icontent> = ({ url }) => {
         <Modal url={url} handleClick={handleClick} />
       ) : (
         <SectionLight>
-          <Center>
-            <VideoBox url={url}>
-              <Overlay>
-                <PlayButton onClick={handleClick}>
-                  <img src="/assets/play-button.svg" alt="play button" />
-                </PlayButton>
-              </Overlay>
-              <Logo />
-            </VideoBox>
-          </Center>
+          <div>
+            <Center>
+              <VideoBox url={url}>
+                <Overlay>
+                  <PlayButton onClick={handleClick}>
+                    <img src="/assets/play-button.svg" alt="play button" />
+                  </PlayButton>
+                </Overlay>
+                <Logo />
+              </VideoBox>
+            </Center>
+          </div>
         </SectionLight>
       )}
     </div>

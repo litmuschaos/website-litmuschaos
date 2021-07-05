@@ -5,7 +5,7 @@ const SectionLight = styled.section`
   padding: ${(props) => (props.theme.screens.lg ? "3rem 2rem" : "5rem")};
 
   & > div {
-    max-width: 112.5rem;
+    max-width: 90rem;
     margin: 0 auto;
   }
 `;
@@ -15,7 +15,7 @@ const SectionDark = styled.section`
   padding: ${(props) => (props.theme.screens.lg ? "3rem 2rem" : "5rem")};
 
   & > div {
-    max-width: 112.5rem;
+    max-width: 90rem;
     margin: 0 auto;
   }
 `;

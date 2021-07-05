@@ -8,7 +8,7 @@ import {
   FreeBoundedContainer,
   ResponsiveRow,
   Row,
-  SectionLight,
+  SectionLight
 } from "../../layout";
 import { Heading, SubText } from "../../texts";
 import { adoptersContent, adoptersData } from "./data";
@@ -20,11 +20,11 @@ const SubTextBig = styled(SubText)`
   color: ${(props) => props.color};
 `;
 
-interface Icontent {
+interface IContent {
   url?: string;
 }
 
-const Hero: React.FC<Icontent> = ({ url }) => {
+const Hero: React.FC<IContent> = ({ url }) => {
   const { darkGray, textPrimary } = useTheme().colors;
   const images = getAdopterHeroImg();
   const image = adoptersContent.filter((item: any) => item.key === url)[0];
@@ -35,7 +35,7 @@ const Hero: React.FC<Icontent> = ({ url }) => {
 
   return (
     <SectionLight>
-      <Row strict style={{ justifyContent: "left" }}>
+      <Row style={{ justifyContent: "left" }}>
         <Link to="/adopters">
           <SubTextBig color={darkGray}>End User Adopters &nbsp;</SubTextBig>
         </Link>

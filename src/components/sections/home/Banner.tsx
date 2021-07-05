@@ -1,28 +1,28 @@
 import React from "react";
-import { SectionDark } from "../../layout";
 import styled from "styled-components";
+import { SectionDark } from "../../layout";
 import { Paragraph, SubHeading } from "../../texts";
 
 const HomeBannerContainer = styled.div`
-  max-width: 1440px;
+  max-width: 90rem;
   margin: 0 auto;
   padding: 5rem 2rem;
   display: flex;
-  flex-direction: ${props => (props.theme.screens.lg ? "column" : "row")};
+  flex-direction: ${(props) => (props.theme.screens.lg ? "column" : "row")};
 `;
 
 const BackgroundBanner = styled.img`
   display: block;
   position: absolute;
-  top: ${props => (props.theme.screens.lg ? "-40px" : "-60px")};
-  height: ${props =>
+  top: ${(props) => (props.theme.screens.lg ? "-40px" : "-60px")};
+  height: ${(props) =>
     props.theme.screens.lg ? "calc(100% + 40px)" : "calc(100% + 60px)"};
-  left: ${props => (props.theme.screens.lg ? "-20px" : "-60px")};
+  left: ${(props) => (props.theme.screens.lg ? "-20px" : "-60px")};
   z-index: -1;
 `;
 
 const BannerLeft = styled.div`
-  width: ${props => (props.theme.screens.lg ? "100%" : "50%")};
+  width: ${(props) => (props.theme.screens.lg ? "100%" : "50%")};
   padding: 1rem;
   position: relative;
   background: #ffffff;
@@ -32,8 +32,8 @@ const BannerLeft = styled.div`
 `;
 
 const BannerRight = styled.div`
-  margin-top: ${props => (props.theme.screens.lg ? "3rem" : "0")};
-  ${props =>
+  margin-top: ${(props) => (props.theme.screens.lg ? "3rem" : "0")};
+  ${(props) =>
     props.theme.screens.lg
       ? ""
       : "width: 50%; display: flex; flex-direction: column; justify-content: center; padding-left: 2rem;"}
@@ -49,11 +49,11 @@ const BannerLeftItemCont = styled.div`
 `;
 
 const LitmusLogo = styled.img`
-  height: ${props => (props.theme.screens.lg ? "35px" : "50px")};
+  height: ${(props) => (props.theme.screens.lg ? "35px" : "50px")};
 `;
 
 const ParagraphBanner = styled.p`
-  font-size: ${props => (props.theme.screens.lg ? "0.9rem" : "1rem")};
+  font-size: ${(props) => (props.theme.screens.lg ? "0.9rem" : "1rem")};
   font-weight: 600;
   margin-top: 0.5rem;
 `;
@@ -63,7 +63,7 @@ const GradientBackground = styled.img`
   bottom: 0;
   right: 0;
   display: block;
-  width: ${props => (props.theme.screens.lg ? "100%" : "80%")};
+  width: ${(props) => (props.theme.screens.lg ? "100%" : "80%")};
 `;
 
 const BannerHome: React.FC = () => {

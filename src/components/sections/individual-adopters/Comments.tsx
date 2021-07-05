@@ -4,13 +4,12 @@ import { Row, SectionLight } from "../../layout";
 import { SubHeading } from "../../texts";
 import { adoptersContent } from "./data";
 
-interface Icontent {
+interface IContent {
   url?: string;
   adopter?: any;
 }
 
 const ContentSection = styled.div`
-  max-width: 1024px !important;
   &:not(:first-child) {
     margin-top: 3.75rem;
   }
@@ -35,7 +34,7 @@ const Img = styled.img`
   width: ${props => (props.theme.screens.md ? "3rem" : "")};
 `;
 
-const Why: React.FC<Icontent> = ({ adopter }) => {
+const Why: React.FC<IContent> = ({ adopter }) => {
   return (
     <ContentSection>
       <Row>
@@ -56,7 +55,7 @@ const Why: React.FC<Icontent> = ({ adopter }) => {
     </ContentSection>
   );
 };
-const How: React.FC<Icontent> = ({ adopter }) => {
+const How: React.FC<IContent> = ({ adopter }) => {
   return (
     <ContentSection>
       <Row>
@@ -77,7 +76,7 @@ const How: React.FC<Icontent> = ({ adopter }) => {
     </ContentSection>
   );
 };
-const Benefits: React.FC<Icontent> = ({ adopter }) => {
+const Benefits: React.FC<IContent> = ({ adopter }) => {
   return (
     <ContentSection>
       <Row>
@@ -98,7 +97,7 @@ const Benefits: React.FC<Icontent> = ({ adopter }) => {
     </ContentSection>
   );
 };
-const Other: React.FC<Icontent> = ({ adopter }) => {
+const Other: React.FC<IContent> = ({ adopter }) => {
   return (
     <ContentSection>
       <Row>
@@ -132,15 +131,17 @@ const Other: React.FC<Icontent> = ({ adopter }) => {
   );
 };
 
-const Comments: React.FC<Icontent> = ({ url }) => {
+const Comments: React.FC<IContent> = ({ url }) => {
   const adopter = adoptersContent.filter((item: any) => item.key === url)[0];
 
   return (
     <SectionLight>
+      <div>
       {adopter.why.heading && <Why adopter={adopter} />}
       {adopter.how.heading && <How adopter={adopter} />}
       {adopter.benefits?.heading && <Benefits adopter={adopter} />}
       {adopter.other.heading && <Other adopter={adopter} />}
+      </div>
     </SectionLight>
   );
 };
