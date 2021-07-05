@@ -11,13 +11,17 @@ const Container = styled.div`
   z-index: ${props => props.theme.zIndex.content};
 `;
 
-const Layout: React.FC = ({ children }) => {
+interface Ilayoutprops {
+  noPreFooter?: boolean;
+}
+
+const Layout: React.FC<Ilayoutprops> = ({ children, noPreFooter }) => {
   return (
     <ThemeProvider theme={theme()}>
       <Container>
         <Nav />
         <main>{children}</main>
-        <PreFooter />
+        {noPreFooter ? <></> : <PreFooter />}
         <Footer />
       </Container>
     </ThemeProvider>

@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { OutlinedButton } from "../../../components/button";
 import {
@@ -7,7 +8,6 @@ import {
 } from "../../../components/layout";
 import { Heading, Paragraph, SubHeading } from "../../../components/texts";
 import { useTheme } from "../../../styles";
-import { OctoCat } from "../../image-fetch/OctoCat";
 
 interface IContributeButton {
   width: string;
@@ -48,7 +48,11 @@ const Contributing: React.FC = () => {
     <SectionDark>
       <ResponsiveRow breakpoint="lg">
         <BoundedContainer breakpoint="lg" width="40%" margin="0">
-          <OctoCat />
+          <StaticImage
+            src="../../../images/octocat.png"
+            alt="Github Octocat"
+            placeholder="blurred"
+          />
         </BoundedContainer>
 
         <BoundedContainer breakpoint="lg" width="50%" margin="0">

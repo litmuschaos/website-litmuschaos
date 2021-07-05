@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Button } from "../../../components/button";
 import {
@@ -7,7 +8,6 @@ import {
   SectionDark,
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
-import { CommunityImage } from "../../image-fetch/CommunityImage";
 
 const HeaderContent: React.FC = () => {
   return (
@@ -49,11 +49,15 @@ const Head: React.FC = () => {
     <SectionDark>
       <ResponsiveRow breakpoint="lg">
         <BoundedContainer breakpoint="lg" width="60%" margin="0">
-          <CommunityImage />
+          <StaticImage
+            src="../../../images/community.png"
+            alt="Choas Bird looking at chaos experiments"
+            placeholder="blurred"
+          />
         </BoundedContainer>
 
         <BoundedContainer breakpoint="lg" width="40%" margin="2rem 0 0 2rem">
-          <Center fullHeight={true}>
+          <Center>
             <HeaderContent />
           </Center>
         </BoundedContainer>

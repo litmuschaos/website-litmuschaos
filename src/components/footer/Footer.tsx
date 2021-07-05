@@ -1,8 +1,13 @@
 import React from "react";
 import { useTheme } from "../../styles";
-import { Button } from "../button";
-import { BoundedContainer, Column, Row, SectionLight } from "../layout";
-import { Paragraph, PurpleText, SubHeading } from "../texts";
+import {
+  BoundedContainer,
+  Column,
+  FreeBoundedContainer,
+  Row,
+  SectionLight,
+} from "../layout";
+import { Paragraph, PurpleText } from "../texts";
 import { community, resources, sitemap } from "./data";
 import { Links } from "./FooterLinks";
 
@@ -44,10 +49,10 @@ const Copyright: React.FC = () => (
 );
 
 const Footer: React.FC = () => {
-  const { md } = useTheme().screens;
+  const { md, lg } = useTheme().screens;
 
   return (
-    <SectionLight style={{ padding: md ? "3rem 2rem" : "5rem 10rem" }}>
+    <SectionLight style={{ padding: lg ? "3rem 2rem" : "5rem 10rem" }}>
       <div>
         {md ? (
           <>
@@ -63,54 +68,20 @@ const Footer: React.FC = () => {
             </Column>
             <Copyright />
             <br />
-            <div>
-              <SubHeading style={{ margin: "0.5rem 0" }}>
-                Add yourself to the adopters
-              </SubHeading>
-              <Paragraph>
-                and share your chaos engineering story to the community
-              </Paragraph>
-              <br />
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/litmuschaos/litmus/blob/master/ADOPTERS.md"
-              >
-                <Button gradientColor="green">Become an Adopter</Button>
-              </a>
-            </div>
           </>
         ) : (
-          <Row>
+          <Row space>
             <BoundedContainer breakpoint="sm" width="30%" margin="0 1rem 0 0">
               <Logo />
               <Copyright />
             </BoundedContainer>
-            <div>
+            <FreeBoundedContainer breakpoint="sm" width="50%" margin="">
               <Row>
                 <Links data={sitemap} showImage={false} internalLink={true} />
                 <Links data={resources} showImage={true} internalLink={false} />
                 <Links data={community} showImage={true} internalLink={false} />
               </Row>
-            </div>
-            <div style={{ width: "25%" }}>
-              <Column>
-                <SubHeading style={{ fontSize: "1rem", margin: "0.5rem 0" }}>
-                  Add yourself to the adopters
-                </SubHeading>
-                <Paragraph>
-                  and share your chaos engineering story to the community
-                </Paragraph>
-                <br />
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://github.com/litmuschaos/litmus/blob/master/ADOPTERS.md"
-                >
-                  <Button gradientColor="green">Become an Adopter</Button>
-                </a>
-              </Column>
-            </div>
+            </FreeBoundedContainer>
           </Row>
         )}
         <div>
@@ -122,15 +93,13 @@ const Footer: React.FC = () => {
               target="_blank"
               href="https://chaosnative.com/"
             >
-              <PurpleText
-                fontSize="paragraph"
-                fontWeight={400}
-                style={{ display: "inline" }}
+              <Paragraph
+                color="textPrimary"
+                style={{ display: "inline", fontWeight: 600 }}
               >
-                ChaosNative Inc
-              </PurpleText>
+                ChaosNative
+              </Paragraph>
             </a>{" "}
-            team
           </Paragraph>
         </div>
       </div>
