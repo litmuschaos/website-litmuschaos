@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
 
@@ -28,8 +28,11 @@ const FeaturesImage: React.FC = () => {
 
   return (
     <Wrapper>
-      <StyledImage
-        image={data.image.childImageSharp.gatsbyImageData}
+      <StaticImage
+        // image={data.image.childImageSharp.gatsbyImageData}
+        // style={{ margin: "auto", objectFit: "cover" }}
+        src="../../images/features-image.png"
+        layout="fullWidth"
         alt="Image of Litmus Features"
       />
     </Wrapper>

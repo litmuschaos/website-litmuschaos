@@ -1,13 +1,13 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Button } from "../../../components/button";
 import {
   BoundedContainer,
   Center,
   ResponsiveRow,
-  SectionDark
+  SectionDark,
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
-import { ChaosBirdSteps } from "../../image-fetch/ChaosBirdSteps";
 
 const HeaderContent: React.FC = () => {
   return (
@@ -41,13 +41,17 @@ const Head: React.FC = () => {
     <SectionDark>
       <ResponsiveRow breakpoint="lg">
         <BoundedContainer breakpoint="lg" width="35%" margin="0">
-          <Center >
+          <Center>
             <HeaderContent />
           </Center>
         </BoundedContainer>
 
         <BoundedContainer breakpoint="lg" width="65%" margin="0 0 0 2rem">
-          <ChaosBirdSteps />
+          <StaticImage
+            src="../../../images/chaos-bird-steps.png"
+            alt="Choas Bird climbing stairs towars resilience"
+            placeholder="blurred"
+          />
         </BoundedContainer>
       </ResponsiveRow>
     </SectionDark>
@@ -55,4 +59,3 @@ const Head: React.FC = () => {
 };
 
 export { Head };
-
