@@ -1,8 +1,8 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import styled, { css } from "styled-components";
 import { useTheme } from "../../styles";
 import { Button } from "../button";
-import { CNCFLogo } from "../image-fetch/CNCFLogo";
 import {
   BoundedContainer,
   Center,
@@ -24,7 +24,7 @@ const CNCFText = styled.div`
           width: 20rem;
           margin: 0 auto;
           margin-top: ${(props) =>
-            props.theme.screens.xxxl ? "-7rem" : "-8rem"};
+            props.theme.screens.xxxl ? "-10rem" : "-12rem"};
         `}
 `;
 
@@ -74,7 +74,11 @@ const PreFooterTop: React.FC = () => {
               <img src="/svg/cncf-color.svg" alt="CNCF Logo" />
             </CNCFLogoDiv>
           ) : (
-            <CNCFLogo />
+            <StaticImage
+              src="../../images/CNCFDesktop.png"
+              alt="Choas Bird taking feedback"
+              placeholder="blurred"
+            />
           )}
           <CNCFText>
             <Paragraph textAlign="center">

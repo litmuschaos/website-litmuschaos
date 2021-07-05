@@ -1,6 +1,6 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { useTheme } from "styled-components";
-import { ChaosBirdExp } from "../../image-fetch/ChaosBirdExp";
 import { InfoSection } from "../../info-section";
 import {
   BoundedContainer,
@@ -18,7 +18,11 @@ const CloudNativeWay: React.FC = () => {
         <Heading textAlign="center">Do it the cloud-native way</Heading>
         <ResponsiveRow breakpoint="xl">
           <BoundedContainer breakpoint="xl" width="50%" margin="0">
-            <ChaosBirdExp />
+            <StaticImage
+              src="../../../images/cloud-native-way.png"
+              alt="Choas Bird doing experiments"
+              placeholder="blurred"
+            />
           </BoundedContainer>
 
           <BoundedContainer breakpoint="xl" width="45%" margin="0">

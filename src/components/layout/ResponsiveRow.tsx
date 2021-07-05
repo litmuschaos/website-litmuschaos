@@ -12,7 +12,6 @@ interface IResponsiveRow {
 const ResponsiveRow = styled.div<IResponsiveRow>`
   width: 100%;
   display: flex;
-  max-width: 1200px !important;
   margin-bottom: ${props => (props.marginBottom ? props.marginBottom : "")};
   ${props =>
     props.theme.screens[props.breakpoint]

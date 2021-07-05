@@ -10,14 +10,13 @@ import { SmallText } from "../texts";
 import Burger from "./Burger";
 
 const NavBar = styled.nav`
-  width: ${props => (props.theme.screens.xl ? "calc(100% - 3rem)" : "100%")};
-  max-width: 1200px;
+  width: ${(props) => (props.theme.screens.xl ? "calc(100% - 3rem)" : "100%")};
+  max-width: 90rem;
   margin: 0 auto;
-  padding: ${props => (props.theme.screens.md ? "1.4rem 0" : "0")};
   display: flex;
   justify-content: space-between;
   position: relative;
-  z-index: ${props => props.theme.zIndex.nav};
+  z-index: ${(props) => props.theme.zIndex.nav};
 `;
 
 const LogoDiv = styled.div`
@@ -30,9 +29,9 @@ const MobBurgerDiv = styled(LogoDiv)`
 const GitHubStars = styled.div`
   width: fit-content;
   height: 2rem;
-  font-size: ${props => props.theme.fontSize.small.lg};
+  font-size: ${(props) => props.theme.fontSize.small.lg};
   padding: 0 0.5rem;
-  margin-left: ${props => (props.theme.screens.md ? "0.5rem" : "1.5rem")};
+  margin-left: ${(props) => (props.theme.screens.md ? "0.5rem" : "1.5rem")};
   border: 1px solid #000000;
   border-radius: 0.5rem;
   display: flex;
@@ -52,16 +51,16 @@ const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   li {
-    padding: ${props =>
+    padding: ${(props) =>
       props.theme.screens.mmd
         ? "1rem 0.3rem"
         : props.theme.screens.xl
         ? "0.7rem 0.5rem"
         : "1rem 0.65rem"};
-    font-size: ${props =>
+    font-size: ${(props) =>
       props.theme.screens.mmd ? "0.9rem" : props.theme.fontSize.button};
     a {
-      color: ${props =>
+      color: ${(props) =>
         props.color === "white"
           ? props.theme.colors.white
           : props.theme.colors.black};
@@ -73,15 +72,15 @@ const SlideDownMenuDesktop = styled.div`
   position: absolute;
   display: none;
   right: 0;
-  background: ${props => props.theme.colors.white};
-  box-shadow: 0px 4.8px 14.4px ${props => props.theme.colors.boxShadowCol1},
-    0px 25.6px 57.6px ${props => props.theme.colors.boxShadowCol2};
+  background: ${(props) => props.theme.colors.white};
+  box-shadow: 0px 4.8px 14.4px ${(props) => props.theme.colors.boxShadowCol1},
+    0px 25.6px 57.6px ${(props) => props.theme.colors.boxShadowCol2};
   border-radius: 10px;
   padding: 1rem 0;
   width: 200px;
   border-radius: 6px;
   a {
-    color: ${props => props.theme.colors.black} !important;
+    color: ${(props) => props.theme.colors.black} !important;
   }
 `;
 
@@ -102,7 +101,7 @@ const DropDownLinksDesktop = styled(Link)`
   font-size: 0.95rem;
   transition: all 100ms ease-in;
   &:hover {
-    background: ${props => props.theme.colors.dropShadowNavbarDesktop};
+    background: ${(props) => props.theme.colors.dropShadowNavbarDesktop};
     color: #000;
   }
 `;

@@ -1,19 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
-import styled from "styled-components";
-
-const Wrapper = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-`;
-
-const StyledImage = styled(GatsbyImage)`
-  margin: auto;
-  width: 100%;
-  object-fit: cover;
-`;
 
 const FeaturesImage: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -27,12 +14,11 @@ const FeaturesImage: React.FC = () => {
   `);
 
   return (
-    <Wrapper>
-      <StyledImage
-        image={data.image.childImageSharp.gatsbyImageData}
-        alt="Image of Litmus Features"
-      />
-    </Wrapper>
+    <GatsbyImage
+      image={data.image.childImageSharp.gatsbyImageData}
+      style={{ position: "absolute", transform: "translate(19%, 0)" }}
+      alt="Image of Litmus Features"
+    />
   );
 };
 

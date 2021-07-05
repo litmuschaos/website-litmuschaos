@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
 import { Button } from "../../../components/button";
@@ -5,10 +6,9 @@ import {
   BoundedContainer,
   Center,
   ResponsiveRow,
-  SectionDark
+  SectionDark,
 } from "../../../components/layout";
 import { Heading, Paragraph } from "../../../components/texts";
-import { AdoptersImage } from "../../image-fetch/AdopterImage";
 
 const SwagButtonContainer = styled.div`
   display: flex;
@@ -16,15 +16,15 @@ const SwagButtonContainer = styled.div`
 `;
 
 const SwagButton = styled.div`
-min-width: 8rem !important;
-width: 40%;
+  min-width: 8rem !important;
+  width: 40%;
 `;
 
 const SwagLink = styled.a`
-width: ${props => props.theme.screens.md && "40%"}
+width: ${(props) => props.theme.screens.md && "40%"}
   padding: 0 1rem;
-  color: ${props => props.theme.colors.swagBtnLink};
-  font-size: ${props =>
+  color: ${(props) => props.theme.colors.swagBtnLink};
+  font-size: ${(props) =>
     props.theme.screens.md
       ? props.theme.fontSize.paragraph.md
       : props.theme.fontSize.paragraph.lg};
@@ -80,7 +80,11 @@ const Head: React.FC = () => {
           </Center>
         </BoundedContainer>
         <BoundedContainer breakpoint="lg" width="50%" margin="0">
-          <AdoptersImage />
+          <StaticImage
+            src="../../../images/adopters.png"
+            alt="Choas Bird with abopters"
+            placeholder="blurred"
+          />
         </BoundedContainer>
       </ResponsiveRow>
     </SectionDark>
@@ -88,4 +92,3 @@ const Head: React.FC = () => {
 };
 
 export { Head };
-

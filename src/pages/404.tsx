@@ -1,7 +1,7 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { Button } from "../components/button";
-import { Image404 } from "../components/image-fetch/Image404";
 import { BoundedContainer, Center, ResponsiveRow } from "../components/layout";
 import { Link } from "../components/link";
 import { Paragraph } from "../components/texts";
@@ -49,13 +49,17 @@ const NotFoundPage: React.FC = () => {
               margin="0"
               style={{ maxWidth: "100%" }}
             >
-              <Center >
+              <Center>
                 <Content />
               </Center>
             </BoundedContainer>
 
             <BoundedContainer breakpoint="lg" width="50%" margin="0 0 0 2rem">
-              <Image404 />
+              <StaticImage
+                src="../images/404.png"
+                alt="Page not found image"
+                placeholder="blurred"
+              />
             </BoundedContainer>
           </ResponsiveRow>
         </Center>

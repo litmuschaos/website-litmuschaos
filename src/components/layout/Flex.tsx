@@ -3,11 +3,9 @@ import styled from "styled-components";
 interface IRow {
   wrap?: string;
   space?: boolean;
-  strict?: boolean;
 }
 const Row = styled.div<IRow>`
   display: flex;
-  max-width: ${props => (props.strict ? "1200px !important" : "")};
   flex-wrap: ${props => props.wrap ?? "no-wrap"};
   justify-content: ${props => (props.space ? "space-between" : "")};
 `;
