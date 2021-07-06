@@ -18,7 +18,7 @@ export default {
   fontSize: {
     heading: { lg: "2.2rem", md: "1.75rem" },
     subHeading: { lg: "1.5rem", md: "1.125rem" },
-    paragraph: { lg: "1rem", md: "0.875rem" },
+    paragraph: { lg: "1.1rem", md: "0.9rem" },
     subText: { lg: "1.25rem", md: "1.125rem" },
     button: { lg: "1.125rem", md: "0.875rem" },
     small: { lg: "0.875rem", md: "0.75rem" },
@@ -46,6 +46,7 @@ export default {
     CTAintuit: "#1F2022",
     CTAlenskart: "#005797",
     CTAhalodoc: "linear-gradient(266.12deg, #90062F 0%, #E9094C 99.53%)",
+    yellowPill: "#ffa615",
 
     grayText: (opacity: number): string =>
       opacityCheck(opacity)

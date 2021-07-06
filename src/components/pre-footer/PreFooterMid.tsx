@@ -9,7 +9,7 @@ const PreFooterMid = () => {
       <ResponsiveRow breakpoint="lg">
         <BoundedContainer breakpoint="lg" width="60%" margin="">
           <SubHeading>
-            Have you adopted{" "}
+            Are you an end user and adopted LitmusChaos{" "}
             <PurpleText
               style={{ display: "inline-block" }}
               fontWeight={600}
@@ -17,7 +17,7 @@ const PreFooterMid = () => {
             >
               LitmusChaos
             </PurpleText>
-            ? Let us know and we’ll send you some sweet swag!
+            ? Let us know and we will be happy to list you here.
           </SubHeading>
         </BoundedContainer>
         <BoundedContainer breakpoint="lg" width="30%" margin="">
@@ -26,7 +26,7 @@ const PreFooterMid = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button gradientColor="green">Get your swags</Button>
+            <Button gradientColor="green">List me on this page</Button>
           </a>
         </BoundedContainer>
       </ResponsiveRow>

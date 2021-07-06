@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { useEffect, useState } from "react";
 import styled, { useTheme } from "styled-components";
 import { Button, WhiteOnGreenButton } from "../../button";
@@ -16,39 +17,38 @@ const MainHeading = styled.h1`
 `;
 
 const GithubTile = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  align-items: center;
   text-align: center;
   margin: 0 0.2rem;
   border: 1px solid #cfd3e3;
-  border-radius: 7px;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  box-shadow: 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
   background: linear-gradient(133.06deg, #f9fafc 1.78%, #eef1f7 64.41%);
   font-family: "Inter", sans-serif;
-
-  div {
-    &:nth-child(1) {
-      position: relative;
-      padding-left: 3rem;
-      img {
-        position absolute;
-        top: 0.55rem;
-        left: 1.5rem;
-        width: 1em;
-        display: inline-block;
-      }
-      p {
-        display: inline-block;
-      }
-    }
-    &:nth-child(2) {
-      border-left: 1px solid #cfd3e3;
-    }
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
   }
 `;
 
 const Span = styled.div`
-  padding: 0.3rem 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  img {
+    width: 15px;
+    display: inline-block;
+    margin-right: 0.3rem;
+  }
+  p {
+    font-size: 0.9rem;
+    &:hover {
+      color: ${(props) => props.theme.colors.textSecondary};
+    }
+  }
 `;
 
 // Components
@@ -68,7 +68,7 @@ const HeadText: React.FC = () => {
         .then((data) => {
           setGithub({
             stars: data.stargazers_count,
-            watchers: data.watchers_count,
+            watchers: data.subscribers_count,
             forks: data.forks_count,
           });
         });
@@ -79,29 +79,40 @@ const HeadText: React.FC = () => {
     return (
       <Row>
         <GithubTile>
-          <Span>
-            <img src="/assets/github-star.svg" alt="github star" />
-            <p>Star</p>
+          <Link to="https://github.com/litmuschaos/litmus" target="_blank">
+            <Span>
+              <img src="/assets/github-star.svg" alt="github star" />
+              <p>Star</p>
+            </Span>
+          </Link>
+          <Span style={{ borderLeft: "1px solid #CFD3E3" }}>
+            <p style={{ cursor: "default" }}>{github.stars}</p>
           </Span>
-          <Span>{github.stars}</Span>
         </GithubTile>
         <GithubTile>
-          <Span>
-            <img
-              style={{ top: "0.7rem" }}
-              src="/assets/github-watchers.svg"
-              alt="github star"
-            />
-            <p>Watch</p>
+          <Link
+            to="https://github.com/litmuschaos/litmus/subscription"
+            target="_blank"
+          >
+            <Span>
+              <img src="/assets/github-watchers.svg" alt="github star" />
+              <p>Watch</p>
+            </Span>
+          </Link>
+          <Span style={{ borderLeft: "1px solid #CFD3E3" }}>
+            <p style={{ cursor: "default" }}>{github.watchers}</p>
           </Span>
-          <Span>{github.watchers}</Span>
         </GithubTile>
         <GithubTile>
-          <Span>
-            <img src="/assets/github-forks.svg" alt="github star" />
-            <p>Fork</p>
+          <Link to="https://github.com/litmuschaos/litmus/fork" target="_blank">
+            <Span>
+              <img src="/assets/github-forks.svg" alt="github star" />
+              <p>Fork</p>
+            </Span>
+          </Link>
+          <Span style={{ borderLeft: "1px solid #CFD3E3" }}>
+            <p style={{ cursor: "default" }}>{github.forks}</p>
           </Span>
-          <Span>{github.forks}</Span>
         </GithubTile>
       </Row>
     );

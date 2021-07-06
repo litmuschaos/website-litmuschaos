@@ -17,6 +17,7 @@ const NavBar = styled.nav`
   justify-content: space-between;
   position: relative;
   z-index: ${(props) => props.theme.zIndex.nav};
+  padding: ${(props) => (props.theme.screens.md ? "1rem 0" : "")};
 `;
 
 const LogoDiv = styled.div`
@@ -65,6 +66,15 @@ const Ul = styled.ul`
           ? props.theme.colors.white
           : props.theme.colors.black};
     }
+    span {
+      color: ${(props) =>
+        props.color === "white"
+          ? props.theme.colors.white
+          : props.theme.colors.black};
+      &:hover {
+        color: #000;
+      }
+    }
   }
 `;
 
@@ -77,7 +87,7 @@ const SlideDownMenuDesktop = styled.div`
     0px 25.6px 57.6px ${(props) => props.theme.colors.boxShadowCol2};
   border-radius: 10px;
   padding: 1rem 0;
-  width: 200px;
+  width: 250px;
   border-radius: 6px;
   a {
     color: ${(props) => props.theme.colors.black} !important;
@@ -179,26 +189,30 @@ const Nav: React.FC = () => {
           <Link to="/chaoshub">ChaosHub</Link>
         </li>
         <DropDownNavElement>
-          <Link to="#">Community</Link>
+          <span>Community &#8628;</span>
           <SlideDownMenuDesktop>
-            <DropDownLinksDesktop to="/adopters">
-              End User Adopters
+            <DropDownLinksDesktop to="/community">
+              Community Resources
             </DropDownLinksDesktop>
             <DropDownLinksDesktop
               to="https://dev.to/t/litmuschaos"
               target="_blank"
             >
-              Blogs
+              Blog
             </DropDownLinksDesktop>
-            <DropDownLinksDesktop to="/community">
-              Other Resources
+            <DropDownLinksDesktop to="/adopters">
+              End User Adopters
             </DropDownLinksDesktop>
           </SlideDownMenuDesktop>
         </DropDownNavElement>
         <OutlinedNavButton>
-          <a rel="noopener noreferrer" target="_blank" href="#">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.katacoda.com/litmusbot/scenarios/getting-started-with-litmus"
+          >
             <OutlinedButton backgroundColor={`${match ? `white` : `purple`}`}>
-              Get Started
+              Interactive Tutorial
             </OutlinedButton>
           </a>
         </OutlinedNavButton>

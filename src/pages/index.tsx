@@ -13,16 +13,18 @@ import { SEO } from "../components/seo";
 
 const App = () => {
   return (
-    <Layout>
-      <SEO />
-      <Head />
-      <PurpleBox />
+    <>
       <BannerHome />
-      <CloudNativeWay />
-      <QuickStart />
-      <GetStarted />
-      <FeedBack />
-    </Layout>
+      <Layout>
+        <SEO />
+        <Head />
+        <PurpleBox />
+        <CloudNativeWay />
+        <QuickStart />
+        <GetStarted />
+        <FeedBack />
+      </Layout>
+    </>
   );
 };
 

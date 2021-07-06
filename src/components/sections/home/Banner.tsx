@@ -1,108 +1,100 @@
+import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
-import { SectionDark } from "../../layout";
-import { Paragraph, SubHeading } from "../../texts";
 
-const HomeBannerContainer = styled.div`
+const BannerContainer = styled.div`
   max-width: 90rem;
   margin: 0 auto;
-  padding: 5rem 2rem;
+  height: 2.8rem;
   display: flex;
-  flex-direction: ${(props) => (props.theme.screens.lg ? "column" : "row")};
-`;
-
-const BackgroundBanner = styled.img`
-  display: block;
-  position: absolute;
-  top: ${(props) => (props.theme.screens.lg ? "-40px" : "-60px")};
-  height: ${(props) =>
-    props.theme.screens.lg ? "calc(100% + 40px)" : "calc(100% + 60px)"};
-  left: ${(props) => (props.theme.screens.lg ? "-20px" : "-60px")};
-  z-index: -1;
-`;
-
-const BannerLeft = styled.div`
-  width: ${(props) => (props.theme.screens.lg ? "100%" : "50%")};
-  padding: 1rem;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  background: #ffffff;
-  box-shadow: 0px 5.05263px 15.1579px rgba(0, 0, 0, 0.18),
-    0px 26.9474px 60.6316px rgba(0, 0, 0, 0.22);
-  border-radius: 10px;
+  svg {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 `;
-
-const BannerRight = styled.div`
-  margin-top: ${(props) => (props.theme.screens.lg ? "3rem" : "0")};
-  ${(props) =>
-    props.theme.screens.lg
-      ? ""
-      : "width: 50%; display: flex; flex-direction: column; justify-content: center; padding-left: 2rem;"}
+const Banner = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    background-color: #ffa615;
+    font-size: 0.9rem;
+    padding: 0.2rem 1rem;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+  }
+  p {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  a {
+    color: #5b44ba;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
 `;
-
-const BannerLeftItemCont = styled.div`
-  background-color: #f5f9fc;
-  border-radius: 10px;
-  padding: 3rem 1rem;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-`;
-
-const LitmusLogo = styled.img`
-  height: ${(props) => (props.theme.screens.lg ? "35px" : "50px")};
-`;
-
-const ParagraphBanner = styled.p`
-  font-size: ${(props) => (props.theme.screens.lg ? "0.9rem" : "1rem")};
-  font-weight: 600;
-  margin-top: 0.5rem;
-`;
-
-const GradientBackground = styled.img`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: block;
-  width: ${(props) => (props.theme.screens.lg ? "100%" : "80%")};
+const BannerFluidContainer = styled.div`
+  width: 100%;
+  box-shadow: 0px 0.6px 1.8px rgba(0, 0, 0, 0.1),
+    0px 3.2px 7.2px rgba(0, 0, 0, 0.13);
 `;
 
 const BannerHome: React.FC = () => {
+  const [banner, setBanner] = React.useState(true);
+  const hideBanner = () => {
+    setBanner(!banner);
+  };
   return (
     <>
-      <SectionDark>
-        <HomeBannerContainer>
-          <BannerLeft>
-            <BackgroundBanner
-              src="./Banner/bannerBackground.png"
-              alt="Banner Background"
-            />
-            <BannerLeftItemCont>
-              <LitmusLogo src="./Banner/logo.png" alt="Litmus Logo" />
-              <ParagraphBanner>Releasing on August 15, 2021</ParagraphBanner>
-              <GradientBackground
-                src="./Banner/gradientShape.png"
-                alt="Gradient Image"
-              />
-            </BannerLeftItemCont>
-          </BannerLeft>
-          <BannerRight>
-            <SubHeading>Chaos Engineering for Enterprises.</SubHeading>
-            <Paragraph>
-              With biggest and promising updates, Litmus 2.0 is going to be
-              released on 15th August, 2021. Read the blog to know few of the
-              new features.
-            </Paragraph>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://dev.to/litmus-chaos/litmus-2-0-simplifying-chaos-engineering-for-enterprises-4448"
-              style={{ color: "#5b44ba" }}
+      {banner ? (
+        <BannerFluidContainer>
+          <BannerContainer>
+            <Banner>
+              <span>NEW</span>
+              <p>Releasing Litmus 2.0 on August 15, 2021</p>
+              <Link
+                to="https://dev.to/litmus-chaos/litmus-2-0-simplifying-chaos-engineering-for-enterprises-4448"
+                target="_blank"
+              >
+                See what's coming in Litmus 2.0
+              </Link>
+            </Banner>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              onClick={hideBanner}
             >
-              Sneek peek into Litmus 2.0
-            </a>
-          </BannerRight>
-        </HomeBannerContainer>
-      </SectionDark>
+              <path
+                d="M18.75 5.25L5.25 18.75"
+                stroke="#7E8F9A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.75 18.75L5.25 5.25"
+                stroke="#7E8F9A"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </BannerContainer>
+        </BannerFluidContainer>
+      ) : (
+        ""
+      )}
     </>
   );
 };
