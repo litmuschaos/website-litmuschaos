@@ -15,12 +15,22 @@ const PurpleBox: React.FC = () => {
     {
       mobile: file(relativePath: { eq: "purple-box-md.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 700, quality: 100, layout: CONSTRAINED)
+          gatsbyImageData(
+            width: 700
+            quality: 100
+            layout: CONSTRAINED
+            placeholder: BLURRED
+          )
         }
       }
       desktop: file(relativePath: { eq: "purple-box.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 1000, quality: 100, layout: CONSTRAINED)
+          gatsbyImageData(
+            width: 1000
+            quality: 100
+            layout: CONSTRAINED
+            placeholder: BLURRED
+          )
         }
       }
     }

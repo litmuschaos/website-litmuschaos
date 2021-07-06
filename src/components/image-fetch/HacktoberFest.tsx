@@ -25,7 +25,12 @@ const HacktoberFestImage: React.FC = () => {
     {
       image: file(relativePath: { eq: "hacktoberfest.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 1024, quality: 100, layout: CONSTRAINED)
+          gatsbyImageData(
+            width: 1024
+            quality: 100
+            layout: CONSTRAINED
+            placeholder: BLURRED
+          )
         }
       }
     }

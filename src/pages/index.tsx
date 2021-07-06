@@ -8,11 +8,13 @@ import {
   Head,
   QuickStart,
 } from "../components/sections/home";
+import { Banner } from "../components/sections/home/Banner";
 import { SEO } from "../components/seo";
 
 const App = () => {
   return (
     <>
+      <Banner />
       <Layout>
         <SEO />
         <Head />

@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { theme } from "../../../styles";
 
 const BannerFluidContainer = styled.div`
   width: 100%;
@@ -28,7 +29,7 @@ const BannerContainer = styled.div`
     cursor: pointer;
   }
 `;
-const Banner = styled.div`
+const BannerWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
@@ -59,17 +60,15 @@ const Banner = styled.div`
   }
 `;
 
-const BannerHome: React.FC = () => {
-  const [banner, setBanner] = React.useState(true);
-  const hideBanner = () => {
-    setBanner(!banner);
-  };
+const Banner: React.FC = () => {
+  const [bannerOpen, setBannerOpen] = React.useState(true);
+
   return (
-    <>
-      {banner ? (
+    <ThemeProvider theme={theme()}>
+      {bannerOpen ? (
         <BannerFluidContainer>
           <BannerContainer>
-            <Banner>
+            <BannerWrapper>
               <span>NEW</span>
               <div>
                 <p>Releasing Litmus 2.0 on August 15, 2021</p>
@@ -80,14 +79,14 @@ const BannerHome: React.FC = () => {
                   See what's coming in Litmus 2.0
                 </Link>
               </div>
-            </Banner>
+            </BannerWrapper>
             <svg
               width="24"
               height="24"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              onClick={hideBanner}
+              onClick={() => setBannerOpen(!bannerOpen)}
             >
               <path
                 d="M18.75 5.25L5.25 18.75"
@@ -109,8 +108,8 @@ const BannerHome: React.FC = () => {
       ) : (
         <></>
       )}
-    </>
+    </ThemeProvider>
   );
 };
 
-export { BannerHome };
+export { Banner };

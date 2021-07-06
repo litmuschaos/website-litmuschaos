@@ -5,7 +5,6 @@ import { theme } from "../../styles";
 import { Footer } from "../footer";
 import { Nav } from "../nav";
 import { PreFooter } from "../pre-footer";
-import { BannerHome } from "../sections/home/Banner";
 
 const Container = styled.div`
   position: relative;
@@ -19,7 +18,6 @@ interface Ilayoutprops {
 const Layout: React.FC<Ilayoutprops> = ({ children, noPreFooter }) => {
   return (
     <ThemeProvider theme={theme()}>
-      <BannerHome />
       <Container>
         <Nav />
         <main>{children}</main>
