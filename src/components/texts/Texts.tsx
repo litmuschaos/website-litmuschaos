@@ -7,8 +7,8 @@ interface IText {
 
 const Heading = styled.h1<IText>`
   line-height: 130%;
-  text-align: ${props => props.textAlign ?? "left"};
-  font-size: ${props =>
+  text-align: ${(props) => props.textAlign ?? "left"};
+  font-size: ${(props) =>
     props.theme.screens.md
       ? props.theme.fontSize.heading.md
       : props.theme.fontSize.heading.lg};
@@ -17,8 +17,8 @@ const Heading = styled.h1<IText>`
 const SubHeading = styled.p<IText>`
   line-height: 170%;
   font-weight: 600;
-  text-align: ${props => props.textAlign ?? "left"};
-  font-size: ${props =>
+  text-align: ${(props) => props.textAlign ?? "left"};
+  font-size: ${(props) =>
     props.theme.screens.md
       ? props.theme.fontSize.subHeading.md
       : props.theme.fontSize.subHeading.lg};
@@ -26,12 +26,12 @@ const SubHeading = styled.p<IText>`
 
 const Paragraph = styled.p<IText>`
   line-height: 170%;
-  text-align: ${props => props.textAlign ?? "left"};
-  color: ${props =>
+  text-align: ${(props) => props.textAlign ?? "left"};
+  color: ${(props) =>
     props.color === "textPrimary"
       ? props.theme.colors.textPrimary
       : props.theme.colors.darkGray};
-  font-size: ${props =>
+  font-size: ${(props) =>
     props.theme.screens.md
       ? props.theme.fontSize.paragraph.md
       : props.theme.fontSize.paragraph.lg};
@@ -45,11 +45,11 @@ interface IPurpleText extends IText {
 
 const PurpleText = styled.p<IPurpleText>`
   line-height: 130%;
-  font-weight: ${props => props.fontWeight};
-  text-align: ${props => props.textAlign ?? "left"};
-  color: ${props => props.theme.colors.textSecondary};
+  font-weight: ${(props) => props.fontWeight};
+  text-align: ${(props) => props.textAlign ?? "left"};
+  color: ${(props) => props.theme.colors.textSecondary};
   text-decoration: "none";
-  font-size: ${props =>
+  font-size: ${(props) =>
     props.theme.screens.md
       ? props.theme.fontSize[props.fontSize].md
       : props.theme.fontSize[props.fontSize].lg};
@@ -62,10 +62,10 @@ interface ISubText extends IText {
 
 const SubText = styled.p<ISubText>`
   line-height: 150%;
-  text-align: ${props => props.textAlign ?? "left"};
-  color: ${props => props.color ?? props.theme.colors.textPrimary};
-  font-weight: ${props => props.fontWeight ?? "normal"};
-  font-size: ${props =>
+  text-align: ${(props) => props.textAlign ?? "left"};
+  color: ${(props) => props.color ?? props.theme.colors.textPrimary};
+  font-weight: ${(props) => props.fontWeight ?? "normal"};
+  font-size: ${(props) =>
     props.theme.screens.md
       ? props.theme.fontSize.subText.md
       : props.theme.fontSize.subText.lg};
@@ -77,10 +77,10 @@ interface ICode extends IText {
 
 const Code = styled.span<ICode>`
   line-height: 170%;
-  text-align: ${props => props.textAlign ?? "left"};
-  color: ${props => props.bgColor(1)};
+  text-align: ${(props) => props.textAlign ?? "left"};
+  color: ${(props) => props.bgColor(1)};
   word-wrap: break-word;
-  font-size: ${props =>
+  font-size: ${(props) =>
     props.theme.screens.md
       ? props.theme.fontSize.paragraph.md
       : props.theme.fontSize.paragraph.lg};
@@ -105,15 +105,15 @@ const GreenStats = styled.p`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: ${props => (props.theme.screens.md ? "3rem" : "3.5rem")};
+  font-size: ${(props) => (props.theme.screens.md ? "3rem" : "3.5rem")};
   font-weight: bold;
-  color: ${props => props.theme.colors.darkGreen(1)};
+  color: ${(props) => props.theme.colors.darkGreen(1)};
 `;
 
 const SmallText = styled.p<IText>`
-  text-align: ${props => props.textAlign ?? "left"};
-  color: ${props => props.color ?? props.theme.colors.textPrimary};
-  font-size: ${props =>
+  text-align: ${(props) => props.textAlign ?? "left"};
+  color: ${(props) => props.color ?? props.theme.colors.textPrimary};
+  font-size: ${(props) =>
     props.theme.screens.md
       ? props.theme.fontSize.small.md
       : props.theme.fontSize.small.lg};

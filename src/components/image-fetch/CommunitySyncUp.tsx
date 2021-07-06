@@ -25,7 +25,12 @@ const CommunitySyncUpImage: React.FC = () => {
     {
       image: file(relativePath: { eq: "CommunitySyncUp.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 1024, quality: 100, layout: CONSTRAINED)
+          gatsbyImageData(
+            width: 1024
+            quality: 100
+            layout: CONSTRAINED
+            placeholder: BLURRED
+          )
         }
       }
     }

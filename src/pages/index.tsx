@@ -8,21 +8,23 @@ import {
   Head,
   QuickStart,
 } from "../components/sections/home";
-import { BannerHome } from "../components/sections/home/Banner";
+import { Banner } from "../components/sections/home/Banner";
 import { SEO } from "../components/seo";
 
 const App = () => {
   return (
-    <Layout>
-      <SEO />
-      <Head />
-      <PurpleBox />
-      <BannerHome />
-      <CloudNativeWay />
-      <QuickStart />
-      <GetStarted />
-      <FeedBack />
-    </Layout>
+    <>
+      <Banner />
+      <Layout>
+        <SEO />
+        <Head />
+        <PurpleBox />
+        <CloudNativeWay />
+        <QuickStart />
+        <GetStarted />
+        <FeedBack />
+      </Layout>
+    </>
   );
 };
 

@@ -1,14 +1,5 @@
 const adoptersData = [
   {
-    key: "redhat",
-    heading:
-      "Testing the maturity of the Red Hat Openshift Virtualization solution using chaos testing.",
-    subheading:
-      "Red Hat is an enterprise software company with an open source development model and building software that pushes the boundaries of technology.",
-    company: "Red Hat",
-    videoUrl: "https://www.youtube.com/embed/VITGHJ47gx8",
-  },
-  {
     key: "orange",
     heading: "Validating the resiliency of Orange’s private telco.",
     subheading:
@@ -63,38 +54,6 @@ const adoptersData = [
 // -------------------------------------------------------------------------------------------------------
 
 const adoptersContent = [
-  {
-    key: "redhat",
-    why: {
-      heading: "Why do we use Litmus?",
-      subtext:
-        "We wanted to test the maturity of the Red Hat Openshift Virtualization solution using chaos testing. Following that, we decided to use Litmus for these reasons:",
-      list: [
-        "It's an Open Source project",
-        "It has a wide selection of experiments available",
-        "It's a CNCF sandbox project",
-        "There are frequent releases and it is well maintained",
-      ],
-    },
-    how: {
-      heading: "How do we use Litmus?",
-      subtext:
-        "Litmus experiments are deployed against a single Openshift cluster that runs on top of a baremetal server using libvirt/KVM. Each experiment consists of observing the behavior upon applying chaos to the underlying infrastructure of a running VMI pod instance and validating the results of the probes. The chaos we inject to the VMs that host the openshift nodes can vary from triggering reboots, sudden shutdowns, suspend the node, and network disruption at the node level, among others.",
-    },
-    benefits: {
-      heading: "Benefits in using Litmus.",
-      subtext:
-        "Being a cloud-native solution, Litmus allows us to define our experiment and expectations in the chaosexperiment manifest and retrieve the results in the chaosresult object generated at runtime. Its vast selection of experiments, periodic release cadence, and welcoming community were sufficient signals that ensured with Litmus we would achieve our goal.",
-    },
-    other: {
-      heading: "Other Resources",
-      videoUrl: "https://youtu.be/VITGHJ47gx8",
-      quote:
-        "“Litmus was our top choice when it came to developing our cloud native chaos scenarios: it’s extensive list of experiments, open source nature, and friendly community gave us all the ingredients we needed to successfully complete our goals.”",
-      author: "Jordi Gil",
-      designation: "Senior Software Engineer at Red Hat",
-    },
-  },
   {
     key: "orange",
     why: {
@@ -215,8 +174,7 @@ const adoptersContent = [
         "Litmus has a wide variety of chaos experiments for Kubernetes workload and Infrastructure and provides a very easy way for end-to-end automation of resiliency test cases.",
     },
     other: {
-      cta:
-        "Leverage to test the resiliency of multi k8s cluster workloads in a private cloud.",
+      cta: "Leverage to test the resiliency of multi k8s cluster workloads in a private cloud.",
     },
   },
   {

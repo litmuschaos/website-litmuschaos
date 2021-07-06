@@ -18,12 +18,12 @@ const FadedDiv = styled.div`
   justify-content: space-between;
   width: 0.625rem;
   margin-left: 2rem;
-  background: ${props => props.theme.gradient.fadedLine(0)};
+  background: ${(props) => props.theme.gradient.fadedLine(0)};
 `;
 
 const Wrapper = styled.div`
-  width: ${props => (props.theme.screens.md ? "80vw" : "40vw")};
-  padding-top: ${props => (props.theme.screens.md ? "2rem" : "1rem")};
+  width: ${(props) => (props.theme.screens.md ? "80vw" : "40vw")};
+  padding-top: ${(props) => (props.theme.screens.md ? "2rem" : "1rem")};
   margin-left: -1.4rem;
 `;
 
@@ -85,7 +85,7 @@ const GetStartedSteps: React.FC = () => {
           <Step
             bullet="2"
             title="Get experiments"
-            description="Browse and install the required experiments from ChaosHub. When you install them, they become custom resources which you can tune."
+            description="Browse and install the required experiments from ChaosHub. When installed, they become custom resources which you can tune."
             yamlLink={`https://hub.litmuschaos.io/api/chaos/${latestVersion}?file=charts/generic/experiments.yaml`}
           />
           <Step
@@ -108,8 +108,8 @@ const GetStarted: React.FC = () => {
 
   useEffect(() => {
     fetch("https://hub.litmuschaos.io/api/version")
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         const version = data[0].slice(0, data[0].length - 1) + "0";
         setLatestVersion(version); // Set the latest monthly release version
         setYamlLink(

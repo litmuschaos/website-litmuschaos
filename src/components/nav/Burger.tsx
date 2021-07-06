@@ -13,7 +13,7 @@ const HamBurger = styled.div`
     display: block;
     width: 30px;
     height: 3px;
-    background-color: #000;
+    background-color: ${(props) => props.theme.colors.black};
     mix-blend-mode: difference;
     &:first-child {
       margin-bottom: 4px;
@@ -28,13 +28,13 @@ const HamBurger = styled.div`
 const MobileNavBar = styled.div`
   position: absolute;
   width: 100%;
-  background-color: #ffffff;
+  background-color: ${(props) => props.theme.colors.white};
   left: 0;
   padding: 1rem 0.5rem;
   top: 60px;
   border-radius: 6px;
-  box-shadow: 0px 4.8px 14.4px rgba(0, 0, 0, 0.18),
-    0px 25.6px 57.6px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 4.8px 14.4px ${(props) => props.theme.colors.bannerShadowFrom},
+    0px 25.6px 57.6px ${(props) => props.theme.colors.bannerShadowTo};
   display: flex;
   flex-direction: column;
   a,
@@ -43,20 +43,20 @@ const MobileNavBar = styled.div`
     display: block;
     margin-top: 0 !important;
     text-align: center;
-    color: #000;
+    color: ${(props) => props.theme.colors.black};
     width: 100%;
     font-size: 0.9rem;
     font-weight: 600;
   }
   a.buttonMobile {
-    border: 1px solid #5b44ba;
+    border: 1px solid ${(props) => props.theme.colors.textSecondary};
     border-radius: 6px;
-    color: #5b44ba;
+    color: ${(props) => props.theme.colors.textSecondary};
   }
 `;
 
 const SubNavMobile = styled.div`
-  background: rgba(225, 225, 225, 0.3);
+  background: ${(props) => props.theme.colors.mobileNavBackground};
   width: 100%;
   margin-bottom: 1rem;
   border-radius: 6px;

@@ -11,6 +11,7 @@ const GithubIcon: React.FC = () => {
           alt="Github Icon"
           width={20}
           height={20}
+          placeholder="blurred"
         />
       </Center>
     </div>

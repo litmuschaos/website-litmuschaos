@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { VideoFrame } from "../../video-box";
 import { adoptersData } from "./data";
 
 interface IContent {
@@ -55,6 +56,13 @@ const CloseButton = styled.span`
 
   cursor: pointer;
 `;
+const CenteredDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+`;
 
 const Modal: React.FC<IContent> = ({ url, handleClick }) => {
   const video = adoptersData.filter((fil) => fil.key === url)[0];
@@ -64,16 +72,9 @@ const Modal: React.FC<IContent> = ({ url, handleClick }) => {
         <CloseButton onClick={handleClick}>
           <img src="/assets/close-button.svg" alt="close" />
         </CloseButton>
-        <iframe
-          width="100%"
-          height="100%"
-          src={video.videoUrl}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          style={{ borderRadius: "10px" }}
-        ></iframe>
+        <CenteredDiv>
+          <VideoFrame width="900px" src={video.videoUrl ?? ""} />
+        </CenteredDiv>
       </FrameContainer>
     </Backdrop>
   );
