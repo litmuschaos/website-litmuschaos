@@ -138,10 +138,9 @@ const HeadText: React.FC = () => {
         for your Kubernetes
       </MainHeading>
       <Paragraph>
-        Chaos Engineering is fundamental to increasing the resilience of today’s
-        cloud native, highly dynamic applications and infrastructure. Kubernetes
-        developers and SREs use Litmus to create, manage and monitor chaos
-        workflows by extending Kubernetes itself.
+        Kubernetes developers and SREs use Litmus to create, manage and monitor
+        chaos workflows. Resilience of your Kubernetes starts with finding a
+        weakness and starting to fix it.
       </Paragraph>
       <div style={{ marginTop: "1rem" }}>{flexibleButton}</div>
       <div style={{ marginTop: "1rem" }}>{!md ? <GithubContent /> : null}</div>
