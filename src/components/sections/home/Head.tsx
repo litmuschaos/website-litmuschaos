@@ -21,10 +21,10 @@ const GithubTile = styled.div`
   align-items: center;
   text-align: center;
   margin: 0 0.2rem;
-  border: 1px solid #cfd3e3;
+  border: 1px solid ${(props) => props.theme.colors.githubGray};
   border-radius: 5px;
-  box-shadow: 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
-  background: linear-gradient(133.06deg, #f9fafc 1.78%, #eef1f7 64.41%);
+  box-shadow: 0px 1.6px 3.6px ${(props) => props.theme.colors.bannerShadowTo};
+  background: ${(props) => props.theme.gradient.githubGradient};
   font-family: "Inter", sans-serif;
   &:first-child {
     margin-left: 0;
@@ -49,6 +49,10 @@ const Span = styled.div`
       color: ${(props) => props.theme.colors.textSecondary};
     }
   }
+`;
+
+const SpanNumbers = styled(Span)`
+  border-left: 1px solid ${(props) => props.theme.colors.githubGray};
 `;
 
 // Components
@@ -85,9 +89,9 @@ const HeadText: React.FC = () => {
               <p>Star</p>
             </Span>
           </Link>
-          <Span style={{ borderLeft: "1px solid #CFD3E3" }}>
+          <SpanNumbers>
             <p style={{ cursor: "default" }}>{github.stars}</p>
-          </Span>
+          </SpanNumbers>
         </GithubTile>
         <GithubTile>
           <Link
@@ -99,9 +103,9 @@ const HeadText: React.FC = () => {
               <p>Watch</p>
             </Span>
           </Link>
-          <Span style={{ borderLeft: "1px solid #CFD3E3" }}>
+          <SpanNumbers>
             <p style={{ cursor: "default" }}>{github.watchers}</p>
-          </Span>
+          </SpanNumbers>
         </GithubTile>
         <GithubTile>
           <Link to="https://github.com/litmuschaos/litmus/fork" target="_blank">
@@ -110,9 +114,9 @@ const HeadText: React.FC = () => {
               <p>Fork</p>
             </Span>
           </Link>
-          <Span style={{ borderLeft: "1px solid #CFD3E3" }}>
+          <SpanNumbers>
             <p style={{ cursor: "default" }}>{github.forks}</p>
-          </Span>
+          </SpanNumbers>
         </GithubTile>
       </Row>
     );

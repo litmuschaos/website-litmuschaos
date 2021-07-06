@@ -47,6 +47,10 @@ export default {
     CTAlenskart: "#005797",
     CTAhalodoc: "linear-gradient(266.12deg, #90062F 0%, #E9094C 99.53%)",
     yellowPill: "#ffa615",
+    bannerShadowFrom: "rgba(0, 0, 0, 0.1)",
+    bannerShadowTo: "rgba(0, 0, 0, 0.13)",
+    mobileNavBackground: "rgba(225, 225, 225, 0.3)",
+    githubGray: "#cfd3e3",
 
     grayText: (opacity: number): string =>
       opacityCheck(opacity)
@@ -97,5 +101,6 @@ export default {
             #ebebeb 85%,
             rgba(235, 235, 235, 0) 100%
           );`,
+    githubGradient: "linear-gradient(133.06deg, #f9fafc 1.78%, #eef1f7 64.41%)",
   },
 };

@@ -1,12 +1,13 @@
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "../../../styles";
 
 const BannerFluidContainer = styled.div`
   width: 100%;
-  box-shadow: 0px 0.6px 1.8px rgba(0, 0, 0, 0.1),
-    0px 3.2px 7.2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 0.6px 1.8px ${(props) => props.theme.colors.bannerShadowFrom},
+    0px 3.2px 7.2px ${(props) => props.theme.colors.bannerShadowTo};
   position: relative;
   z-index: 120;
   background: ${(props) => props.theme.colors.white};
@@ -21,7 +22,7 @@ const BannerContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  svg {
+  span.closeBtn {
     position: absolute;
     right: 0;
     top: 50%;
@@ -80,29 +81,16 @@ const Banner: React.FC = () => {
                 </Link>
               </div>
             </BannerWrapper>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              onClick={() => setBannerOpen(!bannerOpen)}
-            >
-              <path
-                d="M18.75 5.25L5.25 18.75"
-                stroke="#7E8F9A"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+            <span className="closeBtn">
+              <StaticImage
+                src="../../../../static/svg/close.svg"
+                alt="Close Button"
+                width={24}
+                height={24}
+                placeholder="blurred"
+                onClick={() => setBannerOpen(!bannerOpen)}
               />
-              <path
-                d="M18.75 18.75L5.25 5.25"
-                stroke="#7E8F9A"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            </span>
           </BannerContainer>
         </BannerFluidContainer>
       ) : (

@@ -33,10 +33,10 @@ const GitHubStars = styled.div`
   font-size: ${(props) => props.theme.fontSize.small.lg};
   padding: 0 0.5rem;
   margin-left: ${(props) => (props.theme.screens.md ? "0.5rem" : "1.5rem")};
-  border: 1px solid #000000;
+  border: 1px solid ${(props) => props.theme.colors.black};
   border-radius: 0.5rem;
   display: flex;
-  color: black;
+  color: ${(props) => props.theme.colors.black};
   flex-direction: row;
   justify-content: center;
 `;
@@ -72,7 +72,7 @@ const Ul = styled.ul`
           ? props.theme.colors.white
           : props.theme.colors.black};
       &:hover {
-        color: #000;
+        color: ${(props) => props.theme.colors.black};
       }
     }
   }
@@ -107,12 +107,12 @@ const DropDownLinksDesktop = styled(Link)`
   display: block;
   width: 100%;
   text-align: left;
-  color: #000;
+  color: ${(props) => props.theme.colors.black};
   font-size: 0.95rem;
   transition: all 100ms ease-in;
   &:hover {
     background: ${(props) => props.theme.colors.dropShadowNavbarDesktop};
-    color: #000;
+    color: ${(props) => props.theme.colors.black};
   }
 `;
 
