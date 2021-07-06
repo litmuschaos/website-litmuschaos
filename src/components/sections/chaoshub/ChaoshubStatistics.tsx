@@ -27,8 +27,8 @@ const ChaoshubStatistics: React.FC = () => {
 
   useEffect(() => {
     fetch("https://hub.litmuschaos.io/api/community")
-      .then(response => response.json())
-      .then(data =>
+      .then((response) => response.json())
+      .then((data) =>
         setAnalyticsData({
           totalRuns: data.google.totalRuns,
           operatorInstalls: data.google.operatorInstalls,

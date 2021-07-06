@@ -1,8 +1,13 @@
-import React from "react";
+import { Link } from "gatsby";
+import React, { useEffect, useState } from "react";
 import styled, { useTheme } from "styled-components";
-// import { useTheme } from "../styles";
 import { Button, WhiteOnGreenButton } from "../../button";
-import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
+import {
+  BoundedContainer,
+  ResponsiveRow,
+  Row,
+  SectionDark,
+} from "../../layout";
 import { Paragraph } from "../../texts";
 
 const MainHeading = styled.h1`
@@ -11,9 +16,111 @@ const MainHeading = styled.h1`
   font-size: ${(props) => (props.theme.screens.md ? "2rem" : "2.6rem")};
 `;
 
+const GithubTile = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 0.2rem;
+  border: 1px solid ${(props) => props.theme.colors.githubGray};
+  border-radius: 5px;
+  box-shadow: 0px 1.6px 3.6px ${(props) => props.theme.colors.bannerShadowTo};
+  background: ${(props) => props.theme.gradient.githubGradient};
+  font-family: "Inter", sans-serif;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+`;
+
+const Span = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  img {
+    width: 15px;
+    display: inline-block;
+    margin-right: 0.3rem;
+  }
+  p {
+    font-size: 0.9rem;
+    &:hover {
+      color: ${(props) => props.theme.colors.textSecondary};
+    }
+  }
+`;
+
+const SpanNumbers = styled(Span)`
+  border-left: 1px solid ${(props) => props.theme.colors.githubGray};
+`;
+
 // Components
 const HeadText: React.FC = () => {
   const { sm, md } = useTheme().screens;
+  const url = "https://api.github.com/repos/litmuschaos/litmus";
+  const [github, setGithub] = useState({
+    stars: "",
+    watchers: "",
+    forks: "",
+  });
+
+  useEffect(() => {
+    (async () => {
+      await fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          setGithub({
+            stars: data.stargazers_count,
+            watchers: data.subscribers_count,
+            forks: data.forks_count,
+          });
+        });
+    })();
+  }, []);
+
+  const GithubContent = () => {
+    return (
+      <Row>
+        <GithubTile>
+          <Link to="https://github.com/litmuschaos/litmus" target="_blank">
+            <Span>
+              <img src="/assets/github-star.svg" alt="github star" />
+              <p>Star</p>
+            </Span>
+          </Link>
+          <SpanNumbers>
+            <p style={{ cursor: "default" }}>{github.stars}</p>
+          </SpanNumbers>
+        </GithubTile>
+        <GithubTile>
+          <Link
+            to="https://github.com/litmuschaos/litmus/subscription"
+            target="_blank"
+          >
+            <Span>
+              <img src="/assets/github-watchers.svg" alt="github star" />
+              <p>Watch</p>
+            </Span>
+          </Link>
+          <SpanNumbers>
+            <p style={{ cursor: "default" }}>{github.watchers}</p>
+          </SpanNumbers>
+        </GithubTile>
+        <GithubTile>
+          <Link to="https://github.com/litmuschaos/litmus/fork" target="_blank">
+            <Span>
+              <img src="/assets/github-forks.svg" alt="github star" />
+              <p>Fork</p>
+            </Span>
+          </Link>
+          <SpanNumbers>
+            <p style={{ cursor: "default" }}>{github.forks}</p>
+          </SpanNumbers>
+        </GithubTile>
+      </Row>
+    );
+  };
 
   const flexibleButton = (
     <Button
@@ -35,12 +142,12 @@ const HeadText: React.FC = () => {
         for your Kubernetes
       </MainHeading>
       <Paragraph>
-        Chaos Engineering is fundamental to increasing the resilience of today’s
-        cloud native, highly dynamic applications and infrastructure. Kubernetes
-        developers and SREs use Litmus to create, manage and monitor chaos
-        workflows by extending Kubernetes itself.
+        Kubernetes developers and SREs use Litmus to create, manage and monitor
+        chaos workflows. Resilience of your Kubernetes starts with finding a
+        weakness and starting to fix it.
       </Paragraph>
       <div style={{ marginTop: "1rem" }}>{flexibleButton}</div>
+      <div style={{ marginTop: "1rem" }}>{!md ? <GithubContent /> : null}</div>
     </>
   );
 

@@ -3,7 +3,12 @@ import styled from "styled-components";
 import { IYamlContext, YamlContext } from "../../../context";
 import { useTheme } from "../../../styles";
 import { IconCircle } from "../../icon-circle";
-import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
+import {
+  BoundedContainer,
+  Center,
+  ResponsiveRow,
+  SectionDark,
+} from "../../layout";
 import { Terminal } from "../../terminal";
 import { Heading, Paragraph, PurpleText, SubText } from "../../texts";
 
@@ -80,7 +85,7 @@ const GetStartedSteps: React.FC = () => {
           <Step
             bullet="2"
             title="Get experiments"
-            description="Browse and install the required experiments from ChaosHub. When you install them, they become custom resources which you can tune."
+            description="Browse and install the required experiments from ChaosHub. When installed, they become custom resources which you can tune."
             yamlLink={`https://hub.litmuschaos.io/api/chaos/${latestVersion}?file=charts/generic/experiments.yaml`}
           />
           <Step
@@ -122,7 +127,7 @@ const GetStarted: React.FC = () => {
   return (
     <YamlContext.Provider value={initialValue}>
       <SectionDark>
-        <div>
+        <Center>
           <Heading textAlign="center">Get started with Litmus</Heading>
           <ResponsiveRow breakpoint="md" alignItems="start">
             <BoundedContainer breakpoint="md" width="50%" margin="0">
@@ -130,7 +135,7 @@ const GetStarted: React.FC = () => {
             </BoundedContainer>
             <GetStartedSteps />
           </ResponsiveRow>
-        </div>
+        </Center>
       </SectionDark>
     </YamlContext.Provider>
   );

@@ -1,131 +1,120 @@
+import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
-import { useTheme } from "../../styles";
-import { OutlinedButton } from "../button";
-import { Link } from "../link/index";
 
-const StyledBurger = styled.div`
-  position: relative;
-  margin: 0 0.7rem;
-  margin-top: 0.5rem;
-  height: 1.5rem;
-  width: 2rem;
+const MobileNavBarContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: flex-end;
-  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+`;
 
-  .line {
-    height: 0.35rem;
-    background-color: white;
-    border: 1px solid ${(props) => props.theme.colors.textSecondary};
-    border-radius: 0.5rem;
-  }
-  .big {
-    width: 2.2rem;
-  }
-  .small {
-    width: 1.7rem;
+const HamBurger = styled.div`
+  span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: ${(props) => props.theme.colors.black};
+    mix-blend-mode: difference;
+    &:first-child {
+      margin-bottom: 4px;
+    }
+    &:nth-child(2) {
+      margin-bottom: 4px;
+      width: 25px;
+    }
   }
 `;
 
-const GettingStarted = styled.div`
-  margin: 0 auto;
-  width: 80%;
-`;
-
-const Ul = styled.ul`
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-
-  li {
-    margin: 1rem 0;
-    padding: 0.3rem 0;
-    font-weight: 600;
-    list-style: none;
-  }
-
-  li:active {
-    background-color: ${(props) => props.theme.colors.purple(0.2)};
-  }
-`;
-
-const BurgerModal = styled.div`
+const MobileNavBar = styled.div`
   position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 5rem;
   width: 100%;
-  height: 20rem;
-  border-radius: 0.25rem;
-  background: white;
-  box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.1);
+  background-color: ${(props) => props.theme.colors.white};
+  left: 0;
+  padding: 1rem 0.5rem;
+  top: 60px;
+  border-radius: 6px;
+  box-shadow: 0px 4.8px 14.4px ${(props) => props.theme.colors.bannerShadowFrom},
+    0px 25.6px 57.6px ${(props) => props.theme.colors.bannerShadowTo};
+  display: flex;
+  flex-direction: column;
+  a,
+  span {
+    padding: 0.7rem 1.5rem;
+    display: block;
+    margin-top: 0 !important;
+    text-align: center;
+    color: ${(props) => props.theme.colors.black};
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  a.buttonMobile {
+    border: 1px solid ${(props) => props.theme.colors.textSecondary};
+    border-radius: 6px;
+    color: ${(props) => props.theme.colors.textSecondary};
+  }
+`;
+
+const SubNavMobile = styled.div`
+  background: ${(props) => props.theme.colors.mobileNavBackground};
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 6px;
 `;
 
 const Burger: React.FC = () => {
   const [open, setOpen] = React.useState<boolean>(false);
-  const { textSecondary } = useTheme().colors;
-
+  const [subMenu, setSubMenu] = React.useState<boolean>(false);
   const handleSwitch = () => {
     setOpen(!open);
+    setSubMenu(false);
   };
-
+  const handleSubMenu = () => {
+    setSubMenu(!subMenu);
+  };
   return (
     <>
-      <div onClick={handleSwitch}>
-        <StyledBurger>
-          <div className="line big" />
-          <div className="line small" />
-          <div className="line small" />
-        </StyledBurger>
+      <MobileNavBarContainer>
+        <HamBurger onClick={handleSwitch}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </HamBurger>
         {open && (
           <>
-            <BurgerModal>
-              <Ul>
-                <li>
-                  <Link to="/whylitmus">Why Litmus?</Link>
-                </li>
-
-                <li>
-                  <Link to="/chaoshub" className="listItems">
-                    ChaosHub
-                  </Link>
-                </li>
-
-                <li>
-                  <a
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    href="https://dev.to/t/litmuschaos"
-                  >
-                    Blogs
-                  </a>
-                </li>
-
-                <li>
-                  <Link to="/community">Community</Link>
-                </li>
-
-                <li>
-                  <GettingStarted>
+            <MobileNavBar>
+              <Link to="/whylitmus">Why Litmus?</Link>
+              <Link to="/chaoshub">ChaosHub</Link>
+              <span onClick={handleSubMenu}>Community</span>
+              {subMenu ? (
+                <>
+                  <SubNavMobile>
+                    <Link to="/adopters">End User Adopters</Link>
                     <a
                       rel="noopener noreferrer"
                       target="_blank"
-                      href="https://docs.litmuschaos.io/docs/getstarted/"
+                      href="https://dev.to/t/litmuschaos"
                     >
-                      <OutlinedButton backgroundColor={textSecondary}>
-                        Get Started
-                      </OutlinedButton>
+                      Blogs
                     </a>
-                  </GettingStarted>
-                </li>
-              </Ul>
-            </BurgerModal>
+                    <Link to="/community">Other Resources</Link>
+                  </SubNavMobile>
+                </>
+              ) : (
+                <></>
+              )}
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://docs.litmuschaos.io/docs/getstarted/"
+                className="buttonMobile"
+              >
+                Get Started
+              </a>
+            </MobileNavBar>
           </>
         )}
-      </div>
+      </MobileNavBarContainer>
     </>
   );
 };

@@ -27,7 +27,10 @@ const SubHeading = styled.p<IText>`
 const Paragraph = styled.p<IText>`
   line-height: 170%;
   text-align: ${(props) => props.textAlign ?? "left"};
-  color: ${(props) => props.theme.colors.darkGray};
+  color: ${(props) =>
+    props.color === "textPrimary"
+      ? props.theme.colors.textPrimary
+      : props.theme.colors.darkGray};
   font-size: ${(props) =>
     props.theme.screens.md
       ? props.theme.fontSize.paragraph.md

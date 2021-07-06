@@ -3,6 +3,7 @@ import styled from "styled-components";
 interface IButton {
   gradientColor?: "purple" | "green";
   backgroundColor?: string;
+  width?: string;
 }
 
 interface IOutlinedButton {
@@ -13,8 +14,9 @@ interface IOutlinedButton {
 // Default Button Styles
 const Button = styled.button<IButton>`
   height: 3rem;
-  min-width: 10rem;
-  width: ${(props) => (props.theme.screens.sm ? "100%" : "18rem")};
+  // min-width: 10rem;
+  width: ${(props) =>
+    props.width ? props.width : props.theme.screens.sm ? "100%" : "18rem"};
   border: none;
   background: ${(props) =>
     props.gradientColor === "purple"
@@ -24,7 +26,10 @@ const Button = styled.button<IButton>`
       : props.backgroundColor};
   color: white;
   border-radius: 0.25rem;
-  font-size: ${(props) => props.theme.fontSize.button};
+  font-size: ${(props) =>
+    props.theme.screens.md
+      ? props.theme.fontSize.button.md
+      : props.theme.fontSize.button.lg};
   cursor: pointer;
   :disabled {
     background: lightgray;
@@ -53,9 +58,16 @@ const OutlinedButton = styled.button<IOutlinedButton>`
   padding: 0.5rem 2rem;
   background: transparent;
   width: ${(props) => (props.theme.screens.sm ? "100%" : "max-content")};
-  color: ${(props) => props.backgroundColor};
-  border: 0.05rem solid ${(props) => props.backgroundColor};
-  border-radius: 0.5rem;
+  color: ${(props) =>
+    props.backgroundColor === "purple"
+      ? props.theme.colors.textSecondary
+      : props.backgroundColor};
+  border: 0.05rem solid
+    ${(props) =>
+      props.backgroundColor === "purple"
+        ? props.theme.colors.textSecondary
+        : props.backgroundColor};
+  border-radius: 0.25rem;
   font-size: ${(props) => props.theme.fontSize.button};
   cursor: pointer;
   :disabled {

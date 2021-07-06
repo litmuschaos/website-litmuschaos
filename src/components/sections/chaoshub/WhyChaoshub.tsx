@@ -6,14 +6,14 @@ import {
   Center,
   ResponsiveRow,
   Row,
-  SectionLight,
+  SectionLight
 } from "../../layout";
 import {
   GreenStats,
   Heading,
   Paragraph,
   PurpleText,
-  SubHeading,
+  SubHeading
 } from "../../texts";
 
 const UsefulLinks = styled.ul`
@@ -129,7 +129,7 @@ const WhyChaoshub: React.FC = () => {
           {lg ? (
             <UsefulLinksContent />
           ) : (
-            <Center fullHeight={false}>
+            <Center >
               <UsefulLinksContent />
             </Center>
           )}
@@ -140,3 +140,4 @@ const WhyChaoshub: React.FC = () => {
 };
 
 export { WhyChaoshub };
+

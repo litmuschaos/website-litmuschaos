@@ -1,19 +1,28 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { useTheme } from "styled-components";
-import { ChaosBirdExp } from "../../image-fetch/ChaosBirdExp";
 import { InfoSection } from "../../info-section";
-import { BoundedContainer, ResponsiveRow, SectionDark } from "../../layout";
+import {
+  BoundedContainer,
+  Center,
+  ResponsiveRow,
+  SectionDark,
+} from "../../layout";
 import { Heading } from "../../texts";
 
 const CloudNativeWay: React.FC = () => {
   const { purple, darkGreen, lightGreen, yellow } = useTheme().colors;
   return (
     <SectionDark>
-      <div>
+      <Center>
         <Heading textAlign="center">Do it the cloud-native way</Heading>
         <ResponsiveRow breakpoint="xl">
           <BoundedContainer breakpoint="xl" width="50%" margin="0">
-            <ChaosBirdExp />
+            <StaticImage
+              src="../../../images/cloud-native-way.png"
+              alt="Choas Bird doing experiments"
+              placeholder="blurred"
+            />
           </BoundedContainer>
 
           <BoundedContainer breakpoint="xl" width="45%" margin="0">
@@ -22,7 +31,7 @@ const CloudNativeWay: React.FC = () => {
                 color={purple}
                 imgSrc="/svg/declarative-chaos.svg"
                 title="Declarative chaos"
-                description="Litmus provides chaos CRDs to manage chaos. Using chaos API, orchestration, scheduling and complex workflow management can be done declaratively."
+                description="Litmus provides chaos CRDs to manage chaos. Orchestration, scheduling and complex workflow management can be done declaratively and also by using chaos API."
               />
               <InfoSection
                 color={darkGreen}
@@ -42,12 +51,12 @@ const CloudNativeWay: React.FC = () => {
                 color={yellow}
                 imgSrc="/svg/chaos-workflows.svg"
                 title="Chaos Workflows"
-                description="Simple to complex chaos workflows are easy to construct. Use GitOps and the chaos workflows to scale your chaos engineering efforts and increase the resilience of your Kubernetes platform."
+                description="From very simple to highly complex chaos workflows, all are easy to construct. Use GitOps and the chaos workflows to scale your chaos engineering efforts and increase your Kubernetes platform’s resilience."
               />
             </ResponsiveRow>
           </BoundedContainer>
         </ResponsiveRow>
-      </div>
+      </Center>
     </SectionDark>
   );
 };

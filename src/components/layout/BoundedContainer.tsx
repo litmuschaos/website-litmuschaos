@@ -14,4 +14,8 @@ const BoundedContainer = styled.div<IBoundedContainer>`
     props.theme.screens[props.breakpoint] ? "100%" : props.width};
 `;
 
-export { BoundedContainer };
+const FreeBoundedContainer = styled(BoundedContainer)`
+  max-width: 100% !important;
+`;
+
+export { BoundedContainer, FreeBoundedContainer };
