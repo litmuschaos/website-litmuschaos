@@ -69,6 +69,10 @@ const top_adopters = {
       name: "Halodoc",
       image: "/svg/halodoc.svg",
     },
+    {
+      name: "Kubesphere",
+      image: "/svg/kubesphere.svg",
+    },
   ],
 };
 
