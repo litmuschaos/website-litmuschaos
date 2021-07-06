@@ -17,6 +17,7 @@ const NavBar = styled.nav`
   justify-content: space-between;
   position: relative;
   z-index: ${(props) => props.theme.zIndex.nav};
+  padding: ${(props) => (props.theme.screens.md ? "1rem 0" : "")};
 `;
 
 const LogoDiv = styled.div`
@@ -32,10 +33,10 @@ const GitHubStars = styled.div`
   font-size: ${(props) => props.theme.fontSize.small.lg};
   padding: 0 0.5rem;
   margin-left: ${(props) => (props.theme.screens.md ? "0.5rem" : "1.5rem")};
-  border: 1px solid #000000;
+  border: 1px solid ${(props) => props.theme.colors.black};
   border-radius: 0.5rem;
   display: flex;
-  color: black;
+  color: ${(props) => props.theme.colors.black};
   flex-direction: row;
   justify-content: center;
 `;
@@ -65,6 +66,15 @@ const Ul = styled.ul`
           ? props.theme.colors.white
           : props.theme.colors.black};
     }
+    span {
+      color: ${(props) =>
+        props.color === "white"
+          ? props.theme.colors.white
+          : props.theme.colors.black};
+      &:hover {
+        color: ${(props) => props.theme.colors.black};
+      }
+    }
   }
 `;
 
@@ -77,7 +87,7 @@ const SlideDownMenuDesktop = styled.div`
     0px 25.6px 57.6px ${(props) => props.theme.colors.boxShadowCol2};
   border-radius: 10px;
   padding: 1rem 0;
-  width: 200px;
+  width: 250px;
   border-radius: 6px;
   a {
     color: ${(props) => props.theme.colors.black} !important;
@@ -97,12 +107,12 @@ const DropDownLinksDesktop = styled(Link)`
   display: block;
   width: 100%;
   text-align: left;
-  color: #000;
+  color: ${(props) => props.theme.colors.black};
   font-size: 0.95rem;
   transition: all 100ms ease-in;
   &:hover {
     background: ${(props) => props.theme.colors.dropShadowNavbarDesktop};
-    color: #000;
+    color: ${(props) => props.theme.colors.black};
   }
 `;
 
@@ -179,26 +189,30 @@ const Nav: React.FC = () => {
           <Link to="/chaoshub">ChaosHub</Link>
         </li>
         <DropDownNavElement>
-          <Link to="#">Community</Link>
+          <span>Community &#8628;</span>
           <SlideDownMenuDesktop>
-            <DropDownLinksDesktop to="/adopters">
-              End User Adopters
+            <DropDownLinksDesktop to="/community">
+              Community Resources
             </DropDownLinksDesktop>
             <DropDownLinksDesktop
               to="https://dev.to/t/litmuschaos"
               target="_blank"
             >
-              Blogs
+              Blog
             </DropDownLinksDesktop>
-            <DropDownLinksDesktop to="/community">
-              Other Resources
+            <DropDownLinksDesktop to="/adopters">
+              End User Adopters
             </DropDownLinksDesktop>
           </SlideDownMenuDesktop>
         </DropDownNavElement>
         <OutlinedNavButton>
-          <a rel="noopener noreferrer" target="_blank" href="#">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.katacoda.com/litmusbot/scenarios/getting-started-with-litmus"
+          >
             <OutlinedButton backgroundColor={`${match ? `white` : `purple`}`}>
-              Get Started
+              Interactive Tutorial
             </OutlinedButton>
           </a>
         </OutlinedNavButton>

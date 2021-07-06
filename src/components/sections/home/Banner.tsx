@@ -1,110 +1,101 @@
+import { Link } from "gatsby";
 import React from "react";
-import styled from "styled-components";
-import { SectionDark } from "../../layout";
-import { Paragraph, SubHeading } from "../../texts";
+import styled, { ThemeProvider } from "styled-components";
+import { theme } from "../../../styles";
 
-const HomeBannerContainer = styled.div`
+const BannerFluidContainer = styled.div`
+  width: 100%;
+  box-shadow: 0px 0.6px 1.8px ${(props) => props.theme.colors.bannerShadowFrom},
+    0px 3.2px 7.2px ${(props) => props.theme.colors.bannerShadowTo};
+  position: relative;
+  z-index: 120;
+  background: ${(props) => props.theme.colors.white};
+  height: ${(props) => (props.theme.screens.md ? "fit-content" : "2.8rem")};
+  padding: ${(props) => (props.theme.screens.md ? "0.5rem 1rem" : "0")};
+`;
+const BannerContainer = styled.div`
   max-width: 90rem;
   margin: 0 auto;
-  padding: 5rem 2rem;
+  height: 100%;
   display: flex;
-  flex-direction: ${(props) => (props.theme.screens.lg ? "column" : "row")};
-`;
-
-const BackgroundBanner = styled.img`
-  display: block;
-  position: absolute;
-  top: ${(props) => (props.theme.screens.lg ? "-40px" : "-60px")};
-  height: ${(props) =>
-    props.theme.screens.lg ? "calc(100% + 40px)" : "calc(100% + 60px)"};
-  left: ${(props) => (props.theme.screens.lg ? "-20px" : "-60px")};
-  z-index: -1;
-`;
-
-const BannerLeft = styled.div`
-  width: ${(props) => (props.theme.screens.lg ? "100%" : "50%")};
-  padding: 1rem;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  background: #ffffff;
-  box-shadow: 0px 5.05263px 15.1579px rgba(0, 0, 0, 0.18),
-    0px 26.9474px 60.6316px rgba(0, 0, 0, 0.22);
-  border-radius: 10px;
+  span.closeBtn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+`;
+const BannerWrapper = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    background-color: ${(props) => props.theme.colors.yellowPill};
+    font-size: 0.9rem;
+    padding: 0.2rem 1rem;
+    border-radius: 100px;
+    color: ${(props) => props.theme.colors.white};
+    display: ${(props) => (props.theme.screens.sm ? "none" : "inline-block")};
+  }
+  div {
+    display: flex;
+    flex-direction: ${(props) => (props.theme.screens.sm ? "column" : "row")};
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    margin: ${(props) => (props.theme.screens.sm ? "0" : "0 0.5rem")};
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  a {
+    color: ${(props) => props.theme.colors.darkBlue};
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
 `;
 
-const BannerRight = styled.div`
-  margin-top: ${(props) => (props.theme.screens.lg ? "3rem" : "0")};
-  ${(props) =>
-    props.theme.screens.lg
-      ? ""
-      : "width: 50%; display: flex; flex-direction: column; justify-content: center; padding-left: 2rem;"}
-`;
+const Banner: React.FC = () => {
+  const [bannerOpen, setBannerOpen] = React.useState(true);
 
-const BannerLeftItemCont = styled.div`
-  background-color: #f5f9fc;
-  border-radius: 10px;
-  padding: 3rem 1rem;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-`;
-
-const LitmusLogo = styled.img`
-  height: ${(props) => (props.theme.screens.lg ? "35px" : "50px")};
-`;
-
-const ParagraphBanner = styled.p`
-  font-size: ${(props) => (props.theme.screens.lg ? "0.9rem" : "1rem")};
-  font-weight: 600;
-  margin-top: 0.5rem;
-`;
-
-const GradientBackground = styled.img`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: block;
-  width: ${(props) => (props.theme.screens.lg ? "100%" : "80%")};
-`;
-
-const BannerHome: React.FC = () => {
   return (
-    <>
-      <SectionDark>
-        <HomeBannerContainer>
-          <BannerLeft>
-            <BackgroundBanner
-              src="./Banner/bannerBackground.png"
-              alt="Banner Background"
-            />
-            <BannerLeftItemCont>
-              <LitmusLogo src="./Banner/logo.png" alt="Litmus Logo" />
-              <ParagraphBanner>Releasing on August 15, 2021</ParagraphBanner>
-              <GradientBackground
-                src="./Banner/gradientShape.png"
-                alt="Gradient Image"
+    <ThemeProvider theme={theme()}>
+      {bannerOpen ? (
+        <BannerFluidContainer>
+          <BannerContainer>
+            <BannerWrapper>
+              <span>NEW</span>
+              <div>
+                <p>Releasing Litmus 2.0 on August 15, 2021</p>
+                <Link
+                  to="https://dev.to/litmus-chaos/litmus-2-0-simplifying-chaos-engineering-for-enterprises-4448"
+                  target="_blank"
+                >
+                  See what's coming in Litmus 2.0
+                </Link>
+              </div>
+            </BannerWrapper>
+            <span className="closeBtn">
+              <img
+                src="/svg/close.svg"
+                alt="Close Button"
+                width={24}
+                height={24}
+                onClick={() => setBannerOpen(!bannerOpen)}
               />
-            </BannerLeftItemCont>
-          </BannerLeft>
-          <BannerRight>
-            <SubHeading>Chaos Engineering for Enterprises.</SubHeading>
-            <Paragraph>
-              With biggest and promising updates, Litmus 2.0 is going to be
-              released on 15th August, 2021. Read the blog to know few of the
-              new features.
-            </Paragraph>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://dev.to/litmus-chaos/litmus-2-0-simplifying-chaos-engineering-for-enterprises-4448"
-              style={{ color: "#5b44ba" }}
-            >
-              Sneek peek into Litmus 2.0
-            </a>
-          </BannerRight>
-        </HomeBannerContainer>
-      </SectionDark>
-    </>
+            </span>
+          </BannerContainer>
+        </BannerFluidContainer>
+      ) : (
+        <></>
+      )}
+    </ThemeProvider>
   );
 };
 
-export { BannerHome };
+export { Banner };

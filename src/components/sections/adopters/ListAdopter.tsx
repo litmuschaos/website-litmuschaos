@@ -45,11 +45,11 @@ const CompanyInfoCard = styled.div<FlexDir>`
   height: ${(props) => (props.theme.screens.lg ? "auto" : "300px")};
   flex-direction: column;
   justify-content: ${(props) =>
-    props.theme.screens.lg ? "flex-start" : "center"};
+    props.theme.screens.md ? "flex-start" : "center"};
   margin-top: ${(props) => (props.theme.screens.lg ? "1rem" : "0")};
   ${(props) => (props.theme.screens.lg ? "" : "width: 60%;")}
   ${(props) =>
-    props.theme.screens.lg
+    props.theme.screens.md
       ? ""
       : props.reverse
       ? "padding-right: 3rem"
@@ -74,7 +74,7 @@ const ListCard: React.FC<IProps> = (props) => {
   return (
     <Center>
       <ResponsiveRow
-        breakpoint="md"
+        breakpoint="lg"
         reverseRow={props.reverse}
         marginBottom="4rem"
       >

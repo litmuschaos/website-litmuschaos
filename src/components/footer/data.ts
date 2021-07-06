@@ -17,6 +17,10 @@ const sitemap = {
       name: "Community",
       url: "/community",
     },
+    {
+      name: "End Users",
+      url: "/adopters",
+    },
   ],
 };
 

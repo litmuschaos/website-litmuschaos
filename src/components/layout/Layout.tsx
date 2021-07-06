@@ -8,7 +8,7 @@ import { PreFooter } from "../pre-footer";
 
 const Container = styled.div`
   position: relative;
-  z-index: ${props => props.theme.zIndex.content};
+  z-index: ${(props) => props.theme.zIndex.content};
 `;
 
 interface Ilayoutprops {

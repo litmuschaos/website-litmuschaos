@@ -12,7 +12,12 @@ const getAdopterHeroImg = () => {
           node {
             relativeDirectory
             childImageSharp {
-              gatsbyImageData(width: 350, quality: 100, layout: CONSTRAINED)
+              gatsbyImageData(
+                width: 350
+                quality: 100
+                layout: CONSTRAINED
+                placeholder: BLURRED
+              )
             }
           }
         }
