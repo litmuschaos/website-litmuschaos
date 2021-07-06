@@ -1,5 +1,4 @@
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "../../../styles";
@@ -82,12 +81,11 @@ const Banner: React.FC = () => {
               </div>
             </BannerWrapper>
             <span className="closeBtn">
-              <StaticImage
-                src="../../../../static/svg/close.svg"
+              <img
+                src="/svg/close.svg"
                 alt="Close Button"
                 width={24}
                 height={24}
-                placeholder="blurred"
                 onClick={() => setBannerOpen(!bannerOpen)}
               />
             </span>
