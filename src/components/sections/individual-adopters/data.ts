@@ -213,36 +213,24 @@ const adoptersContent = [
     why: {
       heading: "Why we explored Litmus?",
       subtext:
-        "We wanted a tool that we could leverage to test the containerized control plane of our private cloud, so we came across Litmus, it has the following benefits.",
-      list: [
-        "It is designed for Kubernetes workload",
-        "It has a wide variety of generic test cases for Kubernetes workload and Infrastructure",
-        "It can be used to trigger customized validations",
-        "It is easy to Integrate with our existing automation framework",
-      ],
+        "When we started building our next-gen platform on Kubernetes Keiko, we realized that its reliability is most important. We started using the litmus base solution. We have our homegrown solution build on Kubernetes with a container-native approach, using chaostoolkit. We need a solution that can reuse the work and help in building Kubernetes native way.",
+      list: [],
     },
     how: {
       heading: "How we explored litmus?",
       subtext:
-        "We explored Litmus to validate the resiliency of our private telco cloud by covering the following areas.",
-      list: [
-        "Testing resiliency of Control plane Kubernetes Infrastructure",
-        "Validating the HA of different control plane services",
-        "Testing interdependency among different open source applications",
-      ],
+        "We use LitmusChaos on the cluster as an operator and create custom resources for experiments. Those experiments will be exposed and executed via the test using Argo workflow. In the future, we are planning to go gitOps for chaos. We have a cluster and service owner use case to handle separate role access to execute this chaos. We are using Chaos for the Application, cloud, and Kubernetes platform. We are attaching chaos with Performance testing to get the full impact of chaos on the given service.",
+      list: [],
     },
     benefits: {
       heading: "Benefits in using Litmus.",
       subtext:
-        "Litmus has a wide variety of generic test cases for Kubernetes workload and Infrastructure and provides a very easy way for end-to-end automation of resiliency test cases.",
+        "We are getting benefits from its plug-in architecture. With open-source and community-backed up, we could move fast if we face any challenges. We have shared our journey on chaos and how we are using Choas Workflow and Chaos gitOps using Argo.",
     },
     other: {
       heading: "Other Resources",
+      blogUrl: "https://sumitnagal.medium.com/chaos-journey-279924051d57",
       videoUrl: "https://youtu.be/Ohj0VrwmQWs?t=567",
-      quote:
-        "“Litmus is a great tool that offers out of the box generic chaos tests with different types of probes for performing validations at different time during the experiment which make automation easy”",
-      author: "Samar",
-      designation: "Lead Engineer at Orange",
     },
   },
 ];
