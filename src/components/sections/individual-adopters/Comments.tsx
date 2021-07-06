@@ -16,7 +16,7 @@ const ContentSection = styled.div`
 `;
 
 const TextBox = styled.div`
-  margin-left: ${props => (props.theme.screens.md ? "1rem" : "2rem")};
+  margin-left: ${(props) => (props.theme.screens.md ? "1rem" : "2rem")};
 `;
 
 const List = styled.ul`
@@ -25,13 +25,13 @@ const List = styled.ul`
 `;
 
 const SubTextGray = styled.div`
-  color: ${props => props.theme.colors.darkGray};
+  color: ${(props) => props.theme.colors.darkGray};
 `;
 
 const Img = styled.img`
   display: inline;
   align-self: flex-start;
-  width: ${props => (props.theme.screens.md ? "3rem" : "")};
+  width: ${(props) => (props.theme.screens.md ? "3rem" : "")};
 `;
 
 const Why: React.FC<IContent> = ({ adopter }) => {
@@ -108,7 +108,7 @@ const Other: React.FC<IContent> = ({ adopter }) => {
             {adopter?.other?.videoUrl && (
               <>
                 <br />
-                Videos:{" "}
+                Video:{" "}
                 <a rel="noopener noreferrer" href={adopter?.other?.videoUrl}>
                   {adopter?.other?.videoUrl}
                 </a>
@@ -116,7 +116,7 @@ const Other: React.FC<IContent> = ({ adopter }) => {
                   <>
                     <br />
                     <br />
-                    Blogs:{" "}
+                    Blog:{" "}
                     <a rel="noopener noreferrer" href={adopter?.other?.blogUrl}>
                       {adopter?.other?.blogUrl}
                     </a>
@@ -137,10 +137,10 @@ const Comments: React.FC<IContent> = ({ url }) => {
   return (
     <SectionLight>
       <div>
-      {adopter.why.heading && <Why adopter={adopter} />}
-      {adopter.how.heading && <How adopter={adopter} />}
-      {adopter.benefits?.heading && <Benefits adopter={adopter} />}
-      {adopter.other.heading && <Other adopter={adopter} />}
+        {adopter.why.heading && <Why adopter={adopter} />}
+        {adopter.how.heading && <How adopter={adopter} />}
+        {adopter.benefits?.heading && <Benefits adopter={adopter} />}
+        {adopter.other.heading && <Other adopter={adopter} />}
       </div>
     </SectionLight>
   );
