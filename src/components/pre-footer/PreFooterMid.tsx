@@ -9,7 +9,7 @@ const PreFooterMid = () => {
       <ResponsiveRow breakpoint="lg">
         <BoundedContainer breakpoint="lg" width="60%" margin="">
           <SubHeading>
-            Are you an end user and adopted LitmusChaos{" "}
+            Are you an end user and adopted{" "}
             <PurpleText
               style={{ display: "inline-block" }}
               fontWeight={600}
