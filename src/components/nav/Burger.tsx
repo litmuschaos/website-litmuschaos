@@ -89,15 +89,15 @@ const Burger: React.FC = () => {
               {subMenu ? (
                 <>
                   <SubNavMobile>
-                    <Link to="/adopters">End User Adopters</Link>
+                    <Link to="/community">Community Resources</Link>
                     <a
                       rel="noopener noreferrer"
                       target="_blank"
                       href="https://dev.to/t/litmuschaos"
                     >
-                      Blogs
+                      Blog
                     </a>
-                    <Link to="/community">Other Resources</Link>
+                    <Link to="/adopters">End User Adopters</Link>
                   </SubNavMobile>
                 </>
               ) : (
