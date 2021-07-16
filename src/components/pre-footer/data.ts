@@ -73,6 +73,10 @@ const top_adopters = {
       name: "Kubesphere",
       image: "/svg/kubesphere.svg",
     },
+    {
+      name: "Pravega",
+      image: "/svg/pravega.png",
+    },
   ],
 };
 
