@@ -3,6 +3,7 @@ const siteDescription =
   "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.";
 const siteAuthor = "@litmuschaos";
 const siteUrl = "https://litmuschaos.io";
+const siteImage = `${siteUrl}/icons/siteImage.png`;
 const siteKeywords = [
   "chaos engineering",
   "Litmus Chaos",
@@ -29,11 +30,12 @@ const siteKeywords = [
 
 module.exports = {
   siteMetadata: {
-    title: siteTitle,
-    description: siteDescription,
-    author: siteAuthor,
-    url: siteUrl,
-    keywords: siteKeywords,
+    siteTitle,
+    siteDescription,
+    siteAuthor,
+    siteUrl,
+    siteKeywords,
+    siteImage,
   },
   plugins: [
     {
@@ -81,11 +83,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: siteUrl,
-        sitemap: `${siteUrl}/sitemap.xml`,
+        sitemap: `${siteUrl}/sitemap/sitemap-index.xml`,
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
           development: {
@@ -112,12 +115,12 @@ module.exports = {
           {
             src: "icons/icon_512x512.png",
             sizes: "512x512",
-            types: "image/png",
+            type: "image/png",
           },
           {
             src: "icons/icon_192x192.png",
             sizes: "192x192",
-            types: "image/png",
+            type: "image/png",
           },
         ],
       },
