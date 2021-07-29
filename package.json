@@ -37,7 +37,7 @@
     "gatsby-plugin-react-helmet": "^4.8.0",
     "gatsby-plugin-robots-txt": "^1.6.8",
     "gatsby-plugin-sharp": "^3.8.0",
-    "gatsby-plugin-sitemap": "3.3.0",
+    "gatsby-plugin-sitemap": "4.1.0",
     "gatsby-plugin-styled-components": "^4.8.0",
     "gatsby-plugin-typescript": "^3.8.0",
     "gatsby-source-filesystem": "^3.8.0",
