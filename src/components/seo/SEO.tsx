@@ -1,12 +1,10 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
-
+import { Meta, useSiteMetadata } from "../../hooks";
 type MetaItem = {
   name: string;
   content: string;
 };
-
 type SEOProps = {
   title?: string;
   description?: string;
@@ -16,70 +14,64 @@ type SEOProps = {
   meta?: MetaItem[];
   image?: string;
 };
-
 const SEO: React.FC<SEOProps> = (props) => {
-  const data = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          title
-          description
-          author
-          url
-          keywords
-        }
-      }
-    }
-  `);
-
-  const { siteMetadata } = data.site;
-
+  const siteMetadata = useSiteMetadata();
   const {
-    title,
-    description,
-    url,
-    author,
+    siteTitle,
+    siteDescription,
+    siteAuthor,
+    siteUrl,
     meta = [],
-    keywords = [],
+    siteKeywords,
+    siteImage,
   } = siteMetadata;
-  const siteTitle = props.title || title;
-  const siteDescription = props.description || description;
-  const siteUrl = props.url || url;
-  const siteAuthor = props.author || author;
-  const siteImage = "https://i.ibb.co/qgv3Kg9/site-Image.png";
-  const siteKeywords = [...keywords, props.keywords].join(",");
-  const metaData = [
+  const title = props.title || siteTitle;
+  const description = props.description || siteDescription;
+  const url = props.url || siteUrl;
+  const author = props.author || siteAuthor;
+  const image = props.image || siteImage;
+  const keywords = [...siteKeywords, props.keywords].join(",");
+  const metaData: Meta[] = [
     {
       name: "canonical",
-      content: siteUrl,
+      content: url,
     },
     {
       name: "description",
-      content: siteDescription,
+      content: description,
     },
     {
       name: "image",
-      content: siteImage,
+      content: image,
     },
     {
-      name: "og:url",
-      content: siteUrl,
+      name: "author",
+      content: author,
     },
     {
-      name: "og:type",
+      name: "url",
+      property: "og:url",
+      content: url,
+    },
+    {
+      name: "type",
+      property: "og:type",
       content: "article",
     },
     {
-      name: "og:title",
-      content: siteTitle,
+      name: "title",
+      property: "og:title",
+      content: title,
     },
     {
-      name: "og:description",
-      content: siteDescription,
+      name: "description",
+      property: "og:description",
+      content: description,
     },
     {
+      name: "image",
       property: "og:image",
-      content: siteImage,
+      content: image,
     },
     {
       name: "twitter:card",
@@ -87,26 +79,25 @@ const SEO: React.FC<SEOProps> = (props) => {
     },
     {
       name: "twitter:creator",
-      content: siteAuthor,
+      content: author,
     },
     {
       name: "twitter:title",
-      content: siteTitle,
+      content: title,
     },
     {
       name: "twitter:description",
-      content: siteDescription,
+      content: description,
     },
     {
       name: "twitter:image",
-      content: siteImage,
+      content: image,
     },
     {
       name: "keywords",
-      content: siteKeywords,
+      content: keywords,
     },
   ].concat(meta);
-
   const linkData = [
     {
       rel: "shortcut icon",
@@ -120,12 +111,11 @@ const SEO: React.FC<SEOProps> = (props) => {
   return (
     <Helmet
       htmlAttributes={{ lang: "en" }}
-      title={siteTitle}
+      title={title}
       // titleTemplate={`%s | ${siteTitle}`}
       meta={metaData}
       link={linkData}
     />
   );
 };
-
 export { SEO };
