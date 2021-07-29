@@ -34,6 +34,7 @@ module.exports = {
     author: siteAuthor,
     url: siteUrl,
     keywords: siteKeywords,
+    siteUrl: siteUrl,
   },
   plugins: [
     {
@@ -81,6 +82,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -112,12 +114,12 @@ module.exports = {
           {
             src: "icons/icon_512x512.png",
             sizes: "512x512",
-            types: "image/png",
+            type: "image/png",
           },
           {
             src: "icons/icon_192x192.png",
             sizes: "192x192",
-            types: "image/png",
+            type: "image/png",
           },
         ],
       },
