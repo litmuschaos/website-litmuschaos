@@ -15,13 +15,12 @@ const LitmusCommunityVideo: React.FC = () => {
         <br />
         the Litmus community
       </Heading>
-
       <BoundedContainer breakpoint="sm" width="80%" margin="2rem auto">
         <Paragraph textAlign="center">{paragraphText}</Paragraph>
       </BoundedContainer>
       <VideoFrame
         width="47.188rem"
-        src="https://www.youtube.com/embed/fi-vhKE5vKI"
+        src="https://www.youtube.com/embed/4vj3wnR5exI"
       />
       <a
         rel="noopener noreferrer"
