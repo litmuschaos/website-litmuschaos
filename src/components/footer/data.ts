@@ -30,7 +30,7 @@ const resources = {
     {
       name: "Docs",
       image: "/svg/Docs.svg",
-      url: "https://docs.litmuschaos.io/docs/getstarted/",
+      url: "https://docs.litmuschaos.io/docs/getting-started/installation/",
     },
     {
       name: "FAQ",
