@@ -1,3 +1,6 @@
+### :warning: This repository is deprecated and no longer maintained. 
+### Please use this repo for LitmusChaos website [https://github.com/litmuschaos/litmus-website-2].
+
 # LitmusChaos
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flitmuschaos%2Fwebsite-litmuschaos.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Flitmuschaos%2Fwebsite-litmuschaos?ref=badge_shield)
